@@ -1,0 +1,176 @@
+{
+  "@@locale": "en",
+  "appTitle": "News",
+  "appSubtitle": "AI news",
+  "navToday": "Today",
+  "navSources": "Sources",
+  "navSaved": "Saved",
+  "navMe": "Me",
+  "actionRefresh": "Refresh",
+  "actionSearch": "Search",
+  "actionSettings": "Settings",
+  "actionSave": "Save",
+  "actionUnsave": "Unsave",
+  "actionMarkRead": "Mark read",
+  "actionOpenOriginal": "Open original",
+  "actionShare": "Share",
+  "shareCopied": "Title and link copied",
+  "actionLanguage": "Language",
+  "actionTheme": "Theme",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "langZh": "中文",
+  "langEn": "English",
+  "fontSize": "Body size",
+  "snapshotRepo": "Snapshot repo (owner/repo)",
+  "snapshotHint": "On desktop, overseas feeds are fetched live. On phones, the bundled snapshot is used; set a repo to refresh via jsDelivr.",
+  "snapshotUrl": "Custom snapshot URL",
+  "sourcesManage": "Manage sources",
+  "sourcesEnabled": "Enabled",
+  "emptyToday": "Nothing yet. Pull to refresh.",
+  "emptyFilter": "Nothing from this source. Pick another, or pull to refresh.",
+  "feedAll": "All sources",
+  "feedDomestic": "China",
+  "feedWorld": "World",
+  "regionDomestic": "China",
+  "regionWorld": "World",
+  "feedCount": "{n} stories",
+  "@feedCount": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "emptySaved": "Saved stories will land here.",
+  "emptySearch": "No titles or summaries matched.",
+  "emptyArticle": "Pick a story on the left. You'll see the excerpt until you fetch the full article.",
+  "emptySource": "This source has no items right now.",
+  "errorPartial": "Some sources failed. Cached items are shown.",
+  "errorNetwork": "Network unreachable. Showing local cache when possible.",
+  "errorSnapshot": "Snapshot URL was rejected or failed. Using the local cache.",
+  "errorTranslate": "Translation failed. Try again in a moment.",
+  "errorBody": "Could not fetch the article body. The original site is still available.",
+  "refreshing": "Updating…",
+  "lastUpdated": "Updated {time}",
+  "@lastUpdated": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "unreadDot": "Unread",
+  "searchHint": "Search titles, summaries, and bodies",
+  "categoryLabs": "Labs",
+  "categoryChina": "China press",
+  "categoryPapers": "Papers",
+  "categoryIndustry": "Industry",
+  "categoryGlobal": "World",
+  "sourceFailed": "Failed",
+  "sourceOk": "OK",
+  "aboutBody": "A daily AI brief. Domestic RSS is fetched on-device; overseas feeds are live on desktop and snapshotted on phones. Open a story for the excerpt, then fetch the full article or translate when you need it.",
+  "aboutTitle": "About",
+  "authorQq": "Author QQ",
+  "qqCopied": "QQ number copied",
+  "cancel": "Cancel",
+  "done": "Done",
+  "openInBrowser": "Open in browser",
+  "noExcerpt": "No excerpt. Open the original article.",
+  "briefTitle": "Today's brief",
+  "boardsTitle": "Hot lists",
+  "bySource": "By source",
+  "sourcesReorderHint": "Hold and drag to reorder",
+  "markAllRead": "Mark all read",
+  "newBadge": "New",
+  "readingBody": "Loading article…",
+  "fetchFullText": "Fetch full text",
+  "refetchFullText": "Fetch again",
+  "showSummary": "Summary",
+  "showFullText": "Show full text",
+  "translateArticle": "Translate",
+  "translatingArticle": "Translating…",
+  "copyArticle": "Copy",
+  "articleCopied": "Title and article copied",
+  "copyTranslation": "Copy translation",
+  "copyOriginalText": "Copy original",
+  "copyBilingual": "Copy bilingual",
+  "ttsVoicesZh": "Chinese voices",
+  "ttsVoicesEn": "English voices",
+  "listenArticle": "Listen",
+  "stopListening": "Stop",
+  "pauseSpeech": "Pause",
+  "resumeSpeech": "Resume",
+  "preparingSpeech": "Generating...",
+  "ttsChunkLabel": "{current}/{total}",
+  "@ttsChunkLabel": {
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "ttsChunkRemaining": "{time} left in this segment",
+  "@ttsChunkRemaining": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "ttsPreparingChunk": "Preparing {current}/{total}…",
+  "@ttsPreparingChunk": {
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "listenFailed": "Couldn't read this aloud. Check the network or proxy.",
+  "downloadSpeech": "Download audio",
+  "downloadingSpeech": "Synthesizing {done}/{total}…",
+  "@downloadingSpeech": {
+    "placeholders": {
+      "done": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "audioSaved": "Audio saved",
+  "audioSaveFailed": "Couldn't save the audio. Check the network or proxy.",
+  "nothingToListen": "Nothing to read aloud.",
+  "translationCopied": "Translation copied",
+  "originalCopied": "Original copied",
+  "bilingualCopied": "Bilingual copy copied",
+  "originalBody": "Original",
+  "bodyUnavailable": "Couldn't load the article. Summary below — or open the original.",
+  "bodyFetchFailed": "Couldn't fetch the full article. The original site is still available.",
+  "bodyExcerptOnly": "Only the summary is available, not the full article. Open the original if you need more.",
+  "imageLoadFailed": "Image couldn't load",
+  "relatedSources": "{n} sources",
+  "@relatedSources": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "unreadCount": "{n} unread",
+  "@unreadCount": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "sourceFragile": "Fragile",
+  "settingsSectionAppearance": "Appearance",
+  "settingsSectionNetwork": "Network",
+  "useSystemProxy": "Use system proxy",
+  "proxyUrl": "HTTP proxy",
+  "proxyHint": "This app does not pick up Windows system proxy by default, which often breaks overseas RSS. Enable to read env vars and Windows proxy, or set Clash/V2Ray HTTP port such as 127.0.0.1:7890. SOCKS is not supported.",
+  "settingsSectionData": "Data",
+  "settingsSectionSources": "Sources",
+  "settingsSectionTranslate": "Chinese translation",
+  "autoTranslate": "Translate overseas titles and excerpts into Chinese",
+  "showOriginal": "Also show the English original",
+  "translationHint": "Uses Tencent Transmart by default (reachable in mainland China, no VPN). Add a DeepSeek or Qwen API key for more stable news-style wording.",
+  "translationApiKey": "API key (optional)",
+  "translationBaseUrl": "API base URL",
+  "translationModel": "Model",
+  "translating": "Translating overseas stories into Chinese…",
+  "relativeJustNow": "Just now",
+  "relativeMinutes": "{n} min ago",
+  "@relativeMinutes": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "relativeHours": "{n} hr ago",
+  "@relativeHours": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "relativeDays": "{n} days ago",
+  "@relativeDays": {
+    "placeholders": { "n": { "type": "int" } }
+  }
+}

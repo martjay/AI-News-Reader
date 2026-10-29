@@ -1,0 +1,176 @@
+{
+  "@@locale": "zh",
+  "appTitle": "新闻",
+  "appSubtitle": "AI 新闻",
+  "navToday": "今日",
+  "navSources": "来源",
+  "navSaved": "收藏",
+  "navMe": "我的",
+  "actionRefresh": "刷新",
+  "actionSearch": "搜索",
+  "actionSettings": "设置",
+  "actionSave": "收藏",
+  "actionUnsave": "取消收藏",
+  "actionMarkRead": "标为已读",
+  "actionOpenOriginal": "打开原文",
+  "actionShare": "分享",
+  "shareCopied": "标题和链接已复制",
+  "actionLanguage": "语言",
+  "actionTheme": "主题",
+  "themeLight": "浅色",
+  "themeDark": "深色",
+  "langZh": "中文",
+  "langEn": "English",
+  "fontSize": "正文字号",
+  "snapshotRepo": "快照仓库（owner/repo）",
+  "snapshotHint": "电脑会尽量直连海外源。手机使用内置快照；填仓库后可通过 jsDelivr 自动更新。",
+  "snapshotUrl": "自定义快照 URL",
+  "sourcesManage": "管理来源",
+  "sourcesEnabled": "已开启",
+  "emptyToday": "还没有条目。下拉刷新试试。",
+  "emptyFilter": "这个源暂时没有内容。换一个源或下拉刷新。",
+  "feedAll": "全部源",
+  "feedDomestic": "国内",
+  "feedWorld": "国际",
+  "regionDomestic": "国内新闻",
+  "regionWorld": "国际新闻",
+  "feedCount": "{n} 篇",
+  "@feedCount": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "emptySaved": "收藏的文章会出现在这里。",
+  "emptySearch": "没有匹配的标题或摘要。",
+  "emptyArticle": "从左侧选一篇。默认只显示摘要，需要时再获取全文。",
+  "emptySource": "这个源暂时没有内容。",
+  "errorPartial": "部分来源未能更新，已显示缓存。",
+  "errorNetwork": "网络不可达。已尽量使用本地缓存。",
+  "errorSnapshot": "快照地址无效或下载失败，已使用本地缓存。",
+  "errorTranslate": "翻译暂时失败，可稍后重试。",
+  "errorBody": "正文抓取失败，仍可打开原文。",
+  "refreshing": "正在更新…",
+  "lastUpdated": "更新于 {time}",
+  "@lastUpdated": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "unreadDot": "未读",
+  "searchHint": "搜索标题、摘要、正文",
+  "categoryLabs": "实验室",
+  "categoryChina": "国内媒体",
+  "categoryPapers": "论文",
+  "categoryIndustry": "产业",
+  "categoryGlobal": "国际",
+  "sourceFailed": "失败",
+  "sourceOk": "正常",
+  "aboutBody": "把分散的 AI 资讯收成一份今日报。国内源直连 RSS，海外源在电脑上直连、在手机上走快照。点开先看摘要，需要时再手动获取全文或翻译。",
+  "aboutTitle": "关于",
+  "authorQq": "作者 QQ",
+  "qqCopied": "QQ 号码已复制",
+  "cancel": "取消",
+  "done": "完成",
+  "openInBrowser": "用浏览器打开",
+  "noExcerpt": "这篇没有摘要，请打开原文阅读。",
+  "briefTitle": "今日要点",
+  "boardsTitle": "热榜",
+  "bySource": "按来源",
+  "sourcesReorderHint": "长按拖动调整顺序",
+  "markAllRead": "全部标为已读",
+  "newBadge": "新",
+  "readingBody": "正在取正文…",
+  "fetchFullText": "获取全文",
+  "refetchFullText": "重新获取",
+  "showSummary": "简介",
+  "showFullText": "显示全文",
+  "translateArticle": "翻译",
+  "translatingArticle": "正在翻译…",
+  "copyArticle": "复制",
+  "articleCopied": "标题和正文已复制",
+  "copyTranslation": "复制译文",
+  "copyOriginalText": "复制原文",
+  "copyBilingual": "复制双语",
+  "ttsVoicesZh": "中文朗读人",
+  "ttsVoicesEn": "英文朗读人",
+  "listenArticle": "朗读",
+  "stopListening": "停止",
+  "pauseSpeech": "暂停",
+  "resumeSpeech": "继续",
+  "preparingSpeech": "正在生成...",
+  "ttsChunkLabel": "第 {current}/{total} 段",
+  "@ttsChunkLabel": {
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "ttsChunkRemaining": "本段剩余 {time}",
+  "@ttsChunkRemaining": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "ttsPreparingChunk": "正在生成第 {current}/{total} 段…",
+  "@ttsPreparingChunk": {
+    "placeholders": {
+      "current": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "listenFailed": "朗读失败，请检查网络或代理。",
+  "downloadSpeech": "下载语音",
+  "downloadingSpeech": "正在合成 {done}/{total}…",
+  "@downloadingSpeech": {
+    "placeholders": {
+      "done": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "audioSaved": "语音已保存",
+  "audioSaveFailed": "保存语音失败，请检查网络或代理。",
+  "nothingToListen": "没有可朗读的内容。",
+  "translationCopied": "译文已复制",
+  "originalCopied": "原文已复制",
+  "bilingualCopied": "双语已复制",
+  "originalBody": "原文",
+  "bodyUnavailable": "正文暂时读不到，摘要如下。可打开原站。",
+  "bodyFetchFailed": "未能获取全文。可打开原站。",
+  "bodyExcerptOnly": "只拿到摘要，不是完整正文。可打开原站。",
+  "imageLoadFailed": "图片无法加载",
+  "relatedSources": "{n} 家来源",
+  "@relatedSources": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "unreadCount": "{n} 未读",
+  "@unreadCount": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "sourceFragile": "不稳定",
+  "settingsSectionAppearance": "外观",
+  "settingsSectionNetwork": "网络",
+  "useSystemProxy": "使用系统代理",
+  "proxyUrl": "手动代理（HTTP）",
+  "proxyHint": "Dart 默认不读 Windows 系统代理，海外 RSS 会直连失败。开启后读取环境变量和 Windows 代理；也可填 Clash/V2Ray 的 HTTP 端口，例如 127.0.0.1:7890。不支持 SOCKS。",
+  "settingsSectionData": "数据",
+  "settingsSectionSources": "来源",
+  "settingsSectionTranslate": "中文翻译",
+  "autoTranslate": "自动把海外标题和摘要译成中文",
+  "showOriginal": "同时显示英文原文",
+  "translationHint": "默认用腾讯交互翻译（国内可直连，无需代理）。填写 DeepSeek 或通义 API Key 后，译文会更稳、更像新闻口吻。",
+  "translationApiKey": "API Key（可选）",
+  "translationBaseUrl": "接口地址",
+  "translationModel": "模型名",
+  "translating": "正在把海外新闻译成中文…",
+  "relativeJustNow": "刚刚",
+  "relativeMinutes": "{n} 分钟前",
+  "@relativeMinutes": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "relativeHours": "{n} 小时前",
+  "@relativeHours": {
+    "placeholders": { "n": { "type": "int" } }
+  },
+  "relativeDays": "{n} 天前",
+  "@relativeDays": {
+    "placeholders": { "n": { "type": "int" } }
+  }
+}

@@ -1,0 +1,778 @@
+snapshot:
+  # Written by tools/apply_snapshot_repo.ps1 from config/snapshot.repo (owner/repo).
+  defaultUrl: "https://cdn.jsdelivr.net/gh/martjay/AI-News-Reader@main/data/snapshot.json"
+  assetPath: data/snapshot.json
+
+sources:
+  - id: aihot
+    name: AIHOT
+    nameEn: AIHOT
+    category: china
+    access: direct
+    type: rss
+    url: https://aihot.news/feed/all.xml
+    home: https://aihot.news/all
+    intervalMinutes: 10
+    enabled: true
+
+  - id: qbitai
+    name: 閲忓瓙浣?
+    nameEn: QbitAI
+    category: china
+    access: direct
+    type: rss
+    url: https://www.qbitai.com/feed
+    home: https://www.qbitai.com
+    intervalMinutes: 15
+    enabled: true
+
+  - id: jiqizhixin
+    name: 鏈哄櫒涔嬪績
+    nameEn: Synced
+    category: china
+    access: direct
+    type: rss
+    url: https://www.jiqizhixin.com/rss
+    fallbackUrl: https://rsshub.app/jiqizhixin
+    home: https://www.jiqizhixin.com
+    intervalMinutes: 30
+    fragile: true
+    enabled: true
+
+  - id: sspai
+    name: 灏戞暟娲?
+    nameEn: SSPAI
+    category: industry
+    access: direct
+    type: sspai
+    url: https://sspai.com/api/v1/article/tag/page/get?limit=30&offset=0&tag=%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0&released=false
+    home: https://sspai.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: juejin
+    name: 鎺橀噾
+    nameEn: Juejin
+    category: industry
+    access: direct
+    type: juejin
+    url: https://api.juejin.cn/content_api/v1/content/article_rank?category_id=1&type=hot&spider=0
+    home: https://juejin.cn
+    intervalMinutes: 20
+    enabled: true
+
+  - id: ithome
+    name: IT涔嬪
+    nameEn: ITHome
+    category: industry
+    access: direct
+    type: rss
+    url: https://www.ithome.com/rss/
+    home: https://www.ithome.com
+    intervalMinutes: 20
+    enabled: true
+
+  - id: solidot
+    name: Solidot
+    nameEn: Solidot
+    category: industry
+    access: direct
+    type: rss
+    url: https://www.solidot.org/index.rss
+    home: https://www.solidot.org
+    intervalMinutes: 30
+    enabled: true
+
+  - id: kr36
+    name: 36姘?
+    nameEn: 36Kr
+    category: industry
+    access: direct
+    type: kr36
+    url: https://gateway.36kr.com/api/mis/nav/home/nav/rank/hot
+    home: https://36kr.com
+    intervalMinutes: 20
+    enabled: true
+
+  - id: openai
+    name: OpenAI
+    nameEn: OpenAI
+    category: labs
+    access: snapshot
+    type: rss
+    url: https://openai.com/news/rss.xml
+    home: https://openai.com/news
+    intervalMinutes: 60
+    enabled: true
+
+  - id: deepmind
+    name: Google DeepMind
+    nameEn: Google DeepMind
+    category: labs
+    access: snapshot
+    type: rss
+    url: https://deepmind.google/blog/rss.xml
+    home: https://deepmind.google/blog
+    intervalMinutes: 60
+    enabled: true
+
+  - id: google_research
+    name: Google Research
+    nameEn: Google Research
+    category: labs
+    access: snapshot
+    type: rss
+    url: https://research.google/blog/rss/
+    home: https://research.google/blog
+    intervalMinutes: 60
+    enabled: true
+
+  - id: microsoft_ai
+    name: Microsoft AI
+    nameEn: Microsoft AI
+    category: labs
+    access: snapshot
+    type: rss
+    url: https://blogs.microsoft.com/ai/feed/
+    home: https://blogs.microsoft.com/ai
+    intervalMinutes: 60
+    enabled: true
+
+  - id: nvidia_dl
+    name: NVIDIA
+    nameEn: NVIDIA
+    category: labs
+    access: snapshot
+    type: rss
+    url: https://blogs.nvidia.com/blog/category/deep-learning/feed/
+    home: https://blogs.nvidia.com
+    intervalMinutes: 60
+    enabled: true
+
+  - id: hf_blog
+    name: Hugging Face
+    nameEn: Hugging Face
+    category: labs
+    access: snapshot
+    type: rss
+    url: https://huggingface.co/blog/feed.xml
+    home: https://huggingface.co/blog
+    intervalMinutes: 30
+    enabled: true
+
+  - id: hf_papers
+    name: HF Daily Papers
+    nameEn: HF Daily Papers
+    category: papers
+    access: snapshot
+    type: hf_papers
+    url: https://huggingface.co/api/daily_papers
+    home: https://huggingface.co/papers
+    intervalMinutes: 60
+    enabled: true
+
+  - id: arxiv_ai
+    name: arXiv cs.AI
+    nameEn: arXiv cs.AI
+    category: papers
+    access: snapshot
+    type: rss
+    url: https://rss.arxiv.org/rss/cs.AI
+    home: https://arxiv.org/list/cs.AI/recent
+    intervalMinutes: 60
+    enabled: true
+
+  - id: arxiv_cl
+    name: arXiv cs.CL
+    nameEn: arXiv cs.CL
+    category: papers
+    access: snapshot
+    type: rss
+    url: https://rss.arxiv.org/rss/cs.CL
+    home: https://arxiv.org/list/cs.CL/recent
+    intervalMinutes: 60
+    enabled: true
+
+  - id: arxiv_lg
+    name: arXiv cs.LG
+    nameEn: arXiv cs.LG
+    category: papers
+    access: snapshot
+    type: rss
+    url: https://rss.arxiv.org/rss/cs.LG
+    home: https://arxiv.org/list/cs.LG/recent
+    intervalMinutes: 60
+    enabled: true
+
+  - id: techcrunch_ai
+    name: TechCrunch AI
+    nameEn: TechCrunch AI
+    category: global
+    access: snapshot
+    type: rss
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    home: https://techcrunch.com/category/artificial-intelligence
+    intervalMinutes: 30
+    enabled: true
+
+  - id: venturebeat_ai
+    name: VentureBeat AI
+    nameEn: VentureBeat AI
+    category: global
+    access: snapshot
+    type: rss
+    url: https://venturebeat.com/category/ai/feed
+    home: https://venturebeat.com/category/ai
+    intervalMinutes: 30
+    enabled: true
+
+  - id: mittr_ai
+    name: MIT Tech Review
+    nameEn: MIT Technology Review
+    category: global
+    access: snapshot
+    type: rss
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+    home: https://www.technologyreview.com/topic/artificial-intelligence
+    intervalMinutes: 60
+    enabled: true
+
+  - id: marktechpost
+    name: MarkTechPost
+    nameEn: MarkTechPost
+    category: global
+    access: snapshot
+    type: rss
+    url: https://www.marktechpost.com/feed/
+    home: https://www.marktechpost.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: hn_ai
+    name: Hacker News AI
+    nameEn: Hacker News AI
+    category: global
+    access: snapshot
+    type: rss
+    url: https://hnrss.org/newest?q=AI
+    home: https://news.ycombinator.com
+    intervalMinutes: 15
+    enabled: true
+
+  - id: v2ex-share
+    name: V2EX
+    nameEn: V2EX
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.v2ex.com
+    home: https://v2ex.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: zhihu
+    name: 鐭ヤ箮鐑
+    nameEn: Zhihu
+    category: china
+    access: direct
+    type: hot
+    url: https://www.zhihu.com
+    home: https://www.zhihu.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: weibo
+    name: 寰崥鐑悳
+    nameEn: Weibo
+    category: china
+    access: direct
+    type: hot
+    url: https://s.weibo.com
+    home: https://weibo.com
+    intervalMinutes: 5
+    enabled: true
+
+  - id: zaobao
+    name: 鑱斿悎鏃╂姤
+    nameEn: Lianhe Zaobao
+    category: global
+    access: direct
+    type: hot
+    url: https://www.zaobao.com
+    home: https://www.zaobao.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: coolapk
+    name: 閰峰畨
+    nameEn: Coolapk
+    category: industry
+    access: direct
+    type: hot
+    url: https://coolapk.com
+    home: https://coolapk.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: mktnews-flash
+    name: MKTNews 蹇
+    nameEn: MKTNews
+    category: industry
+    access: direct
+    type: hot
+    url: https://mktnews.net
+    home: https://mktnews.net
+    intervalMinutes: 5
+    enabled: true
+
+  - id: wallstreetcn-quick
+    name: 鍗庡皵琛楄闂宦峰揩璁?
+    nameEn: WallstreetCN Live
+    category: industry
+    access: direct
+    type: hot
+    url: https://wallstreetcn.com
+    home: https://wallstreetcn.com
+    intervalMinutes: 5
+    enabled: true
+
+  - id: wallstreetcn-news
+    name: 鍗庡皵琛楄闂宦锋渶鏂?
+    nameEn: WallstreetCN News
+    category: industry
+    access: direct
+    type: hot
+    url: https://wallstreetcn.com
+    home: https://wallstreetcn.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: wallstreetcn-hot
+    name: 鍗庡皵琛楄闂宦锋渶鐑?
+    nameEn: WallstreetCN Hot
+    category: industry
+    access: direct
+    type: hot
+    url: https://wallstreetcn.com
+    home: https://wallstreetcn.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: 36kr-quick
+    name: 36姘揩璁?
+    nameEn: 36Kr Flash
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.36kr.com/newsflashes
+    home: https://36kr.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: 36kr-renqi
+    name: 36姘汉姘旀
+    nameEn: 36Kr Popular
+    category: industry
+    access: direct
+    type: hot
+    url: https://36kr.com
+    home: https://36kr.com
+    intervalMinutes: 20
+    enabled: true
+
+  - id: douyin
+    name: 鎶栭煶鐑悳
+    nameEn: Douyin
+    category: china
+    access: direct
+    type: hot
+    url: https://www.douyin.com
+    home: https://www.douyin.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: hupu
+    name: 铏庢墤鐑笘
+    nameEn: Hupu
+    category: china
+    access: direct
+    type: hot
+    url: https://bbs.hupu.com
+    home: https://hupu.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: dongqiudi
+    name: 鎳傜悆甯?
+    nameEn: Dongqiudi
+    category: china
+    access: direct
+    type: hot
+    url: https://www.dongqiudi.com
+    home: https://www.dongqiudi.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: tieba
+    name: 鐧惧害璐村惂
+    nameEn: Tieba
+    category: china
+    access: direct
+    type: hot
+    url: https://tieba.baidu.com
+    home: https://tieba.baidu.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: toutiao
+    name: 浠婃棩澶存潯
+    nameEn: Toutiao
+    category: china
+    access: direct
+    type: hot
+    url: https://www.toutiao.com
+    home: https://www.toutiao.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: thepaper
+    name: 婢庢箖鐑
+    nameEn: The Paper
+    category: china
+    access: direct
+    type: hot
+    url: https://www.thepaper.cn
+    home: https://www.thepaper.cn
+    intervalMinutes: 30
+    enabled: true
+
+  - id: sputniknewscn
+    name: 鍗槦閫氳绀?
+    nameEn: Sputnik
+    category: global
+    access: direct
+    type: hot
+    url: https://sputniknews.cn
+    home: https://sputniknews.cn
+    intervalMinutes: 20
+    enabled: true
+
+  - id: cankaoxiaoxi
+    name: 鍙傝€冩秷鎭?
+    nameEn: Cankao Xiaoxi
+    category: global
+    access: direct
+    type: hot
+    url: https://china.cankaoxiaoxi.com
+    home: https://china.cankaoxiaoxi.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: pcbeta-windows11
+    name: 杩滄櫙 Win11
+    nameEn: PCBeta Win11
+    category: industry
+    access: direct
+    type: hot
+    url: https://bbs.pcbeta.com
+    home: https://bbs.pcbeta.com
+    intervalMinutes: 10
+    fragile: true
+    enabled: true
+
+  - id: cls-telegraph
+    name: 璐㈣仈绀剧數鎶?
+    nameEn: CLS Telegraph
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.cls.cn
+    home: https://www.cls.cn
+    intervalMinutes: 5
+    enabled: true
+
+  - id: cls-depth
+    name: 璐㈣仈绀炬繁搴?
+    nameEn: CLS Depth
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.cls.cn
+    home: https://www.cls.cn
+    intervalMinutes: 20
+    enabled: true
+
+  - id: cls-hot
+    name: 璐㈣仈绀剧儹闂?
+    nameEn: CLS Hot
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.cls.cn
+    home: https://www.cls.cn
+    intervalMinutes: 20
+    enabled: true
+
+  - id: xueqiu-hotstock
+    name: 闆悆鐑偂
+    nameEn: Xueqiu
+    category: industry
+    access: direct
+    type: hot
+    url: https://xueqiu.com
+    home: https://xueqiu.com
+    intervalMinutes: 5
+    enabled: true
+
+  - id: gelonghui
+    name: 鏍奸殕姹?
+    nameEn: Gelonghui
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.gelonghui.com
+    home: https://www.gelonghui.com
+    intervalMinutes: 5
+    enabled: true
+
+  - id: fastbull-express
+    name: 娉曞竷蹇
+    nameEn: FastBull Express
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.fastbull.cn
+    home: https://www.fastbull.cn
+    intervalMinutes: 5
+    enabled: true
+
+  - id: fastbull-news
+    name: 娉曞竷澶存潯
+    nameEn: FastBull News
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.fastbull.cn
+    home: https://www.fastbull.cn
+    intervalMinutes: 30
+    enabled: true
+
+  - id: hackernews
+    name: Hacker News
+    nameEn: Hacker News
+    category: industry
+    access: snapshot
+    type: hot
+    url: https://news.ycombinator.com
+    home: https://news.ycombinator.com
+    intervalMinutes: 15
+    enabled: true
+
+  - id: producthunt
+    name: Product Hunt
+    nameEn: Product Hunt
+    category: industry
+    access: snapshot
+    type: hot
+    url: https://www.producthunt.com
+    home: https://www.producthunt.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: github-trending-today
+    name: GitHub Trending
+    nameEn: GitHub Trending
+    category: industry
+    access: snapshot
+    type: hot
+    url: https://github.com/trending
+    home: https://github.com
+    intervalMinutes: 60
+    enabled: true
+
+  - id: bilibili-hot-search
+    name: B绔欑儹鎼?
+    nameEn: Bilibili Search
+    category: china
+    access: direct
+    type: hot
+    url: https://www.bilibili.com
+    home: https://www.bilibili.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: bilibili-hot-video
+    name: B绔欑儹闂?
+    nameEn: Bilibili Hot
+    category: china
+    access: direct
+    type: hot
+    url: https://www.bilibili.com
+    home: https://www.bilibili.com
+    intervalMinutes: 20
+    enabled: true
+
+  - id: bilibili-ranking
+    name: B绔欐帓琛屾
+    nameEn: Bilibili Rank
+    category: china
+    access: direct
+    type: hot
+    url: https://www.bilibili.com
+    home: https://www.bilibili.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: kuaishou
+    name: 蹇墜鐑
+    nameEn: Kuaishou
+    category: china
+    access: direct
+    type: hot
+    url: https://www.kuaishou.com
+    home: https://www.kuaishou.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: kaopu
+    name: 闈犺氨鏂伴椈
+    nameEn: Kaopu
+    category: global
+    access: direct
+    type: hot
+    url: https://kaopu.news
+    home: https://kaopu.news
+    intervalMinutes: 30
+    enabled: true
+
+  - id: jin10
+    name: 閲戝崄鏁版嵁
+    nameEn: Jin10
+    category: industry
+    access: direct
+    type: hot
+    url: https://www.jin10.com
+    home: https://www.jin10.com
+    intervalMinutes: 5
+    enabled: true
+
+  - id: baidu
+    name: 鐧惧害鐑悳
+    nameEn: Baidu
+    category: china
+    access: direct
+    type: hot
+    url: https://www.baidu.com
+    home: https://www.baidu.com
+    intervalMinutes: 10
+    enabled: true
+
+  - id: nowcoder
+    name: 鐗涘
+    nameEn: Nowcoder
+    category: china
+    access: direct
+    type: hot
+    url: https://www.nowcoder.com
+    home: https://www.nowcoder.com
+    intervalMinutes: 15
+    enabled: true
+
+  - id: ifeng
+    name: 鍑ゅ嚢缃?
+    nameEn: Ifeng
+    category: china
+    access: direct
+    type: hot
+    url: https://www.ifeng.com
+    home: https://www.ifeng.com
+    intervalMinutes: 15
+    enabled: true
+
+  - id: chongbuluo-latest
+    name: 铏儴钀芥渶鏂?
+    nameEn: Chongbuluo Latest
+    category: china
+    access: direct
+    type: hot
+    url: https://www.chongbuluo.com
+    home: https://www.chongbuluo.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: chongbuluo-hot
+    name: 铏儴钀芥渶鐑?
+    nameEn: Chongbuluo Hot
+    category: china
+    access: direct
+    type: hot
+    url: https://www.chongbuluo.com
+    home: https://www.chongbuluo.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: douban
+    name: 璞嗙摚鐑棬鐢靛奖
+    nameEn: Douban Movies
+    category: china
+    access: direct
+    type: hot
+    url: https://movie.douban.com
+    home: https://www.douban.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: steam
+    name: Steam 鍦ㄧ嚎
+    nameEn: Steam
+    category: global
+    access: snapshot
+    type: hot
+    url: https://store.steampowered.com
+    home: https://store.steampowered.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: tencent-hot
+    name: 鑵捐鏂伴椈鏃╂姤
+    nameEn: Tencent News
+    category: china
+    access: direct
+    type: hot
+    url: https://news.qq.com
+    home: https://news.qq.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: freebuf
+    name: FreeBuf
+    nameEn: FreeBuf
+    category: china
+    access: direct
+    type: hot
+    url: https://www.freebuf.com
+    home: https://www.freebuf.com
+    intervalMinutes: 20
+    enabled: true
+
+  - id: qqvideo-tv-hotsearch
+    name: 鑵捐瑙嗛鐑悳
+    nameEn: QQ Video
+    category: china
+    access: direct
+    type: hot
+    url: https://v.qq.com
+    home: https://v.qq.com
+    intervalMinutes: 30
+    enabled: true
+
+  - id: iqiyi-hot-ranklist
+    name: 鐖卞鑹虹儹鎾?
+    nameEn: iQiyi
+    category: china
+    access: direct
+    type: hot
+    url: https://www.iqiyi.com
+    home: https://www.iqiyi.com
+    intervalMinutes: 30
+    enabled: true
