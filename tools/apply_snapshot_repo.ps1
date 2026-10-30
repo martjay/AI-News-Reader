@@ -12,11 +12,12 @@ if ($repo -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
   exit 1
 }
 $url = "https://cdn.jsdelivr.net/gh/$repo@main/data/snapshot.json"
-$text = Get-Content -Raw -Path $yamlPath
+$utf8 = New-Object System.Text.UTF8Encoding $false
+$text = [System.IO.File]::ReadAllText($yamlPath, $utf8)
 $updated = [regex]::Replace($text, '(?m)^  defaultUrl:.*$', "  defaultUrl: `"$url`"", 1)
 if ($updated -eq $text) {
   Write-Error 'Could not find snapshot.defaultUrl in config\sources.yaml'
   exit 1
 }
-[System.IO.File]::WriteAllText($yamlPath, $updated)
+[System.IO.File]::WriteAllText($yamlPath, $updated, $utf8)
 Write-Host "[OK] snapshot.defaultUrl -> $url"

@@ -93,8 +93,10 @@ exit /b 0
 set "DEST=%~1"
 set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
 if not exist "%VSWHERE%" exit /b 1
+set "CRT_LIST=%TEMP%\news-crt-path.txt"
+"%VSWHERE%" -latest -find "VC\Redist\MSVC\*\x64\Microsoft.VC14*.CRT\msvcp140.dll" > "%CRT_LIST%"
 set "CRT_DLL="
-for /f "usebackq delims=" %%i in (`"%VSWHERE%" -latest -find "VC\Redist\MSVC\*\x64\Microsoft.VC14*.CRT\msvcp140.dll"`) do set "CRT_DLL=%%i"
+set /p CRT_DLL=<"%CRT_LIST%"
 if not defined CRT_DLL exit /b 1
 for %%i in ("%CRT_DLL%") do set "CRT_DIR=%%~dpi"
 copy /Y "%CRT_DIR%msvcp140.dll" "%DEST%\" >nul
