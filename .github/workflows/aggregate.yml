@@ -1,0 +1,33 @@
+name: Aggregate news snapshot
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/sources.yaml"
+      - "tools/aggregator/**"
+      - "packages/news_core/**"
+      - ".github/workflows/aggregate.yml"
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 3.10.4
+      - name: Fetch snapshot sources
+        run: dart pub get && dart run bin/aggregator.dart
+        working-directory: tools/aggregator
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshot.json
+          git diff --staged --quiet || git commit -m "chore: refresh news snapshot"
+          git push

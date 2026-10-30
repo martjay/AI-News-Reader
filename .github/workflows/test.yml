@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 3.10.4
+      - name: news_core tests
+        run: dart pub get && dart test
+        working-directory: packages/news_core
+      - name: aggregator tests
+        run: dart pub get && dart test
+        working-directory: tools/aggregator
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: app tests
+        run: flutter pub get && flutter test
+        working-directory: app
