@@ -36,8 +36,16 @@ Future<void> main(List<String> args) async {
     fetcher.client.close();
   }
 
-  final snapshot = NewsSnapshot(generatedAt: DateTime.now().toUtc(), sources: results);
   final out = File('${root.path}/data/snapshot.json');
+  NewsSnapshot? previous;
+  if (out.existsSync()) {
+    try {
+      previous = NewsSnapshot.decode(out.readAsStringSync());
+    } catch (e) {
+      stderr.writeln('[WARN] Ignoring unreadable previous snapshot: $e');
+    }
+  }
+  final snapshot = mergeSnapshot(previous, results, DateTime.now().toUtc());
   out.parent.createSync(recursive: true);
   out.writeAsStringSync('${snapshot.encode()}\n');
   stdout.writeln('[OK] Wrote ${out.path}');

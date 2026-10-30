@@ -358,6 +358,56 @@ Markdown Content:
     expect(result.text.toLowerCase(), contains('word'));
   });
 
+  test('mergeSnapshot keeps previous items when this fetch is empty', () {
+    final previous = NewsSnapshot(
+      generatedAt: DateTime.utc(2026, 10, 29),
+      sources: {
+        'openai': SourceFetchResult(
+          sourceId: 'openai',
+          status: 'ok',
+          updatedAt: DateTime.utc(2026, 10, 29, 1),
+          items: const [
+            NewsItem(id: 'old', sourceId: 'openai', title: 'Old', url: 'https://openai.com/a'),
+          ],
+        ),
+        'empty-before': SourceFetchResult(
+          sourceId: 'empty-before',
+          status: 'error',
+          updatedAt: DateTime.utc(2026, 10, 29, 1),
+        ),
+      },
+    );
+    final fresh = {
+      'openai': SourceFetchResult(
+        sourceId: 'openai',
+        status: 'error',
+        updatedAt: DateTime.utc(2026, 10, 30),
+        error: 'timeout',
+      ),
+      'nvidia': SourceFetchResult(
+        sourceId: 'nvidia',
+        status: 'ok',
+        updatedAt: DateTime.utc(2026, 10, 30, 2),
+        items: const [
+          NewsItem(id: 'new', sourceId: 'nvidia', title: 'New', url: 'https://nvidia.com/b'),
+        ],
+      ),
+      'empty-before': SourceFetchResult(
+        sourceId: 'empty-before',
+        status: 'error',
+        updatedAt: DateTime.utc(2026, 10, 30),
+        error: 'HTTP 403',
+      ),
+    };
+    final merged = mergeSnapshot(previous, fresh, DateTime.utc(2026, 10, 30, 3));
+    expect(merged.sources['openai']!.status, 'stale');
+    expect(merged.sources['openai']!.items.single.id, 'old');
+    expect(merged.sources['openai']!.error, 'timeout');
+    expect(merged.sources['nvidia']!.items.single.id, 'new');
+    expect(merged.sources['empty-before']!.items, isEmpty);
+    expect(merged.sources['empty-before']!.status, 'error');
+  });
+
   test('fetchReadable returns empty when remote fails and seed is empty', () async {
     final client = FetchClient(
       client: MockClient((request) async => http.Response('blocked', 500)),

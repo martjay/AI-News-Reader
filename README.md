@@ -1,6 +1,6 @@
 # 新闻 / News
 
-Cross-platform **AI news reader** (Flutter): Android and Windows first, same codebase for iOS / macOS / Linux.
+AI news reader (Flutter). The same codebase can target other desktops and phones; the builds this repo ships are Windows and Android.
 
 Domestic RSS is fetched on the device. Overseas feeds are bundled as `data/snapshot.json` and can be refreshed from jsDelivr after you publish this repo.
 
@@ -29,7 +29,7 @@ Release APKs require `app/android/key.properties` and an upload keystore. `build
 ## Overseas snapshot (no VPN on the phone)
 
 1. The public repository is [martjay/AI-News-Reader](https://github.com/martjay/AI-News-Reader). `snapshot.defaultUrl` already points at its jsDelivr snapshot.
-2. GitHub Actions (`.github/workflows/aggregate.yml`) fetches snapshot sources every 30 minutes into `data/snapshot.json`.
+2. GitHub Actions (`.github/workflows/aggregate.yml`) fetches snapshot sources every 30 minutes into `data/snapshot.json`. A failed source keeps the previous items instead of publishing an empty list.
 3. In the app, open **Me** to override the snapshot repo. The default load is:
 
 `https://cdn.jsdelivr.net/gh/martjay/AI-News-Reader@main/data/snapshot.json`

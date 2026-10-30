@@ -112,10 +112,13 @@ class NewsController extends Notifier<NewsState> {
           enabled = pinPreferredSource(catalog.enabled.where((s) => !s.board).map((s) => s.id).toList());
         }
       } else {
-        for (final source in catalog.sources) {
-          if (seen.contains(source.id)) continue;
-          seen.add(source.id);
-        }
+        final adopted = adoptUnseenSources(
+          enabledSources: enabled,
+          seenSourceIds: seen,
+          sources: catalog.sources,
+        );
+        enabled = adopted.enabled;
+        seen = adopted.seen;
       }
       final order = settings.sourceOrder.isEmpty
           ? pinPreferredSource(enabled)

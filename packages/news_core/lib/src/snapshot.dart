@@ -45,3 +45,32 @@ class NewsSnapshot {
 
   String encode() => const JsonEncoder.withIndent('  ').convert(toJson());
 }
+
+/// Keeps the previous items when this fetch returned nothing.
+NewsSnapshot mergeSnapshot(
+  NewsSnapshot? previous,
+  Map<String, SourceFetchResult> fresh,
+  DateTime generatedAt,
+) {
+  final merged = <String, SourceFetchResult>{};
+  for (final entry in fresh.entries) {
+    final next = entry.value;
+    final old = previous?.sources[entry.key];
+    if (next.items.isNotEmpty) {
+      merged[entry.key] = next;
+      continue;
+    }
+    if (old != null && old.items.isNotEmpty) {
+      merged[entry.key] = SourceFetchResult(
+        sourceId: entry.key,
+        status: 'stale',
+        updatedAt: old.updatedAt,
+        items: old.items,
+        error: next.error,
+      );
+      continue;
+    }
+    merged[entry.key] = next;
+  }
+  return NewsSnapshot(generatedAt: generatedAt, sources: merged);
+}

@@ -11,6 +11,12 @@ class SourceFetcher {
   final FetchClient client;
 
   Future<SourceFetchResult> fetch(SourceDef source) async {
+    final first = await _fetchOnce(source);
+    if (first.items.isNotEmpty) return first;
+    return _fetchOnce(source);
+  }
+
+  Future<SourceFetchResult> _fetchOnce(SourceDef source) async {
     final started = DateTime.now();
     try {
       List<NewsItem> items;
