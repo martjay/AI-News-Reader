@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-07T15:48:58.495826Z",
+  "generatedAt": "2026-11-07T19:45:54.044206Z",
   "sources": {
     "openai": {
       "sourceId": "openai",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:49.905043Z",
+      "updatedAt": "2026-11-07T19:45:48.356919Z",
       "error": null,
       "items": [
         {
@@ -372,7 +372,7 @@
     "deepmind": {
       "sourceId": "deepmind",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:49.924047Z",
+      "updatedAt": "2026-11-07T19:45:48.378713Z",
       "error": null,
       "items": [
         {
@@ -740,7 +740,7 @@
     "google_research": {
       "sourceId": "google_research",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:49.924341Z",
+      "updatedAt": "2026-11-07T19:45:48.379108Z",
       "error": null,
       "items": [
         {
@@ -1108,14 +1108,14 @@
     "microsoft_ai": {
       "sourceId": "microsoft_ai",
       "status": "error",
-      "updatedAt": "2026-11-07T15:48:50.144157Z",
+      "updatedAt": "2026-11-07T19:45:48.770589Z",
       "error": "Exception: HTTP 410 for https://blogs.microsoft.com/ai/feed/",
       "items": []
     },
     "nvidia_dl": {
       "sourceId": "nvidia_dl",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:49.924500Z",
+      "updatedAt": "2026-11-07T19:45:48.379282Z",
       "error": null,
       "items": [
         {
@@ -1285,7 +1285,7 @@
     "hf_blog": {
       "sourceId": "hf_blog",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:49.924547Z",
+      "updatedAt": "2026-11-07T19:45:48.379331Z",
       "error": null,
       "items": [
         {
@@ -1653,7 +1653,7 @@
     "hf_papers": {
       "sourceId": "hf_papers",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.573427Z",
+      "updatedAt": "2026-11-07T19:45:49.240350Z",
       "error": null,
       "items": [
         {
@@ -3125,7 +3125,7 @@
     "techcrunch_ai": {
       "sourceId": "techcrunch_ai",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.574388Z",
+      "updatedAt": "2026-11-07T19:45:49.241116Z",
       "error": null,
       "items": [
         {
@@ -3313,14 +3313,14 @@
     "venturebeat_ai": {
       "sourceId": "venturebeat_ai",
       "status": "error",
-      "updatedAt": "2026-11-07T15:48:50.698781Z",
+      "updatedAt": "2026-11-07T19:45:49.402674Z",
       "error": "Exception: HTTP 429 for https://venturebeat.com/category/ai/feed",
       "items": []
     },
     "mittr_ai": {
       "sourceId": "mittr_ai",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.735798Z",
+      "updatedAt": "2026-11-07T19:45:49.446803Z",
       "error": null,
       "items": [
         {
@@ -3418,7 +3418,7 @@
     "marktechpost": {
       "sourceId": "marktechpost",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.735951Z",
+      "updatedAt": "2026-11-07T19:45:49.447041Z",
       "error": null,
       "items": [
         {
@@ -3516,16 +3516,169 @@
     "hn_ai": {
       "sourceId": "hn_ai",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.736006Z",
+      "updatedAt": "2026-11-07T19:45:49.447097Z",
       "error": null,
       "items": [
         {
-          "id": "735e32a0b4d77f816a2af7722d93057e3f1a8696f43a53b026c65084d95ffdf3",
+          "id": "eb938b7002c17f1ea34d97fab0224f2042c628165120ca1429fd06cc17c209a4",
           "sourceId": "hn_ai",
-          "title": "Let's Encrypt AI: protect AI chats with on AI GPUs by the end of 2027",
-          "url": "https://letsencrypt.ai/",
-          "summary": "Article URL: https://letsencrypt.ai/ Comments URL: https://news.ycombinator.com/item?id=50405484 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T15:43:43.000Z",
+          "title": "RigHaven – Self-hosted execution harness for AI agents",
+          "url": "https://github.com/ggmm82/righaven",
+          "summary": "Article URL: https://github.com/ggmm82/righaven Comments URL: https://news.ycombinator.com/item?id=50407370 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T19:40:06.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "509cb6b7135b0155c165736290c12a4c5484fd60fb89cd09864dcb46f39ae5f5",
+          "sourceId": "hn_ai",
+          "title": "Context compaction recovery for AI coding agents: six checks, not a summary",
+          "url": "https://tobiasuhlig.medium.com/context-compaction-recovery-for-ai-coding-agents-six-checks-not-a-summary-4eb9a1d458b7",
+          "summary": "Article URL: https://tobiasuhlig.medium.com/context-compaction-recovery-for-ai-coding-agents-six-checks-not-a-summary-4eb9a1d458b7 Comments URL: https://news.ycombinator.com/item?id=50407338 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T19:36:59.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "800b9ccfc7902c9f411412379350f160525cf5aba41e3844d71626c1304da53e",
+          "sourceId": "hn_ai",
+          "title": "Why AI Will Not End Scholarly Publishing (and the Publish-or-Perish Institution)",
+          "url": "https://nicolaijfoss.substack.com/p/why-ai-will-not-end-scholarly-publishing",
+          "summary": "Article URL: https://nicolaijfoss.substack.com/p/why-ai-will-not-end-scholarly-publishing Comments URL: https://news.ycombinator.com/item?id=50407257 Points: 1 # Comments: 1",
+          "pubDate": "2026-11-07T19:29:29.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "0ecb181e73053e0958748ab5f4395e0d1d3abf4099fbe74880a704af9e374310",
+          "sourceId": "hn_ai",
+          "title": "Day AI: Context Graph and Agent Control Plane for GTM",
+          "url": "https://day.ai/",
+          "summary": "Article URL: https://day.ai/ Comments URL: https://news.ycombinator.com/item?id=50407219 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T19:24:33.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "c662d4f7187ccd1cf152a91289f78c1974db9920d17e5168042f41fc8195dcd3",
+          "sourceId": "hn_ai",
+          "title": "Some thoughts on AI, scientific papers, and peer review",
+          "url": "https://www.alekpetty.com/blog/ai_in_science.html",
+          "summary": "Article URL: https://www.alekpetty.com/blog/ai_in_science.html Comments URL: https://news.ycombinator.com/item?id=50407043 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-07T19:01:37.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "7f248188dc997fb363445c6a816890c67efd3c82921a19f45d5105d50c347ea8",
+          "sourceId": "hn_ai",
+          "title": "AI Promoted Everybody. Architecture as Truth (AAT) Is the New Job",
+          "url": "https://www.puglieseweb.com/blog/architecture-as-truth",
+          "summary": "Article URL: https://www.puglieseweb.com/blog/architecture-as-truth Comments URL: https://news.ycombinator.com/item?id=50406831 Points: 4 # Comments: 0",
+          "pubDate": "2026-11-07T18:37:04.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "6144f0020de2caf4344bbcce706ff69e4969af6731944062c95c24ec7435cce0",
+          "sourceId": "hn_ai",
+          "title": "Gradual disempowerment model organism: Frontier AI labs",
+          "url": "https://www.lesswrong.com/posts/jbttuCF4wFZmXakcj/the-world-s-best-gradual-disempowerment-model-organism",
+          "summary": "Article URL: https://www.lesswrong.com/posts/jbttuCF4wFZmXakcj/the-world-s-best-gradual-disempowerment-model-organism Comments URL: https://news.ycombinator.com/item?id=50406802 Points: 3 # Comments: 0",
+          "pubDate": "2026-11-07T18:32:04.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "0ea23d14b40fffb9d612cd5b130b6c89faae7bbcabd300e03a68486a774b6a5b",
+          "sourceId": "hn_ai",
+          "title": "Chatty – Open-source autonomous AI chat agent with tool calling",
+          "url": "https://github.com/PersonaliAI/chatty",
+          "summary": "Article URL: https://github.com/PersonaliAI/chatty Comments URL: https://news.ycombinator.com/item?id=50406794 Points: 3 # Comments: 0",
+          "pubDate": "2026-11-07T18:31:32.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "77cba6ca61192015804bf1efa97cdb77f1e11eb39f33f09be5122afe508852b8",
+          "sourceId": "hn_ai",
+          "title": "The End of AI Frontiers",
+          "url": "https://hunch.net/?p=13764006",
+          "summary": "Article URL: https://hunch.net/?p=13764006 Comments URL: https://news.ycombinator.com/item?id=50406589 Points: 80 # Comments: 1",
+          "pubDate": "2026-11-07T18:04:07.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "77cba6ca61192015804bf1efa97cdb77f1e11eb39f33f09be5122afe508852b8",
+          "sourceId": "hn_ai",
+          "title": "The end of Microsoft Research's AI Frontiers group",
+          "url": "https://hunch.net/?p=13764006",
+          "summary": "https://archive.is/AaY5O https://businessexaminer.ca/victoria-articles/item/microsoft... Comments URL: https://news.ycombinator.com/item?id=50406563 Points: 122 # Comments: 63",
+          "pubDate": "2026-11-07T18:02:17.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "83b358c5f286203417cfb83226a786717101440d1023190b3fb0a0126ff75d7a",
+          "sourceId": "hn_ai",
+          "title": "Infinix – Abandoned Local AI Agent Base Seeking Developers",
+          "url": "https://github.com/Moonyeep/Infinix",
+          "summary": "Article URL: https://github.com/Moonyeep/Infinix Comments URL: https://news.ycombinator.com/item?id=50406499 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T17:54:37.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "76386953781126e16faae49f1532ce7870d8ae2a1a84f385f0b314451fac751a",
+          "sourceId": "hn_ai",
+          "title": "AI tools I use (avg software developer)",
+          "url": "https://fredrikmeyer.net/2026/11/07/how-i-use-ai-2026.html",
+          "summary": "Article URL: https://fredrikmeyer.net/2026/11/07/how-i-use-ai-2026.html Comments URL: https://news.ycombinator.com/item?id=50406494 Points: 2 # Comments: 1",
+          "pubDate": "2026-11-07T17:53:47.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "ac26f977ccdbe217a9fc25ef79503b370c76993d572ddc40d01e809751dd4fee",
+          "sourceId": "hn_ai",
+          "title": "Structify: AI apps built on a manufacturer's ERP data",
+          "url": "https://www.structify.ai",
+          "summary": "Article URL: https://www.structify.ai Comments URL: https://news.ycombinator.com/item?id=50406460 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T17:49:09.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "4b42a42fd90e318cc1f1b6bcc4a63d0dbca9265b1b4a35152c41e886da53462b",
+          "sourceId": "hn_ai",
+          "title": "Tell HN: Hanzo AI Is Spamming From GitHub Contributions",
+          "url": "https://news.ycombinator.com/item?id=50406105",
+          "summary": "Email received: Hey $name, Wanted to invite you to the Hanzo beta — we're looking for top open-source devs to help us shape the future of agentic AI. Join the beta: https://hanzo[.]app/beta I was checking out your open-source work on s3tools/s3cmd (especially what you've been building with Open-Source AI / ML) — really impressive engineering. We've been exploring autonomous decision systems and tool-use agents and would love your input. Let me know if you'd like to hop on a quick call, we're trying to speak with as many builders as we can: https://cal[.]com/antje-worring Warmly, Antje Worring Co-CEO, Hanzo AI GitHub: https://github[.]com/zooqueen LinkedIn: https://www.linkedin[.]com/in/antje-worring/ Hanzo AI, Inc. · 1 Ferry Building, Suite 201, San Francisco, CA 94111 Unsubscribe: https://hanzo[.]app/unsubscribe Reply 'stop' to opt out (I have not participated in the repo in question in over a decade) Comments URL: https://news.ycombinator.com/item?id=50406105 Points: 3 # Comments: 0",
+          "pubDate": "2026-11-07T17:06:04.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "a4b2dd8edee2f22f3bb17a71d29c68c51013e1ed08b3e6ce28fd10d5d11d65b2",
+          "sourceId": "hn_ai",
+          "title": "Show HN: Trendalyse – Explore Ideas with Google Trends and AI",
+          "url": "https://trendalyse.com/",
+          "summary": "Article URL: https://trendalyse.com/ Comments URL: https://news.ycombinator.com/item?id=50406012 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T16:54:58.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "2f95c7b8ede095e116c14a7757a2e41bfaed22fd12c11c09512cfaffb0911293",
+          "sourceId": "hn_ai",
+          "title": "Show HN: AIVim – an open-source, Vim-inspired AI editor",
+          "url": "https://news.ycombinator.com/item?id=50405893",
+          "summary": "I thought it would be cool to have a modern, Vim-inspired editor with AI, so I built AIVim. Just revamped it. Try it in an isolated Python environment with Ollama or a hosted API. Fast token generation makes the interaction feel responsive. Comments URL: https://news.ycombinator.com/item?id=50405893 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T16:39:45.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "00ada6c7824f24bf19c8bb0394147779642e83ebed3db9898f3ecd48d28cd94d",
+          "sourceId": "hn_ai",
+          "title": "Measuring how AI agents handle everyday wet-lab science",
+          "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/",
+          "summary": "Article URL: https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/ Comments URL: https://news.ycombinator.com/item?id=50405821 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-07T16:28:42.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "5a7b338af1d0bbc0703942e630e2cbaba9baf7b173a94768fcf7cfd42b409e42",
+          "sourceId": "hn_ai",
+          "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+          "url": "https://0rwx.com/",
+          "summary": "Article URL: https://0rwx.com/ Comments URL: https://news.ycombinator.com/item?id=50405734 Points: 8 # Comments: 1",
+          "pubDate": "2026-11-07T16:14:29.000Z",
           "extraSourceIds": []
         },
         {
@@ -3533,7 +3686,7 @@
           "sourceId": "hn_ai",
           "title": "Using AI should be joyful",
           "url": "https://12gramsofcarbon.com/p/agentics-using-ai-should-be-joyful",
-          "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-using-ai-should-be-joyful Comments URL: https://news.ycombinator.com/item?id=50405439 Points: 1 # Comments: 0",
+          "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-using-ai-should-be-joyful Comments URL: https://news.ycombinator.com/item?id=50405439 Points: 2 # Comments: 2",
           "pubDate": "2026-11-07T15:37:42.000Z",
           "extraSourceIds": []
         },
@@ -3545,167 +3698,14 @@
           "summary": "Article URL: https://www.uber.com/us/en/blog/securing-ai-agents/ Comments URL: https://news.ycombinator.com/item?id=50405330 Points: 2 # Comments: 0",
           "pubDate": "2026-11-07T15:23:58.000Z",
           "extraSourceIds": []
-        },
-        {
-          "id": "6f06aab4b95f2c31dfe7ccc936f9749a09f5ec85dba71e80e3f67b0aded3f97a",
-          "sourceId": "hn_ai",
-          "title": "Honeycomb Team Agents: AI SRE Done Right",
-          "url": "https://www.honeycomb.io/blog/honeycomb-team-agents-ai-sre-done-right",
-          "summary": "Article URL: https://www.honeycomb.io/blog/honeycomb-team-agents-ai-sre-done-right Comments URL: https://news.ycombinator.com/item?id=50405124 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T14:59:40.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "21615214c81fb0a034fbb61d222426c1bd138f43e328ab6b85a29736e6a165f5",
-          "sourceId": "hn_ai",
-          "title": "Google AI's Opinions on How Ansible Has Changed",
-          "url": "https://laserllama.substack.com/p/google-ais-opinions-on-how-ansible",
-          "summary": "Article URL: https://laserllama.substack.com/p/google-ais-opinions-on-how-ansible Comments URL: https://news.ycombinator.com/item?id=50405050 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T14:52:24.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "e9bee2cdc32d296f8093461ae0774a139b3a011ead6889327460fa2bf7ed1e3a",
-          "sourceId": "hn_ai",
-          "title": "AI agents are getting more complex. Developers shouldn't have to babysit them",
-          "url": "https://thenewstack.io/harness-engineering-coding-agents/",
-          "summary": "Article URL: https://thenewstack.io/harness-engineering-coding-agents/ Comments URL: https://news.ycombinator.com/item?id=50404938 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T14:39:40.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "d6add5a83d8d5ba0932f928cd915741e519a6a212e504c650a4996afda4b278e",
-          "sourceId": "hn_ai",
-          "title": "Show HN: Image to Image AI: Free AI Image Editor Online – Tancky AI",
-          "url": "https://tancky.io/",
-          "summary": "Article URL: https://tancky.io/ Comments URL: https://news.ycombinator.com/item?id=50404825 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T14:26:11.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "bbfb56df5a19e4614ae3311ceb94ce72f71bf3aadd70edbc3118c239a07b68fd",
-          "sourceId": "hn_ai",
-          "title": "AI can track a single bird over time–based solely on its song",
-          "url": "https://www.science.org/content/article/ai-can-track-single-bird-over-time-based-solely-its-song",
-          "summary": "Article URL: https://www.science.org/content/article/ai-can-track-single-bird-over-time-based-solely-its-song Comments URL: https://news.ycombinator.com/item?id=50404785 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-07T14:22:36.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "4ab6f87c783435dba6d4124118c0cb7bab05315943ca4df2cab87ce746c9ae2f",
-          "sourceId": "hn_ai",
-          "title": "I don't care if web content is AI-generated",
-          "url": "https://kevinboone.me/ai.html",
-          "summary": "Article URL: https://kevinboone.me/ai.html Comments URL: https://news.ycombinator.com/item?id=50404622 Points: 14 # Comments: 10",
-          "pubDate": "2026-11-07T14:02:56.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "4801a1245ccfa5ba27beda809049392f7d1a094a4b95d8b27de592ca5242e66d",
-          "sourceId": "hn_ai",
-          "title": "Former Meta Security Chief Calls Password Access for AI Agents 'Insane'",
-          "url": "https://epyhia.com/meta-launches-muse-ai-spaces-former-security-chief-calls-password",
-          "summary": "Article URL: https://epyhia.com/meta-launches-muse-ai-spaces-former-security-chief-calls-password Comments URL: https://news.ycombinator.com/item?id=50404588 Points: 3 # Comments: 0",
-          "pubDate": "2026-11-07T13:59:07.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "ee3d4005190cd634ed97070b0578c78356771b97908d7c70591942d8699b0fff",
-          "sourceId": "hn_ai",
-          "title": "Show HN: I made a guardrail against AI outreach slop (API/MCP)",
-          "url": "https://maildignity.com/",
-          "summary": "Article URL: https://maildignity.com/ Comments URL: https://news.ycombinator.com/item?id=50404494 Points: 5 # Comments: 0",
-          "pubDate": "2026-11-07T13:48:09.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "533e3d6e035e0c4c3569b4bf639240a26159abbe3f543763570aa876ac7415f9",
-          "sourceId": "hn_ai",
-          "title": "Why does America hate AI?",
-          "url": "https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232",
-          "summary": "Article URL: https://www.ft.com/content/af97585a-3381-42a9-838b-9a205ab81232 Comments URL: https://news.ycombinator.com/item?id=50404484 Points: 3 # Comments: 2",
-          "pubDate": "2026-11-07T13:46:27.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "9a61e49ca5afa19c22387527840c1d4fe94c3e08ca7a96ec3ca5d1b232d025c2",
-          "sourceId": "hn_ai",
-          "title": "AI Santa Video Generator – Personalized Santa Videos",
-          "url": "https://aisantavideo.net",
-          "summary": "Article URL: https://aisantavideo.net Comments URL: https://news.ycombinator.com/item?id=50404445 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-07T13:38:30.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "91345328a39b3e00377f764a586779acfaff3393fff56e96f87c980673b999f8",
-          "sourceId": "hn_ai",
-          "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
-          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
-          "summary": "Article URL: https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/ Comments URL: https://news.ycombinator.com/item?id=50404412 Points: 2 # Comments: 1",
-          "pubDate": "2026-11-07T13:31:42.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "3b8a0f2c74e75f9fbcdb33769d4face325aff70eabb8d0ddcc5e866ad9e632ca",
-          "sourceId": "hn_ai",
-          "title": "Baidu Hit with Securities Fraud Class Action over AI Growth Claims",
-          "url": "https://epyhia.com/baidu-hit-with-securities-fraud-class-action-over-ai-growth-claims",
-          "summary": "Article URL: https://epyhia.com/baidu-hit-with-securities-fraud-class-action-over-ai-growth-claims Comments URL: https://news.ycombinator.com/item?id=50404378 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T13:25:34.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "29afe243b1df5d4b807abf7e54c777ef80607fe54899b6321fef1233daf41ea5",
-          "sourceId": "hn_ai",
-          "title": "AI is turning protectionists into free traders",
-          "url": "https://www.economist.com/finance-and-economics/2026/11/05/ai-is-turning-protectionists-into-free-traders",
-          "summary": "Article URL: https://www.economist.com/finance-and-economics/2026/11/05/ai-is-turning-protectionists-into-free-traders Comments URL: https://news.ycombinator.com/item?id=50404341 Points: 3 # Comments: 0",
-          "pubDate": "2026-11-07T13:20:23.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "5bee89cc071947323c85274e44398c97448ca3466e3a8437d097493ca641f65e",
-          "sourceId": "hn_ai",
-          "title": "Post-AI Computer Science – Volume 4",
-          "url": "https://thingspool.net/shards-of-sanity/page-4.html",
-          "summary": "Article URL: https://thingspool.net/shards-of-sanity/page-4.html Comments URL: https://news.ycombinator.com/item?id=50404332 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T13:19:33.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "862fe8e8636c490fda7bf65ca200ad4064119795e879547ce03dd0c993df6f88",
-          "sourceId": "hn_ai",
-          "title": "The Joy of Coding Is Gone: My Honest Take on AI",
-          "url": "https://www.youtube.com/watch?v=gIvVjepvdMg",
-          "summary": "Article URL: https://www.youtube.com/watch?v=gIvVjepvdMg Comments URL: https://news.ycombinator.com/item?id=50404279 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-07T13:11:50.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "7c3ccee9ecbf236496516afa7d31a8d2369d6b2915749f7cfe7d3e91c7baa1fe",
-          "sourceId": "hn_ai",
-          "title": "AI is a technological version of the Homeric songs",
-          "url": "https://www.economist.com/by-invitation/2026/10/28/ai-is-a-technological-version-of-the-homeric-songs",
-          "summary": "Article URL: https://www.economist.com/by-invitation/2026/10/28/ai-is-a-technological-version-of-the-homeric-songs Comments URL: https://news.ycombinator.com/item?id=50404100 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T12:48:07.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "977dba9e40ee7407f91101345289e04dd51ab65dc569ebbf18ca6b0630547da6",
-          "sourceId": "hn_ai",
-          "title": "Climate skeptics used AI to review their work. It told them they were biased",
-          "url": "https://thebulletin.org/2026/10/climate-skeptics-used-ai-to-review-their-work-it-told-them-they-were-biased/",
-          "summary": "Article URL: https://thebulletin.org/2026/10/climate-skeptics-used-ai-to-review-their-work-it-told-them-they-were-biased/ Comments URL: https://news.ycombinator.com/item?id=50404051 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-07T12:40:05.000Z",
-          "extraSourceIds": []
         }
       ]
     },
     "hackernews": {
       "sourceId": "hackernews",
-      "status": "ok",
+      "status": "stale",
       "updatedAt": "2026-11-07T15:48:50.736047Z",
-      "error": null,
+      "error": "Exception: HTTP 502 for https://hnrss.org/frontpage?count=30",
       "items": [
         {
           "id": "7e9e9424e8bdab4a0fa7c2ce038d81888bacfe55cb8ad7184360c7049cf68ff0",
@@ -3982,9 +3982,189 @@
     "producthunt": {
       "sourceId": "producthunt",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.737089Z",
+      "updatedAt": "2026-11-07T19:45:49.448435Z",
       "error": null,
       "items": [
+        {
+          "id": "4e4537ea29781e48161986540bd42de6e16640e0ccbfb845b73b839a10d75d95",
+          "sourceId": "producthunt",
+          "title": "Fleeep",
+          "url": "https://www.producthunt.com/products/fleeep",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "1aa747c8186fcf11ef2e34d882146e73f40003537601aa096546a9a876c31fe4",
+          "sourceId": "producthunt",
+          "title": "Deal Pilot",
+          "url": "https://www.producthunt.com/products/deal-pilot",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7f563499c67bf5e8cea0de5cf60863e75b6e39949c0432aac1955bbd79b8c20a",
+          "sourceId": "producthunt",
+          "title": "Exa Monitors v2",
+          "url": "https://www.producthunt.com/products/exa-ai",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "ccc63b9c68102a8ed188704c685b62d917021f9386fce63b747d6c11e4ad4750",
+          "sourceId": "producthunt",
+          "title": "Switchy",
+          "url": "https://www.producthunt.com/products/switchy",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6a80f017801c69542a5b467f792fb67a2cb582bbf39c7397af0c133f96f3ae4a",
+          "sourceId": "producthunt",
+          "title": "Trace by Context.dev",
+          "url": "https://www.producthunt.com/products/context-dev",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2d2c7a02101241fdcbcf55ae6400f7f01991620a5f4a6230f6cf46cb44661a0b",
+          "sourceId": "producthunt",
+          "title": "Rex (Beta)",
+          "url": "https://www.producthunt.com/products/superlogical",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7be906e4196e1edae13e347269109ffb861596172d9a4b3baa9acbf2d732bf23",
+          "sourceId": "producthunt",
+          "title": "Sendoff",
+          "url": "https://www.producthunt.com/products/sendoff-2",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7ac7e1b629ac99e2231ec8483ff5cab5f593c8e5515654442c8adbb5b824a16a",
+          "sourceId": "producthunt",
+          "title": "kayet",
+          "url": "https://www.producthunt.com/products/kayet",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b863ca506df49f58350d8ed8655b069d6545606097a4860ce6f357eebb8d547d",
+          "sourceId": "producthunt",
+          "title": "Duly",
+          "url": "https://www.producthunt.com/products/duly-life-organizer",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "97636b6d4cc409e31336141e7bb2e008aab272000df745287ef3cbb858d292e8",
+          "sourceId": "producthunt",
+          "title": "ChatGPT Images 2.6",
+          "url": "https://www.producthunt.com/products/openai",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "555b4e2423b269bce69fa39ba1ff3bcaabb1076fa44bce4620e76635ef6a0efe",
+          "sourceId": "producthunt",
+          "title": "ClarifierAI for Chrome",
+          "url": "https://www.producthunt.com/products/clarifierai-rewrite-text-2",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "97636b6d4cc409e31336141e7bb2e008aab272000df745287ef3cbb858d292e8",
+          "sourceId": "producthunt",
+          "title": "GPT‑6 Cyber",
+          "url": "https://www.producthunt.com/products/openai",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "e5d4cf1d8bdf9433285675f9d2478335d4ac5eee773b8f29ecc866ce2b8f5937",
+          "sourceId": "producthunt",
+          "title": "Google Omni 1.2 Flash",
+          "url": "https://www.producthunt.com/products/google-omni-1-2-flash",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "5f3ba8a345632d20f9799d957e793fcbb253a2027cb391210babfa2d11d09b85",
+          "sourceId": "producthunt",
+          "title": "Instagram Edits for Desktop",
+          "url": "https://www.producthunt.com/products/instagram",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "cb00c1800a1b033531766038b2bb59fa04ae7632f74dca2556ac26e41de0fd9c",
+          "sourceId": "producthunt",
+          "title": "seam",
+          "url": "https://www.producthunt.com/products/seam-2",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f0f1fce4af311c58f7260d43ba09d17fc94248f9c45508b575e89611934cfbc4",
+          "sourceId": "producthunt",
+          "title": "Capnot",
+          "url": "https://www.producthunt.com/products/capnot",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "92e65bd7fc8fb5ce1b5f74ae6402f50559c8cd259a9e46353b3117f7879734d3",
+          "sourceId": "producthunt",
+          "title": "PacerTrip",
+          "url": "https://www.producthunt.com/products/pacertrip",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2e0f60065e353f0468a3d3a67cdc91d167d8f90778397bf5951b6cc120a48409",
+          "sourceId": "producthunt",
+          "title": "Dino Kids",
+          "url": "https://www.producthunt.com/products/dino-kids",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "41790fdea102b08c260a7658807c2f3aa212c618c7ca78184b45995dbb2a60ec",
+          "sourceId": "producthunt",
+          "title": "Standflow",
+          "url": "https://www.producthunt.com/products/standflow",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7391d45179f2c32b6c54f993248b89ef3a4fc838a4b18e4b7648b1b1b37ec586",
+          "sourceId": "producthunt",
+          "title": "Muse Realtime Avatar",
+          "url": "https://www.producthunt.com/products/meta-ai",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
         {
           "id": "3470808fd7e7994d4b395b66910a0c76e32a1e56e9e04106e69219392de44588",
           "sourceId": "producthunt",
@@ -4004,145 +4184,10 @@
           "extraSourceIds": []
         },
         {
-          "id": "e5d4cf1d8bdf9433285675f9d2478335d4ac5eee773b8f29ecc866ce2b8f5937",
+          "id": "a7613e7830da70bff5859659beed3a8cbd4787aaffa79f1cca788b5ba8faaa83",
           "sourceId": "producthunt",
-          "title": "Google Omni 1.2 Flash",
-          "url": "https://www.producthunt.com/products/google-omni-1-2-flash",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f0f1fce4af311c58f7260d43ba09d17fc94248f9c45508b575e89611934cfbc4",
-          "sourceId": "producthunt",
-          "title": "Capnot",
-          "url": "https://www.producthunt.com/products/capnot",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "5f3ba8a345632d20f9799d957e793fcbb253a2027cb391210babfa2d11d09b85",
-          "sourceId": "producthunt",
-          "title": "Instagram Edits for Desktop",
-          "url": "https://www.producthunt.com/products/instagram",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "92e65bd7fc8fb5ce1b5f74ae6402f50559c8cd259a9e46353b3117f7879734d3",
-          "sourceId": "producthunt",
-          "title": "PacerTrip",
-          "url": "https://www.producthunt.com/products/pacertrip",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "41790fdea102b08c260a7658807c2f3aa212c618c7ca78184b45995dbb2a60ec",
-          "sourceId": "producthunt",
-          "title": "Standflow",
-          "url": "https://www.producthunt.com/products/standflow",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "97636b6d4cc409e31336141e7bb2e008aab272000df745287ef3cbb858d292e8",
-          "sourceId": "producthunt",
-          "title": "ChatGPT Images 2.6",
-          "url": "https://www.producthunt.com/products/openai",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7391d45179f2c32b6c54f993248b89ef3a4fc838a4b18e4b7648b1b1b37ec586",
-          "sourceId": "producthunt",
-          "title": "Muse Realtime Avatar",
-          "url": "https://www.producthunt.com/products/meta-ai",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "4e4537ea29781e48161986540bd42de6e16640e0ccbfb845b73b839a10d75d95",
-          "sourceId": "producthunt",
-          "title": "Fleeep",
-          "url": "https://www.producthunt.com/products/fleeep",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2e0f60065e353f0468a3d3a67cdc91d167d8f90778397bf5951b6cc120a48409",
-          "sourceId": "producthunt",
-          "title": "Dino Kids",
-          "url": "https://www.producthunt.com/products/dino-kids",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6a80f017801c69542a5b467f792fb67a2cb582bbf39c7397af0c133f96f3ae4a",
-          "sourceId": "producthunt",
-          "title": "Trace by Context.dev",
-          "url": "https://www.producthunt.com/products/context-dev",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cb00c1800a1b033531766038b2bb59fa04ae7632f74dca2556ac26e41de0fd9c",
-          "sourceId": "producthunt",
-          "title": "seam",
-          "url": "https://www.producthunt.com/products/seam-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7f563499c67bf5e8cea0de5cf60863e75b6e39949c0432aac1955bbd79b8c20a",
-          "sourceId": "producthunt",
-          "title": "Exa Monitors v2",
-          "url": "https://www.producthunt.com/products/exa-ai",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "97636b6d4cc409e31336141e7bb2e008aab272000df745287ef3cbb858d292e8",
-          "sourceId": "producthunt",
-          "title": "GPT‑6 Cyber",
-          "url": "https://www.producthunt.com/products/openai",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2d2c7a02101241fdcbcf55ae6400f7f01991620a5f4a6230f6cf46cb44661a0b",
-          "sourceId": "producthunt",
-          "title": "Rex (Beta)",
-          "url": "https://www.producthunt.com/products/superlogical",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "ccc63b9c68102a8ed188704c685b62d917021f9386fce63b747d6c11e4ad4750",
-          "sourceId": "producthunt",
-          "title": "Switchy",
-          "url": "https://www.producthunt.com/products/switchy",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7be906e4196e1edae13e347269109ffb861596172d9a4b3baa9acbf2d732bf23",
-          "sourceId": "producthunt",
-          "title": "Sendoff",
-          "url": "https://www.producthunt.com/products/sendoff-2",
+          "title": "The Writer's Quarter",
+          "url": "https://www.producthunt.com/products/the-writer-s-quarter",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4157,51 +4202,6 @@
           "extraSourceIds": []
         },
         {
-          "id": "b863ca506df49f58350d8ed8655b069d6545606097a4860ce6f357eebb8d547d",
-          "sourceId": "producthunt",
-          "title": "Duly",
-          "url": "https://www.producthunt.com/products/duly-life-organizer",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "555b4e2423b269bce69fa39ba1ff3bcaabb1076fa44bce4620e76635ef6a0efe",
-          "sourceId": "producthunt",
-          "title": "ClarifierAI for Chrome",
-          "url": "https://www.producthunt.com/products/clarifierai-rewrite-text-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "a7613e7830da70bff5859659beed3a8cbd4787aaffa79f1cca788b5ba8faaa83",
-          "sourceId": "producthunt",
-          "title": "The Writer's Quarter",
-          "url": "https://www.producthunt.com/products/the-writer-s-quarter",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "1aa747c8186fcf11ef2e34d882146e73f40003537601aa096546a9a876c31fe4",
-          "sourceId": "producthunt",
-          "title": "Deal Pilot",
-          "url": "https://www.producthunt.com/products/deal-pilot",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7ac7e1b629ac99e2231ec8483ff5cab5f593c8e5515654442c8adbb5b824a16a",
-          "sourceId": "producthunt",
-          "title": "kayet",
-          "url": "https://www.producthunt.com/products/kayet",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
           "id": "5acbf58c0ba28792295f071758bee029984ca8c3cfb3f0fae74675a770180003",
           "sourceId": "producthunt",
           "title": "Releasebeam",
@@ -4211,64 +4211,10 @@
           "extraSourceIds": []
         },
         {
-          "id": "4356cde3186e41ea8b44331dc672775235cfc671584a2f6f180355a8602dfd9d",
+          "id": "7e62f5b7ef6f45a8cf506c8aa467a96b168d94ef5aab5ea457951f94a54db3e3",
           "sourceId": "producthunt",
-          "title": "PostMyPace",
-          "url": "https://www.producthunt.com/products/postmypace",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "c3b505781ab6961d51f09653bdd655b460c1f774731d582471b1b9903551fd21",
-          "sourceId": "producthunt",
-          "title": "Winq",
-          "url": "https://www.producthunt.com/products/winq",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "102a4b7dd69f29147d2edabcbb13e413b196811f2a13997bced2704e06720020",
-          "sourceId": "producthunt",
-          "title": "Any Video to Text",
-          "url": "https://www.producthunt.com/products/any-video-to-text",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "0707f1429afe0f15a85fb04c4951ef99aa78801f7e1e08aafc45e7307d9d8f75",
-          "sourceId": "producthunt",
-          "title": "Kivo",
-          "url": "https://www.producthunt.com/products/kivo-4",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "288d00f8cfebe2c6d7fca266b09b0a86a7bc8546428a21809b51803ffce297ac",
-          "sourceId": "producthunt",
-          "title": "AudioCentral",
-          "url": "https://www.producthunt.com/products/audiocentral",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cfe86a3ddf5a9da3b6bd6c6f32cd9133ede75754827d48ff5c6081d8202dbac7",
-          "sourceId": "producthunt",
-          "title": "Plainmail",
-          "url": "https://www.producthunt.com/products/plainmail",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "e3adb141cdff3f2004fb602d2598d39c827b6e3636b022f2e50c3a61f53f8627",
-          "sourceId": "producthunt",
-          "title": "Rankfender v3.0",
-          "url": "https://www.producthunt.com/products/rankfender",
+          "title": "refern.",
+          "url": "https://www.producthunt.com/products/refern",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4292,19 +4238,46 @@
           "extraSourceIds": []
         },
         {
-          "id": "c1dc96a267f295eb33188bd0b298ce887bae88a7435be36957933a754ca771e6",
+          "id": "0707f1429afe0f15a85fb04c4951ef99aa78801f7e1e08aafc45e7307d9d8f75",
           "sourceId": "producthunt",
-          "title": "crystl",
-          "url": "https://www.producthunt.com/products/crystl-multitasking-terminal",
+          "title": "Kivo",
+          "url": "https://www.producthunt.com/products/kivo-4",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "dbd869b9c1cf46b64b9d620acfcd823c37d5cd47c763d7043837e4d2b98c02d8",
+          "id": "1bb574da94f4cd30880074839d4231eabb77f60fb7b6fa77d13c2854581ac2df",
           "sourceId": "producthunt",
-          "title": "Datastripes Data Stories",
-          "url": "https://www.producthunt.com/products/datastripes",
+          "title": "Earth Stats",
+          "url": "https://www.producthunt.com/products/earth-stats",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "29750b71f8de914b902419f519446ba7fff991a482f8660b05c2896b2176ceb2",
+          "sourceId": "producthunt",
+          "title": "OpenVisio",
+          "url": "https://www.producthunt.com/products/openvisio",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "64148effe553292ee7a7047fdfe6ca1083b02aafcb5a91f1e10f7006469e9d36",
+          "sourceId": "producthunt",
+          "title": "Wonder Dev View",
+          "url": "https://www.producthunt.com/products/wonder-dev-view",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "78d34c9fd3816db294b5f4f483f0077a2b971455dc1c50d74dec5d13551405c4",
+          "sourceId": "producthunt",
+          "title": "Textwhisk",
+          "url": "https://www.producthunt.com/products/textwhisk",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4319,15 +4292,6 @@
           "extraSourceIds": []
         },
         {
-          "id": "1dbdbf5d00454a94d0d23acd3d72bd3603129bb0ac5b59f5e3925358208e9f98",
-          "sourceId": "producthunt",
-          "title": "Meshia",
-          "url": "https://www.producthunt.com/products/meshia",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
           "id": "8efa3a65c034ec37c8a2144db81e2afeb9c99035d013ad1e20ee8f761707e538",
           "sourceId": "producthunt",
           "title": "axel.md",
@@ -4337,10 +4301,46 @@
           "extraSourceIds": []
         },
         {
-          "id": "cfe29d24d0e5c3ecc2a8005386b57922ec787dd9d81a350a70bef64fbfa14cb2",
+          "id": "cec4c903af4929110ad258117dfa858a4e9f2f21295f15eb3fd136616a386765",
           "sourceId": "producthunt",
-          "title": "Make0 Brain OSS",
-          "url": "https://www.producthunt.com/products/make0-brain",
+          "title": "AgentTM",
+          "url": "https://www.producthunt.com/products/agenttm",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2e467bbadabcac65d5b733bb7a7e9ae0ca3c1eff058815b98773bd4189c5bc6e",
+          "sourceId": "producthunt",
+          "title": "Pressure",
+          "url": "https://www.producthunt.com/products/pressure",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "eabc3eac212c51822d969cc4ecdc218d69f803bfdc2b33e48165cf98eec81d99",
+          "sourceId": "producthunt",
+          "title": "SafeGrd",
+          "url": "https://www.producthunt.com/products/safegrd",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "62bcc9ef0d52ce2932ac668d1053e9a4070fdc35f950098b1898fcf6f8207b7b",
+          "sourceId": "producthunt",
+          "title": "Enhanced for Todoist",
+          "url": "https://www.producthunt.com/products/enhanced-for-todoist",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "8a56b624d40a8ba94ec22a5589a103309e8cc846515f05d63a257484047b1e52",
+          "sourceId": "producthunt",
+          "title": "chalk",
+          "url": "https://www.producthunt.com/products/chalk-546d9cf8-cdc3-4b80-9b88-f441167c8f6e",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4350,7 +4350,7 @@
     "github-trending-today": {
       "sourceId": "github-trending-today",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:50.737155Z",
+      "updatedAt": "2026-11-07T19:45:49.448526Z",
       "error": null,
       "items": [
         {
@@ -4493,7 +4493,7 @@
     "steam": {
       "sourceId": "steam",
       "status": "ok",
-      "updatedAt": "2026-11-07T15:48:58.309426Z",
+      "updatedAt": "2026-11-07T19:45:53.760708Z",
       "error": null,
       "items": [
         {
@@ -4501,7 +4501,7 @@
           "sourceId": "steam",
           "title": "Counter-Strike 2",
           "url": "https://store.steampowered.com/app/730/CounterStrike_2/",
-          "summary": "1,216,274",
+          "summary": "1,106,070",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4510,7 +4510,7 @@
           "sourceId": "steam",
           "title": "Dota 2",
           "url": "https://store.steampowered.com/app/570/Dota_2/",
-          "summary": "804,922",
+          "summary": "737,508",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4519,25 +4519,7 @@
           "sourceId": "steam",
           "title": "PUBG: BATTLEGROUNDS",
           "url": "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/",
-          "summary": "650,865",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "1b3773bc48cc8d21c76fa7f3601812c461ea0fee8a14c3a43bf74c088ff09f0f",
-          "sourceId": "steam",
-          "title": "Phantom Blade Zero",
-          "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
-          "summary": "490,007",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cafb6b7d81a338e24aeedb75972dab5cdb1fe696b3c748281e330db1484b3cce",
-          "sourceId": "steam",
-          "title": "Apex Legends",
-          "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
-          "summary": "218,802",
+          "summary": "262,257",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4546,7 +4528,7 @@
           "sourceId": "steam",
           "title": "AION 2",
           "url": "https://store.steampowered.com/app/3393110/AION_2/",
-          "summary": "202,259",
+          "summary": "193,832",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4555,7 +4537,7 @@
           "sourceId": "steam",
           "title": "Call of Duty®",
           "url": "https://store.steampowered.com/app/1938090/Call_of_Duty/",
-          "summary": "194,337",
+          "summary": "192,040",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4564,16 +4546,7 @@
           "sourceId": "steam",
           "title": "Bongo Cat",
           "url": "https://store.steampowered.com/app/3419430/Bongo_Cat/",
-          "summary": "188,081",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "91775245e6c61f93cee2e4689d92b3a5c021382ff11767ce0eb80495a26c3908",
-          "sourceId": "steam",
-          "title": "Probably Stolen",
-          "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
-          "summary": "176,469",
+          "summary": "178,271",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4582,7 +4555,16 @@
           "sourceId": "steam",
           "title": "Rust",
           "url": "https://store.steampowered.com/app/252490/Rust/",
-          "summary": "151,607",
+          "summary": "154,531",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "1b3773bc48cc8d21c76fa7f3601812c461ea0fee8a14c3a43bf74c088ff09f0f",
+          "sourceId": "steam",
+          "title": "Phantom Blade Zero",
+          "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+          "summary": "143,805",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4591,25 +4573,7 @@
           "sourceId": "steam",
           "title": "Cyberpunk 2077",
           "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
-          "summary": "130,121",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "3685ab197aa7543393776646700c11099c74fa8bba10349cc5f9c617e90698bd",
-          "sourceId": "steam",
-          "title": "Wallpaper Engine",
-          "url": "https://store.steampowered.com/app/431960/Wallpaper_Engine/",
-          "summary": "115,385",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "b2f598305ccfcd02ec393b28d0ebe9f20c55b0d03a174cd5b27f4e36e482db7b",
-          "sourceId": "steam",
-          "title": "Delta Force",
-          "url": "https://store.steampowered.com/app/2507950/Delta_Force/",
-          "summary": "114,618",
+          "summary": "126,642",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4618,25 +4582,7 @@
           "sourceId": "steam",
           "title": "Team Fortress 2",
           "url": "https://store.steampowered.com/app/440/Team_Fortress_2/",
-          "summary": "99,029",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "8ec7acf3f46b56d476901428413fa126cf0984b0c2cb6007f767e258af9f40c3",
-          "sourceId": "steam",
-          "title": "War Thunder",
-          "url": "https://store.steampowered.com/app/236390/War_Thunder/",
-          "summary": "94,602",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cca8cdfaf0e2f7db7ac31548f8e239796bb4ee573ee3c2424aed5d7d84be2f17",
-          "sourceId": "steam",
-          "title": "Slay the Spire 2",
-          "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
-          "summary": "83,799",
+          "summary": "103,161",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4645,61 +4591,16 @@
           "sourceId": "steam",
           "title": "WARDOGS",
           "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
-          "summary": "81,604",
+          "summary": "93,730",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "25f640dc6c4cbeab80235e0e1a21dcb12c391aefffc38186a853b76372f0b3a0",
+          "id": "cafb6b7d81a338e24aeedb75972dab5cdb1fe696b3c748281e330db1484b3cce",
           "sourceId": "steam",
-          "title": "Warframe",
-          "url": "https://store.steampowered.com/app/230410/Warframe/",
-          "summary": "81,463",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "aee1e1fab2de02946efa7da2987dd32da1873fc183c26083cde5dbab63393230",
-          "sourceId": "steam",
-          "title": "Stardew Valley",
-          "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
-          "summary": "80,088",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "c1ea1c408894e2e22fb2c9259bc668380d36d28af75b6d24353de2fd49c2aaf7",
-          "sourceId": "steam",
-          "title": "Grand Theft Auto V Enhanced",
-          "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
-          "summary": "74,810",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "8675e89d044dbee34180d4119e83acfc194f1c11a136ed5b2b36fe1252b538df",
-          "sourceId": "steam",
-          "title": "Grand Theft Auto V Legacy",
-          "url": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/",
-          "summary": "69,092",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "56e2f2f53bf24be6521b23086a00e6db514917796dfa013db36ac8c87526bc13",
-          "sourceId": "steam",
-          "title": "TBH: Task Bar Hero",
-          "url": "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
-          "summary": "67,946",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f82deb643dc6769035a18dbd529330cabef41e296a502af657f73c4208c20816",
-          "sourceId": "steam",
-          "title": "R.E.P.O.",
-          "url": "https://store.steampowered.com/app/3241660/REPO/",
-          "summary": "66,024",
+          "title": "Apex Legends",
+          "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+          "summary": "91,669",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4708,16 +4609,25 @@
           "sourceId": "steam",
           "title": "ROB RUN",
           "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
-          "summary": "65,018",
+          "summary": "86,515",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "547babfbcb800ec42efdae7d1c7cdeaa27ad6180a3a313eb5e1b5195b1d63e85",
+          "id": "91775245e6c61f93cee2e4689d92b3a5c021382ff11767ce0eb80495a26c3908",
           "sourceId": "steam",
-          "title": "VRChat",
-          "url": "https://store.steampowered.com/app/438100/VRChat/",
-          "summary": "63,978",
+          "title": "Probably Stolen",
+          "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
+          "summary": "81,682",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "8ec7acf3f46b56d476901428413fa126cf0984b0c2cb6007f767e258af9f40c3",
+          "sourceId": "steam",
+          "title": "War Thunder",
+          "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+          "summary": "76,008",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4726,34 +4636,7 @@
           "sourceId": "steam",
           "title": "Valheim",
           "url": "https://store.steampowered.com/app/892970/Valheim/",
-          "summary": "63,793",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6bde3c0276b8e598c0618e6c4a1205bf87baab022d5c1eb1dab9899c20da2790",
-          "sourceId": "steam",
-          "title": "Dead by Daylight",
-          "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
-          "summary": "63,576",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "b0533802e00abfe7a0de256e0b704d58f12df159d2a57cce25f065b1add6f6cf",
-          "sourceId": "steam",
-          "title": "Geometry Dash",
-          "url": "https://store.steampowered.com/app/322170/Geometry_Dash/",
-          "summary": "63,543",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "ef50cf44846204cbd25d6b26705a1b2dc5251ae1ec3b426c7e771dd9f29d221a",
-          "sourceId": "steam",
-          "title": "Enshrouded",
-          "url": "https://store.steampowered.com/app/1203620/Enshrouded/",
-          "summary": "62,669",
+          "summary": "74,601",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4762,16 +4645,16 @@
           "sourceId": "steam",
           "title": "Tom Clancy's Rainbow Six Siege",
           "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
-          "summary": "60,769",
+          "summary": "73,376",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "44a2b45b9190376c7d20a892b5528811eda1232ac038bbff918e2cbc242f30de",
+          "id": "b0533802e00abfe7a0de256e0b704d58f12df159d2a57cce25f065b1add6f6cf",
           "sourceId": "steam",
-          "title": "Spacewar",
-          "url": "https://steamcommunity.com/app/480",
-          "summary": "59,754",
+          "title": "Geometry Dash",
+          "url": "https://store.steampowered.com/app/322170/Geometry_Dash/",
+          "summary": "71,325",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4780,16 +4663,70 @@
           "sourceId": "steam",
           "title": "ARC Raiders",
           "url": "https://store.steampowered.com/app/1808500/ARC_Raiders/",
-          "summary": "59,669",
+          "summary": "71,253",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "fbd68c34fe71d6b1e32a2f5b27879fbf8306be947e833f2aad4c47f326a61cca",
+          "id": "ef50cf44846204cbd25d6b26705a1b2dc5251ae1ec3b426c7e771dd9f29d221a",
           "sourceId": "steam",
-          "title": "Overwatch®",
-          "url": "https://store.steampowered.com/app/2357570/Overwatch/",
-          "summary": "59,200",
+          "title": "Enshrouded",
+          "url": "https://store.steampowered.com/app/1203620/Enshrouded/",
+          "summary": "68,199",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "25f640dc6c4cbeab80235e0e1a21dcb12c391aefffc38186a853b76372f0b3a0",
+          "sourceId": "steam",
+          "title": "Warframe",
+          "url": "https://store.steampowered.com/app/230410/Warframe/",
+          "summary": "66,136",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3685ab197aa7543393776646700c11099c74fa8bba10349cc5f9c617e90698bd",
+          "sourceId": "steam",
+          "title": "Wallpaper Engine",
+          "url": "https://store.steampowered.com/app/431960/Wallpaper_Engine/",
+          "summary": "65,542",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "8675e89d044dbee34180d4119e83acfc194f1c11a136ed5b2b36fe1252b538df",
+          "sourceId": "steam",
+          "title": "Grand Theft Auto V Legacy",
+          "url": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/",
+          "summary": "62,173",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f82deb643dc6769035a18dbd529330cabef41e296a502af657f73c4208c20816",
+          "sourceId": "steam",
+          "title": "R.E.P.O.",
+          "url": "https://store.steampowered.com/app/3241660/REPO/",
+          "summary": "59,788",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6bde3c0276b8e598c0618e6c4a1205bf87baab022d5c1eb1dab9899c20da2790",
+          "sourceId": "steam",
+          "title": "Dead by Daylight",
+          "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+          "summary": "58,720",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3369b3c2ae4e206a9f110f65201da10910c04277793a4e210dc4f5ae89e1b658",
+          "sourceId": "steam",
+          "title": "Crosshair X",
+          "url": "https://store.steampowered.com/app/1366800/Crosshair_X/",
+          "summary": "57,142",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4798,52 +4735,7 @@
           "sourceId": "steam",
           "title": "Project Zomboid",
           "url": "https://store.steampowered.com/app/108600/Project_Zomboid/",
-          "summary": "56,678",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "ae70273187c0d5bd927f34c039107296c315416470a66bbaedb468ea888a8833",
-          "sourceId": "steam",
-          "title": "Hearts of Iron IV",
-          "url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
-          "summary": "56,246",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7501e13513955781190ee6022239d2947bdd240a74d356d4d06e149d5e10bbdc",
-          "sourceId": "steam",
-          "title": "Don't Starve Together",
-          "url": "https://store.steampowered.com/app/322330/Dont_Starve_Together/",
-          "summary": "54,144",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f13a09442dc5d2e63ed32d55add8860367c1f9ddca5325de042295db89ab12c0",
-          "sourceId": "steam",
-          "title": "EA SPORTS FC™ 27",
-          "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
-          "summary": "53,309",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "a9639c6e557886f8c2405ab2900bbd9117eed2632f9e0a149b0aacf141db0285",
-          "sourceId": "steam",
-          "title": "The Binding of Isaac: Rebirth",
-          "url": "https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/",
-          "summary": "52,395",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "4ec076428aa2de784c928368ae3895bf58cbcbf37f57be18803f22cbd611e8d0",
-          "sourceId": "steam",
-          "title": "NARAKA: BLADEPOINT",
-          "url": "https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/",
-          "summary": "51,182",
+          "summary": "55,975",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4852,7 +4744,115 @@
           "sourceId": "steam",
           "title": "DayZ",
           "url": "https://store.steampowered.com/app/221100/DayZ/",
-          "summary": "50,498",
+          "summary": "55,830",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "44a2b45b9190376c7d20a892b5528811eda1232ac038bbff918e2cbc242f30de",
+          "sourceId": "steam",
+          "title": "Spacewar",
+          "url": "https://steamcommunity.com/app/480",
+          "summary": "55,719",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "56e2f2f53bf24be6521b23086a00e6db514917796dfa013db36ac8c87526bc13",
+          "sourceId": "steam",
+          "title": "TBH: Task Bar Hero",
+          "url": "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
+          "summary": "55,624",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "fbd68c34fe71d6b1e32a2f5b27879fbf8306be947e833f2aad4c47f326a61cca",
+          "sourceId": "steam",
+          "title": "Overwatch®",
+          "url": "https://store.steampowered.com/app/2357570/Overwatch/",
+          "summary": "53,935",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f13a09442dc5d2e63ed32d55add8860367c1f9ddca5325de042295db89ab12c0",
+          "sourceId": "steam",
+          "title": "EA SPORTS FC™ 27",
+          "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
+          "summary": "52,581",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "c1ea1c408894e2e22fb2c9259bc668380d36d28af75b6d24353de2fd49c2aaf7",
+          "sourceId": "steam",
+          "title": "Grand Theft Auto V Enhanced",
+          "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
+          "summary": "52,276",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "547babfbcb800ec42efdae7d1c7cdeaa27ad6180a3a313eb5e1b5195b1d63e85",
+          "sourceId": "steam",
+          "title": "VRChat",
+          "url": "https://store.steampowered.com/app/438100/VRChat/",
+          "summary": "51,563",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b2f598305ccfcd02ec393b28d0ebe9f20c55b0d03a174cd5b27f4e36e482db7b",
+          "sourceId": "steam",
+          "title": "Delta Force",
+          "url": "https://store.steampowered.com/app/2507950/Delta_Force/",
+          "summary": "51,328",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "aee1e1fab2de02946efa7da2987dd32da1873fc183c26083cde5dbab63393230",
+          "sourceId": "steam",
+          "title": "Stardew Valley",
+          "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
+          "summary": "50,513",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "a0e9c80bb1cca70f87fa388fe8b711e545a2a33c5156d19b58bc963874c5efa2",
+          "sourceId": "steam",
+          "title": "Farming Simulator 25",
+          "url": "https://store.steampowered.com/app/2300320/Farming_Simulator_25/",
+          "summary": "50,153",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2308be1440745bfc05d9f37d5288e0268492f5236a21145e5c96d223c407e536",
+          "sourceId": "steam",
+          "title": "Baldur's Gate 3",
+          "url": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/",
+          "summary": "48,862",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "92ad8dc7209523f65472c1ad50c06b3c865e0cd6a712fe6387225ac871949ce6",
+          "sourceId": "steam",
+          "title": "Euro Truck Simulator 2",
+          "url": "https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/",
+          "summary": "47,413",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "cca8cdfaf0e2f7db7ac31548f8e239796bb4ee573ee3c2424aed5d7d84be2f17",
+          "sourceId": "steam",
+          "title": "Slay the Spire 2",
+          "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
+          "summary": "46,850",
           "pubDate": null,
           "extraSourceIds": []
         }
