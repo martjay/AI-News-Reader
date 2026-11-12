@@ -1,12 +1,30 @@
 {
-  "generatedAt": "2026-11-12T03:58:09.389388Z",
+  "generatedAt": "2026-11-12T12:13:53.584296Z",
   "sources": {
     "openai": {
       "sourceId": "openai",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:07.645391Z",
+      "updatedAt": "2026-11-12T12:13:50.376146Z",
       "error": null,
       "items": [
+        {
+          "id": "cb78b8743a2c6a6037d4ac4bac4798ee6687d52a3d7c4751833803dc8f18ace4",
+          "sourceId": "openai",
+          "title": "Holiday Extras is rethinking what it can build with Codex",
+          "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+          "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+          "pubDate": "2026-11-12T09:30:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "0c2b9e6d1b0133fb81b1e388bd924a43afd4acf05272ce1d1e60c9dbf684b58a",
+          "sourceId": "openai",
+          "title": "Supporting research on AI and children’s safety",
+          "url": "https://openai.com/index/children-first-declaration",
+          "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+          "pubDate": "2026-11-12T00:00:00.000Z",
+          "extraSourceIds": []
+        },
         {
           "id": "05adaef4451c1df1b413a94626aa74c81405fcdccc166a9e3eb95013b053d7ce",
           "sourceId": "openai",
@@ -332,15 +350,6 @@
           "extraSourceIds": []
         },
         {
-          "id": "2651dfce6aa8e69fe0fb45d0f86eda33967cb3d0afc49f7062f47dad654dd117",
-          "sourceId": "openai",
-          "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
-          "url": "https://openai.com/index/dan-driscoll-joins-openai",
-          "summary": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.",
-          "pubDate": "2026-11-02T00:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
           "id": "76e53b8b222cbf1a788befc2e2f263a6c7b7afb3805a9e2ff4f388d55d6720a0",
           "sourceId": "openai",
           "title": "Qodo builds context into AI code review with Codex",
@@ -350,21 +359,12 @@
           "extraSourceIds": []
         },
         {
-          "id": "84f68cc7ca3a911cb5ad89338f1429760525bddcb1cebdd2ca451e6ce7f432b8",
+          "id": "2651dfce6aa8e69fe0fb45d0f86eda33967cb3d0afc49f7062f47dad654dd117",
           "sourceId": "openai",
-          "title": "Making it easier for websites to express AI training preferences",
-          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-          "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
-          "pubDate": "2026-10-30T09:30:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "2456678b3de786bb9cc943f71b550d639ab86d5367cbbb68aaa95dc06c47fd96",
-          "sourceId": "openai",
-          "title": "Community safety report and new protections for teens",
-          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-          "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
-          "pubDate": "2026-10-30T09:00:00.000Z",
+          "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+          "url": "https://openai.com/index/dan-driscoll-joins-openai",
+          "summary": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.",
+          "pubDate": "2026-11-02T00:00:00.000Z",
           "extraSourceIds": []
         }
       ]
@@ -372,7 +372,7 @@
     "deepmind": {
       "sourceId": "deepmind",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:07.661721Z",
+      "updatedAt": "2026-11-12T12:13:50.391441Z",
       "error": null,
       "items": [
         {
@@ -740,7 +740,7 @@
     "google_research": {
       "sourceId": "google_research",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:07.661985Z",
+      "updatedAt": "2026-11-12T12:13:50.391732Z",
       "error": null,
       "items": [
         {
@@ -1108,14 +1108,14 @@
     "microsoft_ai": {
       "sourceId": "microsoft_ai",
       "status": "error",
-      "updatedAt": "2026-11-12T03:58:07.993725Z",
+      "updatedAt": "2026-11-12T12:13:50.690114Z",
       "error": "Exception: HTTP 410 for https://blogs.microsoft.com/ai/feed/",
       "items": []
     },
     "nvidia_dl": {
       "sourceId": "nvidia_dl",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:07.662150Z",
+      "updatedAt": "2026-11-12T12:13:50.391853Z",
       "error": null,
       "items": [
         {
@@ -1285,7 +1285,7 @@
     "hf_blog": {
       "sourceId": "hf_blog",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:07.662198Z",
+      "updatedAt": "2026-11-12T12:13:50.391882Z",
       "error": null,
       "items": [
         {
@@ -1653,9 +1653,153 @@
     "hf_papers": {
       "sourceId": "hf_papers",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.467072Z",
+      "updatedAt": "2026-11-12T12:13:50.851003Z",
       "error": null,
       "items": [
+        {
+          "id": "07eb716accf00751317457869e4d0917b576d93ebc88b5ff7efe4b23e8587587",
+          "sourceId": "hf_papers",
+          "title": "Evolving Infra: Agent-Adaptive LLM Serving at Scale",
+          "url": "https://huggingface.co/papers/2611.12304",
+          "summary": "Agentic workloads are a major source of LLM inference demand. Existing prefill--decode (PD) disaggregated serving systems offer limited flexibility for runtime adaptation of compute allocation and KV cache management, and rely on coarse signals that only partly capture the diverse and dynamic agent workload. These limitations lead to load imbalance between prefill and decode nodes and eviction of KV caches that agents will reuse. We present Evolving Infra, an agent-adaptive serving framework that adapts compute allocation to agent workloads and KV cache management to agent context management at runtime. We decouple compute allocation from key--value (KV) cache management, allowing nodes to switch efficiently between prefill and decode. Building on this design, an online planner matches the PD split to workload composition, while an agent-aware distributed KV manager guides cache eviction and transfer with signals from agent context management. Across coding, math, and computer-use tasks with GLM-5.2 and Kimi K2.6 on up to 256 GB300 GPUs, Evolving Infra reduces mean end-to-end request latency and P95 TTFT by up to 4.1x and 14x over Dynamo, NVIDIA's production framework.",
+          "pubDate": "2026-11-08T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "f5ae10f4222875715460f507d05793225f7307ef8bf9f318ee754047cabedcc0",
+          "sourceId": "hf_papers",
+          "title": "CARTBench: Rubric-Based Evaluation of Shopping Advice for Complex and Ambiguous Requests with Timelines",
+          "url": "https://huggingface.co/papers/2611.05862",
+          "summary": "Large language model (LLM) shopping assistants now recommend products in multi-turn conversations. However, reliable evaluation faces Data scarcity and Difficulty Standardizing Criteria. To address these obstacles, we introduce CARTBench for CART (Complex and Ambiguous Requests with Timelines). For Data scarcity, we curate cases from real commercial shopping needs across 17 retail domains, pairing timestamped dialogue with 1,603 product records. For Difficulty Standardizing Criteria, we develop case-specific rubrics guided by Ideal Response Principles, distilled from excellent replies manually selected from successfully completed orders. These principles also guide Principle-Guided CART Prompting, our structured recommendation strategy. The experimental benchmark contains 1,328 expert-annotated criteria across Core, Excellence, and Safety. To answer the CART question, we evaluate 7 flagship commercial API models, including GPT-6.1-Sol and Claude-Opus-5, and 35B+ parameters open-weight models. In the first full-suite evaluation under the frozen rubrics, 3 of 10 models exceed 90% on Core, while none exceeds 45% on Excellence. Therefore, we identify an understanding-to-execution gap between required behavior and high-quality purchase advice. To examine these limitations, we diagnose shared failures in product evidence and unresolved needs, linked to changing requirements and decisive unknowns. Code and data are available at https://github.com/Da1yuqin/CARTBench.",
+          "pubDate": "2026-11-03T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "94300442d756d3c7b1b5e084dde0b9621a16b23cc9a35ef3c2e421995b5af112",
+          "sourceId": "hf_papers",
+          "title": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
+          "url": "https://huggingface.co/papers/2611.12869",
+          "summary": "The Platonic Representation Hypothesis (PRH) suggests that neural networks are converging toward similar representation spaces. As language models become more capable, their representations are aligning with those of vision models. However, recent work has questioned whether this trend continues to hold for newer language models. Moreover, it has been shown that representation similarity metrics can be confounded by model depth and width, requiring appropriate baselines for interpretation. In this work, we first investigate where alignment emerges between unimodal models across model layers and representation dimensions. Next, we find that the PRH capability-alignment trend persists for newer models as long as the captions are sufficiently clean and informative. Finally, we contextualize cross-modal alignment, introducing unimodal and multimodal baselines on various datasets. Our results show that the cross-modal representational alignment of unimodal models can surpass that of explicitly aligned vision-language models, but remains substantially behind the alignment observed for models of the same modality. Code is available at https://github.com/ExplainableML/prh-closer-look.",
+          "pubDate": "2026-11-09T13:53:57.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "582dba1f0dd7b231e10ef73573463626dee18717357f6fb379b2d46f1d9d3a85",
+          "sourceId": "hf_papers",
+          "title": "Precision on Demand: Escalating Weight Bits at Uncertain Decoding Steps in a Small Local Model",
+          "url": "https://huggingface.co/papers/2611.14418",
+          "summary": "Local decoding usually fixes one weight precision for the whole generation. We study a different allocation: store 8-bit weights, decode with their top 4 bits, and redo a step at 8 bits only when the low-precision output distribution looks uncertain (entropy above a threshold or a small top-two margin). Quantization is simulated, the model is Qwen3-0.6B, and the benchmark is GSM8K. Cost is counted in weight bytes read per token. On 36724 replayed steps the entropy of the low pass ranks argmax flips with AUC 0.93. At a 15% escalation budget it catches 78% of flips and the margin gate 94%, against the 15% expected for a random gate of equal rate (a computed expectation, not a run). In 150 live problems all-high scores 64.0% and all-low 55.3% (McNemar p=0.053). An entropy gate with a 16% escalation rate scores 62.7% at 0.87 of the all-high weight bytes. Its paired difference is -1.3 (-8.0 to +5.3) points to all-high and +7.3 (+0.0 to +14.7) points to all-low (p=0.080), so the live data do not separate the gate from either end. Verified speculation reaches zero KL at similar bytes in the same cost model. A live random control, a thinking-mode phase rule, a second model and live KL were not run.",
+          "pubDate": "2026-11-09T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "d4c6cab31d3b7b07fa767522cbaab745eaa4d2988a3d62b7fbca2d23bbee0594",
+          "sourceId": "hf_papers",
+          "title": "Bits or permutations? Spending a fixed inference budget on weight precision or on option-order averaging in small local language models",
+          "url": "https://huggingface.co/papers/2611.14413",
+          "summary": "Local language models can save memory by storing weights in fewer bits, and they can reduce sensitivity to the order of answer options by averaging a few reorderings. We ask whether the first makes the second worse, and which is the cheaper way to spend a fixed budget. On Qwen3-0.6B and Qwen3-1.7B with simulated round-to-nearest weight quantization (8, 6, 4 and 3 bits, fp16 reference), read from the logits of the letters A to D on ARC-Easy, ARC-Challenge, MMLU and HellaSwag (300 items each), 6 bits lose no accuracy against fp16 (they score +1.8 (+1.0 to +2.5) and +0.9 (+0.3 to +1.5) points higher, which we do not explain), and 8 bits change it by -0.7 (-1.1 to -0.3) and -0.4 (-0.7 to -0.2) points. At 4 bits the answer-slot skew rises from 0.15 to 0.53 (0.6B) and from 0.07 to 0.12 (1.7B); Gaussian noise at the same weight SNR gives 0.15 and 0.37 (two draws) and 0.19 (one draw), so the control is inconclusive on whether rounding adds slot skew beyond equal-power noise. Flip rates rise but stay below an accuracy-matched baseline of independent uniform errors. Averaging four cyclic orders recovers +12.6 points at 4 bits for 0.6B (+5.3 at fp16). We price bits and passes in one machine-independent unit, weight bytes read times passes. In cost-matched pairs, extra orders beat extra bits only when the weights have 6 or more bits, and the decision table reduces to: use 6-bit weights and spend the rest of the budget on up to four orders, one pass each. Everything is simulated on two small models with the simplest quantizer; a title-level search found no earlier study of quantization together with option order.",
+          "pubDate": "2026-11-09T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "3e555eccc3027011e2290e49e949c5044300f7144881c499ec03a6e0e68b24d1",
+          "sourceId": "hf_papers",
+          "title": "PolyRoute: A Twelve-Language and Code-Mixed Benchmark for Typed-Decision Routing, with Baselines and a Leaderboard",
+          "url": "https://huggingface.co/papers/2611.13843",
+          "summary": "Typed-decision encoders answer a question about a text in one forward pass, but their behaviour outside English is rarely measured on a fixed yardstick. We release PolyRoute: 322 native-language support messages in 12 languages and 9 writing systems, 156 code-mixed or romanised messages (Hinglish, Spanglish, Arabizi), 967 optional native training rows, and a protocol for a three-way department-routing decision. Labels come from Qwen3.8-27B with a blind second pass (91% of candidates kept); an independent model, gemma4-31b, agrees on 97.2% of test items, and the largest character 5-gram similarity between any test text and any training text is 0.33. A leaderboard of 13 systems gives 61.2% for the English-root checkpoint, 77.3% for the shipped multilingual one and 96.6% for the best fine-tune; TF-IDF with logistic regression reaches 91.9%. On four withheld languages the three multilingual systems score 77%, 90% and 93%. On code-mixed text the English root (85%) is nominally ahead of the shipped multilingual checkpoint (79%; p=0.134). The split resolves differences only above about 4 points. All texts and labels are LLM-generated.",
+          "pubDate": "2026-11-09T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "11ebab6fa8fcc21ea0838a211a330ca8151de9a19b9280495e259a145bdb3f2e",
+          "sourceId": "hf_papers",
+          "title": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+          "url": "https://huggingface.co/papers/2611.13410",
+          "summary": "Low-bit quantization reduces the inference cost of LLM agents but can compromise task success. Examining failed rollouts, we find that quantized agents overlook task requirements or environmental conditions, producing environment transitions that diverge from successful full-precision references. Correcting these behavioral divergences remains difficult: offline data may miss the student's failure contexts, while its own rollouts may provide few correct responses in those contexts. We introduce SteerDistill, a quantization-aware distillation method in which a full-precision teacher guides the student to revise failed responses and iteratively refines its guidance using feedback from student execution. This closed-loop teacher steering produces locally verified behavioral corrections. We internalize these corrections by training the student without guidance to match the steered student's predictions at corrected turns and the full-precision teacher's at other turns, enabling unassisted inference. Across five agentic benchmarks and three models, SteerDistill exceeds the strongest quantized baseline by 1.67--2.18 points in average score under W4A16 and stays within one point of BF16. On τ^2-Bench, it outperforms QeRL by 1.84 percentage points in success rate using 67% fewer training GPU hours and produces shorter successful trajectories than the quantized baselines.",
+          "pubDate": "2026-11-09T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "f707222cc7e317c26f3d0352ab23743ed4c920f9f75565a1b08cebf8c022ad92",
+          "sourceId": "hf_papers",
+          "title": "Mixed Signals: Weight-Space Programming for EEG and ECG",
+          "url": "https://huggingface.co/papers/2611.13758",
+          "summary": "Weight-space programming allows language models to read a trained neural network's weights and edit them. This opens the door to ``training'' by reasoning rather than through gradient descent. Prior work has demonstrated its functionality and promise for game-playing networks and fixing specific failures in language models, even extending to diffusion models. In this work, we present its applicability to models trained on biosignal data, specifically EEG and ECG data. We show that frontier models are not only able to debug specific faults planted in biosignal-based models without being told what these faults are, but are even capable of writing all the weights of a network from scratch, given only the architecture, the task, and a minimal set of training subjects. In particular, in one set of experiments, a language model was able to match standard gradient-descent training using 6times fewer training subjects, through reasoning alone and without any gradient descent step. Networks written by Claude Opus 5.5 also scored higher than classic hand-crafted EEG pipelines (alpha band power, and common spatial patterns with linear discriminant analysis) when built from the same 5 subjects. We also highlight some of the limitations, which include the inability of language models to improve already well-trained classification models, and their incapacity to reliably recognize, from the weights alone, the task a network was trained on. Overall, our results indicate that weight-space programming can be useful for small networks, such as those deployed on edge devices and wearables, but the concept still requires further investigation before it can be used in practice.",
+          "pubDate": "2026-11-09T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "18cc41f3050187b3dea7696794ab745f03e88bbb65b268bbcab1e3a3830cfd60",
+          "sourceId": "hf_papers",
+          "title": "Module-Aware Optimization for Graph Neural Networks",
+          "url": "https://huggingface.co/papers/2611.08379",
+          "summary": "Different optimizers impose different geometries on parameter updates. Adaptive methods such as Adam and AdamW use coordinate-wise updates, while matrix-aware optimizers such as Muon utilize weight-matrix structure through orthogonalized updates. For Graph Neural Networks (GNNs), however, the effective geometry of its weight matrices is shaped not only by its learned channel-mixing weights, but also by the graph-propagated representations it acts on. Thus, even if an update is well normalized as a matrix, its effect on the layer output can be amplified when applied to graph-propagated features. To address this gap, we introduce GraphMuon, a graph-aware optimizer that adapts Muon's matrix updates to the covariance structure of graph-propagated layer inputs. GraphMuon performs orthogonalization in a metric defined by these propagated representations and normalizes step sizes according to the update's induced effect on the layer representation. We show that theoretically, vanilla Muon can suffer from graph-induced update amplification, while our GraphMuon can mitigate this effect. As such, our GraphMuon yields a graph-metric analogue of Muon's polar update step. Empirically, GraphMuon achieves 1.32times-2.42times validation-loss time-to-target speedups over AdamW on three large-scale OGB benchmarks. Across 15 dataset-architecture configurations spanning node classification, inductive graph classification, and graph regression, it achieves lower time-to-target in 13 cases, while maintaining competitive or superior predictive performance. Code is available at https://github.com/guy-hadad/GraphMuon.",
+          "pubDate": "2026-11-04T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "bc676cb1bab7cc6c640facb71c62bf8c230f602f204933b3b11b3c1d594f8c08",
+          "sourceId": "hf_papers",
+          "title": "Read Less, Solve More: Token-Efficient Sparse Reading of External Content for AI Agents",
+          "url": "https://huggingface.co/papers/2608.22237",
+          "summary": "Web-facing AI agents repeatedly access webpages, documents, repositories, and tool responses, yet reading interfaces often expose entire objects when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute relevant evidence. We present SparseRead, a reusable reading control layer that governs content admission without modifying the agent model. Its Read Intent Protocol tracks evolving needs and source coverage; Adaptive Reader Backends select how evidence is located and exposed; and the Budgeted Read Gate bounds cumulative raw exposure per episode with faithful full-view fallback. A unified Reader interface supports interchangeable evidence acquisition across heterogeneous resources. Across six models, including Claude Opus 5, and five scenarios, SparseRead reduces total tokens by up to 92.9% and wall time by up to 89.0%, preserving or improving task quality in 97% settings. On Web deep-search tasks, it reduces tokens by 31.0--43.0% and task completion time by 23.0--37.0%. Ablations validate the three designs, while integration with three agent frameworks demonstrates portability.",
+          "pubDate": "2026-11-06T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "442c97c8377e4dc878e3d58ac8c68271fbd3e36193ce5c87b1ec20f34b6b5243",
+          "sourceId": "hf_papers",
+          "title": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
+          "url": "https://huggingface.co/papers/2611.08286",
+          "summary": "Visual interaction models that support users during ongoing physical tasks require evaluation in closed loop, where assistant responses can change subsequent user behavior and task outcomes. Existing benchmarks largely rely on offline replay and therefore cannot capture these effects. We introduce Interactive Visual Gym, a framework for closed-loop evaluation and training of visual interaction models through joint simulation of executable task environments and human users. We contribute three simulators that recreate everyday tasks and human-aligned action spaces across cooking, household manipulation, and mobile-interface domains, together with a persona-conditioned user simulation harness that collaborates with the assistant while incorporating controlled execution errors and other out-of-plan behaviors. We instantiate the framework as IVG-Bench, a benchmark with 315 interaction scenarios. Evaluating state-of-the-art VLMs as visual interaction models reveals substantial limitations: the best-performing model, Gemini 4 Argon, completes only 53.4% of tasks within the time limit, exhibits significant weaknesses in factual grounding and actionable guidance, and is often too slow to prevent errors when response latency is considered. We verify our evaluation protocol with a human study which finds 78.5% agreement between our interaction-quality metric and participant preferences. We further show that the environments provide useful learning signals: in a proof-of-concept GRPO experiment, closed-loop training improves both task success and interaction quality for Qwen3.5-4B model in our cooking environment.",
+          "pubDate": "2026-11-04T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "7466475ee436335675308cbdff9a7ae216516d0b748f2e0ed3b9f02fcbf9a283",
+          "sourceId": "hf_papers",
+          "title": "Scaling Mathematical Proof Supervision from Structured Textbooks",
+          "url": "https://huggingface.co/papers/2610.40394",
+          "summary": "Mathematical supervision for language models is typically flattened into isolated problem-solution pairs, discarding the curricular organization and evidential structure of the original sources. We introduce TOME-Math (Textbook-Oriented Mathematical Evidence), a large-scale corpus that converts 2,118 textbooks spanning the core areas of university-level mathematics subjects into approximately 380K structured proof-supervision records while preserving chapter order, proposition-proof links, dependency references, and source provenance. Leveraging these structural signals, we explore curriculum learning across multiple mathematical subjects and characterize scaling patterns with supervision volume and source breadth. At full scale, fine-tuning on TOME-Math raises the unweighted mean score across our held-out evaluations and established public benchmarks by 16.7 percentage points over the base model, while exceeding all three public instruction-data baselines evaluated in aggregate. Our findings highlight structured textbooks as both a scalable source of mathematical supervision and an empirical framework for studying the impact of data organization on mathematical reasoning. We will release the corpus to facilitate further research on structured mathematical supervision.",
+          "pubDate": "2026-10-28T20:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "ed297bd4f21924aba3118b5890ecbe3f4ba6e90fecc735b2a59da08e96beb65f",
+          "sourceId": "hf_papers",
+          "title": "CogBattery: Human-Referenced Evaluation of Cognitive Task Behavior and Structure in Language Models",
+          "url": "https://huggingface.co/papers/2607.24999",
+          "summary": "Human cognitive tasks let us compare language models with humans under controlled conditions. Yet a model can reproduce the direction of a human effect while making different errors. CogBattery evaluates 54 open-weight language models on text adaptations of 13 cognitive paradigms, comparing each with human data from its source study. Like humans, models respond more to n-back lures than to controls, yet they make far more false alarms on ordinary non-targets. Most models' reported confidence separates correct from incorrect answers less well than humans' does, and most always choose the same wager, including models that classify accurately. These patterns span many model families. Across tasks, model scores share two dimensions. The first is closely tied to scale, yet larger models are not consistently closer to humans. Predefined cognitive groupings show no reliable predictive advantage over random groupings of the same size. These results show that matching human effect directions does not establish human-like behavior. CogBattery provides condition-level human references for testing errors and confidence reports in new models.",
+          "pubDate": "2026-10-29T20:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "dfccd253f527c6c1406df88f724ee889ebadb5f2597c6ff2acec1af3a437cdbf",
+          "sourceId": "hf_papers",
+          "title": "WMIP: A Working-Memory-Inspired Programmable Probe of Cumulative State Tracking in Large Language Models",
+          "url": "https://huggingface.co/papers/2603.27343",
+          "summary": "Human working memory lets people maintain and update information. Large language models (LLMs) face a related demand when tracking updates within a single prompt without writing out intermediate states, yet existing tests differ in their constraints on written steps. We introduce a working-memory-inspired probe of cumulative state tracking with program-computed answers, 3 to 100 updates, and final-state, intermediate-state, or multi-target queries. It compares protocols on identical items. Across 18 LLMs, accuracy is 84.9% on single-step arithmetic but 31.7% on core items requiring one number after three to seven updates. From 50 updates on, no model exceeds 10% accuracy. Core accuracy reaches 88.0% under a larger budget and instructions to write steps and place the answer on the last line, mainly due to the instruction changes rather than the budget. Core accuracy also correlates positively with public Berkeley Function Calling Leaderboard scores. These findings show that strong single-step arithmetic does not ensure reliable cumulative tracking and that output protocols substantially change measured accuracy. We release the generator, items, scoring code, and responses for reproducible comparisons across depths, query types, and protocols.",
+          "pubDate": "2026-10-29T20:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "2a0cd1e13ba6ee06743fae108e134c328ee67073380c50c9263df9d58ba0c110",
+          "sourceId": "hf_papers",
+          "title": "Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference",
+          "url": "https://huggingface.co/papers/2611.10193",
+          "summary": "Large language models (LLMs) increasingly support Web-based services that must balance response quality and inference cost across heterogeneous requests. Conventional routing selects one model per prompt, while fixed ensembles cannot adapt their composition and cost to individual requests. We introduce PISA, a prompt-adaptive, cost-aware single-model router, and PISA-E, its extension to ensemble routing. At the core of both methods, PISA combines soft cluster memberships with model-specific predictors to estimate individual model capabilities. Building on these estimates, PISA-E jointly selects ensemble composition and cardinality under an explicit cost--quality preference that can be adjusted at inference time without retraining. A tractable ensemble-success surrogate and efficient candidate selection enable this extension without ensemble-specific training. Across four LLM routing benchmarks under in-distribution (ID) and out-of-distribution (OOD) conditions, PISA achieves the highest macro-average cost--performance hypervolume among the evaluated single-model routers in both settings. Meanwhile, PISA-E achieves the highest macro-average task performance among the evaluated ensemble approaches when prioritizing response quality, surpassing the strongest competitors by 2.09 and 2.87 percentage points under ID and OOD conditions, respectively. At selected lower-cost operating points, it also exceeds the strongest ensemble competitors' macro-average task performance while reducing average inference cost by approximately 36% and 25%, respectively. These results demonstrate the effectiveness of prompt-adaptive capability estimation for both single-model routing and selective ensembling.",
+          "pubDate": "2026-11-05T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "8a5ce4a987adc29727525f0bd8ebb397801ff53c42ac121c40eaeb12d6bb7f63",
+          "sourceId": "hf_papers",
+          "title": "Incentivizing Self-Learning in Large Language Models via Reinforcement Learning",
+          "url": "https://huggingface.co/papers/2610.39671",
+          "summary": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks. Yet problem solving in unfamiliar domains calls for tightly coupled knowledge acquisition and reasoning, beyond factual retrieval and aggregation or learning solely from a preassembled context. We study self-learning -- autonomously retrieving, studying, and applying knowledge from long-form reference materials on the fly. To investigate this capability, we formulate a textbook-based mathematical problem-solving task. LLMs must navigate textbook exposition, learn and apply relevant principles, and construct proofs for exercises, with reference solutions withheld. We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards. Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines. These gains extend to complex long-context benchmarks involving different task types, with improvements over the base model of 1.7 and 2.3 percentage points on BrowseComp-Plus and CL-bench, respectively. Together, these findings suggest that RL can foster a domain-agnostic self-learning strategy, highlighting the potential of self-learning from long-form corpora to strengthen broader problem-solving capabilities on complex, long-context tasks.",
+          "pubDate": "2026-10-28T20:00:00.000Z",
+          "extraSourceIds": []
+        },
         {
           "id": "4f92bb8b07c7bc08b0dbeda059ce133ab9f79b1d7b7a84349205db9905384619",
           "sourceId": "hf_papers",
@@ -1871,158 +2015,14 @@
           "summary": "Reinforcement learning (RL) can improve an agent's task capability while reinforcing behavior that violates contextual execution requirements. We study this reward-driven misalignment, including reward hacking, through verifiable reward--context conflicts, where compliant task completion remains feasible while some executable shortcuts earn more reward than every compliant strategy. Encoding these conflicts in task dynamics lets us generate diverse interactive environments at scale and derive compliance feedback from execution histories. In resource and reporting workflows, task optimization increases real productivity through unauthorized resource use or raises reported scores while actual work declines. Controlled changes in the training distribution show that minority conflict exposure can still lead to widespread shortcut acquisition, reaching 97.9\\% certified profitable violations on an API task under a 25\\% conflict mixture after 128 updates. The same contextual checks supply a simple binary penalty that supports joint capability and compliance gains and partially mitigates acquired violations. Learned safety adapts to expanded authorization and transfers across mechanisms into workflows with evolving evidence and approval requirements. On 32 unseen changing-evidence tasks, resource-trained safety increases safe completion from 53.1\\% to 89.1\\% relative to task-only training, while both policies achieve full real work. These results connect a verifiable account of reward-driven misalignment with scalable task construction and safety learning that remains useful under changing execution requirements.",
           "pubDate": "2026-11-08T19:00:00.000Z",
           "extraSourceIds": []
-        },
-        {
-          "id": "e16298ee09ccc665052b5b6e5198f5b1bd6458ef3d28749d57bba6192a59694e",
-          "sourceId": "hf_papers",
-          "title": "Are Dense Rewards Worth Their Tokens in GRPO?",
-          "url": "https://huggingface.co/papers/2611.13560",
-          "summary": "RLVR trains language models to reason by rewarding correct final answers. A widely used algorithm, group-relative policy optimization (GRPO), gives every token of a solution the same credit, so dense process rewards have been proposed to credit intermediate steps, for example with a Monte-Carlo reward that scores each step by sampling continuations from it. Comparing such a reward with GRPO per training update, or vetting it with a gradient test on a single batch, leaves out what it costs: in our setting, the continuations alone take 91% of all generated tokens. We introduce a matched-compute protocol that gives every training intervention the same budget, measured in generated tokens and training GPU-hours, and tests it in preregistered studies with controls for side effects. Across 1,668 runs on six models, matching compute reverses the ranking. On Qwen2.5-1.5B, the Monte-Carlo reward leads standard GRPO per update, yet ends 14.3 percentage points lower at equal tokens and 7.8 points lower at equal training time, and none of four dense-reward variants outperforms GRPO even with as much training time. A per-token gradient test orders these rewards as training does but overestimates each by one to two points, as much as the gains it is meant to detect. In contrast, training on the prompts whose predicted success is nearest 1/2 improves accuracy at matched compute, by 1.7 points on Qwen3-0.6B and 0.8 on Qwen2.5-1.5B. These gains replicate on fresh seeds and unseen problems, and a simple rule, that the candidate prompts are predicted to fail more often than not, predicted where they appear in five of six preregistered tests. Both gains come early in training, and standard GRPO with twice the initial learning rate comes within half a point of them. We argue that training interventions should be validated at matched compute, which overturns some apparent gains and confirms others.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "5aec6015fcb8fd220f4f9217894df5c58d3010ce3dcf85809b455182b6ee8c70",
-          "sourceId": "hf_papers",
-          "title": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
-          "url": "https://huggingface.co/papers/2611.13572",
-          "summary": "Much of the variation in financial time series is driven by market-wide shocks that cannot be predicted from an asset's own history. Per-asset self-supervised learning treats this variation as irreducible noise. Under a latent factor model, we show that conditioning prediction on the realized market factor makes the asset's market exposure necessary for optimal prediction, while reducing the noise against which the asset-specific component is learned. Building on this insight, we introduce Market-Conditioned JEPA (MC-JEPA), a joint-embedding predictive architecture for financial time series. During training, we construct a leave-one-out market condition for each asset from the future target embeddings of other assets and incorporate it through factor loadings derived from the asset's own representation. On 11 years of minute-level Chinese A-share data, MC-JEPA improves over per-asset JEPA across nine targets spanning returns, market exposure, risk, and liquidity, with the strongest and most statistically significant gains in exposure, risk, and liquidity. It achieves the best RankIC on all liquidity targets and on return horizons from two hours to five days, outperforming time-series foundation models and self-supervised baselines, and delivers the best portfolio performance in a historical backtest. Ablations show that the return and exposure gains require the condition to be aligned with the realized market movement. After restoring the volatility scale removed by normalization, the predictor's factor loadings rank stocks by market beta nearly as well as a supervised probe, without labels. A synthetic factor-model study with known parameters shows that conditioning improves the recovery of both market exposure and the asset-specific component.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "aa2c588e72d1e6a30c40437de0cdd0c24fe4a84b4b2ba63767bf7b37cf1d0f01",
-          "sourceId": "hf_papers",
-          "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
-          "url": "https://huggingface.co/papers/2611.14210",
-          "summary": "Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read a network's weights and write a repair. Their GPT-6 Astra agent corrected the reasoning loops of Qwen3.5-0.8B without gradients, using 158 agent turns, 89.7 million tokens, and 50 forward-pass requests. Our method, Tree-Ising, casts this repair as a sparse discrete optimization problem over the model's own BF16 weights. Forward statistics define an objective that weakens a loop direction, strengthens a concluding direction, and preserves the layer's output on productive tokens. Within a state-tree representation, where lossless BF16 storage acts as a special case, the admissible edits are sign flips and exponent shifts that preserve all shared group exponents and mantissas. We decompose this objective exactly into independent QUBO (Ising) problems, one per output row, which we solve on a GPU using simulated annealing or quantum-inspired simulated bifurcation. On the agent's two layers, Tree-Ising achieves 54.6% on MATH-500, outperforming the agent's edit (51.7%) under the same evaluation protocol, while the base model scores 7.9% as reported. The simulated bifurcation solver yields a statistically indistinguishable repair at 55.1%. Both solvers outperform the agent edit across all five math benchmarks, with statistically significant improvements on MATH-500 and GSM8K after correcting for multiple comparisons. Our approach modifies 13% to 17% fewer weights and reduces BF16 bit flips by a factor of 2.2 to 2.3. It requires only four forward-pass requests and zero LLM tokens, with the annealing recipe costing about $0.90 in GPU time. On Qwen3.5-2B, with layers and dose selected using only the base model, the same recipe increases greedy GSM8K accuracy from 21.6% to 69.4%. As a proof of concept, we execute an eight-variable repair subproblem using QAOA on an IBM Heron processor.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "9537c2a60cdfa48ba284451435c9d958d429e0d68ff1cf32531a169a1c50c13a",
-          "sourceId": "hf_papers",
-          "title": "MMDM: Measuring Massive Multitask Decision Making",
-          "url": "https://huggingface.co/papers/2611.14309",
-          "summary": "System-1 Decision Models directly make structured probabilistic decisions over query-specified options given a state in a single forward pass, without autoregressively generating reasoning trajectories or textual responses. Recent evaluations cover diverse tasks but often rely on existing benchmarks, where prior exposure to test material can obscure generalization. Moreover, real-world decision making often involves long contexts, large option spaces, and complex logical dependencies, challenges that existing benchmarks do not adequately capture together. Thus, we introduce MMDM (Massive Multitask Decision Making), a benchmark of 5,448 high-quality questions across 16 task categories, combining newly constructed tasks with source-grounded recompositions and rewrites for single-select, multi-select, and soft-label decision making in fresh contexts. It covers realistic scenarios such as agent state tracking, tool and skill selection, preference judgments, and rubric scoring, with option spaces ranging from 2 to 1,024 and inputs extending to 64,817 tokens. With MMDM, we conduct a comprehensive quantitative evaluation of 28 decision models, showing that many perform well on common knowledge yet struggle with interdependent options, constrained decisions, and multi-select tasks. For example, Perplexity Decider-V1.2 reaches 78.75% Hard Single-select Accuracy on world knowledge, but only 53.95% on option logic and 47.95% on constraint planning, while the best Hard Multi-select Accuracy across all models is 36.81%. These results highlight joint reasoning, constraint-aware selection, and complete multi-select recovery as key priorities for decision model development, with MMDM providing a testbed for measuring this progress.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "98e7abd83e84fbf5cf18cf32b11a6a1e1c06c9b45b2e5550f6a595da3e0eac87",
-          "sourceId": "hf_papers",
-          "title": "EVAThink: Evidence Sufficiency-Guided Training for Adaptive Thinking in Video Understanding",
-          "url": "https://huggingface.co/papers/2611.13907",
-          "summary": "Under a fixed frame budget, video understanding with vision-language models (VLMs) depends on whether the sampled frames provide sufficient evidence for the question. Sufficient frame evidence supports direct answering, whereas less informative observations may benefit from reasoning that connects the available cues. We introduce EVAThink, which enhances video understanding through evidence sufficiency-guided training for adaptive thinking. First, Recoverable Evidence Gap Mining constructs evidence-dense and evidence-sparse video views that share the same question and answer under an identical frame budget. It retains pairs where sparse views yield lower direct-answer accuracy than dense views but benefit from explicit reasoning, providing supervision for response-mode selection. Second, Evidence-Guided Two-Stage Reinforcement Learning uses stage-specific rewards to guide training with evidence-based mode preferences and then refine response efficiency, while first-token advantage regularization mitigates mode collapse. Trained on only 6.7K curated samples, EVAThink consistently improves upon the base model across video understanding benchmarks under both 32- and 64-frame budgets, while outperforming strong baselines on average. The code, model, and datasets are available at https://github.com/ChangtiWu/EVAThink{EVAThink}.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "6745f2bc85da78af1f11c87f38ae521fc3d6209d811b06b0e7cd574fe611eedc",
-          "sourceId": "hf_papers",
-          "title": "Learning to Act with World Models by Valuing What Comes Next",
-          "url": "https://huggingface.co/papers/2611.12200",
-          "summary": "A sparse terminal reward tells an agent little about its steps. Much of the missing information is implicit in the environment's dynamics, because each state transition can change the conditions for success long before the reward arrives. A world model trained on real transitions can learn to predict what each action changes, but a predicted observation does not by itself show whether success has become more likely. With a binary terminal reward, PPO's critic makes this judgment by estimating the current policy's probability of success, but only for states the agent reaches. Our method, WM-PPO, elegantly brings the two together. For each action the policy samples, executed or not, the world model predicts the next observation and the critic values the predicted successor. In the policy channel, comparisons among these values give the policy auxiliary advantages; in the value channel, their mean gives the critic an auxiliary target. A shared gate weights both channels according to how reliably comparisons with similar margins predicted real outcomes earlier in training. The policy, critic and world model all learn from the agent's own interaction, with no teacher or privileged information, and only the policy is used at inference. With a comparable number of real environment steps, WM-PPO raises success from PPO's 63.5% to 87.5% on ALFWorld and from 39.3% to 52.9% on ScienceWorld. It matches the strongest PPO refinements we tested on ALFWorld and exceeds the best of them by 6.5 points on ScienceWorld. The trained policy more often completes prerequisite steps before placing an object or committing to an answer.",
-          "pubDate": "2026-11-09T05:59:19.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "9a670dbc12a64e1d5907c448634e9fd3ce2773d1f51069c4bd2bdec10b93da4f",
-          "sourceId": "hf_papers",
-          "title": "DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight",
-          "url": "https://huggingface.co/papers/2611.11166",
-          "summary": "Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future prediction. We introduce DexForesight, a framework that learns spatial foresight implicitly by injecting dynamics-aware world representations into the latent space of a dexterous policy. During training, DexForesight learns an action-conditioned spatial world model from offline scene depth, kinematic hand geometry, and demonstration trajectories. The world model predicts 3D hand-point motion and visual feature changes, capturing both articulated hand dynamics and scene changes under demonstrated actions, including the motion of fingers occluded from the cameras. We then freeze the world model and align policy queries with its predictive world queries, transferring the learned spatial dynamics into policy latents and using them to condition action generation. At deployment, only the policy is retained, operating on RGB observations, language, and robot state without depth input or explicit future prediction. On 11 DexJoCo simulation tasks, DexForesight improves the overall success rate of the base policy from 49.4% to 60.5%. On three real-robot dexterous manipulation tasks, DexForesight achieves 58.3% success, compared with 50.0% for the strongest baseline. Project page https://dexforesight.github.io/",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "f18b0c1d417dc5d9b58215d248ca33782458fb7aa7b62cf7f9e1f4ecbb6e962e",
-          "sourceId": "hf_papers",
-          "title": "ProTEUS: A mutation-resolved world model for closed-loop protein evolution",
-          "url": "https://huggingface.co/papers/2611.13348",
-          "summary": "Protein engineering requires navigating rugged fitness landscapes, where small sequence changes can produce large functional differences, but experimental screening can only sample a small fraction of sequence space. Thus, a central challenge is to efficiently traverse the large combinatorial space of mutations in silico. We introduce ProTEUS, a mutation-resolved world model for closed-loop protein evolution. Pretrained on deep mutational scanning assays, ProTEUS learns a joint representation of sequence, evolutionary, and structural information using MutationFormer, a mutation-biased attention architecture. Variants are represented as states in this joint latent space, and mutations define actions whose functional consequences are predicted. To support exploration of many mutants, we developed a fast, physics-constrained all-atom predictor that utilizes explicit geometric constraint enforcement to achieve >10 fold increase in speed than AlphaFold3 with guaranteed physical validity. Lastly, ProTEUS refines its prediction and understanding of protein activity through closed loop experimental feedback to guide evolution toward a desired phenotype. ProTEUS surpasses established models in both zero-shot and supervised fine-tuning mutation prediction tasks. We experimentally demonstrate its utility in two closed-loop multi-objective engineering campaigns on aldehyde dehydrogenase and levansucrase, yielding variants with >10 fold higher activity than wild type. ProTEUS provides a world-model framework that connects virtual evaluation of mutational outcomes with experimental learning for efficient protein evolution.",
-          "pubDate": "2026-11-08T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "e5ef485c8e1265a5862a2d67fa30d51a4542f09c163374a2e528c78381461540",
-          "sourceId": "hf_papers",
-          "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
-          "url": "https://huggingface.co/papers/2611.14488",
-          "summary": "Memory-augmented vision-language-action (VLA) policies are meant to remember what happened. Many of them, however, fill memory by time: they sample frames uniformly across the episode and stamp each frame with its time step. Because time passes even when nothing happens, such a memory may not tell waiting from working. We show that it does not. On the counting tasks of RoboMME, we make the robot briefly pause or fidget its wrist. Such a null event changes nothing the task depends on, yet a released memory VLA counts the interval as work done and stops early. We call this failure phantom progress. It cuts success from 47 to 16 of 50 on one task and from 44 to 10 on the other. When the same frames are withheld from memory, success returns, so the cause lies in memory rather than in the interruption itself. We trace the failure to a temporal shortcut: because demonstrations proceed at a steady pace, elapsed time predicts progress. Indeed, rescaling the time stamps alone makes the policy stop early when the clock runs fast and repeat when it runs slow. Surprisingly, removing the time encoding does not cure the failure, because the frames of a null event still occupy slots of the time-sampled memory. Across RoboMME's released designs, vulnerability follows how memory is indexed. Of the fixes the diagnosis suggests, training with injected pauses does not remove the failure and impairs counting, whereas indexing memory by events recovers half or more of the loss without retraining. A memory meant to remember what happened should count events rather than clock ticks.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "78f4a6f39e8f07d39ae295d30bf5fbd47f5c0945aea83da8c9e6520f5c23da19",
-          "sourceId": "hf_papers",
-          "title": "ExRL: Sample-Efficient Online Adaptation of Long-Chunk Policies via Execution Length Control",
-          "url": "https://huggingface.co/papers/2611.13482",
-          "summary": "Predicting long action chunks, often spanning dozens of timesteps, has become a key ingredient in increasingly capable robot policies. In this paper, we find that adapting these long-chunk policies with existing reinforcement learning (RL) methods can require many online samples due to the high dimensionality of the action chunks being optimized, making such adaptation impractical in real-world scenarios where interaction data are costly to collect. Our key insight is to shift adaptation from optimizing actions to optimizing how long to execute each predicted action chunk. This keeps the adaptation space low-dimensional while its expressivity grows with the chunk size. We thus introduce Execution at the Right Length (ExRL), a simple approach which augments the base policy with a lightweight adapter that predicts the execution length of each chunk and is trained using off-policy RL algorithms. Across simulation benchmarks and real-world robotic tasks, ExRL enables sample-efficient adaptation of a diverse range of long-chunk policies with minimal task-specific hyperparameter tuning.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "3c722bfbd08e30f4cde9cf9d2b3dcc45a4e64d189954db9f574f64ff8b2026ec",
-          "sourceId": "hf_papers",
-          "title": "DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction",
-          "url": "https://huggingface.co/papers/2611.03142",
-          "summary": "Scaling depth is a key route to stronger large language models, but Pre-LN architectures often suffer from depth-wise information dilution, limiting the effective use of deep layers. While cross-layer connectivity has proven effective at mitigating this problem, existing designs usually introduce additional computation or memory access. We revisit cross-layer KV sharing as an efficient form of such connectivity. Beyond cache compression, each KV reuse edge creates a direct gradient path from deep layers to source KV projections, turning KV sharing into an implicit structural regularizer for KV representation geometry. We provide a systematic analysis of this mechanism, showing that proper sharing topologies sharpen key retrieval directions while enriching the value content subspace, whereas existing adjacent or global-anchor designs do not fully exploit this effect. Motivated by this, we propose DepthGraft, a hierarchical KV-sharing architecture that reconstructs deep-layer KV from stride-aligned shallow-middle source pairs. DepthGraft distributes non-local gradient flow across source layers, while preserving prefill early completion and reducing KV cache by roughly one third. Experiments on dense and MoE models from 0.5B to 16B parameters show consistent downstream improvements under both GQA and MLA. Notably, on the 16B MoE model, DepthGraft achieves a 7.0% absolute improvement on MMLU-Pro, along with gains of 6.6% on CMMLU and 6.4% on C3. These results validate the potential of DepthGraft as a scalable design for large-scale pretraining. The project page is available at https://github.com/jianke0604/DepthGraft.",
-          "pubDate": "2026-11-01T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "8f9b46bd02b01c7a887c16c0e62fbad33961ba0682e055b04168a9def64922f4",
-          "sourceId": "hf_papers",
-          "title": "dNaViT: Discrete Codes are General-Purpose Visual Representations",
-          "url": "https://huggingface.co/papers/2611.12426",
-          "summary": "Discrete autoregressive modeling, notably through next-token prediction, has become a cornerstone of modern language models. Extending this paradigm to vision allows visual and language models to converge on a unified framework, thereby fostering shared methodology and infrastructure. This work investigates a central question: how far can a finite discrete vocabulary go in representing the richness of the visual world? We present dNaViT, a Discrete Native-resolution Vision Transformer that produces discrete visual primitives analogous to language tokens. Built upon a frozen pretrained encoder, dNaViT applies lightweight residual modulation with a dual-branch objective to inject reconstruction-aware cues into semantic features. By leveraging grouped product quantization, it scales discrete capacity without inflating spatial sequence lengths, while a balanced training recipe maintains both semantic and pixel-level information. Consequently, dNaViT functions as a versatile discrete visual tokenizer, enabling unified encoding across downstream tasks alongside high-fidelity image decoding. Extensive evaluations show that dNaViT matches or exceeds task-specific baselines across 12 visual understanding benchmarks, 4 generation benchmarks, and an image editing benchmark. These findings demonstrate that a compact discrete vocabulary can serve as a universal visual currency and unlock the full potential of fully unified, native multimodal methodology.",
-          "pubDate": "2026-11-08T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "8d37f7867f33b77df9c39a58cd0e57af634d63269a23a43a3c73fac726cce8e6",
-          "sourceId": "hf_papers",
-          "title": "Few-Step Streaming Video Generation via Condition Shifting",
-          "url": "https://huggingface.co/papers/2611.14033",
-          "summary": "Few-step sampling reduces the cost of streaming video generation. Distribution Matching Distillation (DMD) supervises few-step generators with a separate fake-score network, which adds training memory and computation and must track the evolving generator. We extend APEX to streaming video by using condition shifting to estimate the velocity field of the generated distribution within the generator. The original text condition selects generation, while a shifted condition selects fake estimation using the same parameters. This removes the independent fake network while retaining S2-Avatar's frozen reference teacher, Self-Replay Forcing, and perceptual regularization. We evaluate APEX on 180-second videos using three backbone evaluations per block and a one-step spatial Refiner, with a 70-case human study and a 320-case StreamAV-Bench comparison. Compared with S2-Avatar, APEX achieves higher video instruction fulfillment on the Progressive track (3.856 versus 3.831) and higher visual aesthetics across both tracks (0.641898 versus 0.632606). Human raters favor APEX most strongly on instruction following, with +30.0% net preference, followed by consistency and video quality at +4.3% each. Motion quality favors S2-Avatar, audiovisual synchronization is predominantly tied, and usability is unchanged. Separate measurements under matched training settings show 4.4% lower peak allocated GPU memory per GPU and 9.2% shorter mean iteration time than DMD.",
-          "pubDate": "2026-11-09T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "ffd98aed6c9caa8aa51d5ecb89f5a6fc32326b574d9a47b74b7bd37ce785e235",
-          "sourceId": "hf_papers",
-          "title": "PhysOPSD: Code as Privilege for Physically Plausible Video Generation",
-          "url": "https://huggingface.co/papers/2611.12411",
-          "summary": "While modern video generative models achieve remarkable visual fidelity, they remain noticeably brittle when generating physically plausible dynamics and complex interactions. Targeted post-training is crucial, yet supervised fine-tuning suffers from offline state mismatch, and reinforcement learning is hindered by sparse, ill-defined physical reward functions. On-Policy (Self-)Distillation (OPSD) reconciles on-policy rollouts with dense corrective feedback, shifting the core challenge to designing effective privileged context. However, conventional modalities fall short: text prompts are inherently declarative, whereas real reference videos heavily entangle physical laws with visual appearance without parametric control. To this end, we propose PhysOPSD, introducing executable code as privileged physical context for video generation. Unlike static visual observations, executable code instantiates an editable physical world with intrinsic abstraction and controllability. Powered by PhysOPSD-Engine, we translate real-world physical scenarios into verifiable simulation programs. PhysOPSD then incorporates (i) dual-level physical privilege to bridge the information gap via an intermediate bottleneck, alongside (ii) controlled physical variations under shared rollout noise to expose causal dynamic shifts. Extensive experiments demonstrate that PhysOPSD substantially improves physical plausibility across diverse backbones, outperforming SFT and RL baselines with only 3K samples, while preserving general video generation quality.",
-          "pubDate": "2026-11-08T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "c6d9b9f5472562c6577beecde43e06fe51622c58240fd42cb3be7ce0452e725d",
-          "sourceId": "hf_papers",
-          "title": "World In-Context Learning for Agentic Robot Manipulation",
-          "url": "https://huggingface.co/papers/2611.12885",
-          "summary": "Trained action policies write manipulation skill into network weights, tying what is learned to the distribution it is learned from. In-context learning (ICL) avoids this coupling but has not matched trained policies, because a demonstration recorded in another scene carries no feedback from the world the robot currently faces. We observe that what an agent learns in context is semantic, recording task steps and object roles rather than visual appearance, so experience gathered in one world transfers to another. Based on this insight, we propose World In-Context Learning (WICL), a paradigm in which a frozen model starts from a demonstration, rehearses the task in a world such as a simulator, and writes the feedback into its context rather than its weights. We build RoboScript, a modular infrastructure that implements WICL for agentic manipulation. From a single demonstration, RoboScript learns each task through rehearsal in simulation, freezes the learned knowledge as a Task Memory, and deploys the frozen memory on new scenes with data isolation that ensures every deployment input is available on a real robot. On all 50 tasks of RoboTwin 2.0, RoboScript reaches 83.4% mean success across clean and randomized settings with one demonstration per task and no gradient updates, exceeding the strongest trained action policy by over 20 points. The method generalizes across visual distributions, improves through reflection, scales with the foundation model, and transfers to a physical dual-arm robot through cross-embodiment memory adaptation. With a world in the loop, a robot can learn a manipulation task in its context as well as it learns one in its weights. All code is available at https://github.com/ArcheOne-AI/RoboScript",
-          "pubDate": "2026-11-08T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "06e16f9cceff276907ba0e7f54784f6ce92070cabc989aeaaf05c41cab3825cf",
-          "sourceId": "hf_papers",
-          "title": "Predictive Surprise as Self-Grounding Concept Bottleneck for Interpretable Time Series",
-          "url": "https://huggingface.co/papers/2611.12955",
-          "summary": "Time-series classifiers deployed in risk-sensitive domains must be (1) accurate, (2) interpretable, and (3) able to abstain when evidence is weak. Existing methods do not deliver all 3 at once, and the obstacle is structural, rather than logistical. Meaningful temporal patterns cannot be defined without knowing segment boundaries, yet meaningful boundaries cannot be placed without knowing which patterns to expect. Existing approaches break this circularity by using fixed windows or expert-annotated vocabularies, thereby sacrificing at least one of the 3 properties. We introduce ConceptTime, which closes the loop through a single self-supervised signal. A frozen probabilistic forecaster predicts a distribution over the next observation at every timestep of the sequence. We call the mismatch between its prediction and the realized signal the predictive surprise. This signal both locates segment boundaries and characterizes each resulting segment through the forecaster. Segments are thus grounded by how they behaved relative to expectation, not by what they look like. These summaries cluster into a vocabulary of dynamical regimes that we call concepts. A lightweight head classifies from the concept sequence, and the distance to the nearest concept yields reliability by design. Across 17 public benchmarks, ConceptTime is competitive with state-of-the-art black-box accuracy, beats every interpretable baseline, and retains near-98% accuracy on Epilepsy with 1% of labels. It further remains competitive with softmax, prototype-distance, and SHAP/TimeX/TimeX++ on OOD detection and deletion faithfulness, without a single annotation, language model call, or domain expert. Code is available at: https://github.com/Sachithx/ConceptTime.git.",
-          "pubDate": "2026-11-06T19:00:00.000Z",
-          "extraSourceIds": []
         }
       ]
     },
     "arxiv_ai": {
       "sourceId": "arxiv_ai",
-      "status": "ok",
+      "status": "stale",
       "updatedAt": "2026-11-12T03:58:08.467650Z",
-      "error": null,
+      "error": "No items",
       "items": [
         {
           "id": "b9d2444f15e2eae282712a9978b9056efb2ce5008fe7a8142b075b7192991877",
@@ -2388,9 +2388,9 @@
     },
     "arxiv_cl": {
       "sourceId": "arxiv_cl",
-      "status": "ok",
+      "status": "stale",
       "updatedAt": "2026-11-12T03:58:08.467756Z",
-      "error": null,
+      "error": "No items",
       "items": [
         {
           "id": "57c55b32e1e7446ffe816ea0a056df4bca6004ee26ec77521deae004f9d0aba3",
@@ -2756,9 +2756,9 @@
     },
     "arxiv_lg": {
       "sourceId": "arxiv_lg",
-      "status": "ok",
+      "status": "stale",
       "updatedAt": "2026-11-12T03:58:08.467798Z",
-      "error": null,
+      "error": "No items",
       "items": [
         {
           "id": "7adece2d0ac918de1a6d6515c6b41b02eb54ab282353d94047df451e5772e853",
@@ -3125,7 +3125,7 @@
     "techcrunch_ai": {
       "sourceId": "techcrunch_ai",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.467836Z",
+      "updatedAt": "2026-11-12T12:13:50.851607Z",
       "error": null,
       "items": [
         {
@@ -3313,14 +3313,14 @@
     "venturebeat_ai": {
       "sourceId": "venturebeat_ai",
       "status": "error",
-      "updatedAt": "2026-11-12T03:58:08.539243Z",
+      "updatedAt": "2026-11-12T12:13:50.986647Z",
       "error": "Exception: HTTP 429 for https://venturebeat.com/category/ai/feed",
       "items": []
     },
     "mittr_ai": {
       "sourceId": "mittr_ai",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.683644Z",
+      "updatedAt": "2026-11-12T12:13:51.044781Z",
       "error": null,
       "items": [
         {
@@ -3418,9 +3418,18 @@
     "marktechpost": {
       "sourceId": "marktechpost",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.683883Z",
+      "updatedAt": "2026-11-12T12:13:51.044894Z",
       "error": null,
       "items": [
+        {
+          "id": "d35cac58169190f6477d5f38c1290328a2e4e68afce42522098b61ee92b7ee9d",
+          "sourceId": "marktechpost",
+          "title": "IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits",
+          "url": "https://www.marktechpost.com/2026/11/12/ibm-quantum-nighthawk-r3-520-qubits-1040-qubit-system-2027/",
+          "summary": "IBM announced Quantum Nighthawk r3, a 520-qubit processor designed for 10,000 quantum operations. 2 r3 chips will link into a 1,040-qubit system in 2027, while Nighthawk r2 already posts up to 19x speedups over Heron. The post IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits appeared first on MarkTechPost .",
+          "pubDate": "2026-11-12T08:42:21.000Z",
+          "extraSourceIds": []
+        },
         {
           "id": "2ec56a2f84ba54e05a4f603504c099c99251b028a3a492808b04db3a4e65a95c",
           "sourceId": "marktechpost",
@@ -3501,202 +3510,193 @@
           "summary": "Meta Muse Ember is Meta’s smallest model, built for tool calls, coding subtasks and document parsing. It ties Claude Haiku 5.5 on the Artificial Analysis Intelligence Index at roughly a third of the cost per task. The post Meta Releases Muse Ember, a 1M-Context Model for High-Volume Agent Work appeared first on MarkTechPost .",
           "pubDate": "2026-11-10T06:36:10.000Z",
           "extraSourceIds": []
-        },
-        {
-          "id": "0f6d64f7cce70b4520c1b15fc97a875dfab052755b72e55c3352b4bc874435ae",
-          "sourceId": "marktechpost",
-          "title": "Google Unveils TPU 8i Max and TPU 8tx: A Dual-Chip TPU and a Confidential TPU",
-          "url": "https://www.marktechpost.com/2026/11/09/google-tpu-8i-max-tpu-8tx/",
-          "summary": "Google added TPU 8i Max and TPU 8tx to its eighth-generation TPU lineup. TPU 8i Max packs 2 TPU 8i chips per package for long-context agents. TPU 8tx adds hardware confidential inference. Bloomberg reports 2027 availability. The post Google Unveils TPU 8i Max and TPU 8tx: A Dual-Chip TPU and a Confidential TPU appeared first on MarkTechPost .",
-          "pubDate": "2026-11-09T17:09:54.000Z",
-          "extraSourceIds": []
         }
       ]
     },
     "hn_ai": {
       "sourceId": "hn_ai",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.683956Z",
+      "updatedAt": "2026-11-12T12:13:51.044929Z",
       "error": null,
       "items": [
         {
-          "id": "21e37992287283c130660c57bd678a1a1679f2f1f6acdd4c657b01ca0776b420",
+          "id": "093ac02a2232b7927dbab147902fbaaf70e4d1e349d693ceac9aae429996ad16",
           "sourceId": "hn_ai",
-          "title": "United Airlines Is Banning AI Bots from Booking Flights",
-          "url": "https://www.wsj.com/tech/ai/united-airlines-is-banning-ai-bots-from-booking-flights-5b514b38",
-          "summary": "Article URL: https://www.wsj.com/tech/ai/united-airlines-is-banning-ai-bots-from-booking-flights-5b514b38 Comments URL: https://news.ycombinator.com/item?id=50462187 Points: 3 # Comments: 2",
-          "pubDate": "2026-11-12T02:11:54.000Z",
+          "title": "Conference Digest: put networking, cloud, K8s, and AI conferences to work",
+          "url": "https://tldr.netdevops.me/",
+          "summary": "Article URL: https://tldr.netdevops.me/ Comments URL: https://news.ycombinator.com/item?id=50465900 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T11:56:55.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "1ab5c1df68fac2f2a7a716896b94935dd03afb2dcdabb04624defa4b85b7d3c0",
+          "id": "01b0ff3d4f305f95c0f756b2846d356f984eb0f3a82c470730fb78622bc8da9e",
           "sourceId": "hn_ai",
-          "title": "Can commercial stage-gates keep enterprise AI pilots out of procurement stalls?",
-          "url": "https://pilotmap.bizmasterynow.com/",
-          "summary": "Article URL: https://pilotmap.bizmasterynow.com/ Comments URL: https://news.ycombinator.com/item?id=50462153 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-12T02:08:10.000Z",
+          "title": "AI makes it 'close to impossible' to assess university coursework,regulator says",
+          "url": "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator",
+          "summary": "Article URL: https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator Comments URL: https://news.ycombinator.com/item?id=50465844 Points: 4 # Comments: 1",
+          "pubDate": "2026-11-12T11:47:47.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "1207ea786fc4190d498fb5d455a3a84b09c73bed5bc6db952cf48545c29812c1",
+          "id": "70fcd804ac9bfe9eef8025eea7ad02626e561c282b5d9d8dc06a891c55cb72be",
           "sourceId": "hn_ai",
-          "title": "Show HN: gethome – a local-first smart home hub with AI",
-          "url": "https://github.com/gethome-inc/gethome-hub",
-          "summary": "Article URL: https://github.com/gethome-inc/gethome-hub Comments URL: https://news.ycombinator.com/item?id=50462079 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-12T02:00:51.000Z",
+          "title": "How companies are using AI to make you spend more money – PBS NewsHour [video]",
+          "url": "https://www.youtube.com/watch?v=IYMjw7m5yf4",
+          "summary": "Article URL: https://www.youtube.com/watch?v=IYMjw7m5yf4 Comments URL: https://news.ycombinator.com/item?id=50465779 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T11:39:40.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "2dea399a5629f61f03f032fc0655d92f8e0ae3bf25745f56705eb6ab97b45871",
+          "id": "6552cadab1f0c31fe678379f70754ce3083069adb49b20de94136af27a949877",
           "sourceId": "hn_ai",
-          "title": "Show HN: Motion Debugger – A browser critic for AI slop",
-          "url": "https://github.com/ShadowKingYT444/motion-debugger",
-          "summary": "Built a tool to unslop UI and add cool motion. It's an open-source workflow for coding agents, using Chromium to inspect the rendered site, catch broken animations, overlapping elements, layout issues, and other visual problems, then gives the agent feedback to fix them. a/b tests are in the repo. Comments URL: https://news.ycombinator.com/item?id=50462023 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-12T01:53:52.000Z",
+          "title": "Can the AI boom make enough money to sustain itself?",
+          "url": "https://economist.com/briefing/2026/11/12/can-the-ai-boom-make-enough-money-to-sustain-itself",
+          "summary": "Article URL: https://economist.com/briefing/2026/11/12/can-the-ai-boom-make-enough-money-to-sustain-itself Comments URL: https://news.ycombinator.com/item?id=50465754 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-12T11:36:58.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "916515f1273860d7ca64d30ac68d97f73f34389d4fc5adab1a77a58ccf968ffe",
+          "id": "b34e90c2f622ee7865ee324fb0ddf4cf6d8a9a6a7286cb5fbbc7c8cdb0f86791",
           "sourceId": "hn_ai",
-          "title": "He let an AI read too many court auction listings. Now he is in a Turkish jail",
-          "url": "https://medium.com/@rkzlyldrm/he-let-an-ai-read-too-many-court-auction-listings-now-he-is-in-a-turkish-jail-a26bd486a43a",
-          "summary": "Article URL: https://medium.com/@rkzlyldrm/he-let-an-ai-read-too-many-court-auction-listings-now-he-is-in-a-turkish-jail-a26bd486a43a Comments URL: https://news.ycombinator.com/item?id=50461979 Points: 5 # Comments: 2",
-          "pubDate": "2026-11-12T01:48:59.000Z",
+          "title": "Lazare, Veni Foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+          "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+          "summary": "Article URL: https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/ Comments URL: https://news.ycombinator.com/item?id=50465659 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T11:20:13.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "a1a681abf6804034da5c02cf45fb96d71dad4b24c1c1037b41b93a56714db828",
+          "id": "30c0b7e77160ed7b1088bdbd857dd04347f67e27d988a6f2cee2d10c700ae913",
           "sourceId": "hn_ai",
-          "title": "Show HN: Lynx – open-source fully-customizable AI workspace",
-          "url": "https://github.com/yakkomajuri/lynx",
-          "summary": "I was finding that managing multiple agent threads with walls of text was getting tiring and inefficient for me and that I wanted a more visual way to interact with my agents, so I built Lynx. Lynx lets you quickly build fully custom interfaces connected to your data sources (e.g. via MCP or API) and trigger agents running on your machine from them (e.g. with Claude Code or Codex). I built it as an experiment but have found myself doing 80-90% of my work from inside Lynx. I have my own Conductor-like workspace for coding, a Mail client, a workspace for my writing, and various others for dashboards and explorations. A few things are really cool about it: - Adding buttons to a UI that trigger a Claude Code agent running on my machine (e.g. to review a PR, get started on a task from Linear, or look for typos in my text) - Iterating on the interfaces is really easy, particularly because of a point tool that let's you select what you want changed and an agent will update it live - Switching between workspaces takes a fraction of a second (much faster than e.g. switching between websites) - It's all local :) Harnesses have been moving towards native support for artifacts and MCP-UI which kind of go in this direction but I think the current models add to context fragmentation rather than actually help it, so I flipped the model on its head and built an AI workspace / harness where interactive interfaces are at the core. Calling this an AI workspace for now but honestly unsure what the proper term should be. Is this a visual harness? A hub for personal software? Keen to hear feedback about the conceptual model and what others have done that might be similar! Comments URL: https://news.ycombinator.com/item?id=50461775 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-12T01:26:11.000Z",
+          "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
+          "url": "https://arxiv.org/abs/2510.26787",
+          "summary": "Article URL: https://arxiv.org/abs/2510.26787 Comments URL: https://news.ycombinator.com/item?id=50465606 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-12T11:12:08.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "8d9c365b516184f43a8e71e055dd370ecc5c9a5e80b3e61b595205d9e617ded5",
+          "id": "25e4ac0619be48f91a2bc0045caa202f8ba56f41df43e0111876a1bbc8536c12",
           "sourceId": "hn_ai",
-          "title": "What gives you the chills? AI can engineer it",
-          "url": "https://medium.com/@joshbocanegra/how-to-engineer-goosebumps-e18935bcb1d2",
-          "summary": "Article URL: https://medium.com/@joshbocanegra/how-to-engineer-goosebumps-e18935bcb1d2 Comments URL: https://news.ycombinator.com/item?id=50460989 Points: 1 # Comments: 1",
-          "pubDate": "2026-11-12T00:13:26.000Z",
+          "title": "Show HN: Wings – queue the next prompt while your AI is still working",
+          "url": "https://aiwings.app",
+          "summary": "Article URL: https://aiwings.app Comments URL: https://news.ycombinator.com/item?id=50465603 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T11:11:16.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "289a7e72d1e55ec6656293a8475d5adc55b63c7c1c5e72cadbcdf5712d10c3af",
+          "id": "ec62160e64b2a2ecf2e5581f8a2ad578ca78b94c8906d0000a711e06dd2b5e34",
           "sourceId": "hn_ai",
-          "title": "Yes, you should panic about AI",
-          "url": "https://rutgerbregman.substack.com/p/yes-you-should-panic-about-ai",
-          "summary": "Article URL: https://rutgerbregman.substack.com/p/yes-you-should-panic-about-ai Comments URL: https://news.ycombinator.com/item?id=50460968 Points: 4 # Comments: 3",
-          "pubDate": "2026-11-12T00:11:49.000Z",
+          "title": "Swatting calls using AI means fake 911 calls are harder to detect",
+          "url": "https://www.npr.org/2026/11/11/nx-s1-6034449/ai-911-calls-swatting",
+          "summary": "Article URL: https://www.npr.org/2026/11/11/nx-s1-6034449/ai-911-calls-swatting Comments URL: https://news.ycombinator.com/item?id=50465570 Points: 4 # Comments: 0",
+          "pubDate": "2026-11-12T11:05:17.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "bb15359d0e24185dd4f6e4265ececf93ae5b6b3eb9101b6b6b470574c0ba7dd8",
+          "id": "7f9da0476b81868866ca44dad09ff88597686d909198edf63162052438d9d4bf",
           "sourceId": "hn_ai",
-          "title": "Show HN: I built a AI acne coach that helps find root cause of your acne",
-          "url": "https://acneally.vercel.app",
-          "summary": "I’ve had acne for 10 years and I'm so exhausted of dont know what happened. So, I'm building AcneAlly to learn you overtime to figure out what's causing your acne, and to give personalized support. Instead of tracking your skin or logging daily habits, you can just talk or interact with it like a companion. You can share about your acne, share your concerns, or ask anything you want. Based on what you share, it uses Al to reasoning to make guesses about what could be causing your acne. As you share more, it update it understanding abt you, its guesses abt the cause and it suggestions. This is an early version, and there's still a lot to improve. I'd love to hear your feedback! Thanks for checking it out! Comments URL: https://news.ycombinator.com/item?id=50460717 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-11T23:49:11.000Z",
+          "title": "Lensden – Compare AR and AI glasses with source-linked specs",
+          "url": "https://lensden.net/products/",
+          "summary": "Article URL: https://lensden.net/products/ Comments URL: https://news.ycombinator.com/item?id=50465543 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-12T11:02:26.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "4c3a6e5470b6edcd5d27515b6c09d120ffe0da661b8795ce082b30e6419ddeb3",
+          "id": "7fcca3442ce04d31245d84e0dd8f65c51a0eae9ed5de8f1ee477f46275649a20",
           "sourceId": "hn_ai",
-          "title": "Agentic AI for Military Cyberoperations (West Point Press) [pdf]",
-          "url": "https://cyberdefensereview.army.mil/Portals/6/Documents/2026-vol11-iss3/CDR_V11_N3_Full_Issue.pdf",
-          "summary": "Article URL: https://cyberdefensereview.army.mil/Portals/6/Documents/2026-vol11-iss3/CDR_V11_N3_Full_Issue.pdf Comments URL: https://news.ycombinator.com/item?id=50460559 Points: 3 # Comments: 0",
-          "pubDate": "2026-11-11T23:36:07.000Z",
+          "title": "Working Without Unnecessary Intermediaries: How AI Changing the Software Tools",
+          "url": "https://medium.com/@smoking2man/working-without-unnecessary-intermediaries-how-ai-is-changing-the-economics-of-software-tools-364087d37d33",
+          "summary": "Article URL: https://medium.com/@smoking2man/working-without-unnecessary-intermediaries-how-ai-is-changing-the-economics-of-software-tools-364087d37d33 Comments URL: https://news.ycombinator.com/item?id=50465458 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-12T10:47:33.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "170aa7be19ef0b4befca9d975b1cb4af8c389f8fdb3f05c39f5793ad3177dcf7",
+          "id": "07951bcd764b873ad09959a06451cebf0bc8d064d645a6b49da5b46722c69c9d",
           "sourceId": "hn_ai",
-          "title": "Composing data pipelines in an AI-native workflow",
-          "url": "https://www.fivetran.com/blog/composing-data-pipelines-in-an-ai-native-workflow",
-          "summary": "Article URL: https://www.fivetran.com/blog/composing-data-pipelines-in-an-ai-native-workflow Comments URL: https://news.ycombinator.com/item?id=50460483 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-11T23:29:56.000Z",
+          "title": "Adversarial defense for binaries/JS/Python against AI reverse-engineering agents",
+          "url": "https://github.com/qybaihe/bla",
+          "summary": "Article URL: https://github.com/qybaihe/bla Comments URL: https://news.ycombinator.com/item?id=50465418 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T10:40:30.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "60be58d35ab55adc8acbcb484322bfe5d6b422ada8b679ae52fa591dc2bfa403",
+          "id": "1fe39f34f9d27bf2071f3c477464affa9e960e80dd1fdec685b4908b954b03f7",
           "sourceId": "hn_ai",
-          "title": "Who gets cheaper security from AI?",
-          "url": "https://franklyspeaking.substack.com/p/who-actually-gets-cheaper-security",
-          "summary": "Article URL: https://franklyspeaking.substack.com/p/who-actually-gets-cheaper-security Comments URL: https://news.ycombinator.com/item?id=50459974 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-11T22:49:50.000Z",
+          "title": "Costcrew a app to manage AI spending",
+          "url": "https://news.ycombinator.com/item?id=50465329",
+          "summary": "I made a app in rust that tells me how much i spent on ai over the days and it answers one important question i fail to answer how much do i spend on ai and cost few answers that it is a app with tons of features to help you manage how much you spend on ai and what ai should you spend your money on Comments URL: https://news.ycombinator.com/item?id=50465329 Points: 1 # Comments: 1",
+          "pubDate": "2026-11-12T10:25:01.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "fe0e1ecd51940a303c39896b351f928290e9f9ff0ccc380ebc9b1fa3bc2fb204",
+          "id": "9a3e34d7f583346cfa7ac0daeebb01656c27ea4d3ff44b048f958d2bc303a75b",
           "sourceId": "hn_ai",
-          "title": "HuggingFace/Kernels: 200 WebGPU Kernels for Local AI",
-          "url": "https://huggingface.co/blog/webgpu-kernels",
-          "summary": "Article URL: https://huggingface.co/blog/webgpu-kernels Comments URL: https://news.ycombinator.com/item?id=50459445 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-11T22:12:54.000Z",
+          "title": "I gave an AI a week to make something interesting or I switch it off",
+          "url": "https://lira-ia.github.io/",
+          "summary": "Article URL: https://lira-ia.github.io/ Comments URL: https://news.ycombinator.com/item?id=50465058 Points: 2 # Comments: 2",
+          "pubDate": "2026-11-12T09:42:55.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "c5bed608ba6106eab69de6aa891fa7074d611ceab2bdb2058170748b068ffd2b",
+          "id": "1636ceba2fa293300b09e26ec5a1437f5fe468b62d20a0c1725cdb1c682d1fa4",
           "sourceId": "hn_ai",
-          "title": "An AI-driven proof of the Aaronson-Ambainis conjecture was announced",
-          "url": "https://bigthink.com/starts-with-a-bang/ai-proved-quantum-complexity-conjecture/",
-          "summary": "Article URL: https://bigthink.com/starts-with-a-bang/ai-proved-quantum-complexity-conjecture/ Comments URL: https://news.ycombinator.com/item?id=50459389 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-11T22:09:10.000Z",
+          "title": "DeepL unveils Aure, its most lifelike Voice AI translation model yet",
+          "url": "https://www.deepl.com/en/press-release/aure-voice-ai-model",
+          "summary": "Article URL: https://www.deepl.com/en/press-release/aure-voice-ai-model Comments URL: https://news.ycombinator.com/item?id=50465036 Points: 4 # Comments: 0",
+          "pubDate": "2026-11-12T09:39:36.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "81d4d4436612ec53831730d355591df53a7443530f157899f970f2fd512deef9",
+          "id": "193797cdd165f02e5101113ec71c69e9943c5083c92fc7c14f06fa515ba3f34b",
           "sourceId": "hn_ai",
-          "title": "Show HN: Zumungo – AI-driven home automation",
-          "url": "https://zumungo.com/get-started.html",
-          "summary": "Just released Zumungo AI driven Home Automation zumungo.com. Zumungo uses the power and flexibility of well established open source projects such as HomeAssitant, Frigate, Whisper, go2rtc, Piper, Open AI, Ollama, etc. It wraps everything in easy to use user interface for non professional users. In addition Zumungo allows users to add their own devices that are not part of the catalog. Of course Zumungo is full blown Home Automation platform and has build-in servers for managing all IoT protocols such as Matter, Thread, Zigbee, Zwave, MQTT, BT, TCP, mDNS etc. Special attention is paid to security and camera management all the way to implementing Vision AI. In my tests Zumungo announces \"UPS truck approaching the drive way. A person carrying a package walks towards the door\". This announcement is processed by an event and results in \"UPS delivery\" on the GH speakers around the house. Zumungo has it's own event engine that is easy to use by both the user as well as AI Agent. User can tell AI agent \" Create an event to open the garage door and turn on the porch light, upon my arrival home on foot or by car tracked by zumungo geo fencing\". Option exist for users to design their own panels to display on tablets on the wall or desktop computers for even easier management of the house by family members, guests, kids etc. For example if you rent your ADU on Airbnb than you can create dedicated panel on a tablet for guests to use that controls their rooms only and has no access to the main house. Zumungo has it's own mobile app available at iOS store. For Android devices it is downloadable from Zumungo server itself. As far as AI goes, Zumungo offers simple interface in settings for user to pick and choose online AI agent from the major 3 ( Claude, Gemini or Open AI ) or pick a local agent from a list of various agents. Available local agents include Llama, Mistral, Qwen, DeepSeek, Phi and others. Zumungo always updates the agents to the best and latest and always vets them for licensing and legal compliance. Zumungo also advises user what kind of hardware is needed for particular agent to run typically 16GB or more of GPU memory. Trying Zumngo is easy. One line on any Linux machine or ready made RPi image - download-flash and go. See \"get started\" at Zumungo web site. Support issues come after trying and this is taken care of as well at Zumungo Forums or just email support@zumungo.com Comments URL: https://news.ycombinator.com/item?id=50459255 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-11T21:58:28.000Z",
+          "title": "AI Customer Driven Development",
+          "url": "https://chohaninsight.com/blog/ai-customer-driven-development/",
+          "summary": "Article URL: https://chohaninsight.com/blog/ai-customer-driven-development/ Comments URL: https://news.ycombinator.com/item?id=50465004 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T09:33:45.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "d3e1ba9436eb0c8d8ad7e678ab69518b3ab4ba24bf66a403be0bba7a51973a0c",
+          "id": "d9423d852991767be33e21486cdfd4dad86c4f9b3bacecaf705a9e5ff5e936bb",
           "sourceId": "hn_ai",
-          "title": "An AI-assisted RP2040 audio board that worked on first spin in 5 days",
-          "url": "https://solderable.dev/blog/fluid",
-          "summary": "Article URL: https://solderable.dev/blog/fluid Comments URL: https://news.ycombinator.com/item?id=50459119 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-11T21:43:47.000Z",
+          "title": "Google gooses Python AI performance by... removing Python",
+          "url": "https://www.theregister.com/devops/2026/11/11/google-gooses-python-ai-performance-by-removing-python/5308995",
+          "summary": "Article URL: https://www.theregister.com/devops/2026/11/11/google-gooses-python-ai-performance-by-removing-python/5308995 Comments URL: https://news.ycombinator.com/item?id=50464918 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T09:23:49.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "6ff2e8dbf6a2168de995c0745177f80f8d250fc1c834ffd243fbfb481807a4ee",
+          "id": "b92543587d494c2a328b25a3ec3b9cf4e407af710f952d35fe3f1ad3ab65d969",
           "sourceId": "hn_ai",
-          "title": "Pundit Claims – Open-Source Register of AI Claims by Gary Marcus and Ed Zitron",
-          "url": "https://punditclaims.ai/",
-          "summary": "Article URL: https://punditclaims.ai/ Comments URL: https://news.ycombinator.com/item?id=50459075 Points: 3 # Comments: 3",
-          "pubDate": "2026-11-11T21:39:36.000Z",
+          "title": "Show HN: MetaArena – Compare & Rank 5,353 Meta Global AI Hackathon Projects",
+          "url": "https://meta-hackathon.com/",
+          "summary": "Hey HN! Recently Meta wrapped up their Global Developer Hackathon ( https://dev.meta.ai/events/global-hackathon ) which had a $1M prize pool (!!): 34K developers applied, 20K accepted, and over 5K projects were submitted. With this crazy volume, it was infeasible to rank or even shortlist the best projects with human review. On the other hand, AI scoring against a rubric led to disappointing results. In an effort to surface and spotlight the best projects, I built MetaArena ( https://meta-hackathon.com/ ). It compares just two projects head-to-head, let's you pick which you thought was the stronger project, and places them on a leaderboard using the same algo platforms like LLMArena and DesignArena use to rank AI models (Bradley-Terry). Check it out, at the very least I hope you find a cool project or two here that inspire you. Lmk if you have any feedback on the arena/leaderboard! Comments URL: https://news.ycombinator.com/item?id=50464559 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-12T08:36:48.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "80fd04152d50c8561eb4a1c328c9c71cb573380a5ed3dbb9ed0d6040bc6d9f42",
+          "id": "5201c6328e95571864fea19cf9d48a627eec3a18efcb26ab3055ef9a5a2c5abd",
           "sourceId": "hn_ai",
-          "title": "Some IGF Jurors released a statement about AI usage",
-          "url": "https://blog.lauramichet.com/some-igf-jurors-released-a-statement-about-ai-usage/",
-          "summary": "Article URL: https://blog.lauramichet.com/some-igf-jurors-released-a-statement-about-ai-usage/ Comments URL: https://news.ycombinator.com/item?id=50459020 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-11T21:34:05.000Z",
+          "title": "Banks turn to credit insurance as they hit limits on lending to AI boom",
+          "url": "https://www.ft.com/content/599932b7-a548-4d45-8ba4-70bdb8d14565",
+          "summary": "Article URL: https://www.ft.com/content/599932b7-a548-4d45-8ba4-70bdb8d14565 Comments URL: https://news.ycombinator.com/item?id=50464464 Points: 4 # Comments: 0",
+          "pubDate": "2026-11-12T08:21:48.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "f5a6f7e67c8d40adcb67fe148f5b3239db0fe97a9963c3dae013345885752e3f",
+          "id": "39b0a51876a16c3397f47533b96233730cc3c1d464e7d1bc29dbb3db14f471dc",
           "sourceId": "hn_ai",
-          "title": "Is the AI Singularity Coming?",
-          "url": "https://www.youtube.com/watch?v=IlgvRtTwaUs",
-          "summary": "Article URL: https://www.youtube.com/watch?v=IlgvRtTwaUs Comments URL: https://news.ycombinator.com/item?id=50458955 Points: 3 # Comments: 1",
-          "pubDate": "2026-11-11T21:28:57.000Z",
+          "title": "Why Every AI Model Will Ship as a Torrent",
+          "url": "https://pirateface.co/articles/every-ai-model-should-be-a-torrent",
+          "summary": "Article URL: https://pirateface.co/articles/every-ai-model-should-be-a-torrent Comments URL: https://news.ycombinator.com/item?id=50464055 Points: 28 # Comments: 9",
+          "pubDate": "2026-11-12T07:20:22.000Z",
           "extraSourceIds": []
         },
         {
-          "id": "dd31e108fd8b55eaa4938ed86ff109fd2521da6976667cdb09251836a25b881a",
+          "id": "3946e31a1c8a181211cc43cf07d029f414115c842a382b537e38f061c2028009",
           "sourceId": "hn_ai",
-          "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
-          "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
-          "summary": "Article URL: https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/ Comments URL: https://news.ycombinator.com/item?id=50458900 Points: 446 # Comments: 430",
-          "pubDate": "2026-11-11T21:24:35.000Z",
+          "title": "AI is getting smarter. Are we thinking better?",
+          "url": "https://www.daybranch.com/",
+          "summary": "Article URL: https://www.daybranch.com/ Comments URL: https://news.ycombinator.com/item?id=50463728 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-12T06:25:46.000Z",
           "extraSourceIds": []
         }
       ]
@@ -3704,15 +3704,60 @@
     "hackernews": {
       "sourceId": "hackernews",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.684033Z",
+      "updatedAt": "2026-11-12T12:13:51.044954Z",
       "error": null,
       "items": [
+        {
+          "id": "d9049b36fff04df3b0d1b9cc80448262292fbd1370a442d9f28c1df23ef672d0",
+          "sourceId": "hackernews",
+          "title": "Anthropic IPO",
+          "url": "https://ipo.anthropic.com/us/",
+          "summary": "Article URL: https://ipo.anthropic.com/us/ Comments URL: https://news.ycombinator.com/item?id=50465829 Points: 23 # Comments: 7",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "16b24c898753195c0d4a967db03ecd2e91c37e1894edb1a022a5f847e406d202",
+          "sourceId": "hackernews",
+          "title": "Code Smells of Desperation (2023)",
+          "url": "https://www.os2museum.com/wp/this-code-smells-of-desperation/",
+          "summary": "Article URL: https://www.os2museum.com/wp/this-code-smells-of-desperation/ Comments URL: https://news.ycombinator.com/item?id=50465395 Points: 3 # Comments: 0",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f6e1c5f7671c20b8c5caf8644c2597853196a72503deeef575c101fc7406ebb4",
+          "sourceId": "hackernews",
+          "title": "Why Writing Correct Software Is Hard",
+          "url": "https://pron.github.io/posts/correctness-and-complexity",
+          "summary": "Article URL: https://pron.github.io/posts/correctness-and-complexity Comments URL: https://news.ycombinator.com/item?id=50465352 Points: 47 # Comments: 11",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "ac579b9d0d9de645f3143ecbc12b1c46489006dc51dda3a251839891da265054",
+          "sourceId": "hackernews",
+          "title": "I'm Working on a FOSS Linux Pinbal Simulation Engine",
+          "url": "https://www.getlazarus.org/forums/topic/17/",
+          "summary": "Article URL: https://www.getlazarus.org/forums/topic/17/ Comments URL: https://news.ycombinator.com/item?id=50463540 Points: 59 # Comments: 24",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "c6b27f647dbe443b181a212c91b014a29576ab4ca6a46cd7dcdb6bbce0b0a765",
+          "sourceId": "hackernews",
+          "title": "Darling Development Update – Q4 2026",
+          "url": "https://blog.darlinghq.org/2026/11/08/development-update-q4-2026/",
+          "summary": "Article URL: https://blog.darlinghq.org/2026/11/08/development-update-q4-2026/ Comments URL: https://news.ycombinator.com/item?id=50463103 Points: 27 # Comments: 6",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
         {
           "id": "bdfb4a0a4693c6f156d3d1265e89acafc763e9628e9c97bfd57bda75af63e648",
           "sourceId": "hackernews",
           "title": "Lean Grimoire",
           "url": "https://terrytao.wordpress.com/2026/11/11/lean-grimoire/",
-          "summary": "Article URL: https://terrytao.wordpress.com/2026/11/11/lean-grimoire/ Comments URL: https://news.ycombinator.com/item?id=50462375 Points: 11 # Comments: 1",
+          "summary": "Article URL: https://terrytao.wordpress.com/2026/11/11/lean-grimoire/ Comments URL: https://news.ycombinator.com/item?id=50462375 Points: 48 # Comments: 8",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3721,7 +3766,7 @@
           "sourceId": "hackernews",
           "title": "Critical RCE Vulnerability in Apache HTTP Server",
           "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
-          "summary": "Article URL: https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability Comments URL: https://news.ycombinator.com/item?id=50462177 Points: 31 # Comments: 18",
+          "summary": "Article URL: https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability Comments URL: https://news.ycombinator.com/item?id=50462177 Points: 244 # Comments: 115",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3730,7 +3775,7 @@
           "sourceId": "hackernews",
           "title": "A general purpose Apple Silicon layer for x86-64 PCs",
           "url": "https://github.com/tylertms/Stela",
-          "summary": "Article URL: https://github.com/tylertms/Stela Comments URL: https://news.ycombinator.com/item?id=50460154 Points: 73 # Comments: 29",
+          "summary": "Article URL: https://github.com/tylertms/Stela Comments URL: https://news.ycombinator.com/item?id=50460154 Points: 114 # Comments: 46",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3739,7 +3784,7 @@
           "sourceId": "hackernews",
           "title": "93% of paint splatters are valid Perl programs (2019)",
           "url": "https://www.mcmillen.dev/sigbovik/",
-          "summary": "Article URL: https://www.mcmillen.dev/sigbovik/ Comments URL: https://news.ycombinator.com/item?id=50459745 Points: 229 # Comments: 34",
+          "summary": "Article URL: https://www.mcmillen.dev/sigbovik/ Comments URL: https://news.ycombinator.com/item?id=50459745 Points: 465 # Comments: 58",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3748,7 +3793,7 @@
           "sourceId": "hackernews",
           "title": "Nvidia is preparing to oust Jensen Huang",
           "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
-          "summary": "Article URL: https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad Comments URL: https://news.ycombinator.com/item?id=50459703 Points: 673 # Comments: 936",
+          "summary": "Article URL: https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad Comments URL: https://news.ycombinator.com/item?id=50459703 Points: 1086 # Comments: 1462",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3757,16 +3802,7 @@
           "sourceId": "hackernews",
           "title": "Lock Your GitHub Actions",
           "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
-          "summary": "Article URL: https://hugovk.dev/blog/2026/lock-github-actions/ Comments URL: https://news.ycombinator.com/item?id=50459485 Points: 170 # Comments: 28",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "fbd66a61f7f27374c42f07fce298eb2a054edb02981a36e60ce135b6c07f8408",
-          "sourceId": "hackernews",
-          "title": "Jensen Huang said to have had relationship with executive who reports to him",
-          "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
-          "summary": "Article URL: https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html Comments URL: https://news.ycombinator.com/item?id=50459321 Points: 290 # Comments: 321",
+          "summary": "Article URL: https://hugovk.dev/blog/2026/lock-github-actions/ Comments URL: https://news.ycombinator.com/item?id=50459485 Points: 269 # Comments: 54",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3775,7 +3811,7 @@
           "sourceId": "hackernews",
           "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
           "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
-          "summary": "Article URL: https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/ Comments URL: https://news.ycombinator.com/item?id=50458900 Points: 451 # Comments: 432",
+          "summary": "Article URL: https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/ Comments URL: https://news.ycombinator.com/item?id=50458900 Points: 569 # Comments: 589",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3784,16 +3820,7 @@
           "sourceId": "hackernews",
           "title": "Emacs in the Age of Magic",
           "url": "https://commandlinesystems.com/magic.txt",
-          "summary": "Article URL: https://commandlinesystems.com/magic.txt Comments URL: https://news.ycombinator.com/item?id=50458208 Points: 165 # Comments: 58",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "bbe31c4942a15db7f3c9bb34c9df1d7b5425f09976ee2aeb8c56e94d493716c2",
-          "sourceId": "hackernews",
-          "title": "Huawei releases MACaQ, its internal quantizer for local inference",
-          "url": "https://github.com/huawei-csl/MACaQ",
-          "summary": "Article URL: https://github.com/huawei-csl/MACaQ Comments URL: https://news.ycombinator.com/item?id=50458166 Points: 70 # Comments: 22",
+          "summary": "Article URL: https://commandlinesystems.com/magic.txt Comments URL: https://news.ycombinator.com/item?id=50458208 Points: 249 # Comments: 109",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3802,16 +3829,7 @@
           "sourceId": "hackernews",
           "title": "The Utah Teapot",
           "url": "https://graphics.cs.utah.edu/teapot/",
-          "summary": "https://www.youtube.com/watch?v=k-23LgrFcvs Comments URL: https://news.ycombinator.com/item?id=50457618 Points: 95 # Comments: 22",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "76789b02592be0f785755beb599628ac9ca7cfb97a6653423e254a31b19407b9",
-          "sourceId": "hackernews",
-          "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
-          "url": "https://termsheetplease.com/",
-          "summary": "Article URL: https://termsheetplease.com/ Comments URL: https://news.ycombinator.com/item?id=50457230 Points: 196 # Comments: 77",
+          "summary": "https://www.youtube.com/watch?v=k-23LgrFcvs Comments URL: https://news.ycombinator.com/item?id=50457618 Points: 156 # Comments: 35",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3820,7 +3838,7 @@
           "sourceId": "hackernews",
           "title": "Gemini Decisions API",
           "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
-          "summary": "Article URL: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/ Comments URL: https://news.ycombinator.com/item?id=50456791 Points: 312 # Comments: 100",
+          "summary": "Article URL: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/ Comments URL: https://news.ycombinator.com/item?id=50456791 Points: 454 # Comments: 142",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3829,16 +3847,7 @@
           "sourceId": "hackernews",
           "title": "AWS emulator",
           "url": "https://github.com/aws/aws-emulator",
-          "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent... https://www.allthingsdistributed.com/2026/11/aws-emulator-an... Comments URL: https://news.ycombinator.com/item?id=50456631 Points: 739 # Comments: 224",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2634430ae283fd390201bf17d9753999b32a6b9f8fb3884d948e0fd01c9e0085",
-          "sourceId": "hackernews",
-          "title": "Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents",
-          "url": "https://news.ycombinator.com/item?id=50455811",
-          "summary": "Hi HN, we’re Alan and Akshay from Pomerado ( https://pomerado.ai/ ). We connect your agents to any website by turning sites into deterministic, self-healing APIs in minutes, fully self-serve. Agents are no longer limited by their intelligence, but rather by their ability to interact with systems. Airlines, banks, e-commerce, insurance portals, government sites, and legacy portals all lack APIs or MCPs and are common parts of personal assistant or business workflows. Agents instead rely on browser automation or computer use, which can be slow, expensive, and unreliable. And even if computer use were perfect, most companies have banned it out of security and compliance concerns. We discovered this problem while tinkering with our own personal assistants. When OpenClaw came out, we wanted to “live our lives through our agents” and have them do everything for us. We soon found their usefulness was restricted by what tools they could connect to. For example, when trying to book flights, they fell back on computer use, which failed to checkout. These issues got magnified on repeated workflows, like searching many airlines at once. Pomerado started off as a project to improve these personal assistant workflows. As we started building, we realized that just-in-time tool creation could have significant applications for AI builders in legacy verticals. We’re ex-McKinsey and Scale AI, where we drove agent deployments in healthcare, professional services, and telecom. Each time, the biggest bottleneck was getting agents to interface well with legacy websites and apps. Pomerado is what we built. It’s a self-serve platform where devs can create APIs for any website (even those they don’t own), in minutes. Users (or their coding agents) provide a short natural language description, answer a few questions about their workflow, and receive a MCP in less than an hour. Future tool calls use the deterministic MCP, which usually returns results in 5-30 seconds. Here’s a walkthrough of our product: https://youtu.be/Bi4jci7rgHo In practice: - Our agent opens a browser, explores the website, and performs the requested task once by writing HTTP requests or a Playwright script. This example run establishes how to navigate the website, interact with the relevant controls, and obtain the desired result. If any additional user input is needed (e.g., login, clarification) the agent will ask the user over MCP. - Afterwards, the agent uses the example run, along with all of the data it recorded, to create a generalizable and repeatable API. Throughout this process, a separate Guardian model reviews the coding agent’s calls against a set of guardrails. We also run a battery of tests with synthetic inputs to ensure that the API is generalized and not overfit to one input. A final publication agent ensures that the integration publishes a reasonable and generalized input/output schema - We also handle sites that require authentication and 2FA. For authentication, we pass off to a deterministic sign-in process to ensure the model and our recorders never read customer credentials. Users can store 2FA TOTP seeds or link their account to a Pomerado phone number for us to autofill 2FA for them as well - If future runs fail, a maintenance job is kicked off to repair and improve the tool. The maintenance job can fix broken steps (e.g., a renamed button), add additional functionality (e.g., searching for business class flights in addition to economy), or add new guardrails (e.g., reservation dates must be in the future). We’ve even seen people improve tools by just saying “please make this faster” Unlike computer use, our MCPs are deterministic at runtime, which makes them much faster and cheaper. By taking slightly longer to do a task the first time, you reap the benefits much more in the future. It’s a great fit for repeated, high-volume tasks you want your agent to do. We’d love to have you try it! We have both an open-source (MIT) ( https://github.com/Pomerado/pomerado ) and a free hosted version ( https://app.pomerado.ai ). So far, users of Pomerado include: - A personal trainer using agents to prepare workouts and message clients. Before Pomerado, agents couldn’t login and use the site reliably, so this was all manual - Car dealerships connecting their Grok Bots to legacy dealer systems, including marketplaces, CRMs, and ERPs. Dealers switched from computer use, which could take 1hr+ - Personal assistants using Pomerado to integrate with a broad range of consumer websites Please ask any questions or share any feedback in the comments, thanks! Comments URL: https://news.ycombinator.com/item?id=50455811 Points: 51 # Comments: 40",
+          "summary": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agent... https://www.allthingsdistributed.com/2026/11/aws-emulator-an... Comments URL: https://news.ycombinator.com/item?id=50456631 Points: 876 # Comments: 240",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3847,7 +3856,7 @@
           "sourceId": "hackernews",
           "title": "Faster Retrieval for Better, More Efficient RAG",
           "url": "https://machinelearning.apple.com/research/faster-retrieval",
-          "summary": "Article URL: https://machinelearning.apple.com/research/faster-retrieval Comments URL: https://news.ycombinator.com/item?id=50455633 Points: 173 # Comments: 29",
+          "summary": "Article URL: https://machinelearning.apple.com/research/faster-retrieval Comments URL: https://news.ycombinator.com/item?id=50455633 Points: 214 # Comments: 38",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3856,16 +3865,7 @@
           "sourceId": "hackernews",
           "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
           "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
-          "summary": "Article URL: https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/ Comments URL: https://news.ycombinator.com/item?id=50455394 Points: 436 # Comments: 223",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "36f7712148cf147277d6f50596bdd2eb218cd2ab0398175bf41924dcdcc6b750",
-          "sourceId": "hackernews",
-          "title": "The hardest notes to find on the guitar",
-          "url": "https://www.gitori.com/blog/articles/hardest-notes-on-the-guitar-fretboard",
-          "summary": "Article URL: https://www.gitori.com/blog/articles/hardest-notes-on-the-guitar-fretboard Comments URL: https://news.ycombinator.com/item?id=50454995 Points: 58 # Comments: 65",
+          "summary": "Article URL: https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/ Comments URL: https://news.ycombinator.com/item?id=50455394 Points: 507 # Comments: 246",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3874,16 +3874,7 @@
           "sourceId": "hackernews",
           "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
           "url": "https://github.com/FrigadeHQ/yogurt",
-          "summary": "Hey HN, I’m Eric and I want to share an OSS project that I’ve been building in my free time. Yogurt is a free, MIT licensed desktop app that uses on-device AI models to transcribe, summarize, and chat with your meetings. Here's a quick demo video: https://www.youtube.com/watch?v=BFfbXAwRq98 Similar to Granola, Yogurt runs in the background and does not join your calls. But unlike Granola, Yogurt is open-source, free to use, and private. Your meeting transcripts, call recordings, and summaries never leave your computer. As small OSS models have gotten faster and more powerful, Yogurt seemed like a pretty obvious win for privacy and cost conscious folks. You do not need a frontier model to summarize meeting notes or answer questions about them. And if you want to make your notes available to a frontier model, you can just share it with Anthropic, OpenAI, etc. directly via Yogurt’s local MCP server. There’s no need to use a paid cloud service as a middleman. I tried some of the most popular OSS note taking tools, and most were missing features like calendar integration, MCP server, etc. or required you to connect or create an account. And more than that, they didn’t feel polished enough for it to be something I actually wanted to use daily, and so I built Yogurt to scratch that itch. I spent a lot of time fine-tuning every UI interaction/animation and optimizing the model calls to get the most out of your hardware + make it snappy. To support Windows/Mac/Linux, I decided to go with Electron. I use whisper.cpp for transcription and Apple’s on-device SpeechAnalyzer if your system supports it. For call summaries and questions, I use a local open weight LLM that automatically gets downloaded and set up based on what your hardware can handle without your cooling fans firing off like crazy (this part uses llama.cpp). I’ve spent a lot of time working on details like echo detection/reduction, global/folder/local level search respectively, and auto-end recordings. Hope this is useful for any of you who have held out on using AI note tools for privacy or cost reasons, or for folks using cloud tools who want to switch to something free and open source that still feels great to use. Would love to hear what you think about the onboarding and note taking experience :) Comments URL: https://news.ycombinator.com/item?id=50454625 Points: 196 # Comments: 87",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "b8451ce8e8c61d34016fdfb7cac03771da41973568c61f4ba6ffb8d9c144dee9",
-          "sourceId": "hackernews",
-          "title": "Atuin Threads: All your agent sessions on every machine",
-          "url": "https://blog.atuin.sh/threads-agent-sessions/",
-          "summary": "Article URL: https://blog.atuin.sh/threads-agent-sessions/ Comments URL: https://news.ycombinator.com/item?id=50453637 Points: 199 # Comments: 77",
+          "summary": "Hey HN, I’m Eric and I want to share an OSS project that I’ve been building in my free time. Yogurt is a free, MIT licensed desktop app that uses on-device AI models to transcribe, summarize, and chat with your meetings. Here's a quick demo video: https://www.youtube.com/watch?v=BFfbXAwRq98 Similar to Granola, Yogurt runs in the background and does not join your calls. But unlike Granola, Yogurt is open-source, free to use, and private. Your meeting transcripts, call recordings, and summaries never leave your computer. As small OSS models have gotten faster and more powerful, Yogurt seemed like a pretty obvious win for privacy and cost conscious folks. You do not need a frontier model to summarize meeting notes or answer questions about them. And if you want to make your notes available to a frontier model, you can just share it with Anthropic, OpenAI, etc. directly via Yogurt’s local MCP server. There’s no need to use a paid cloud service as a middleman. I tried some of the most popular OSS note taking tools, and most were missing features like calendar integration, MCP server, etc. or required you to connect or create an account. And more than that, they didn’t feel polished enough for it to be something I actually wanted to use daily, and so I built Yogurt to scratch that itch. I spent a lot of time fine-tuning every UI interaction/animation and optimizing the model calls to get the most out of your hardware + make it snappy. To support Windows/Mac/Linux, I decided to go with Electron. I use whisper.cpp for transcription and Apple’s on-device SpeechAnalyzer if your system supports it. For call summaries and questions, I use a local open weight LLM that automatically gets downloaded and set up based on what your hardware can handle without your cooling fans firing off like crazy (this part uses llama.cpp). I’ve spent a lot of time working on details like echo detection/reduction, global/folder/local level search respectively, and auto-end recordings. Hope this is useful for any of you who have held out on using AI note tools for privacy or cost reasons, or for folks using cloud tools who want to switch to something free and open source that still feels great to use. Would love to hear what you think about the onboarding and note taking experience :) Comments URL: https://news.ycombinator.com/item?id=50454625 Points: 252 # Comments: 96",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3892,16 +3883,7 @@
           "sourceId": "hackernews",
           "title": "Hyper-Realistic Sand with WebGL2",
           "url": "https://av.github.io/safe-sand/",
-          "summary": "Article URL: https://av.github.io/safe-sand/ Comments URL: https://news.ycombinator.com/item?id=50453288 Points: 330 # Comments: 66",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "48d52c9006aa260e9ac30f76f5aa198ce0518262d4e90701c691c6618682e84c",
-          "sourceId": "hackernews",
-          "title": "Can a Linear Program Do Weight-Space Programming?",
-          "url": "https://nathan.rs/posts/weight-space-lp/",
-          "summary": "Article URL: https://nathan.rs/posts/weight-space-lp/ Comments URL: https://news.ycombinator.com/item?id=50452655 Points: 255 # Comments: 37",
+          "summary": "Article URL: https://av.github.io/safe-sand/ Comments URL: https://news.ycombinator.com/item?id=50453288 Points: 397 # Comments: 74",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3910,7 +3892,7 @@
           "sourceId": "hackernews",
           "title": "My AI agents found an unmapped Maya site?",
           "url": "https://pietromiotti.com/latest/maya-site",
-          "summary": "Article URL: https://pietromiotti.com/latest/maya-site Comments URL: https://news.ycombinator.com/item?id=50452455 Points: 945 # Comments: 342",
+          "summary": "Article URL: https://pietromiotti.com/latest/maya-site Comments URL: https://news.ycombinator.com/item?id=50452455 Points: 1000 # Comments: 369",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3919,7 +3901,7 @@
           "sourceId": "hackernews",
           "title": "Using voltage glitching to unleash the A100 in my mining card",
           "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
-          "summary": "Article URL: https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/ Comments URL: https://news.ycombinator.com/item?id=50451903 Points: 276 # Comments: 112",
+          "summary": "Article URL: https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/ Comments URL: https://news.ycombinator.com/item?id=50451903 Points: 313 # Comments: 124",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3928,34 +3910,34 @@
           "sourceId": "hackernews",
           "title": "Tim Peters has died",
           "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
-          "summary": "https://www.reddit.com/r/Python/s/2Cm5dBcvQw Comments URL: https://news.ycombinator.com/item?id=50450488 Points: 952 # Comments: 102",
+          "summary": "https://www.reddit.com/r/Python/s/2Cm5dBcvQw Comments URL: https://news.ycombinator.com/item?id=50450488 Points: 1256 # Comments: 139",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "5bcd7076ec2c80a49fbfa8ad0934e8bee7363cec1438232f3afda3fc6569b21b",
+          "id": "9adf82ce8aa8e4a79eb0c2aad580ed0c0e1ffb447c06d96efc92472444800e89",
           "sourceId": "hackernews",
-          "title": "Stingray Fish Laser",
-          "url": "https://www.stingray.no/en/technology/",
-          "summary": "Article URL: https://www.stingray.no/en/technology/ Comments URL: https://news.ycombinator.com/item?id=50435712 Points: 8 # Comments: 4",
+          "title": "Legocam: My Lego webcam from 2000, working on a modern Mac",
+          "url": "https://blog.benjamin.ie/legocam",
+          "summary": "Article URL: https://blog.benjamin.ie/legocam Comments URL: https://news.ycombinator.com/item?id=50438958 Points: 26 # Comments: 21",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "84944e80f0f2a95c2c36f0ce9b0d6d9f0dae23438e1b65fd7dc5a6974db45d57",
+          "id": "e6100409c552fc7b26652e68fbb970a469923f15cb1c4b8e1d2d3cce289f0903",
           "sourceId": "hackernews",
-          "title": "A Brief History of Sierra Online (2017)",
-          "url": "https://retrofreakreviews.com/2017/01/30/sierra-retrospective/",
-          "summary": "Article URL: https://retrofreakreviews.com/2017/01/30/sierra-retrospective/ Comments URL: https://news.ycombinator.com/item?id=50435240 Points: 31 # Comments: 11",
+          "title": "Jane Street: Socratic Tutor",
+          "url": "https://github.com/janestreet/agent_skills/blob/master/socratic-tutor/SKILL.md",
+          "summary": "Article URL: https://github.com/janestreet/agent_skills/blob/master/socratic-tutor/SKILL.md Comments URL: https://news.ycombinator.com/item?id=50438261 Points: 305 # Comments: 73",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "3a81b8dcdd179abef03f098908031bea8319b3fbae2253226c462094f898b56a",
+          "id": "dd8a37cfaa71f86798f2e7f7be60d996d58e976644dc15142d1c4b46f80cb004",
           "sourceId": "hackernews",
-          "title": "Flying on Green: Why Farmers Are Turning to Drones for Cover Crop Seeding",
-          "url": "https://www.agweb.com/news/machinery/flying-green-why-farmers-are-turning-drones-cover-crop-seeding",
-          "summary": "Article URL: https://www.agweb.com/news/machinery/flying-green-why-farmers-are-turning-drones-cover-crop-seeding Comments URL: https://news.ycombinator.com/item?id=50433042 Points: 52 # Comments: 25",
+          "title": "Making a €40 USB-C hub work as a Nintendo Switch 2 dock",
+          "url": "http://blog.nozomi.space/posts/sw2_dock/",
+          "summary": "Article URL: http://blog.nozomi.space/posts/sw2_dock/ Comments URL: https://news.ycombinator.com/item?id=50431971 Points: 24 # Comments: 2",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3964,16 +3946,34 @@
           "sourceId": "hackernews",
           "title": "Did Life Begin in an RNA World?",
           "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/",
-          "summary": "Article URL: https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/ Comments URL: https://news.ycombinator.com/item?id=50428619 Points: 21 # Comments: 3",
+          "summary": "Article URL: https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/ Comments URL: https://news.ycombinator.com/item?id=50428619 Points: 64 # Comments: 34",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "c3571f23f2fdd39d02087966b0c986a94894b4cbf8e74c894dfd302d14d7837e",
+          "id": "ff96c91af6c9b05a266c91b825aab8946415623d4c63d5916cedb40ac47d289f",
           "sourceId": "hackernews",
-          "title": "How to make a CNC plasma cutter with high-frequency start",
-          "url": "https://incoherency.co.uk/blog/stories/cnc-plasma-cutter.html",
-          "summary": "Article URL: https://incoherency.co.uk/blog/stories/cnc-plasma-cutter.html Comments URL: https://news.ycombinator.com/item?id=50412715 Points: 18 # Comments: 5",
+          "title": "A live tree of systemd jobs on the boot console",
+          "url": "https://codeberg.org/wvhulle/bootvine",
+          "summary": "Article URL: https://codeberg.org/wvhulle/bootvine Comments URL: https://news.ycombinator.com/item?id=50425017 Points: 130 # Comments: 50",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "9bb97bb7d68a2ba9f479f57569c935495ab91e8054739eb52c3268c9537a49af",
+          "sourceId": "hackernews",
+          "title": "Grote Reber and the 'Square Kilometre Array' Near Bothwell, Tasmania (2017)",
+          "url": "https://www.researchgate.net/publication/319702287_THE_HISTORY_OF_EARLY_LOW_FREQUENCY_RADIO_ASTRONOMY_IN_AUSTRALIA_8_GROTE_REBER_AND_THE_%27SQUARE_KILOMETRE_ARRAY%27_NEAR_BOTHWELL_TASMANIA_IN_THE_1960s_AND_1970s",
+          "summary": "Article URL: https://www.researchgate.net/publication/319702287_THE_HISTORY_OF_EARLY_LOW_FREQUENCY_RADIO_ASTRONOMY_IN_AUSTRALIA_8_GROTE_REBER_AND_THE_%27SQUARE_KILOMETRE_ARRAY%27_NEAR_BOTHWELL_TASMANIA_IN_THE_1960s_AND_1970s Comments URL: https://news.ycombinator.com/item?id=50416606 Points: 9 # Comments: 0",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "8e2978736aefa3c376a48a334952d866b557e567f353fd19ca271f62bbe84dda",
+          "sourceId": "hackernews",
+          "title": "I gave an agent a lakehouse and control of my garden",
+          "url": "https://jatorre.github.io/garden/",
+          "summary": "Article URL: https://jatorre.github.io/garden/ Comments URL: https://news.ycombinator.com/item?id=50415162 Points: 108 # Comments: 49",
           "pubDate": null,
           "extraSourceIds": []
         }
@@ -3982,176 +3982,338 @@
     "producthunt": {
       "sourceId": "producthunt",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.685156Z",
+      "updatedAt": "2026-11-12T12:13:51.045700Z",
       "error": null,
       "items": [
         {
-          "id": "e0b701a2319140377b8d223fe74bc0f38741dcff437f6a0dae1e5955183b1107",
+          "id": "35dee41f5be06df257e159522a328cda80747f69efbf4b2fd7aeeb0fd3c7d4fa",
           "sourceId": "producthunt",
-          "title": "Skillbox",
-          "url": "https://www.producthunt.com/products/skillbox-5",
+          "title": "Neura HQ",
+          "url": "https://www.producthunt.com/products/neura-4",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "bfa678e0a9aa3cef17cc608ab6b79b6cf4e05b99143251ff8985d866f7e24518",
+          "id": "a8401907e175b7709a6924d38304e1d838994bd8542a3967369c8c1fec829927",
           "sourceId": "producthunt",
-          "title": "StableBar",
-          "url": "https://www.producthunt.com/products/stablebar",
+          "title": "Grok Bot 1.0",
+          "url": "https://www.producthunt.com/products/grok",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "54d0c58bf895ff1cf62a6e0a63792131351ade23cf28deaa01b07b023657be41",
+          "id": "51030d8924656e49b24db472feb4865ff26a3a98cacae42599e7994cef868495",
           "sourceId": "producthunt",
-          "title": "Seedream 5.5 by ByteDance",
-          "url": "https://www.producthunt.com/products/seedream-4-0",
+          "title": "Omnigraph",
+          "url": "https://www.producthunt.com/products/omnigraph",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "6d4f50ce94d93c85f7e478ee576eb39b1a405826cde5a6afb6a90c9b61dcff99",
+          "id": "2d499efd4ac2053b817a223bbe35344b1038a68b0bba9e06d19a8eb2210f61e6",
           "sourceId": "producthunt",
-          "title": "bonds chat",
-          "url": "https://www.producthunt.com/products/bonds-2",
+          "title": "Toki Matter",
+          "url": "https://www.producthunt.com/products/toki-ai",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "c1a5f6f5559f534b473c660792a0721e4374cb6c755924b51d23096d320993b1",
+          "id": "58ed4ccdf58b8eb0ab6f717c7035b6bfbc44709469a9dcb82adfaf273641f4e3",
           "sourceId": "producthunt",
-          "title": "Valin",
-          "url": "https://www.producthunt.com/products/valin",
+          "title": "Harness Memory",
+          "url": "https://www.producthunt.com/products/epsilla",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "59a622087ce46a975acbe30da4e332cffc7556e4fef40587b2d4e080e417656d",
+          "id": "820f7927c1758c760e865835e5c4f694169cff8f28e1f300dd7867f1c62a5f38",
           "sourceId": "producthunt",
-          "title": "Relay",
-          "url": "https://www.producthunt.com/products/relaytoai",
+          "title": "Skysoon",
+          "url": "https://www.producthunt.com/products/skysoon",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "b65d85c6d867a2c90897672cd97c27baea9ade81ac60001f0c71d5d15f9ee701",
+          "id": "a73ab6a7d06fdd3f5788677516b8b0786ce0c4489f52f0bcde9c3039b4ca4730",
           "sourceId": "producthunt",
-          "title": "Shot.video",
-          "url": "https://www.producthunt.com/products/shot-video",
+          "title": "Sluice",
+          "url": "https://www.producthunt.com/products/sluice-2",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "7391d45179f2c32b6c54f993248b89ef3a4fc838a4b18e4b7648b1b1b37ec586",
+          "id": "0fe7e1893b6073947ed3be4fe696cb1bedc55ff36a27c24b39413ce5fbb30b3d",
           "sourceId": "producthunt",
-          "title": "Muse Ember by Meta",
-          "url": "https://www.producthunt.com/products/meta-ai",
+          "title": "Plurai Simulation",
+          "url": "https://www.producthunt.com/products/plurai",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "6a5eefeeba48e11d380ffca178105b10ea44712c8b867ed57654c71695698758",
+          "id": "96eb6e0b9c5e9f121338071adc253b7753b0f4b668cc4017569d6fe21f69bec4",
           "sourceId": "producthunt",
-          "title": "Scribe v3 by ElevenLabs",
-          "url": "https://www.producthunt.com/products/elevenlabs",
+          "title": "Sendr V4: Lovable for GTM",
+          "url": "https://www.producthunt.com/products/sendr",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "cc3d3edf494cf468cff4bc9b1ea4937403fbb4e0a04abc00aef741cb5e881b17",
+          "id": "bacf567a29642d47aa5895607921140e65ed5c945790e9ca12ebd8e15fae0640",
           "sourceId": "producthunt",
-          "title": "CALL-E",
-          "url": "https://www.producthunt.com/products/call-e",
+          "title": "⌘+L",
+          "url": "https://www.producthunt.com/products/l",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "ca9c3e8b6209a686eb755ad93d90474d2037b66e5c202855879124f8b3db6d78",
+          "id": "68d5cbe455e4dafd39276b4156e45e7454063c9885bf3cae7cbfc9a28aacbb47",
           "sourceId": "producthunt",
-          "title": "Nod by n8n",
-          "url": "https://www.producthunt.com/products/n8n-io",
+          "title": "Customer.io Fall Release",
+          "url": "https://www.producthunt.com/products/customer-io",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "5f8be2db2234ac7f0ca9a33e80b1b336a15e931845cd5879196304bc9154f032",
+          "id": "c1b8a7d0758fb425a886055ef9779e5bfe78987a0899cda00e6915a3dfa728a4",
           "sourceId": "producthunt",
-          "title": "Mister Blocks",
-          "url": "https://www.producthunt.com/products/mister-blocks",
+          "title": "Hoy for Mac",
+          "url": "https://www.producthunt.com/products/hoy-for-mac",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "99321bd3d64b50b9faed8c63a264ffce21f535ceec9895b3b28d06543f4451ca",
+          "id": "8104fe4bb228bdd58e8603572cc9b41e407fc005a8384ecae3c53a2350b7f84f",
           "sourceId": "producthunt",
-          "title": "Stiro",
-          "url": "https://www.producthunt.com/products/stiro",
+          "title": "CanyonOS",
+          "url": "https://www.producthunt.com/products/canyon-code",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "39782033d51355a67da96838880a8b4e9b37b5aefe8866b78b8db1a73bcb4886",
+          "id": "f80e7f58ebbee0b1540317356f0a339e41e0eecfcb3d8b337da97ad8849fb224",
           "sourceId": "producthunt",
-          "title": "nizima ACTION!!",
-          "url": "https://www.producthunt.com/products/nizima-action-by-live2d",
+          "title": "Infinite Drive",
+          "url": "https://www.producthunt.com/products/infinite-drive",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "54667967721f4d0111e167b982532cda4d008d81b84402a6ad3aae3416c0ea4f",
+          "id": "4a01075ee652079b845a4ba7b39c34f4e5764ccf63ebd3f994f07115069afe9c",
           "sourceId": "producthunt",
-          "title": "Mitra MCP",
-          "url": "https://www.producthunt.com/products/mitra-5",
+          "title": "YouArt Desktop App",
+          "url": "https://www.producthunt.com/products/youart",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "480209c0a215e94321061aadb15af205c4921e9bc08be94b1e818461e0e065f3",
+          "id": "201fcc34b26a85a7d1edc4ed72cd1ac0ea828c6451de38e722c925ca39d5bb16",
           "sourceId": "producthunt",
-          "title": "Xolace",
-          "url": "https://www.producthunt.com/products/xolace",
+          "title": "Gemini Decisions API",
+          "url": "https://www.producthunt.com/products/google",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "2d394b8cc3e8d384ec4dce241f172d8b1ce8252b1f6fff67a30a16d8e7d6d982",
+          "id": "83a7ad37a5d8b663c27473606c648ea82d2aadf6f69a673c8980ff30041e363d",
           "sourceId": "producthunt",
-          "title": "Subscriptrack",
-          "url": "https://www.producthunt.com/products/subscriptrack",
+          "title": "Nameshot",
+          "url": "https://www.producthunt.com/products/nameshot-2",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "44dc67cb391755b2161d6a08f73ed8053763c5af1649c5237313113d42b5248e",
+          "id": "bb99906cbdad296f2d88cfa6d337b6ef6077438191a83b01cd6e90fff436b5f4",
           "sourceId": "producthunt",
-          "title": "ScroogeFrog AI",
-          "url": "https://www.producthunt.com/products/scroogefrog-ai-antifraud",
+          "title": "Spacefast by Automattic",
+          "url": "https://www.producthunt.com/products/spacefast-by-automattic",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "254f909aa9cb289791f9a649756c62dc8feed68286deb2c3fc420ecf9ff6c93c",
+          "id": "e4d532cee313189eed4a51bfec84b627ca7814e6b1f06daa707d7415304db9ab",
           "sourceId": "producthunt",
-          "title": "Kippy AI",
-          "url": "https://www.producthunt.com/products/kippy-ai",
+          "title": "Cloudways Velocity",
+          "url": "https://www.producthunt.com/products/cloudways",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "d6c04f8441c32a1566da90f1b047bf391f15eea6600430d4c4595c0f992e8fe1",
+          "sourceId": "producthunt",
+          "title": "Marqly 7.0",
+          "url": "https://www.producthunt.com/products/marqly",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b33514154a97801a1e180adc31bc79590b2c11a7fa91def98c799acc1b430625",
+          "sourceId": "producthunt",
+          "title": "Didit MCP",
+          "url": "https://www.producthunt.com/products/didit-3",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "bc2b317597c598fd3bdaaad8e56f9d500c1ad53e97cc4020686256bd0571995c",
+          "sourceId": "producthunt",
+          "title": "Yogurt",
+          "url": "https://www.producthunt.com/products/yogurt",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "4d8483ec92dc753b7f41f55f47aed74d208dbe33f4b94c7f4fc36c094053b019",
+          "sourceId": "producthunt",
+          "title": "mang.sh",
+          "url": "https://www.producthunt.com/products/mang-sh",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "826c7ff7cb3a5f87242f88b12ce6c911efbad22f04699ba6e470ab30da3eac45",
+          "sourceId": "producthunt",
+          "title": "three.dev",
+          "url": "https://www.producthunt.com/products/three-dev",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "dda47d8cdc47dfa51277762e957a082778dc57f9f525eb390f82512764df4694",
+          "sourceId": "producthunt",
+          "title": "Jot 2.0",
+          "url": "https://www.producthunt.com/products/jot-2-0",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "c1dc166cac124819bc14225d05affeff74870cbdab768ae4fe4d1dbe191efb45",
+          "sourceId": "producthunt",
+          "title": "Insight7 Voice AI Agents",
+          "url": "https://www.producthunt.com/products/insight7",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "4528e281a5d452f24c3474112fbee942650d0fb2bce02ce7640be3a6d64208b3",
+          "sourceId": "producthunt",
+          "title": "Klang",
+          "url": "https://www.producthunt.com/products/klang",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "064ae7c6da3d1bf47c6541bf717da0f480336d04303de784b8b800d136cc294d",
+          "sourceId": "producthunt",
+          "title": "Adobe AI Assistant",
+          "url": "https://www.producthunt.com/products/adobe-ai-assistant",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "789e7f0983629b7fbfd610751b1fe4b392b54e7284f6e5851b07c4403b312e6f",
+          "sourceId": "producthunt",
+          "title": "Gnista",
+          "url": "https://www.producthunt.com/products/gnista",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "59e32bee36636ca46dc099cbf921056a606606f1c4a3e2b5ad5e545e2410c49e",
+          "sourceId": "producthunt",
+          "title": "Foxpit",
+          "url": "https://www.producthunt.com/products/foxpit",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "a51b83d6b28629b641e8153ed72be742f5a3a39f0b1357618112f68e0893538d",
+          "sourceId": "producthunt",
+          "title": "LeaseWire",
+          "url": "https://www.producthunt.com/products/leasewire",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "349c6f8bce8c6b8ceff34660c1523705a7dbe9473314b89241f04e95e9ae5513",
+          "sourceId": "producthunt",
+          "title": "Crossfade",
+          "url": "https://www.producthunt.com/products/crossfade",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "de3178611955a0457115b45334b0c6c8eaefda0b5ce79f47cfa64e10b3521a74",
+          "sourceId": "producthunt",
+          "title": "WizardNote",
+          "url": "https://www.producthunt.com/products/wizardnote",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7b66601d736bdbf1f26543a240c13d9a63ddfb6f6ac5ea5583a0e31df5b6ad04",
+          "sourceId": "producthunt",
+          "title": "Blendra",
+          "url": "https://www.producthunt.com/products/blendra",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "28156315b75ef4829b9ad23c4e8fcc02d5ff6ce4693dc4ed24c956bee0f30839",
+          "sourceId": "producthunt",
+          "title": "Oxagen",
+          "url": "https://www.producthunt.com/products/oxagen",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "bc1132de00510fa741eb5f546f3a998b1772d4975f5381adc919fd1ea9818d15",
+          "sourceId": "producthunt",
+          "title": "AirWave",
+          "url": "https://www.producthunt.com/products/airwave-2",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2f847ced3a77ee949e61426b065bb073bce26de9ebc907583c3a50b4a346dc52",
+          "sourceId": "producthunt",
+          "title": "Offstage Cloud",
+          "url": "https://www.producthunt.com/products/offstage-cloud",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4166,181 +4328,19 @@
           "extraSourceIds": []
         },
         {
-          "id": "07af292946359a90215d63e70f04b89115e7bf026a20ac467db0ce912833bb0e",
+          "id": "99321bd3d64b50b9faed8c63a264ffce21f535ceec9895b3b28d06543f4451ca",
           "sourceId": "producthunt",
-          "title": "Reddit Reviews",
-          "url": "https://www.producthunt.com/products/reddit",
+          "title": "Stiro",
+          "url": "https://www.producthunt.com/products/stiro",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "115f09cac34046d2e360e382c4e808934cbde52ea1487ae9348a3977cca29fb6",
+          "id": "6a5eefeeba48e11d380ffca178105b10ea44712c8b867ed57654c71695698758",
           "sourceId": "producthunt",
-          "title": "MiniMax H3-Image",
-          "url": "https://www.producthunt.com/products/minimax",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "82bee3ce47a198ade1976710f69d290530b2473b4474e76a4d53bca3b83484ef",
-          "sourceId": "producthunt",
-          "title": "RigSpark",
-          "url": "https://www.producthunt.com/products/rigspark",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "80c740d7ece470e86c44b36983494095372ab2daaea92ee1ed0cb98ec8502b97",
-          "sourceId": "producthunt",
-          "title": "Padrail",
-          "url": "https://www.producthunt.com/products/padrail",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "306287353df0e00afd90282c984a48333da0e94e9ae28b8b2870e11d3f650c6f",
-          "sourceId": "producthunt",
-          "title": "Binqo",
-          "url": "https://www.producthunt.com/products/binqo",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "563b978403f021afae0cb2eeabdd8fa74eb9726a913d30dfb2afc31ab8a57124",
-          "sourceId": "producthunt",
-          "title": "Skipbox",
-          "url": "https://www.producthunt.com/products/skipbox",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "67ffaf24c5599f44dcd7ea82dd3a92d492561a8b4cd1e612aed93a4b55b5f438",
-          "sourceId": "producthunt",
-          "title": "Kumiko",
-          "url": "https://www.producthunt.com/products/kumiko-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "a9b1aafe80dea8f0aee99f99825ecac402a4c260f7b150d0fb0c18c27298ec3d",
-          "sourceId": "producthunt",
-          "title": "CollaboTokyo",
-          "url": "https://www.producthunt.com/products/collabotokyo",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6a80f017801c69542a5b467f792fb67a2cb582bbf39c7397af0c133f96f3ae4a",
-          "sourceId": "producthunt",
-          "title": "Inspo by Context.dev",
-          "url": "https://www.producthunt.com/products/context-dev",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "201fcc34b26a85a7d1edc4ed72cd1ac0ea828c6451de38e722c925ca39d5bb16",
-          "sourceId": "producthunt",
-          "title": "MuJoCo 4",
-          "url": "https://www.producthunt.com/products/google",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "b6e84b23e35c7bfb794d9a9f9299d1af577db0b20033d8ad95e2eb2331f802d2",
-          "sourceId": "producthunt",
-          "title": "Daytwo",
-          "url": "https://www.producthunt.com/products/daytwo-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "e7b804afb5524cbc92b7229b9d9a77025e036021daf7ec1a7cbaf279fa334743",
-          "sourceId": "producthunt",
-          "title": "Opal Reader",
-          "url": "https://www.producthunt.com/products/opal-reader",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "041fd9f4ffaa7460d13b4e495011805bbb23dcf23153906d13b59d7b93d8a2b1",
-          "sourceId": "producthunt",
-          "title": "Quillo",
-          "url": "https://www.producthunt.com/products/quillo-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "e3ac2254a1106a6b10444c2f3afcfb767a65cb93b39aad8495c01d3ff65347c1",
-          "sourceId": "producthunt",
-          "title": "LotusQ",
-          "url": "https://www.producthunt.com/products/lotusq",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "72ddaa91d5e057956fe442a76e697a20c1ced8d998944d6cca1a6a36111fe75b",
-          "sourceId": "producthunt",
-          "title": "FigSchema",
-          "url": "https://www.producthunt.com/products/figschema",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "c946748b93f109c4150946d758b09efc4261f3a52f2dfe008f78d6c17a424851",
-          "sourceId": "producthunt",
-          "title": "QuotedPart",
-          "url": "https://www.producthunt.com/products/quotedpart",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "8cbff056fe6f066c47f7d9a7e5cca815a7fd6cf0d741233d5d3907701595774c",
-          "sourceId": "producthunt",
-          "title": "ForAgent",
-          "url": "https://www.producthunt.com/products/foragent",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "24af126b59432db70b0d611a6ba7440c30d9865a592487c12db1554ec9115c95",
-          "sourceId": "producthunt",
-          "title": "Levo",
-          "url": "https://www.producthunt.com/products/levo-3",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "96fe90b297f711808b325f182629db5f77143f4a0513408038807d69f168f8f4",
-          "sourceId": "producthunt",
-          "title": "VeilCC",
-          "url": "https://www.producthunt.com/products/veilcc",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "27e4e18427097f50cb3619db3601daeb5e9aeb2a8253994bb5b2da161f08e6bd",
-          "sourceId": "producthunt",
-          "title": "TK by Medium",
-          "url": "https://www.producthunt.com/products/medium",
+          "title": "Scribe v3 by ElevenLabs",
+          "url": "https://www.producthunt.com/products/elevenlabs",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4350,78 +4350,15 @@
     "github-trending-today": {
       "sourceId": "github-trending-today",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:08.685255Z",
+      "updatedAt": "2026-11-12T12:13:51.045736Z",
       "error": null,
       "items": [
-        {
-          "id": "2fe3c66cf1a3dfb3ab74c7eadf07f6649656b3c8784aed9ab361544c6a6dff23",
-          "sourceId": "github-trending-today",
-          "title": "meta / astryx",
-          "url": "https://github.com/meta/astryx",
-          "summary": "An open source design system that's fully customizable and agent ready",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "1520f131ba6f8dbcd49d55c49b41de7bedafe1043f1c87b794502f9a2fbc6e50",
-          "sourceId": "github-trending-today",
-          "title": "ZhuLinsen / daily_stock_analysis",
-          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-          "summary": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
         {
           "id": "52213201630086dde81af746db5601c7af957afb97c63214cc19ffdc187dd931",
           "sourceId": "github-trending-today",
           "title": "GoogleChrome / modern-web-guidance-src",
           "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
           "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "30c49ee94e7bf40c40c5d2307e5be18c4d844c88665edfbcdefaf79ae7d2d98f",
-          "sourceId": "github-trending-today",
-          "title": "shadcn / improve",
-          "url": "https://github.com/shadcn/improve",
-          "summary": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6c8d1f3e0759b6908c7299b523cc887e924beb1581391da57c13669adbaa2a39",
-          "sourceId": "github-trending-today",
-          "title": "addyosmani / agent-skills",
-          "url": "https://github.com/addyosmani/agent-skills",
-          "summary": "Production-grade engineering skills for AI coding agents.",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "bd642d2a0e386b595b22baa7055b668a8a71093b110bc20d9855fcd50c33a62b",
-          "sourceId": "github-trending-today",
-          "title": "vercel-labs / agent-browser",
-          "url": "https://github.com/vercel-labs/agent-browser",
-          "summary": "Browser automation CLI for AI agents",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "1130ef10e3f42c4d4ae38ed3c2673fdfbdb2a7d5ed586602c0fb6b56b0cbd7e2",
-          "sourceId": "github-trending-today",
-          "title": "we-promise / sure",
-          "url": "https://github.com/we-promise/sure",
-          "summary": "The personal finance app for everyone (by everyone)",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "dc77961ca4900f0bee6dc0b5c0e421e4f7ed34bf19e76675e1340b7de6a608e7",
-          "sourceId": "github-trending-today",
-          "title": "homeassistant-ai / ha-mcp",
-          "url": "https://github.com/homeassistant-ai/ha-mcp",
-          "summary": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4435,11 +4372,101 @@
           "extraSourceIds": []
         },
         {
-          "id": "65378a5d70084fb979d055dc57688b8eb2e1abdbfd83d1de0e29eb3377d33803",
+          "id": "abe220307142fc99828ea2e00cf32540d4dc2c3079f9cd3f14d8f3b43b6b0ca9",
           "sourceId": "github-trending-today",
-          "title": "TheAlgorithms / Java",
-          "url": "https://github.com/TheAlgorithms/Java",
-          "summary": "All Algorithms implemented in Java",
+          "title": "nvm-sh / nvm",
+          "url": "https://github.com/nvm-sh/nvm",
+          "summary": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f3361b1294d7ed91de75d9f85be0bd53bdbb2c9c21698a3a165f8d820fd01c97",
+          "sourceId": "github-trending-today",
+          "title": "pookjw / HermesEnabler",
+          "url": "https://github.com/pookjw/HermesEnabler",
+          "summary": "Enable Hermès Watch Faces on any Apple Watch devices",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "1130ef10e3f42c4d4ae38ed3c2673fdfbdb2a7d5ed586602c0fb6b56b0cbd7e2",
+          "sourceId": "github-trending-today",
+          "title": "we-promise / sure",
+          "url": "https://github.com/we-promise/sure",
+          "summary": "The personal finance app for everyone (by everyone)",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "5bb8c0f064618b85e221c312e30c7eebfdb1f2b75af478fd8fb9a1d2196b334a",
+          "sourceId": "github-trending-today",
+          "title": "QwenLM / qwen-code",
+          "url": "https://github.com/QwenLM/qwen-code",
+          "summary": "An open-source AI coding agent that lives in your terminal.",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3e8e23314990cf81c1d367d254676235f9060273713709559a80dc019367bb56",
+          "sourceId": "github-trending-today",
+          "title": "ashhart / TensorFold",
+          "url": "https://github.com/ashhart/TensorFold",
+          "summary": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "127caf0ce7e7cf2714093931d9e3bc87017d78234fa162f2d1a5f34dcaa79829",
+          "sourceId": "github-trending-today",
+          "title": "nodejs / node",
+          "url": "https://github.com/nodejs/node",
+          "summary": "Node.js JavaScript runtime ✨🐢🚀✨",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6c8d1f3e0759b6908c7299b523cc887e924beb1581391da57c13669adbaa2a39",
+          "sourceId": "github-trending-today",
+          "title": "addyosmani / agent-skills",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "summary": "Production-grade engineering skills for AI coding agents.",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2fe3c66cf1a3dfb3ab74c7eadf07f6649656b3c8784aed9ab361544c6a6dff23",
+          "sourceId": "github-trending-today",
+          "title": "meta / astryx",
+          "url": "https://github.com/meta/astryx",
+          "summary": "An open source design system that's fully customizable and agent ready",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "334ba6b44bd5b4644b4809b8b4b37220dc425a29e5350a19a57b19f8e2b20d1a",
+          "sourceId": "github-trending-today",
+          "title": "CopilotKit / OpenBot",
+          "url": "https://github.com/CopilotKit/OpenBot",
+          "summary": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "c28c2d205f977d6193b3071a38eb0219db0ca293e36e83a211e88d284a970887",
+          "sourceId": "github-trending-today",
+          "title": "Alishahryar1 / free-claude-code",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "summary": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "57ba82c098ceba0d8d76f2d72fd0c6245087419a11c530101ff563c84649aa8c",
+          "sourceId": "github-trending-today",
+          "title": "ggml-org / llama.cpp",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "summary": "LLM inference in C/C++",
           "pubDate": null,
           "extraSourceIds": []
         }
@@ -4448,7 +4475,7 @@
     "steam": {
       "sourceId": "steam",
       "status": "ok",
-      "updatedAt": "2026-11-12T03:58:09.209207Z",
+      "updatedAt": "2026-11-12T12:13:53.304890Z",
       "error": null,
       "items": [
         {
@@ -4456,7 +4483,7 @@
           "sourceId": "steam",
           "title": "Counter-Strike 2",
           "url": "https://store.steampowered.com/app/730/CounterStrike_2/",
-          "summary": "414,535",
+          "summary": "851,846",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4465,25 +4492,7 @@
           "sourceId": "steam",
           "title": "Dota 2",
           "url": "https://store.steampowered.com/app/570/Dota_2/",
-          "summary": "372,496",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "ba3fd05e78cdca5d65bf242ee77c3a4a8759c77163966ec24f2f82fce806db88",
-          "sourceId": "steam",
-          "title": "ROB RUN",
-          "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
-          "summary": "171,069",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "22b96ee1ac9805205625b98baf2b6cf1016b1539dc951741d221e7bfba27e742",
-          "sourceId": "steam",
-          "title": "Bongo Cat",
-          "url": "https://store.steampowered.com/app/3419430/Bongo_Cat/",
-          "summary": "168,010",
+          "summary": "569,774",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4492,34 +4501,7 @@
           "sourceId": "steam",
           "title": "PUBG: BATTLEGROUNDS",
           "url": "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/",
-          "summary": "150,794",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "b95792f43e4ee7bf5a1c2ae939f80b64eb2a10bd85e91e20b5c2819ea50bb54b",
-          "sourceId": "steam",
-          "title": "Limbus Company",
-          "url": "https://store.steampowered.com/app/1973530/Limbus_Company/",
-          "summary": "139,128",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6f23c859878706a5675832aff8b371332ea4557b9771f7b6c8bfb338354ec09b",
-          "sourceId": "steam",
-          "title": "Call of Duty®",
-          "url": "https://store.steampowered.com/app/1938090/Call_of_Duty/",
-          "summary": "129,337",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "9173e51751e1015d3741dce6177656fbbe5f30c0f42d1e519e22f6989c57cad9",
-          "sourceId": "steam",
-          "title": "AION 2",
-          "url": "https://store.steampowered.com/app/3393110/AION_2/",
-          "summary": "118,087",
+          "summary": "553,383",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4528,25 +4510,7 @@
           "sourceId": "steam",
           "title": "Phantom Blade Zero",
           "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
-          "summary": "102,341",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "3b8a75414260f5e514ca7178eae338728a2dad65ef5a066b7e209aad43f8f8e5",
-          "sourceId": "steam",
-          "title": "Team Fortress 2",
-          "url": "https://store.steampowered.com/app/440/Team_Fortress_2/",
-          "summary": "85,037",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7c3de5141746b3a3bfa33e13f5bbf11bd332d15acfcd3266bd45566f9283d0da",
-          "sourceId": "steam",
-          "title": "Cyberpunk 2077",
-          "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
-          "summary": "71,848",
+          "summary": "265,686",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4555,7 +4519,43 @@
           "sourceId": "steam",
           "title": "Apex Legends",
           "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
-          "summary": "70,564",
+          "summary": "174,925",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "22b96ee1ac9805205625b98baf2b6cf1016b1539dc951741d221e7bfba27e742",
+          "sourceId": "steam",
+          "title": "Bongo Cat",
+          "url": "https://store.steampowered.com/app/3419430/Bongo_Cat/",
+          "summary": "170,337",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "9173e51751e1015d3741dce6177656fbbe5f30c0f42d1e519e22f6989c57cad9",
+          "sourceId": "steam",
+          "title": "AION 2",
+          "url": "https://store.steampowered.com/app/3393110/AION_2/",
+          "summary": "149,472",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "ba3fd05e78cdca5d65bf242ee77c3a4a8759c77163966ec24f2f82fce806db88",
+          "sourceId": "steam",
+          "title": "ROB RUN",
+          "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+          "summary": "148,058",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b95792f43e4ee7bf5a1c2ae939f80b64eb2a10bd85e91e20b5c2819ea50bb54b",
+          "sourceId": "steam",
+          "title": "Limbus Company",
+          "url": "https://store.steampowered.com/app/1973530/Limbus_Company/",
+          "summary": "126,458",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4564,88 +4564,16 @@
           "sourceId": "steam",
           "title": "Probably Stolen",
           "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
-          "summary": "69,425",
+          "summary": "120,182",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "3685ab197aa7543393776646700c11099c74fa8bba10349cc5f9c617e90698bd",
+          "id": "6f23c859878706a5675832aff8b371332ea4557b9771f7b6c8bfb338354ec09b",
           "sourceId": "steam",
-          "title": "Wallpaper Engine",
-          "url": "https://store.steampowered.com/app/431960/Wallpaper_Engine/",
-          "summary": "57,592",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "19b81c365a6b49e5ef55eaa8b5b7de64a24e8ef63ae85eec8ce1c4dea1b87898",
-          "sourceId": "steam",
-          "title": "Tom Clancy's Rainbow Six Siege",
-          "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
-          "summary": "55,036",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "56e2f2f53bf24be6521b23086a00e6db514917796dfa013db36ac8c87526bc13",
-          "sourceId": "steam",
-          "title": "TBH: Task Bar Hero",
-          "url": "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
-          "summary": "54,538",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f25cafcc1d38894195b765a0d295b72a146dd7420377a0b0d40a701ceb07de41",
-          "sourceId": "steam",
-          "title": "Rust",
-          "url": "https://store.steampowered.com/app/252490/Rust/",
-          "summary": "52,946",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "66b74aa26ea9caf669d4f1e47d6ab5df964c2c431907d9d9b39395cc30783a37",
-          "sourceId": "steam",
-          "title": "Marvel Rivals",
-          "url": "https://store.steampowered.com/app/2767030/Marvel_Rivals/",
-          "summary": "52,004",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cca8cdfaf0e2f7db7ac31548f8e239796bb4ee573ee3c2424aed5d7d84be2f17",
-          "sourceId": "steam",
-          "title": "Slay the Spire 2",
-          "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
-          "summary": "50,032",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "25f640dc6c4cbeab80235e0e1a21dcb12c391aefffc38186a853b76372f0b3a0",
-          "sourceId": "steam",
-          "title": "Warframe",
-          "url": "https://store.steampowered.com/app/230410/Warframe/",
-          "summary": "47,365",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "fbd68c34fe71d6b1e32a2f5b27879fbf8306be947e833f2aad4c47f326a61cca",
-          "sourceId": "steam",
-          "title": "Overwatch®",
-          "url": "https://store.steampowered.com/app/2357570/Overwatch/",
-          "summary": "44,630",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "547babfbcb800ec42efdae7d1c7cdeaa27ad6180a3a313eb5e1b5195b1d63e85",
-          "sourceId": "steam",
-          "title": "VRChat",
-          "url": "https://store.steampowered.com/app/438100/VRChat/",
-          "summary": "44,081",
+          "title": "Call of Duty®",
+          "url": "https://store.steampowered.com/app/1938090/Call_of_Duty/",
+          "summary": "108,109",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4654,25 +4582,34 @@
           "sourceId": "steam",
           "title": "Delta Force",
           "url": "https://store.steampowered.com/app/2507950/Delta_Force/",
-          "summary": "41,251",
+          "summary": "94,471",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "20393eb6c20f291afd6820e10996f67a6fce09b5163a07c2951c2d323f5d3fdc",
+          "id": "3685ab197aa7543393776646700c11099c74fa8bba10349cc5f9c617e90698bd",
           "sourceId": "steam",
-          "title": "WARDOGS",
-          "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
-          "summary": "39,893",
+          "title": "Wallpaper Engine",
+          "url": "https://store.steampowered.com/app/431960/Wallpaper_Engine/",
+          "summary": "93,457",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "aee1e1fab2de02946efa7da2987dd32da1873fc183c26083cde5dbab63393230",
+          "id": "3b8a75414260f5e514ca7178eae338728a2dad65ef5a066b7e209aad43f8f8e5",
           "sourceId": "steam",
-          "title": "Stardew Valley",
-          "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
-          "summary": "39,238",
+          "title": "Team Fortress 2",
+          "url": "https://store.steampowered.com/app/440/Team_Fortress_2/",
+          "summary": "91,732",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f25cafcc1d38894195b765a0d295b72a146dd7420377a0b0d40a701ceb07de41",
+          "sourceId": "steam",
+          "title": "Rust",
+          "url": "https://store.steampowered.com/app/252490/Rust/",
+          "summary": "76,279",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4681,52 +4618,52 @@
           "sourceId": "steam",
           "title": "War Thunder",
           "url": "https://store.steampowered.com/app/236390/War_Thunder/",
-          "summary": "38,717",
+          "summary": "69,497",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "f0b7b276167d0ee95b2460a03b231aa2df4973c3784e1adb2e6f697a49243aac",
+          "id": "56e2f2f53bf24be6521b23086a00e6db514917796dfa013db36ac8c87526bc13",
           "sourceId": "steam",
-          "title": "ARC Raiders",
-          "url": "https://store.steampowered.com/app/1808500/ARC_Raiders/",
-          "summary": "37,761",
+          "title": "TBH: Task Bar Hero",
+          "url": "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
+          "summary": "65,093",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "34037af49375913589a780dee799b6b893bb22901c1be89a2c14d16e25529ab4",
+          "id": "7c3de5141746b3a3bfa33e13f5bbf11bd332d15acfcd3266bd45566f9283d0da",
           "sourceId": "steam",
-          "title": "Valheim",
-          "url": "https://store.steampowered.com/app/892970/Valheim/",
-          "summary": "35,089",
+          "title": "Cyberpunk 2077",
+          "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+          "summary": "64,992",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "6bde3c0276b8e598c0618e6c4a1205bf87baab022d5c1eb1dab9899c20da2790",
+          "id": "25f640dc6c4cbeab80235e0e1a21dcb12c391aefffc38186a853b76372f0b3a0",
           "sourceId": "steam",
-          "title": "Dead by Daylight",
-          "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
-          "summary": "34,138",
+          "title": "Warframe",
+          "url": "https://store.steampowered.com/app/230410/Warframe/",
+          "summary": "56,281",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "b0533802e00abfe7a0de256e0b704d58f12df159d2a57cce25f065b1add6f6cf",
+          "id": "cca8cdfaf0e2f7db7ac31548f8e239796bb4ee573ee3c2424aed5d7d84be2f17",
           "sourceId": "steam",
-          "title": "Geometry Dash",
-          "url": "https://store.steampowered.com/app/322170/Geometry_Dash/",
-          "summary": "31,900",
+          "title": "Slay the Spire 2",
+          "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
+          "summary": "54,845",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "2be0970e0efe5caf31f1d2755e46d83e92425f52ea1fcd2168950c2b65779fb8",
+          "id": "aee1e1fab2de02946efa7da2987dd32da1873fc183c26083cde5dbab63393230",
           "sourceId": "steam",
-          "title": "Project Zomboid",
-          "url": "https://store.steampowered.com/app/108600/Project_Zomboid/",
-          "summary": "31,873",
+          "title": "Stardew Valley",
+          "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
+          "summary": "52,493",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4735,52 +4672,61 @@
           "sourceId": "steam",
           "title": "Grand Theft Auto V Enhanced",
           "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
-          "summary": "31,579",
+          "summary": "49,236",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "2308be1440745bfc05d9f37d5288e0268492f5236a21145e5c96d223c407e536",
+          "id": "4ec076428aa2de784c928368ae3895bf58cbcbf37f57be18803f22cbd611e8d0",
           "sourceId": "steam",
-          "title": "Baldur's Gate 3",
-          "url": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/",
-          "summary": "31,462",
+          "title": "NARAKA: BLADEPOINT",
+          "url": "https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/",
+          "summary": "47,823",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "3369b3c2ae4e206a9f110f65201da10910c04277793a4e210dc4f5ae89e1b658",
+          "id": "8675e89d044dbee34180d4119e83acfc194f1c11a136ed5b2b36fe1252b538df",
           "sourceId": "steam",
-          "title": "Crosshair X",
-          "url": "https://store.steampowered.com/app/1366800/Crosshair_X/",
-          "summary": "30,671",
+          "title": "Grand Theft Auto V Legacy",
+          "url": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/",
+          "summary": "47,212",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "d295527da88530b8a7686fd0e3a0153a73082852dcbd8638d5149d93be355884",
+          "id": "78d92e5e54f20dd3bb839c39984f145af72b5dfbb58b01ca719c75b3c660f168",
           "sourceId": "steam",
-          "title": "Left 4 Dead 2",
-          "url": "https://store.steampowered.com/app/550/Left_4_Dead_2/",
-          "summary": "29,434",
+          "title": "Football Manager 27",
+          "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+          "summary": "46,991",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "ef50cf44846204cbd25d6b26705a1b2dc5251ae1ec3b426c7e771dd9f29d221a",
+          "id": "547babfbcb800ec42efdae7d1c7cdeaa27ad6180a3a313eb5e1b5195b1d63e85",
           "sourceId": "steam",
-          "title": "Enshrouded",
-          "url": "https://store.steampowered.com/app/1203620/Enshrouded/",
-          "summary": "27,328",
+          "title": "VRChat",
+          "url": "https://store.steampowered.com/app/438100/VRChat/",
+          "summary": "39,127",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "09d64a98cfba55af5580f00228e09ef6f49e9a56aa9df7ae6fe3bae890463486",
+          "id": "7501e13513955781190ee6022239d2947bdd240a74d356d4d06e149d5e10bbdc",
           "sourceId": "steam",
-          "title": "MapleStory",
-          "url": "https://store.steampowered.com/app/216150/MapleStory/",
-          "summary": "26,470",
+          "title": "Don't Starve Together",
+          "url": "https://store.steampowered.com/app/322330/Dont_Starve_Together/",
+          "summary": "37,065",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6bde3c0276b8e598c0618e6c4a1205bf87baab022d5c1eb1dab9899c20da2790",
+          "sourceId": "steam",
+          "title": "Dead by Daylight",
+          "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+          "summary": "36,593",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4789,25 +4735,106 @@
           "sourceId": "steam",
           "title": "The Binding of Isaac: Rebirth",
           "url": "https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/",
-          "summary": "26,081",
+          "summary": "35,400",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "6db7fef745e777565e78ac14811a8325c770ca73fc036dcb9462abff76a1796e",
+          "id": "92ad8dc7209523f65472c1ad50c06b3c865e0cd6a712fe6387225ac871949ce6",
           "sourceId": "steam",
-          "title": "The Elder Scrolls V: Skyrim Special Edition",
-          "url": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/",
-          "summary": "26,000",
+          "title": "Euro Truck Simulator 2",
+          "url": "https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/",
+          "summary": "33,921",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "126394e10be67c341da3dc2a8836c211f8e1ce11ff75a5476f1fa4338e009501",
+          "id": "44a2b45b9190376c7d20a892b5528811eda1232ac038bbff918e2cbc242f30de",
           "sourceId": "steam",
-          "title": "HELLDIVERS™ 2",
-          "url": "https://store.steampowered.com/app/553850/HELLDIVERS_2/",
-          "summary": "25,451",
+          "title": "Spacewar",
+          "url": "https://steamcommunity.com/app/480",
+          "summary": "32,468",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "fbd68c34fe71d6b1e32a2f5b27879fbf8306be947e833f2aad4c47f326a61cca",
+          "sourceId": "steam",
+          "title": "Overwatch®",
+          "url": "https://store.steampowered.com/app/2357570/Overwatch/",
+          "summary": "30,823",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "ae70273187c0d5bd927f34c039107296c315416470a66bbaedb468ea888a8833",
+          "sourceId": "steam",
+          "title": "Hearts of Iron IV",
+          "url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+          "summary": "30,720",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2be0970e0efe5caf31f1d2755e46d83e92425f52ea1fcd2168950c2b65779fb8",
+          "sourceId": "steam",
+          "title": "Project Zomboid",
+          "url": "https://store.steampowered.com/app/108600/Project_Zomboid/",
+          "summary": "29,683",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "19b81c365a6b49e5ef55eaa8b5b7de64a24e8ef63ae85eec8ce1c4dea1b87898",
+          "sourceId": "steam",
+          "title": "Tom Clancy's Rainbow Six Siege",
+          "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+          "summary": "28,941",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b0533802e00abfe7a0de256e0b704d58f12df159d2a57cce25f065b1add6f6cf",
+          "sourceId": "steam",
+          "title": "Geometry Dash",
+          "url": "https://store.steampowered.com/app/322170/Geometry_Dash/",
+          "summary": "28,715",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b3c159164f357525bb44bbc7039a8bd4f7a4c659099c9d3aa17307b728ffb60d",
+          "sourceId": "steam",
+          "title": "Aniimo",
+          "url": "https://store.steampowered.com/app/4126040/Aniimo/",
+          "summary": "28,545",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "20393eb6c20f291afd6820e10996f67a6fce09b5163a07c2951c2d323f5d3fdc",
+          "sourceId": "steam",
+          "title": "WARDOGS",
+          "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+          "summary": "28,495",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3369b3c2ae4e206a9f110f65201da10910c04277793a4e210dc4f5ae89e1b658",
+          "sourceId": "steam",
+          "title": "Crosshair X",
+          "url": "https://store.steampowered.com/app/1366800/Crosshair_X/",
+          "summary": "28,234",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "5b53747c7e9b6b6f8318ea7e6fc0cdcb233560b80a5afbd75af58d827bee9fe8",
+          "sourceId": "steam",
+          "title": "Sid Meier's Civilization VI",
+          "url": "https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/",
+          "summary": "27,106",
           "pubDate": null,
           "extraSourceIds": []
         }
