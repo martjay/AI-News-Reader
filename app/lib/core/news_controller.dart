@@ -313,7 +313,9 @@ class NewsController extends Notifier<NewsState> {
         await db.upsertItems(merged);
       }
       await db.prune(keepId: state.selectedId);
-      final records = await db.loadArticles();
+      final loaded = await db.loadArticles();
+      final live = {for (final record in state.records) record.item.id: record};
+      final records = [for (final row in loaded) preserveFetchedBody(row, live[row.item.id])];
       final statuses = await db.loadStatuses();
       state = state.copyWith(
         records: records,
@@ -339,24 +341,29 @@ class NewsController extends Notifier<NewsState> {
     if (!settings.autoTranslate) return;
 
     final copied = <(String, String, String)>[];
-    var records = [
-      for (final rec in state.records)
-        if (rec.titleZh.isEmpty && rec.item.title.isNotEmpty && isPrimarilyChinese(rec.item.title))
-          rec.copyWith(titleZh: rec.item.title, summaryZh: rec.item.summary)
-        else
-          rec,
-    ];
-    for (final rec in records) {
-      if (rec.titleZh == rec.item.title && rec.item.title.isNotEmpty && isPrimarilyChinese(rec.item.title)) {
+    for (final rec in state.records) {
+      if (rec.titleZh.isEmpty && rec.item.title.isNotEmpty && isPrimarilyChinese(rec.item.title)) {
         copied.add((rec.item.id, rec.item.title, rec.item.summary));
       }
     }
     if (copied.isNotEmpty) {
       await db.setTranslations(copied);
-      state = state.copyWith(records: records);
+      final copiedIds = copied.map((row) => row.$1).toSet();
+      state = state.copyWith(
+        records: [
+          for (final rec in state.records)
+            if (copiedIds.contains(rec.item.id) && rec.titleZh.isEmpty && isPrimarilyChinese(rec.item.title))
+              rec.copyWith(
+                titleZh: rec.item.title,
+                summaryZh: rec.summaryZh.isEmpty ? rec.item.summary : rec.summaryZh,
+              )
+            else
+              rec,
+        ],
+      );
     }
 
-    final pending = records.where((r) => r.needsTranslation).take(80).toList();
+    final pending = state.records.where((r) => r.needsTranslation).take(80).toList();
     if (pending.isEmpty) return;
 
     state = state.copyWith(translating: true);
@@ -385,21 +392,23 @@ class NewsController extends Notifier<NewsState> {
           continue;
         }
         translated.add((rec.item.id, titleZh, summaryZh));
-        records = [
-          for (final r in records)
-            if (r.item.id == rec.item.id) r.copyWith(titleZh: titleZh, summaryZh: summaryZh) else r,
-        ];
-        state = state.copyWith(records: records, translating: true);
+        state = state.copyWith(
+          translating: true,
+          records: [
+            for (final current in state.records)
+              if (current.item.id == rec.item.id) current.copyWith(titleZh: titleZh, summaryZh: summaryZh) else current,
+          ],
+        );
       }
       await db.setTranslations(translated);
     } finally {
       tx.close();
       if (failures > 0) {
-        state = state.copyWith(translating: false, records: records, banner: 'translate');
+        state = state.copyWith(translating: false, banner: 'translate');
       } else if (state.banner == 'translate') {
-        state = state.copyWith(translating: false, records: records, clearBanner: true);
+        state = state.copyWith(translating: false, clearBanner: true);
       } else {
-        state = state.copyWith(translating: false, records: records);
+        state = state.copyWith(translating: false);
       }
     }
     if (translated.isNotEmpty &&
@@ -533,7 +542,8 @@ class NewsController extends Notifier<NewsState> {
         if (nextSummary != null) summaryZh = nextSummary;
         if (nextBody != null) bodyZh = nextBody;
         await db.setTranslation(id, titleZh: titleZh, summaryZh: summaryZh);
-        await db.setBody(id, body: rec.body, bodyZh: bodyZh, status: rec.bodyStatus);
+        final current = state.records.where((r) => r.item.id == id).firstOrNull ?? rec;
+        await db.setBody(id, body: current.body, bodyZh: bodyZh, status: current.bodyStatus);
         state = state.copyWith(
           translatingBody: true,
           records: [

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:sqlite3_flutter_libs/sqlite3_flutter_libs.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'app/app.dart';
+import 'core/desktop_tray.dart';
 import 'core/news_controller.dart';
 import 'core/settings.dart';
 
@@ -49,19 +51,33 @@ class _Bootstrap extends ConsumerStatefulWidget {
 }
 
 class _BootstrapState extends ConsumerState<_Bootstrap> with WidgetsBindingObserver {
+  DesktopTray? _tray;
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ref.read(newsProvider.notifier).bootstrap();
+      final tray = DesktopTray(() => ref.read(settingsProvider));
+      _tray = tray;
+      unawaited(tray.start());
     });
   }
 
   @override
   void dispose() {
+    _tray?.dispose();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    ref.listen(settingsProvider.select((s) => s.language), (previous, next) {
+      if (previous != next) unawaited(_tray?.applyMenu());
+    });
+    return widget.child;
   }
 
   @override
@@ -70,7 +86,4 @@ class _BootstrapState extends ConsumerState<_Bootstrap> with WidgetsBindingObser
       ref.read(settingsProvider.notifier).touchVisit();
     }
   }
-
-  @override
-  Widget build(BuildContext context) => widget.child;
 }

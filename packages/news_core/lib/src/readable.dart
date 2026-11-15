@@ -290,7 +290,7 @@ String cleanReadableMarkdown(String md, {List<RegExp> extraNoise = const []}) {
       continue;
     }
     if (_markdownNavLine(t)) continue;
-    bodyBits.add(t.replaceAll(RegExp(r'\[([^\]]+)\]\([^)]+\)'), r'$1'));
+    bodyBits.add(t.replaceAllMapped(RegExp(r'\[([^\]]+)\]\([^)]+\)'), (m) => m.group(1)!));
   }
   final body = _blocks(bodyBits.join('\n'), extraNoise: extraNoise);
   if (body.length >= 80) return body;
@@ -410,16 +410,221 @@ bool looksUnreadable(String text) {
   return false;
 }
 
+enum ReaderBlockKind { paragraph, heading, bullet, quote, code, image }
+
+class ReaderSpan {
+  const ReaderSpan(this.text, {this.bold = false, this.italic = false, this.code = false});
+
+  final String text;
+  final bool bold;
+  final bool italic;
+  final bool code;
+}
+
+class ReaderBlock {
+  const ReaderBlock({
+    required this.plain,
+    required this.spans,
+    this.kind = ReaderBlockKind.paragraph,
+    this.headingLevel = 0,
+    this.imageUrl,
+  });
+
+  final String plain;
+  final List<ReaderSpan> spans;
+  final ReaderBlockKind kind;
+  final int headingLevel;
+  final String? imageUrl;
+}
+
+List<ReaderBlock> readerBlocks(String text) {
+  final lines = splitReaderParagraphs(text);
+  final out = <ReaderBlock>[];
+  var inFence = false;
+  final code = StringBuffer();
+  for (final line in lines) {
+    final fence = line.trim();
+    if (fence == '```' || fence.startsWith('```')) {
+      if (inFence) {
+        final body = code.toString().trim();
+        code.clear();
+        inFence = false;
+        if (body.isNotEmpty) {
+          out.add(ReaderBlock(
+            plain: body,
+            spans: [ReaderSpan(body, code: true)],
+            kind: ReaderBlockKind.code,
+          ));
+        }
+      } else {
+        inFence = true;
+      }
+      continue;
+    }
+    if (inFence) {
+      if (code.isNotEmpty) code.writeln();
+      code.write(line);
+      continue;
+    }
+    final block = readerBlock(line);
+    if (block.kind == ReaderBlockKind.image || block.plain.trim().isNotEmpty) out.add(block);
+  }
+  if (inFence && code.toString().trim().isNotEmpty) {
+    final body = code.toString().trim();
+    out.add(ReaderBlock(plain: body, spans: [ReaderSpan(body, code: true)], kind: ReaderBlockKind.code));
+  }
+  return out;
+}
+
+ReaderBlock readerBlock(String line) {
+  final image = readerImageUrl(line);
+  if (image != null) {
+    return ReaderBlock(
+      plain: line.trim(),
+      spans: [ReaderSpan(line.trim())],
+      kind: ReaderBlockKind.image,
+      imageUrl: image,
+    );
+  }
+  var raw = _repairReaderLine(line);
+  if (raw == '---' || raw == '***' || raw == '___') {
+    return const ReaderBlock(plain: '', spans: []);
+  }
+  var kind = ReaderBlockKind.paragraph;
+  var heading = 0;
+  final headingMatch = RegExp(r'^(#{1,6})\s+(.+)$').firstMatch(raw);
+  if (headingMatch != null) {
+    kind = ReaderBlockKind.heading;
+    final level = headingMatch.group(1)!.length;
+    heading = level > 3 ? 3 : level;
+    raw = headingMatch.group(2)!.trim();
+  } else {
+    final bullet = RegExp(r'^(?:[-*+]|\d+\.)\s+(.+)$').firstMatch(raw);
+    if (bullet != null) {
+      kind = ReaderBlockKind.bullet;
+      raw = bullet.group(1)!.trim();
+    } else if (raw.startsWith('> ')) {
+      kind = ReaderBlockKind.quote;
+      raw = raw.substring(2).trim();
+    }
+  }
+  final spans = parseInlineMarkdown(raw);
+  final plain = spans.map((span) => span.text).join().trim();
+  return ReaderBlock(plain: plain, spans: spans, kind: kind, headingLevel: heading);
+}
+
+String _repairReaderLine(String line) {
+  var raw = line.trim();
+  raw = raw.replaceAllMapped(RegExp(r'\[([^\]]+)\]\([^)]*\)'), (m) => m.group(1)!);
+  raw = raw.replaceAll(RegExp(r'(?<![\w\\])\$1(?![\w])'), '');
+  raw = raw.replaceAll(RegExp(r'：\s*[·•∙]\s*'), '：');
+  raw = raw.replaceAll(RegExp(r'[ \t]{2,}'), ' ');
+  return raw.trim();
+}
+
+List<ReaderSpan> parseInlineMarkdown(String input) {
+  final spans = <ReaderSpan>[];
+  final buf = StringBuffer();
+  var bold = false;
+  var italic = false;
+  var code = false;
+  var i = 0;
+
+  void flush() {
+    if (buf.isEmpty) return;
+    spans.add(ReaderSpan(buf.toString(), bold: bold, italic: italic, code: code));
+    buf.clear();
+  }
+
+  while (i < input.length) {
+    if (!code && (input.startsWith('**', i) || input.startsWith('__', i))) {
+      final marker = input.substring(i, i + 2);
+      if (bold || input.indexOf(marker, i + 2) >= 0) {
+        flush();
+        bold = !bold;
+        i += 2;
+        continue;
+      }
+    }
+    if (!bold && input[i] == '`') {
+      if (code) {
+        flush();
+        code = false;
+        i++;
+        continue;
+      }
+      final close = input.indexOf('`', i + 1);
+      if (close > i + 1) {
+        flush();
+        code = true;
+        i++;
+        continue;
+      }
+    }
+    if (!code && (input[i] == '*' || input[i] == '_')) {
+      final mark = input[i];
+      if (italic || _hasItalicCloser(input, i, mark)) {
+        flush();
+        italic = !italic;
+        i++;
+        continue;
+      }
+    }
+    if (!code && input[i] == '[') {
+      final link = _linkAt(input, i);
+      if (link != null) {
+        flush();
+        buf.write(link.$1);
+        i = link.$2;
+        continue;
+      }
+    }
+    buf.write(input[i]);
+    i++;
+  }
+  flush();
+  if (spans.isEmpty) return const [ReaderSpan('')];
+  return spans;
+}
+
+bool _hasItalicCloser(String input, int opener, String mark) {
+  if (opener + 1 >= input.length) return false;
+  if (input[opener + 1] == mark || input[opener + 1] == ' ' || input[opener + 1] == '\n') return false;
+  for (var j = opener + 2; j < input.length; j++) {
+    if (input[j] != mark) continue;
+    if (j + 1 < input.length && input[j + 1] == mark) {
+      j++;
+      continue;
+    }
+    if (input[j - 1] == ' ' || input[j - 1] == '\n') continue;
+    return true;
+  }
+  return false;
+}
+
+(String, int)? _linkAt(String input, int start) {
+  final match = RegExp(r'^\[([^\]]+)\]\([^)]*\)').matchAsPrefix(input, start);
+  if (match == null) return null;
+  final label = match.group(1)!.trim();
+  if (label.isEmpty) return null;
+  return (label, match.end);
+}
+
+String readerPlainText(String text) {
+  return readerBlocks(text).map((block) => block.plain.trim()).where((line) => line.isNotEmpty).join('\n\n');
+}
+
 String speechPlaintext(String text) {
-  return splitReaderParagraphs(text).where((line) {
-    final t = line.trim();
+  return readerBlocks(text).where((block) {
+    if (block.kind == ReaderBlockKind.image) return false;
+    final t = block.plain.trim();
+    if (t.isEmpty) return false;
     if (t.startsWith('🔗')) return false;
-    if (isReaderImageLine(t)) return false;
     if (RegExp(r'^https?://\S+$').hasMatch(t)) return false;
     if (RegExp(r'^(阅读原文|查看原文|原文链接)', caseSensitive: false).hasMatch(t)) return false;
     if (RegExp(r'^read original', caseSensitive: false).hasMatch(t)) return false;
     return true;
-  }).join('\n\n');
+  }).map((block) => block.plain.trim()).join('\n\n');
 }
 
 bool looksUnstructured(String text) {

@@ -1,3 +1,5 @@
+import 'article_record.dart';
+
 class StoredBody {
   const StoredBody({
     required this.body,
@@ -26,6 +28,23 @@ bool hasUsableFullBody(String body, String status) {
 
 bool isWeakBodyStatus(String status) =>
     status == 'fail' || status == 'empty' || status == 'excerpt';
+
+/// Keeps a body fetched while a refresh or title translation was in flight.
+/// Those updates rebuild the article list from an older copy, which would
+/// otherwise put the reader back on the summary.
+ArticleRecord preserveFetchedBody(ArticleRecord incoming, ArticleRecord? live) {
+  if (live == null) return incoming;
+  final incomingFull = hasUsableFullBody(incoming.body, incoming.bodyStatus);
+  final liveFull = hasUsableFullBody(live.body, live.bodyStatus);
+  if (liveFull && !incomingFull) {
+    return incoming.copyWith(
+      body: live.body,
+      bodyZh: live.bodyZh,
+      bodyStatus: live.bodyStatus,
+    );
+  }
+  return incoming;
+}
 
 StoredBody applyFetchedBody({
   required String previousBody,

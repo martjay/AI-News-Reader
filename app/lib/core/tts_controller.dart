@@ -17,6 +17,67 @@ enum TtsStatus { idle, loading, playing, paused }
 
 enum TtsError { none, empty, network, saved, saveFailed }
 
+/// Fields the reader needs for highlighting. Equality ignores playback
+/// position, so the progress ticker does not rebuild the article.
+class SpeechHighlight {
+  const SpeechHighlight({
+    this.articleId,
+    this.status = TtsStatus.idle,
+    this.error = TtsError.none,
+    this.partFrom = 0,
+    this.partTo = -1,
+    this.parts = const [],
+  });
+
+  factory SpeechHighlight.of(TtsState state) {
+    return SpeechHighlight(
+      articleId: state.articleId,
+      status: state.status,
+      error: state.error,
+      partFrom: state.partFrom,
+      partTo: state.partTo,
+      parts: state.speechParts,
+    );
+  }
+
+  final String? articleId;
+  final TtsStatus status;
+  final TtsError error;
+  final int partFrom;
+  final int partTo;
+  final List<String> parts;
+
+  bool get active =>
+      status == TtsStatus.loading || status == TtsStatus.playing || status == TtsStatus.paused;
+
+  bool speaks(String text) {
+    final needle = text.trim();
+    if (!active || needle.isEmpty || parts.isEmpty || partTo < partFrom) return false;
+    for (var i = partFrom; i <= partTo && i < parts.length; i++) {
+      final part = parts[i].trim();
+      if (part.isEmpty) continue;
+      if (part == needle) return true;
+      if (needle.length >= 24 && part.contains(needle)) return true;
+      if (part.length >= 24 && needle.contains(part)) return true;
+    }
+    return false;
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is SpeechHighlight &&
+        articleId == other.articleId &&
+        status == other.status &&
+        error == other.error &&
+        partFrom == other.partFrom &&
+        partTo == other.partTo &&
+        identical(parts, other.parts);
+  }
+
+  @override
+  int get hashCode => Object.hash(articleId, status, error, partFrom, partTo, identityHashCode(parts));
+}
+
 class SpeechChunk {
   const SpeechChunk({
     required this.text,
@@ -70,18 +131,7 @@ class TtsState {
     return left.isNegative ? Duration.zero : left;
   }
 
-  bool speaksText(String text) {
-    final needle = text.trim();
-    if (!active || needle.isEmpty || speechParts.isEmpty || partTo < partFrom) return false;
-    for (var i = partFrom; i <= partTo && i < speechParts.length; i++) {
-      final part = speechParts[i].trim();
-      if (part.isEmpty) continue;
-      if (part == needle) return true;
-      if (needle.length >= 24 && part.contains(needle)) return true;
-      if (part.length >= 24 && needle.contains(part)) return true;
-    }
-    return false;
-  }
+  bool speaksText(String text) => SpeechHighlight.of(this).speaks(text);
 
   TtsState copyWith({
     String? articleId,

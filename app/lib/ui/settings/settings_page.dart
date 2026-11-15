@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -93,140 +95,172 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
               ),
         ),
         const SizedBox(height: AppTokens.s24),
-        Text(l10n.settingsSectionNetwork, style: AppType.section(p.fg)),
-        const SizedBox(height: AppTokens.s8),
-        Text(l10n.proxyHint, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption, height: 1.5)),
-        SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(l10n.useSystemProxy, style: TextStyle(color: p.fg, fontSize: AppTokens.body)),
-          value: settings.useSystemProxy,
-          activeThumbColor: p.primaryFg,
-          activeTrackColor: p.primary,
-          onChanged: (on) async {
-            final next = settings.copyWith(useSystemProxy: on, proxyUrl: _proxy.text.trim());
-            await ref.read(settingsProvider.notifier).update(next);
-            await applyProxyFromSettings(next);
-          },
-        ),
-        Text(l10n.proxyUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
-        const SizedBox(height: AppTokens.s8),
-        TextField(
-          controller: _proxy,
-          style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
-          decoration: const InputDecoration(hintText: '127.0.0.1:7890'),
-          onSubmitted: (_) => _saveProxy(settings),
-        ),
-        const SizedBox(height: AppTokens.s8),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: OutlinedButton(
-            onPressed: () async {
-              await _saveProxy(settings);
-              ref.read(newsProvider.notifier).refresh();
-            },
-            child: Text(l10n.done),
-          ),
-        ),
-        const SizedBox(height: AppTokens.s24),
         Text(l10n.settingsSectionTranslate, style: AppType.section(p.fg)),
         const SizedBox(height: AppTokens.s8),
         Text(l10n.translationHint, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption, height: 1.5)),
-        SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(l10n.autoTranslate, style: TextStyle(color: p.fg, fontSize: AppTokens.body)),
-          value: settings.autoTranslate,
-          activeThumbColor: p.primaryFg,
-          activeTrackColor: p.primary,
-          onChanged: (on) {
+        _inlineSwitch(
+          p,
+          l10n.autoTranslate,
+          settings.autoTranslate,
+          (on) {
             ref.read(settingsProvider.notifier).update(settings.copyWith(autoTranslate: on));
             if (on) ref.read(newsProvider.notifier).translatePending();
           },
         ),
-        SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(l10n.showOriginal, style: TextStyle(color: p.fg, fontSize: AppTokens.body)),
-          value: settings.showOriginal,
-          activeThumbColor: p.primaryFg,
-          activeTrackColor: p.primary,
-          onChanged: (on) => ref.read(settingsProvider.notifier).update(settings.copyWith(showOriginal: on)),
+        _inlineSwitch(
+          p,
+          l10n.showOriginal,
+          settings.showOriginal,
+          (on) => ref.read(settingsProvider.notifier).update(settings.copyWith(showOriginal: on)),
         ),
-        Text(l10n.translationApiKey, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
-        const SizedBox(height: AppTokens.s8),
-        TextField(
-          controller: _apiKey,
-          obscureText: !_showApiKey,
-          style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
-          decoration: InputDecoration(
-            hintText: 'sk-...',
-            suffixIcon: IconButton(
-              onPressed: () => setState(() => _showApiKey = !_showApiKey),
-              icon: Icon(_showApiKey ? LucideIcons.eyeOff : LucideIcons.eye, size: 18, color: p.fgMuted),
+        if (Platform.isWindows || Platform.isLinux || Platform.isMacOS)
+          _inlineSwitch(
+            p,
+            l10n.closeToTray,
+            settings.closeToTray,
+            (on) => ref.read(settingsProvider.notifier).update(settings.copyWith(closeToTray: on)),
+          ),
+        const SizedBox(height: AppTokens.s12),
+        Theme(
+          data: Theme.of(context).copyWith(
+            dividerColor: Colors.transparent,
+            iconTheme: IconThemeData(size: 16, color: p.fgMuted),
+            listTileTheme: const ListTileThemeData(
+              dense: true,
+              horizontalTitleGap: 2,
+              minLeadingWidth: 16,
+              visualDensity: VisualDensity.compact,
             ),
           ),
-          onSubmitted: (v) => _saveTranslate(settings),
-        ),
-        const SizedBox(height: AppTokens.s12),
-        Text(l10n.translationBaseUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
-        const SizedBox(height: AppTokens.s8),
-        TextField(
-          controller: _baseUrl,
-          style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
-          decoration: const InputDecoration(hintText: 'https://api.deepseek.com/v1'),
-          onSubmitted: (_) => _saveTranslate(settings),
-        ),
-        const SizedBox(height: AppTokens.s12),
-        Text(l10n.translationModel, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
-        const SizedBox(height: AppTokens.s8),
-        TextField(
-          controller: _model,
-          style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
-          decoration: const InputDecoration(hintText: 'deepseek-chat'),
-          onSubmitted: (_) => _saveTranslate(settings),
-        ),
-        const SizedBox(height: AppTokens.s8),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: OutlinedButton(
-            onPressed: () {
-              _saveTranslate(settings);
-              ref.read(newsProvider.notifier).translatePending();
-            },
-            child: Text(l10n.done),
-          ),
-        ),
-        const SizedBox(height: AppTokens.s24),
-        Text(l10n.settingsSectionData, style: AppType.section(p.fg)),
-        const SizedBox(height: AppTokens.s8),
-        Text(l10n.snapshotHint, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption, height: 1.5)),
-        const SizedBox(height: AppTokens.s12),
-        Text(l10n.snapshotRepo, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
-        const SizedBox(height: AppTokens.s8),
-        TextField(
-          controller: _repo,
-          style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
-          decoration: const InputDecoration(hintText: 'owner/repo'),
-          onSubmitted: (v) => ref.read(settingsProvider.notifier).update(settings.copyWith(snapshotRepo: v.trim())),
-        ),
-        const SizedBox(height: AppTokens.s12),
-        Text(l10n.snapshotUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
-        const SizedBox(height: AppTokens.s8),
-        TextField(
-          controller: _url,
-          style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
-          decoration: const InputDecoration(hintText: 'https://.../snapshot.json'),
-          onSubmitted: (v) => ref.read(settingsProvider.notifier).update(settings.copyWith(snapshotUrl: v.trim())),
-        ),
-        const SizedBox(height: AppTokens.s8),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: OutlinedButton(
-            onPressed: () {
-              ref.read(settingsProvider.notifier).update(
-                    settings.copyWith(snapshotRepo: _repo.text.trim(), snapshotUrl: _url.text.trim()),
-                  );
-              ref.read(newsProvider.notifier).refresh();
-            },
-            child: Text(l10n.done),
+          child: ExpansionTile(
+            controlAffinity: ListTileControlAffinity.leading,
+            tilePadding: EdgeInsets.zero,
+            childrenPadding: const EdgeInsets.only(bottom: AppTokens.s8),
+            iconColor: p.fgMuted,
+            collapsedIconColor: p.fgMuted,
+            title: Text(l10n.settingsAdvanced, style: AppType.section(p.fg)),
+            children: [
+              Text(l10n.proxyHint, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption, height: 1.5)),
+              _inlineSwitch(
+                p,
+                l10n.useSystemProxy,
+                settings.useSystemProxy,
+                (on) async {
+                  final next = settings.copyWith(useSystemProxy: on, proxyUrl: _proxy.text.trim());
+                  await ref.read(settingsProvider.notifier).update(next);
+                  await applyProxyFromSettings(next);
+                  if (context.mounted) _notifySaved(context);
+                },
+              ),
+              Text(l10n.proxyUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
+              const SizedBox(height: AppTokens.s8),
+              TextField(
+                controller: _proxy,
+                style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
+                decoration: const InputDecoration(hintText: '127.0.0.1:7890'),
+                onSubmitted: (_) async {
+                  await _saveProxy(settings);
+                  if (context.mounted) _notifySaved(context);
+                },
+              ),
+              const SizedBox(height: AppTokens.s8),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton(
+                  onPressed: () async {
+                    await _saveProxy(settings);
+                    ref.read(newsProvider.notifier).refresh();
+                    if (context.mounted) _notifySaved(context);
+                  },
+                  child: Text(l10n.done),
+                ),
+              ),
+              const SizedBox(height: AppTokens.s16),
+              Text(l10n.translationApiKey, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
+              const SizedBox(height: AppTokens.s8),
+              TextField(
+                controller: _apiKey,
+                obscureText: !_showApiKey,
+                style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
+                decoration: InputDecoration(
+                  hintText: 'sk-...',
+                  suffixIcon: IconButton(
+                    onPressed: () => setState(() => _showApiKey = !_showApiKey),
+                    icon: Icon(_showApiKey ? LucideIcons.eyeOff : LucideIcons.eye, size: 18, color: p.fgMuted),
+                  ),
+                ),
+                onSubmitted: (_) => _saveTranslate(settings, context),
+              ),
+              const SizedBox(height: AppTokens.s12),
+              Text(l10n.translationBaseUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
+              const SizedBox(height: AppTokens.s8),
+              TextField(
+                controller: _baseUrl,
+                style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
+                decoration: const InputDecoration(hintText: 'https://api.deepseek.com/v1'),
+                onSubmitted: (_) => _saveTranslate(settings, context),
+              ),
+              const SizedBox(height: AppTokens.s12),
+              Text(l10n.translationModel, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
+              const SizedBox(height: AppTokens.s8),
+              TextField(
+                controller: _model,
+                style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
+                decoration: const InputDecoration(hintText: 'deepseek-chat'),
+                onSubmitted: (_) => _saveTranslate(settings, context),
+              ),
+              const SizedBox(height: AppTokens.s8),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton(
+                  onPressed: () {
+                    _saveTranslate(settings, context);
+                    ref.read(newsProvider.notifier).translatePending();
+                  },
+                  child: Text(l10n.done),
+                ),
+              ),
+              const SizedBox(height: AppTokens.s16),
+              Text(l10n.snapshotHint, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption, height: 1.5)),
+              const SizedBox(height: AppTokens.s12),
+              Text(l10n.snapshotRepo, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
+              const SizedBox(height: AppTokens.s8),
+              TextField(
+                controller: _repo,
+                style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
+                decoration: const InputDecoration(hintText: 'owner/repo'),
+                onSubmitted: (v) {
+                  ref.read(settingsProvider.notifier).update(settings.copyWith(snapshotRepo: v.trim()));
+                  _notifySaved(context);
+                },
+              ),
+              const SizedBox(height: AppTokens.s12),
+              Text(l10n.snapshotUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
+              const SizedBox(height: AppTokens.s8),
+              TextField(
+                controller: _url,
+                style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
+                decoration: const InputDecoration(hintText: 'https://.../snapshot.json'),
+                onSubmitted: (v) {
+                  ref.read(settingsProvider.notifier).update(settings.copyWith(snapshotUrl: v.trim()));
+                  _notifySaved(context);
+                },
+              ),
+              const SizedBox(height: AppTokens.s8),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton(
+                  onPressed: () {
+                    ref.read(settingsProvider.notifier).update(
+                          settings.copyWith(snapshotRepo: _repo.text.trim(), snapshotUrl: _url.text.trim()),
+                        );
+                    ref.read(newsProvider.notifier).refresh();
+                    _notifySaved(context);
+                  },
+                  child: Text(l10n.done),
+                ),
+              ),
+            ],
           ),
         ),
         const SizedBox(height: AppTokens.s24),
@@ -258,7 +292,13 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     await applyProxyFromSettings(next);
   }
 
-  void _saveTranslate(AppSettings settings) {
+  void _notifySaved(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(AppLocalizations.of(context).settingsSaved), duration: const Duration(seconds: 2)),
+    );
+  }
+
+  void _saveTranslate(AppSettings settings, BuildContext context) {
     ref.read(settingsProvider.notifier).update(
           settings.copyWith(
             translationApiKey: _apiKey.text.trim(),
@@ -266,6 +306,34 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             translationModel: _model.text.trim().isEmpty ? 'deepseek-chat' : _model.text.trim(),
           ),
         );
+    _notifySaved(context);
+  }
+
+  Widget _inlineSwitch(AppPalette p, String label, bool value, ValueChanged<bool> onChanged) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 2),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 36,
+            height: 22,
+            child: FittedBox(
+              fit: BoxFit.contain,
+              alignment: Alignment.centerLeft,
+              child: Switch(
+                value: value,
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                activeThumbColor: p.primaryFg,
+                activeTrackColor: p.primary,
+                onChanged: onChanged,
+              ),
+            ),
+          ),
+          const SizedBox(width: AppTokens.s8),
+          Flexible(child: Text(label, style: TextStyle(color: p.fg, fontSize: AppTokens.body))),
+        ],
+      ),
+    );
   }
 
   Widget _row(AppPalette p, String label, Widget child) {

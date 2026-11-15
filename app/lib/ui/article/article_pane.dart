@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:news_core/news_core.dart';
@@ -131,6 +134,31 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
   final _titleKey = GlobalKey();
   final _paraKeys = <GlobalKey>[];
   bool _preferSummary = false;
+  bool _followSpeech = true;
+  Timer? _followHold;
+
+  @override
+  void dispose() {
+    _followHold?.cancel();
+    super.dispose();
+  }
+
+  void _pauseSpeechFollow() {
+    _followSpeech = false;
+    _followHold?.cancel();
+    _followHold = Timer(const Duration(milliseconds: 1600), () {
+      _followSpeech = true;
+    });
+  }
+
+  bool _onReaderScroll(ScrollNotification notification) {
+    if (notification.metrics.axis != Axis.vertical) return false;
+    final dragged = notification is ScrollStartNotification && notification.dragDetails != null ||
+        notification is ScrollUpdateNotification && notification.dragDetails != null;
+    final wheeled = notification is UserScrollNotification && notification.direction != ScrollDirection.idle;
+    if (dragged || wheeled) _pauseSpeechFollow();
+    return false;
+  }
 
   @override
   void didUpdateWidget(covariant _ReaderBody oldWidget) {
@@ -149,14 +177,15 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
       ..addAll(List.generate(count, (_) => GlobalKey()));
   }
 
-  void _scrollSpokenIntoView(TtsState tts, String title, List<String> paragraphs) {
+  void _scrollSpokenIntoView(SpeechHighlight tts, String title, List<ReaderBlock> paragraphs) {
+    if (!_followSpeech) return;
     if (tts.articleId != widget.rec.item.id || !tts.active) return;
     BuildContext? target;
-    if (tts.speaksText(title)) {
+    if (tts.speaks(title)) {
       target = _titleKey.currentContext;
     } else {
       for (var i = 0; i < paragraphs.length && i < _paraKeys.length; i++) {
-        if (tts.speaksText(paragraphs[i])) {
+        if (tts.speaks(paragraphs[i].plain)) {
           target = _paraKeys[i].currentContext;
           break;
         }
@@ -181,7 +210,7 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
     final loadingBody = widget.loadingBody;
     final translatingBody = widget.translatingBody;
     final translateFailed = widget.translateFailed;
-    final tts = ref.watch(ttsProvider);
+    final tts = ref.watch(ttsProvider.select(SpeechHighlight.of));
     final speechFailed = tts.articleId == rec.item.id &&
         (tts.error == TtsError.network || tts.error == TtsError.saveFailed);
     final onToggleSaved = widget.onToggleSaved;
@@ -216,17 +245,17 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
         ? rec.displayBody(settings.isZh).trim()
         : plaintextFromHtml(rec.displaySummary(settings.isZh), url: item.url).trim();
     final fallback = showingSummary ? summaryText : plaintextFromHtml(rec.displaySummary(settings.isZh), url: item.url).trim();
-    final paragraphs = splitReaderParagraphs(body.isNotEmpty ? body : fallback);
-    final originalParas = showBilingual ? splitReaderParagraphs(originalBody) : const <String>[];
+    final paragraphs = readerBlocks(body.isNotEmpty ? body : fallback);
+    final originalParas = showBilingual ? readerBlocks(originalBody) : const <ReaderBlock>[];
     final busy = loadingBody || translatingBody;
     final weak = !busy && isWeakBodyStatus(rec.bodyStatus);
     final spokenHere = tts.active && tts.articleId == rec.item.id;
     final spokenTitle = spokenHere &&
-        (tts.speaksText(rec.displayTitle(settings.isZh)) ||
-            tts.speaksText(item.title) ||
-            (rec.titleZh.trim().isNotEmpty && tts.speaksText(rec.titleZh)));
+        (tts.speaks(rec.displayTitle(settings.isZh)) ||
+            tts.speaks(item.title) ||
+            (rec.titleZh.trim().isNotEmpty && tts.speaks(rec.titleZh)));
     _ensureParaKeys(paragraphs.length);
-    ref.listen(ttsProvider, (prev, next) {
+    ref.listen(ttsProvider.select(SpeechHighlight.of), (prev, next) {
       if (next.articleId != rec.item.id) return;
       if (prev?.partFrom == next.partFrom && prev?.partTo == next.partTo && prev?.articleId == next.articleId) {
         return;
@@ -291,7 +320,9 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
         ),
         Expanded(
           child: SelectionArea(
-            child: SingleChildScrollView(
+            child: NotificationListener<ScrollNotification>(
+              onNotification: _onReaderScroll,
+              child: SingleChildScrollView(
               padding: EdgeInsets.fromLTRB(
                 AppTokens.s32,
                 AppTokens.s24,
@@ -375,7 +406,7 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
                               hasTranslation: rec.titleZh.trim().isNotEmpty || translatedBody.isNotEmpty,
                               titleZh: rec.titleZh.trim().isNotEmpty ? rec.titleZh.trim() : rec.displayTitle(settings.isZh),
                               titleOriginal: item.title.trim(),
-                              bodyZh: translatedBody.isNotEmpty ? translatedBody : paragraphs.join('\n\n'),
+                              bodyZh: translatedBody.isNotEmpty ? readerPlainText(translatedBody) : readerPlainText(body.isNotEmpty ? body : fallback),
                               bodyOriginal: originalBody.isNotEmpty ? originalBody : fallback,
                               originalLabel: l10n.originalBody,
                             ),
@@ -460,6 +491,7 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
                 ),
               ),
             ),
+            ),
           ),
           ),
         ),
@@ -467,9 +499,68 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
     );
   }
 
-  Widget _paragraph(String text, TextStyle style, AppPalette palette, String articleUrl) {
-    final url = readerImageUrl(text);
-    if (url == null) return Text(text, style: style);
+  Widget _paragraph(ReaderBlock block, TextStyle style, AppPalette palette, String articleUrl) {
+    final url = block.imageUrl ?? (block.kind == ReaderBlockKind.image ? readerImageUrl(block.plain) : null);
+    if (url != null) return _readerImage(url, palette, articleUrl);
+    final base = block.kind == ReaderBlockKind.heading
+        ? style.copyWith(
+            fontSize: (style.fontSize ?? AppTokens.readerBody) + (4 - block.headingLevel).clamp(0, 3) * 1.5.toDouble(),
+            fontWeight: FontWeight.w600,
+            height: 1.4,
+          )
+        : style;
+    final rich = Text.rich(
+      TextSpan(
+        children: [
+          for (final span in block.spans)
+            if (span.text.isNotEmpty)
+              TextSpan(
+                text: span.text,
+                style: base.copyWith(
+                  fontWeight: span.bold ? FontWeight.w700 : base.fontWeight,
+                  fontStyle: span.italic ? FontStyle.italic : FontStyle.normal,
+                  backgroundColor: span.code && block.kind != ReaderBlockKind.code ? palette.bgMuted : null,
+                ),
+              ),
+        ],
+      ),
+      style: base,
+    );
+    if (block.kind == ReaderBlockKind.code) {
+      return DecoratedBox(
+        decoration: BoxDecoration(
+          color: palette.bgMuted,
+          borderRadius: BorderRadius.circular(AppTokens.radius),
+        ),
+        child: Padding(padding: const EdgeInsets.all(AppTokens.s12), child: rich),
+      );
+    }
+    if (block.kind == ReaderBlockKind.quote) {
+      return DecoratedBox(
+        decoration: BoxDecoration(border: Border(left: BorderSide(color: palette.border, width: 2))),
+        child: Padding(padding: const EdgeInsets.only(left: AppTokens.s12), child: rich),
+      );
+    }
+    if (block.kind == ReaderBlockKind.bullet) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 11, right: 8),
+            child: Container(
+              width: 5,
+              height: 5,
+              decoration: BoxDecoration(color: palette.fgMuted, shape: BoxShape.circle),
+            ),
+          ),
+          Expanded(child: rich),
+        ],
+      );
+    }
+    return rich;
+  }
+
+  Widget _readerImage(String url, AppPalette palette, String articleUrl) {
     final l10n = AppLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: AppTokens.s8),
@@ -512,18 +603,18 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
 
   List<Widget> _spokenBody({
     required AppPalette palette,
-    required List<String> paragraphs,
-    required List<String> originalParas,
+    required List<ReaderBlock> paragraphs,
+    required List<ReaderBlock> originalParas,
     required bool showBilingual,
     required bool spokenHere,
-    required TtsState tts,
+    required SpeechHighlight tts,
     required String articleUrl,
   }) {
     final count = showBilingual
         ? (paragraphs.length > originalParas.length ? paragraphs.length : originalParas.length)
         : paragraphs.length;
     final spoken = [
-      for (var i = 0; i < count; i++) spokenHere && i < paragraphs.length && tts.speaksText(paragraphs[i]),
+      for (var i = 0; i < count; i++) spokenHere && i < paragraphs.length && tts.speaks(paragraphs[i].plain),
     ];
 
     Widget unit(int i) {
@@ -536,7 +627,7 @@ class _ReaderBodyState extends ConsumerState<_ReaderBody> {
               _paragraph(paragraphs[i], AppType.readerBody(palette.fg), palette, articleUrl),
             if (showBilingual &&
                 i < originalParas.length &&
-                (i >= paragraphs.length || originalParas[i] != paragraphs[i])) ...[
+                (i >= paragraphs.length || originalParas[i].plain != paragraphs[i].plain)) ...[
               if (i < paragraphs.length) const SizedBox(height: AppTokens.s8),
               _paragraph(
                 originalParas[i],

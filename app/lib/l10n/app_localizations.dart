@@ -431,8 +431,38 @@ abstract class AppLocalizations {
   /// No description provided for @aboutBody.
   ///
   /// In zh, this message translates to:
-  /// **'把分散的 AI 资讯收成一份今日报。国内源直连 RSS，海外源在电脑上直连、在手机上走快照。点开先看摘要，需要时再手动获取全文或翻译。'**
+  /// **'每天把分散的 AI 资讯收成一份今日报。国内新闻直接更新，海外新闻自动跟上。点开先看摘要，需要时再读全文或翻译。'**
   String get aboutBody;
+
+  /// No description provided for @settingsAdvanced.
+  ///
+  /// In zh, this message translates to:
+  /// **'高级'**
+  String get settingsAdvanced;
+
+  /// No description provided for @closeToTray.
+  ///
+  /// In zh, this message translates to:
+  /// **'关闭窗口时留在托盘'**
+  String get closeToTray;
+
+  /// No description provided for @trayShow.
+  ///
+  /// In zh, this message translates to:
+  /// **'显示窗口'**
+  String get trayShow;
+
+  /// No description provided for @trayExit.
+  ///
+  /// In zh, this message translates to:
+  /// **'退出'**
+  String get trayExit;
+
+  /// No description provided for @settingsSaved.
+  ///
+  /// In zh, this message translates to:
+  /// **'已保存'**
+  String get settingsSaved;
 
   /// No description provided for @aboutTitle.
   ///

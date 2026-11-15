@@ -268,6 +268,49 @@ Markdown Content:
     expect(looksUnreadable('韩国特检组申请延长金建希羁押期限，并说明案件目前仍在最高法院审理当中。'), isFalse);
   });
 
+  test('reader preview strips markdown markers and keeps the words', () {
+    const body = '''
+## 披露期限
+* 2026 年 11 月 13 日起，取消原 30 天补丁缓冲期，报告后 **90 天**公开
+来源：[IT之家](https://www.ithome.com/0/1.htm)
+来源：\$1 · ithome.com
+''';
+    final blocks = readerBlocks(body);
+    expect(blocks.map((b) => b.kind), [
+      ReaderBlockKind.heading,
+      ReaderBlockKind.bullet,
+      ReaderBlockKind.paragraph,
+      ReaderBlockKind.paragraph,
+    ]);
+    expect(blocks[0].plain, '披露期限');
+    expect(blocks[1].plain, '2026 年 11 月 13 日起，取消原 30 天补丁缓冲期，报告后 90 天公开');
+    expect(blocks[1].spans.any((s) => s.bold && s.text == '90 天'), isTrue);
+    expect(blocks[2].plain, '来源：IT之家');
+    expect(blocks[3].plain.contains('\$1'), isFalse);
+    expect(blocks[3].plain, '来源：ithome.com');
+    final spoken = speechPlaintext(body);
+    expect(spoken.contains('**'), isFalse);
+    expect(spoken.contains('* 2026'), isFalse);
+    expect(spoken.contains('90 天'), isTrue);
+  });
+
+  test('plain prose is not rewritten as markdown', () {
+    const body = '2 * 3 = 6，这不是列表。\n\n用 Kimi Work 自动化你的工作流 - 教程 #3';
+    final blocks = readerBlocks(body);
+    expect(blocks.map((b) => b.plain), ['2 * 3 = 6，这不是列表。', '用 Kimi Work 自动化你的工作流 - 教程 #3']);
+    expect(blocks.every((b) => b.kind == ReaderBlockKind.paragraph), isTrue);
+  });
+
+  test('markdown links keep their label when cleaned', () {
+    const md = '''
+谷歌将分阶段披露期限从 90 天缩短到 30 天，详见 [IT之家](https://www.ithome.com/news/1.htm) 的报道。这段文字需要足够长，避免被当成标题回退。
+''';
+    final text = cleanReadableMarkdown(md);
+    expect(text.contains('IT之家'), isTrue);
+    expect(text.contains('\$1'), isFalse);
+    expect(text.contains(']('), isFalse);
+  });
+
   test('speech plaintext drops 阅读原文 and urls', () {
     const body =
         '腾讯云回应称这是对第三方开发者所建模型的评估活动，并非混元团队模型，未发现蓄意针对或协同行动的证据。 🔗 阅读原文 via AIHOT · https://aihot.news/items/mixkq919lfpp7nhtni3dearqm';

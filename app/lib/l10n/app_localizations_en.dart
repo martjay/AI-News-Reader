@@ -185,7 +185,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutBody =>
-      'A daily AI brief. Domestic RSS is fetched on-device; overseas feeds are live on desktop and snapshotted on phones. Open a story for the excerpt, then fetch the full article or translate when you need it.';
+      'A daily brief of AI news. Domestic stories update on the device, and overseas news stays current. Open a story for the summary, then read the full text or a translation when you want it.';
+
+  @override
+  String get settingsAdvanced => 'Advanced';
+
+  @override
+  String get closeToTray => 'Keep running in the tray when the window closes';
+
+  @override
+  String get trayShow => 'Show window';
+
+  @override
+  String get trayExit => 'Quit';
+
+  @override
+  String get settingsSaved => 'Saved';
 
   @override
   String get aboutTitle => 'About';

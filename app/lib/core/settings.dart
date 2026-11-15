@@ -28,6 +28,7 @@ class AppSettings {
     this.useSystemProxy = true,
     this.proxyUrl = '',
     this.ttsVoice = 'zh-CN-XiaoxiaoNeural',
+    this.closeToTray = true,
     this.seenSourceIds = const [],
     this.selectedId = '',
   });
@@ -51,6 +52,7 @@ class AppSettings {
   final bool useSystemProxy;
   final String proxyUrl;
   final String ttsVoice;
+  final bool closeToTray;
   final List<String> seenSourceIds;
   final String selectedId;
 
@@ -77,6 +79,7 @@ class AppSettings {
     bool? useSystemProxy,
     String? proxyUrl,
     String? ttsVoice,
+    bool? closeToTray,
     List<String>? seenSourceIds,
     String? selectedId,
   }) {
@@ -100,6 +103,7 @@ class AppSettings {
       useSystemProxy: useSystemProxy ?? this.useSystemProxy,
       proxyUrl: proxyUrl ?? this.proxyUrl,
       ttsVoice: ttsVoice ?? this.ttsVoice,
+      closeToTray: closeToTray ?? this.closeToTray,
       seenSourceIds: seenSourceIds ?? this.seenSourceIds,
       selectedId: selectedId ?? this.selectedId,
     );
@@ -124,6 +128,7 @@ class AppSettings {
         'useSystemProxy': useSystemProxy,
         'proxyUrl': proxyUrl,
         'ttsVoice': ttsVoice,
+        'closeToTray': closeToTray,
         'seenSourceIds': seenSourceIds,
         'selectedId': selectedId,
       };
@@ -149,6 +154,7 @@ class AppSettings {
       useSystemProxy: json['useSystemProxy'] as bool? ?? true,
       proxyUrl: json['proxyUrl'] as String? ?? '',
       ttsVoice: json['ttsVoice'] as String? ?? json['ttsVoiceZh'] as String? ?? 'zh-CN-XiaoxiaoNeural',
+      closeToTray: json['closeToTray'] as bool? ?? true,
       seenSourceIds: (json['seenSourceIds'] as List?)?.cast<String>() ?? const [],
       selectedId: json['selectedId'] as String? ?? '',
     );

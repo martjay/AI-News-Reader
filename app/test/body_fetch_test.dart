@@ -1,5 +1,7 @@
+import 'package:ai_news_reader/core/article_record.dart';
 import 'package:ai_news_reader/core/body_fetch.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:news_core/news_core.dart';
 
 void main() {
   test('auto-fetch runs when body and status are empty regardless of summary length', () {
@@ -67,6 +69,19 @@ void main() {
     expect(stored.status, 'excerpt');
     expect(isFullBodyStatus(stored.status), isFalse);
     expect(isWeakBodyStatus(stored.status), isTrue);
+  });
+
+  test('a stale list refresh keeps a body fetched in the meantime', () {
+    const full =
+        'Full article text that is long enough to count as complete body content for the reader.';
+    final item = NewsItem(id: 'a', sourceId: 'aihot', title: '标题', url: 'https://example.com');
+    final stale = ArticleRecord(item: item, titleZh: '旧标题');
+    final live = ArticleRecord(item: item, titleZh: '旧标题', body: full, bodyStatus: 'ok');
+    final kept = preserveFetchedBody(stale.copyWith(titleZh: '新标题'), live);
+    expect(kept.titleZh, '新标题');
+    expect(kept.body, full);
+    expect(kept.bodyStatus, 'ok');
+    expect(hasUsableFullBody(kept.body, kept.bodyStatus), isTrue);
   });
 
   test('failed refetch still counts a long previous body as full text', () {
