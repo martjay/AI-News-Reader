@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-21T00:33:51.389186Z",
+  "generatedAt": "2026-11-21T07:53:27.430980Z",
   "sources": {
     "openai": {
       "sourceId": "openai",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.013099Z",
+      "updatedAt": "2026-11-21T07:53:24.038809Z",
       "error": null,
       "items": [
         {
@@ -372,7 +372,7 @@
     "deepmind": {
       "sourceId": "deepmind",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.032822Z",
+      "updatedAt": "2026-11-21T07:53:24.062181Z",
       "error": null,
       "items": [
         {
@@ -740,7 +740,7 @@
     "google_research": {
       "sourceId": "google_research",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.033212Z",
+      "updatedAt": "2026-11-21T07:53:24.062537Z",
       "error": null,
       "items": [
         {
@@ -1108,14 +1108,14 @@
     "microsoft_ai": {
       "sourceId": "microsoft_ai",
       "status": "error",
-      "updatedAt": "2026-11-21T00:33:38.278072Z",
+      "updatedAt": "2026-11-21T07:53:24.528192Z",
       "error": "Exception: HTTP 410 for https://blogs.microsoft.com/ai/feed/",
       "items": []
     },
     "nvidia_dl": {
       "sourceId": "nvidia_dl",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.033461Z",
+      "updatedAt": "2026-11-21T07:53:24.062800Z",
       "error": null,
       "items": [
         {
@@ -1285,7 +1285,7 @@
     "hf_blog": {
       "sourceId": "hf_blog",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.033546Z",
+      "updatedAt": "2026-11-21T07:53:24.062874Z",
       "error": null,
       "items": [
         {
@@ -1653,9 +1653,36 @@
     "hf_papers": {
       "sourceId": "hf_papers",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.694383Z",
+      "updatedAt": "2026-11-21T07:53:24.708612Z",
       "error": null,
       "items": [
+        {
+          "id": "24d446a4cbac58aaa6cc1105d27cb32eaf162856b202c69665e1af8fd5977cbe",
+          "sourceId": "hf_papers",
+          "title": "Time Series Structure Learning with Local Causal Parent Discovery",
+          "url": "https://huggingface.co/papers/2611.26232",
+          "summary": "Learning and inference on time series can pose significant statistical challenges, including autocorrelated observations, distribution shift over time, and the curse of dimensionality. These challenges complicate the practical application of causal discovery algorithms, which already suffer from high computational and sample complexity in the general case. To mitigate these issues, this work introduces Iterative Temporal Parent Discovery (ITPD): a sound and complete constraint-based procedure for causal structure learning on multivariate time series with causal nonstationarity. ITPD takes a local-to-global learning approach that discovers the global graph by sequentially discovering the parent set for each variable. ITPD exploits temporal structural priors, graph partitioning, and the local Markov condition to swap higher-order conditional independence tests for lower-order alternatives. With an exact oracle, ITPD performed the least number of tests and used the smallest average conditioning set sizes relative to baselines. In benchmarking simulations, ITPD sat on the Pareto frontier with respect to F1 and wall-clock time and was faster than baselines on large graphs (geq 1000 nodes). For graphs with 2000 nodes, ITPD ran 2.3times, 9.1times, and 40.9times faster than iterative IAMB, DF-PC, and PCMCI, respectively.",
+          "pubDate": "2026-11-18T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "908e50aadea0a77f87cd25a5b6915704ee101283f9f428366f7247cffabe48c2",
+          "sourceId": "hf_papers",
+          "title": "Teaching Vision-Language-Action Models to Stop Safely",
+          "url": "https://huggingface.co/papers/2611.26239",
+          "summary": "Vision-language-action (VLA) models enable robots to perform diverse tasks from visual observations and language instructions. While prior work has explored task suppression and refusal, stopping prohibited behavior once execution is underway and controlling the resulting physical response remain challenging. Our evaluation reveals that policies which suppress a task from its initial state can still complete it when taking over partway through execution. Even when the task remains unfinished, the robot may drop a held object, making non-completion an incomplete measure of safety. To address these challenges, we introduce State-Aware Fallback Imitation (SAFI) for tasks where holding provides an appropriate alternative response. SAFI comprises two stages, (1) fallback target construction, which assigns stationary arm commands and consistent gripper targets throughout prohibited-task demonstrations, and (2) joint policy adaptation, which learns these targets alongside the original actions of retained tasks. This supervision teaches an explicit alternative response at intermediate execution states while maintaining the robot's other skills. Extensive experiments with OpenVLA-OFT across LIBERO and BadLIBERO tasks evaluate prohibited completion, physical incidents, and retained-task performance. On the evaluated LIBERO tasks, SAFI reduces aggregate target success after takeover to 1.3\\%, with no recorded physical incidents or action saturation, while preserving high retained-task success.",
+          "pubDate": "2026-11-18T19:00:00.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "666e04bf1424c73c4e43ad3f7fb7fdce3225a30a2b65fff2465fb3544c3e83f7",
+          "sourceId": "hf_papers",
+          "title": "PAD: Policy-Aware Data Valuation for Autonomous Driving",
+          "url": "https://huggingface.co/papers/2611.25604",
+          "summary": "End-to-end autonomous driving increasingly depends on scaling training demonstrations, yet data growth does not guarantee proportional gains. However, additional data do not guarantee better policies: a demonstration that benefits one planner may be redundant or harmful to another. Existing curation methods typically infer data value from intrinsic sample properties or training-dependent proxies that do not measure downstream policy utility. To address this, we introduce Policy-Aware Data Valuation (PAD), a framework that assigns each candidate demonstration a utility specific to the target driving policy. PAD combines scene-level calibration feedback with projected policy gradients and a regularized approximation of local training geometry, producing scalable influence-based values for the policy. A controlled group-removal study establishes the directional fidelity of these values, while cross-planner analysis shows that the same candidate pool induces markedly different rankings across planner families. On DiffusionDrive, PAD improves EPDMS over real-only training by 3.5 points on NavTest and 5.0 points on NavHard. Policy-specific curation consistently outperforms real-only and full-pool training across diffusion-, regression-, and flow-matching-based planners while substantially reducing scene-level regressions. These results establish policy-aware data valuation as a basis for replacing indiscriminate data accumulation with targeted policy improvement, enabling more efficient and reliable scaling of autonomous-driving systems.",
+          "pubDate": "2026-11-18T19:00:00.000Z",
+          "extraSourceIds": []
+        },
         {
           "id": "defb434ba7a361d7d562c6af64f9f00444c482c0d2edd1dced095ddc98fbb0d3",
           "sourceId": "hf_papers",
@@ -1988,41 +2015,14 @@
           "summary": "Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models (MLLMs) do the same? CAPTCHAs offer a natural test, since humans solve them through this very loop, clicking and dragging on the screen and adjusting after each result. Yet existing CAPTCHA benchmarks are largely solved and rarely spatial, while spatial benchmarks rarely require action. We therefore present TuringSpace, a synthetic web environment of 125 interactive CAPTCHAs that span five spatial abilities and must be solved through clicks and drags on the screen. Every task is a program that generates new instances with a checker and an oracle, so the tasks also form a scalable training gym. Humans solve 94.1% of the tasks, whereas the best model, GPT-6 Astra, still fails 25.9% of them, and the best open-weight model, Kimi K3, fails 68.0%. Our further analysis shows that most failures come from misreading the screenshot, and that model reasoning rarely corrects a wrong belief but hallucinates evidence to defend it. To test whether such spatial abilities can be learned, we fine-tune Qwen3.5-9B on this gym. Its success rate rises from 1.6% to 33.1%, above Kimi K3, and it improves on all seven out-of-distribution benchmarks, including a 9.9-point gain on the real-world indoor videos of VSI-Bench. These results show that grounding spatial intelligence in screen actions exposes what MLLMs lack and offers a scalable way to teach it, with gains that transfer to real-world scenes. We will release TuringSpace to support further study.",
           "pubDate": "2026-11-18T19:00:00.000Z",
           "extraSourceIds": []
-        },
-        {
-          "id": "1ecb7a0328886f83deb6a9ff0e9394a3d213c5e4b832231d5fd75b5c125c60c4",
-          "sourceId": "hf_papers",
-          "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
-          "url": "https://huggingface.co/papers/2611.26409",
-          "summary": "Video understanding, particularly with accompanying audio, remains a central challenge in multimodal intelligence. In this report, we introduce WeMM-Video, a family of Chinese-English bilingual omni-modal foundation models spanning 2B, 4B, 9B, and 35B-A3B variants. Centering on joint audio-visual perception and reasoning, WeMM-Video unifies text, image, audio, and video processing within a hybrid-thinking paradigm, seamlessly supporting both a non-thinking instruct mode for fast, direct responses and a thinking mode for explicit step-by-step reasoning. The models are trained on a large-scale multimodal corpus of approximately 1.2 trillion tokens through progressive pre-training and a multi-stage post-training pipeline incorporating multi-teacher OPD, anti-repetition MrDPO, and specialist RL. Evaluated across more than 120 benchmarks, WeMM-Video demonstrates superior performance in omni-modal video understanding and reasoning, while maintaining highly competitive capabilities across general audio, silent video, image, and text tasks. Specifically, in omni-modal video evaluations, our flagship WeMM-Video-35B-A3B establishes a new open-source state of the art, substantially outperforming proprietary models such as Qwen3.5-Omni-Flash and Seed2.0-Mini-0428 while narrowing the gap with the strong Gemini-3.0-Flash, and our compact WeMM-Video-9B surpasses the larger open-source Qwen3-Omni-30B-A3B-Instruct. We publicly release the WeMM-Video family along with our evaluation and reproduction pipeline to foster further research and development in the open-source community.",
-          "pubDate": "2026-11-18T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "5c924ee07546e69517f04ab6f62039c0074e83ff6a8ed1c3050198ec747bb4fb",
-          "sourceId": "hf_papers",
-          "title": "The Mask Is Not the Object: Volumetric Supervision for 3D Gaussian Segmentation",
-          "url": "https://huggingface.co/papers/2611.21383",
-          "summary": "3D Gaussian Splatting enables object-level operations on Gaussian primitives, yet existing segmentation methods are largely trained and evaluated through rendered views. This mismatch can produce accurate rendered masks from incomplete 3D selections since alpha-blended feature supervision concentrates learning on dominant contributors while leaving occluded or low-contribution Gaussians weakly supervised. We propose VODA, a plug-and-play supervision objective that exploits local depth structure to group per-pixel contributors and directly supervises all Gaussians in selected depth clusters, bypassing contribution-weighted gradient delivery. To evaluate volumetric completeness, we introduce Removal-3D, a synthetic object-removal benchmark, and the Removal Depth Error (RDE), a metric comparing predicted and ground-truth depth changes. Across four rendering-based baselines, VODA consistently improves volumetric segmentation on Removal-3D while maintaining or improving performance on LERF and ScanNet. Further analysis shows that VODA recovers lower-contribution Gaussians, while simple gradient reweighting and spatial propagation fail to reproduce comparable gains.",
-          "pubDate": "2026-11-15T19:00:00.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "ba8c975e733b088be2549809eb2b32512f3dbecd8359212b280293ce93b81fdc",
-          "sourceId": "hf_papers",
-          "title": "EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning",
-          "url": "https://huggingface.co/papers/2611.26380",
-          "summary": "Egocentric video captioning requires fine-grained detail and accurate timing, yet current multimodal large language models (MLLMs) often miss brief actions, confuse their order, or misinterpret the wearer's motion. Existing caption formats also offer limited support for combining detailed narration with precise timing. We present EgoCaptioner, which pairs a video-level overview of the setting, participants, and the wearer's overall activity with timed steps whose narration adapts to varying perceptual demands and marks key moments at specific timestamps. We develop a coarse-to-fine annotation pipeline that establishes event structure before expanding step descriptions, yielding 50,000 training examples from eight egocentric video sources. Complementary rewards assess factual accuracy and coverage, measure step-level temporal alignment, and penalize fragmented or redundant narration, guiding caption refinement through Group Relative Policy Optimization (GRPO). To improve the reliability of factual supervision, we supplement caption references with pose-derived motion facts when sensor data are available. Across five egocentric benchmarks, EgoCaptioner achieves leading performance among evaluated open-source models in caption quality, caption-conditioned question answering, and temporal alignment. It also surpasses Gemini 3.1 Pro on PhysCapBench and all evaluated proprietary baselines on Minerva-Ego under the caption-to-QA protocol. Ablations support the complementary roles of factual and temporal rewards and show that coarse-to-fine annotation provides more effective supervision than single-pass annotation.",
-          "pubDate": "2026-11-18T19:00:00.000Z",
-          "extraSourceIds": []
         }
       ]
     },
     "arxiv_ai": {
       "sourceId": "arxiv_ai",
-      "status": "ok",
+      "status": "stale",
       "updatedAt": "2026-11-21T00:33:38.696077Z",
-      "error": null,
+      "error": "No items",
       "items": [
         {
           "id": "788a0a649e280755f77cc72973ac03011a71ed188e960ea23fb09b3df1686112",
@@ -2388,9 +2388,9 @@
     },
     "arxiv_cl": {
       "sourceId": "arxiv_cl",
-      "status": "ok",
+      "status": "stale",
       "updatedAt": "2026-11-21T00:33:38.696194Z",
-      "error": null,
+      "error": "No items",
       "items": [
         {
           "id": "946085231e21635d98ffc877518a4b6c29dda116e0b7425a0e1769b9ee0a399b",
@@ -2757,7 +2757,7 @@
     "arxiv_lg": {
       "sourceId": "arxiv_lg",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.696260Z",
+      "updatedAt": "2026-11-21T07:53:24.709809Z",
       "error": null,
       "items": [
         {
@@ -2766,7 +2766,7 @@
           "title": "PsyWorld: Profile-Conditioned World Modeling for Human Behavior Prediction",
           "url": "https://arxiv.org/abs/2611.24999",
           "summary": "arXiv:2611.24999v1 Announce Type: new Abstract: Understanding how stable psychometric traits and time-varying states jointly inform behavior is an important problem in computational behavioral science. Existing personalized agents commonly condition actions directly on a static profile, leaving realized state transitions unused as an explicit source of supervision. We introduce a profile-conditioned state world model that uses observed environment--behavior state transitions to learn transition-informed representations for behavioral prediction. During training, a posterior encoder quantizes realized transitions, while a prior predicts the resulting codes from the psychometric profile and pre-transition context. The prior code and predicted next state then condition macro-level behavior and simulator-grounded execution. Thus, the world model provides structured transition supervision instead of treating personality as a direct action descriptor. We evaluate the framework in VEET, a controlled behavioral simulator with human trajectories, and in AgentSociety as a structurally different synthetic environment. A participant-disjoint split of 240 training, 25 validation, and 48 test participants evaluates generalization to unseen people. On VEET, the model reaches 0.904 Top-1 accuracy (95\\% CI: [0.895, 0.913]) and 0.0033 Macro KL. Ablations associate continuous next-state modeling with most of the Top-1 gain, while discrete codes and prior alignment mainly improve Top-3 and distributional alignment. These results establish transition-informed world-model supervision as useful for subject-generalized behavior prediction, without implying causal psychological mechanisms or calibrated long-horizon state dynamics.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2775,7 +2775,7 @@
           "title": "Watch Where You Linearize: Predicting and Correcting Model-Merging Interference",
           "url": "https://arxiv.org/abs/2611.25000",
           "summary": "arXiv:2611.25000v1 Announce Type: new Abstract: Model merging combines separately fine-tuned models by adding their task vectors to a shared backbone. Interference is typically assessed only after constructing and evaluating a candidate merge, making coefficient search expensive. We show that a first-order directional derivative of task A's outputs along task B's vector can predict interference, but only when evaluated at the appropriate model. At the receiver model, this derivative forecasts nearby merges per task and per example, halves the accuracy error of a no-change baseline, and identifies most examples whose predictions flip. For full multi-task merges, a single evaluation is insufficient; two evaluations along the merge path are needed. At the shared pretrained backbone, however, the derivative is nearly orthogonal to realized changes in our vision experiments and only partly predictive in LoRA language-model pilots. Controls link this failure to displacement along the receiver's own task vector, not simply parameter distance; the mismatch appears within the first few dozen fine-tuning steps. Freezing receiver-local responses produces a surrogate affine in the merge coefficients. We use it to construct LR-Merge, a label-free correction that optimizes coefficients through convex teacher matching on unlabeled probes, without backpropagation through merged networks. LR-Merge improves all tested closed-form, isotropic, and sparsified base mergers, with gains generally increasing as more tasks are merged. Using pretrained rather than receiver-local responses instead degrades the base merge. LR-Merge matches exact teacher matching through a merged network, which takes roughly three times longer to converge and performs similarly at an equal compute budget. Once built, the surrogate answers new coefficient and task-subset queries in seconds.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2784,7 +2784,7 @@
           "title": "Density Feedback Control for Transferability of Generative Sparse Adversarial Attacks",
           "url": "https://arxiv.org/abs/2611.25001",
           "summary": "arXiv:2611.25001v1 Announce Type: new Abstract: Generator-based sparse adversarial attacks train encoder--decoder networks to produce transferable sparse perturbations for black-box robustness evaluation. Their perturbation density, however, is set only indirectly by a fixed sparsity coefficient whose mapping to density is unknown and shifts during training, so reaching a target density requires re-tuning; this fixed pressure also yields little transferability gain once density reduction begins. We propose Density Feedback Control (DFC), which tightens or relaxes this coefficient at the end of each epoch according to the gap between the observed hard-mask density and the target, without changing the generator architecture or loss. At a 10\\% target density, DFC brings the mean density of three base attacks within one percentage point of the target in a single run and improves the transfer attack success rate (ASR) of two of them on CNN and Transformer targets, including under per-image $\\ell_0$ budgets, while perturbing fewer pixels. Tracing GPG's training, we observe that as DFC relaxes the coefficient, the transfer ASR recovers with the density and overtakes the fixed-coefficient baseline with fewer pixels. For EGS-TSSA, which restricts perturbations to source-model feature-importance regions, DFC yields no consistent gain; we analyze how this restriction interacts with density feedback.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2793,7 +2793,7 @@
           "title": "A Model of Diverse Sampling from Language Models",
           "url": "https://arxiv.org/abs/2611.25003",
           "summary": "arXiv:2611.25003v1 Announce Type: new Abstract: Language models often produce high-quality individual samples but poor sets, with repeated samples clustering around the same semantic modes. We formalize diverse generation as sampling a size-$K$ subset of complete strings from a determinantal point process (DPP), where the likelihood encodes item quality, and the embedding geometry encodes repulsion between similar outputs. Exact inference over all strings is intractable, so we propose PoolDPP: draw a finite candidate pool from a tractable proposal, importance-weight the candidates toward the target quality, and run a $K$-DPP sampler on the induced pool kernel; a greedy MAP variant provides deterministic selection. We prove a finite-sample bound with an explicit constant: the KL divergence between the sampler's output and the target $K$-DPP decays as O(1/N) in the pool size. Empirically, PoolDPP extends the quality--diversity frontier on open-ended generation and the precision--recall frontier on ambiguous text-to-SQL (Ambrosia), and on mathematical reasoning (GSM8K), it raises diversity at about the same pass@$K$.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2802,7 +2802,7 @@
           "title": "On the Impact of Feature Reduction Techniques on Adversarial Attacks",
           "url": "https://arxiv.org/abs/2611.25004",
           "summary": "arXiv:2611.25004v1 Announce Type: new Abstract: Adversarial attacks have posed significant threats to machine learning models by exploiting their inherent vulnerabilities. Researchers have established an interdisciplinary field called adversarial machine learning to explore these vulnerabilities and develop corresponding defense strategies. Feature reduction strategies are used to decrease the dimensionality of the data in order to reduce training time, avoid the curse of dimensionality, prevent overfitting, and mitigate redundant features. However, their effect on adversarial robustness across different classifiers and attack scenarios remains insufficiently explored. This study aims to analyze the effect of feature reduction techniques on the adversarial robustness of a diverse set of machine learning models under poisoning, backdoor, and universal adversarial perturbation attacks on the APT dataset. These models include support vector machine, decision tree, random forest, multi-layer perceptron, and k-nearest neighbors. The attained results are compared with scenarios where different feature reduction techniques are applied, including principal component analysis, permutation importance ranking, recursive feature elimination, and univariate mutual information. Metrics such as accuracy, F1-score, and mitigation score are employed to evaluate the effect of these techniques on adversarial robustness. The results demonstrate that permutation importance ranking and univariate mutual information generally provide the most consistent robustness improvements, while other methods exhibit more variable effects depending on the classifier and attack scenario.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2811,7 +2811,7 @@
           "title": "Near-Quadratic Sample Compression for All VC Classes",
           "url": "https://arxiv.org/abs/2611.25011",
           "summary": "arXiv:2611.25011v1 Announce Type: new Abstract: The sample compression conjecture is a longstanding open problem in learning theory, originating in the work of Littlestone and Warmuth in the 1980s. At its heart is a connection between simplification and generalization: if a predictor consistent with a training sample is defined using only a small part of that sample, then it is likely to generalize. Sample compression schemes formalize this idea, and many natural learning algorithms can be analyzed this way. The sample compression conjecture of Floyd and Warmuth (1995) asserts that every binary concept class of VC dimension $d$ admits a sample compression scheme of size $O(d)$; a weaker conjecture asks only for size polynomial in $d$. Both have remained open: the first bound depending only on $d$, due to Moran and Yehudayoff (2016), is exponential in $d$. We prove the weaker conjecture by constructing a sample compression scheme of size $O(d^2 \\log^2 d)$.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2820,7 +2820,7 @@
           "title": "HapBO: Harnessed $\\alpha$-$\\pi$ Bayesian Optimization via Expert Natural Language Priors",
           "url": "https://arxiv.org/abs/2611.25100",
           "summary": "arXiv:2611.25100v1 Announce Type: new Abstract: Bayesian Optimization (BO) can be substantially more sample-efficient when informed by prior knowledge about the problem. In practice, however, such knowledge is often available only in natural language, e.g., expert intuitions or documentation, rather than as the explicit probability distribution landscape that prior-guided BO methods may require. Leveraging it effectively demands both an expressive mapping from language to priors and robustness to information that may be misleading. We propose HapBO (Harnessed $\\alpha$-$\\pi$ Bayesian Optimization), which elicits beliefs once from a human expert, a large language model (LLM), or both, and deterministically compiles a structured specification into a reusable belief function ($\\pi: \\mathcal{X} \\to[0,1]$), with a rich representation not restricted to a Gaussian family. Building on $\\alpha$-$\\pi$BO, HapBO applies this belief function through a bounded positive multiplier on any nonnegative acquisition, preserving positive acquisition support and requiring no LLM calls during optimization. We prove that, for the Expected Improvement acquisition function (EI), HapBO preserves the standard simple-regret rate up to a bounded factor, even under adversarial beliefs. We evaluate HapBO on 40 HPOBench tasks, a synthetic suite in 6-15 dimensions and two real-world applications: cortical neurostimulation and constrained solar design. HapBO achieves the lowest aggregate HPOBench regret and strong real-world task performance, with zero in-loop token cost. In real-world applications it improves the optimization outcome even at budgets of 12-20 queries, and at a small fraction of the wall-clock and token costs of other LLM-based methods.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2829,7 +2829,7 @@
           "title": "Long-Range Video Presentation Attack Detection: A Three-Class Benchmark Across 1-100 m and Two Sensor Types",
           "url": "https://arxiv.org/abs/2611.25108",
           "summary": "arXiv:2611.25108v1 Announce Type: new Abstract: Face presentation attack detection (PAD) systems deployed in border control and airport surveillance are constrained by a critical assumption: subjects are captured at close range, typically under one meter. No existing benchmark systematically addresses multi-distance capture, diverse environmental conditions, and concurrent spoofing and occlusion-based attacks, leaving deployed models underprepared for real-world scenarios. We introduce a video-based PAD dataset of 374,000+ frames from 261 unique identities collected across five standoff distances (1 m-100 m) under indoor and outdoor conditions using a DSLR camera (C) and a mobile sensor (M), with three-class labels: live, spoof, and props (occlusions); models are trained and evaluated on video clips rather than single frames. We fine-tune and benchmark four CNN architectures: MobileNetV3, MobileNet, EfficientNet, and ResNet-50. The higher-resolution DSLR maintains near-perfect spoof classification rate across all distances, while the lower-resolution mobile sensor degrades sharply beyond 50 m, with props classification rate dropping to 55% at 75 m for MobileNetV3. EfficientNet achieves the best overall performance (98.48% accuracy, ACER 2.01%). Generalization tests on unseen attack datasets yield 89-94% accuracy, validating cross-domain robustness. These results establish capture distance and sensor resolution as critical but underexplored axes of PAD difficulty. The dataset will be publicly released under an End-User License Agreement to support reproducible long-range PAD research.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2838,7 +2838,7 @@
           "title": "Fast and Memory-Light Evaluation of Density-Based Clusterings with the DISCO Index in R",
           "url": "https://arxiv.org/abs/2611.25114",
           "summary": "arXiv:2611.25114v1 Announce Type: new Abstract: DISCO is a recent internal cluster validity index for density-based clustering that, unlike earlier indices, also evaluates the quality of noise labels. The discoCVI package makes DISCO available in R. This article describes the design of the package and a typical workflow, in which DISCO is used to compare clusterings and to choose the parameters of HDBSCAN without ground truth, followed by the implementation introduced in version 0.2.0. DISCO is defined through density-connectivity distances between all pairs of points, so direct implementations store several n-by-n matrices. We show that every quantity DISCO needs can be read off the single-linkage merge tree of the mutual-reachability minimum spanning tree, so that the index can be computed exactly with memory that grows linearly with the number of points, while the running time remains quadratic as in the original definition. The implementation is tested against the previous version, agrees with the original Python implementation to within $3 \\times 10^{-13}$, and corrects the score of singleton clusters to match the published definition. In benchmarks, discoCVI is 23 to 138 times faster than its previous version for 500 to 4,000 points and 3 to 9 times faster than the Python reference for 500 to 8,000 points, using a fraction of the memory of both, and it scores 100,000 points in about 50 seconds with less than 200 MB of memory.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2847,7 +2847,7 @@
           "title": "Auditing Learned Dynamics in Weather Models",
           "url": "https://arxiv.org/abs/2611.25119",
           "summary": "arXiv:2611.25119v1 Announce Type: new Abstract: Learned weather models are experimentally accessible computational systems whose internal representations can be inspected and manipulated. Using sparse autoencoder features from GraphCast, DeepMind's autoregressive weather forecasting model, we test whether causal relevance requires physical semantics, a question that matters for auditing whether AI forecasters used in high-assurance settings rely on reliable mechanisms. We also look at whether physically associated latent directions can be steered to improve extreme-event forecasts, where interventions are applied to the model's internal activations during the rollout. We find that ablating a feature locked to GraphCast's computational mesh increases global geopotential height error despite lacking conventional physical semantics. Second, suppressing convection- and low-level-vorticity-associated features weakens predicted tropical-cyclone deepening (the fall in central pressure during intensification), while amplifying them reduces intensity error, with amplification of convection features through feature scaling achieving a median of 51\\% error reduction over seven storms. Together, these results separate interpretable, physical association from causal utility and establish sparse features as experimental coordinates for auditing and intervening on learned weather dynamics.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2856,7 +2856,7 @@
           "title": "Temporal Extrapolation of Elastic Seismic Wave Propagation in Layered Media Using Neural Operators",
           "url": "https://arxiv.org/abs/2611.25130",
           "summary": "arXiv:2611.25130v1 Announce Type: new Abstract: Temporal prediction of seismic velocity fields beyond the time interval represented in training remains challenging for neural operator models. This study develops a coupled neural operator framework for stress-conditioned temporal prediction in layered elastic media. A time-integrator-embedded Deep Operator Network (TI-DeepONet) advances the velocity field through an embedded fourth-order Runge-Kutta (RK4) scheme, while a Fourier Neural Operator (FNO) learns a residual correction to the predicted spatial field. The two components are trained jointly in a predictor-corrector configuration. Prediction is initialized with reference velocity fields at the first two time levels and proceeds autoregressively, with reference stress fields and prescribed excitation supplied throughout rollout, including beyond the training interval. Four cases consider horizontally polarized shear (SH) waves in four-layer soil columns with fixed total depths of 50 and 280 m, excited by third-order Gaussian-derivative (DOG3) wavelets with central frequencies between 0.5 and 6 Hz. Layer thicknesses and shear-wave velocities vary across profiles. Evaluations on test profiles extend beyond the training interval by up to twice its duration. The predictions reproduce principal velocity arrivals and depth-dependent response patterns, with accuracy varying across profiles. Across the four cases, mean peak-normalized root-mean-square errors (NRMSEs) range from 0.53% to 2.31% over the full evaluation windows and from 0.61% to 2.82% over the extrapolation intervals. Both metrics use each profile's peak absolute reference velocity over the full evaluation window as the normalizer. These results demonstrate temporal velocity prediction under reference-stress conditioning for the tested configurations; autonomous continuation of the coupled velocity-stress wavefield remains to be established.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2865,7 +2865,7 @@
           "title": "Rate-distortion Assessment for Hierarchical Content Summarization",
           "url": "https://arxiv.org/abs/2611.25151",
           "summary": "arXiv:2611.25151v1 Announce Type: new Abstract: Powerful generative models including large language and vision models have demonstrated success across a wide range of content generation, editing and manipulation tasks via end-to-end prompt-based generation. However, current assessment of the quality of generative content manipulation remains subjective, limiting scientific understanding of model capabilities. Inspired by rate-distortion theory from Shannon information compression theory, in this work we formalize hierarchical content summarization as an information encoding problem. We design a principled framework to extract the semantic hierarchy of the source content to support quantitative characterization of the rate-distortion trade-off between compression efficiency (rate) against information loss (distortion) during generative content manipulation, which allows us to benchmark various models with respect to performance conditional on rate budget of interest. We demonstrate the use of the framework with empirical experiments on content summarization for long-context question-answering with state-of-the-art large language models, offering new insights into their efficiency and comprehension capabilities. We further demonstrate the use of the semantic hierarchy as guidance for performing effective retrieval augmented generation, showing improved rate-distortion characteristics against current baselines.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2874,7 +2874,7 @@
           "title": "Bayesian $\\kappa$-Explorer for Minimax Model Estimation in MDPs",
           "url": "https://arxiv.org/abs/2611.25160",
           "summary": "arXiv:2611.25160v1 Announce Type: new Abstract: We study active exploration for minimax transition estimation in unknown Markov decision processes (MDPs). Frequentist $\\kappa$-Explorer~\\citep{gu2026kappa} addresses this problem through a parameterized family of exploration objectives, but requires confidence-bound constructions and joint optimization over plausible transition kernels and occupancy measures, introducing a computational burden that limits its practical applicability. We develop Bayesian $\\kappa$-Explorer, which simplifies this procedure by placing Dirichlet priors on the transition distributions. Under the posterior mean estimator, the posterior expected squared $\\ell_2$ error equals the total posterior variance, providing a closed-form exploration signal. The algorithm plans under the posterior mean model, eliminating confidence-set optimization. Under the stated assumptions, this simpler planning procedure retains the $\\widetilde{O}(T^{-1/3})$ surrogate convergence rate of frequentist $\\kappa$-Explorer. We further bound the maximum posterior variance relative to the optimal asymptotic minimax allocation benchmark. Experiments on Pendulum, Mountain Car, and Taxi demonstrate lower worst-case transition-estimation errors than the tested baselines.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2883,7 +2883,7 @@
           "title": "Separating Interpretability and Reconstruction in Sparse Autoencoders",
           "url": "https://arxiv.org/abs/2611.25165",
           "summary": "arXiv:2611.25165v1 Announce Type: new Abstract: Sparse Autoencoders (SAEs) are effective tools for mechanistic interpretability by decomposing neural representations into sparse and interpretable features. However, a single sparse representation in traditional SAEs is responsible for both reconstruction fidelity and interpretability, which are not guaranteed to align. To separate these objectives, we propose DualSAE, a modular framework that augments standard SAEs with a plug-in Residual Branch. A standard SAE serves as the Sparse Branch, learning a sparse code that contains the dominant semantics of the input. The added Residual Branch models the non-semantic information omitted by the Sparse Branch. We ensure that the contributions of the two branches towards the overall reconstruction have minimal overlap through a decorrelation loss. We also adopt a two-stage training strategy that first stabilizes sparse representation learning before coupling with the Residual Branch. Across diverse encoder-SAE configurations on two vision datasets and two language corpora, DualSAE achieves mean relative improvements of approximately 29% in reconstruction fidelity and 34% in interpretability (measured by monosemanticity score). Moreover, with more interpretable representations, DualSAE yields consistent performance gains in the downstream applications of topic modeling, hypothesis generation, and LLM steering. Qualitative analysis further suggests that the Sparse Branch indeed preserves dominant semantic content, whereas the Residual Branch captures non-semantic information to improve reconstruction fidelity.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2892,7 +2892,7 @@
           "title": "Game-Theoretic Data Allocation for Expert Specialization and Routing",
           "url": "https://arxiv.org/abs/2611.25167",
           "summary": "arXiv:2611.25167v1 Announce Type: new Abstract: Can the allocation used to train experts also predict which expert will perform best on a prompt? Such a connection would make the intended division of labor inspectable before training and allow the allocation itself to guide inference. We introduce InflEns, a mixture of LoRA experts whose training weights and inference routes come from the same location game in a fixed prompt-trait space. Players choose positions to maximize their expected shares of the prompt distribution, without using expert losses. We utilize the game's kernel-general theoretical criterion for when co-located positions become locally unstable to separation. We evaluate InflEns on a corpus assembled from seven safety-related benchmarks, which demonstrates that the highest-share expert has the lowest held-out response negative log-likelihood (NLL) on approximately 90% of prompts across four kernels under a sharpened simplex representation, compared with approximately 15% after permuting allocations across prompts. We demonstrate that the method performs comparably to published learned gates without having to train an explicit gate on the experts. Because the router is fixed, we can trace harmful behavior to a single expert and retrain only that expert, which lowers HarmBench attack success from 0.51 to 0.02 while keeping instruction following. The game also gives us several controls over how the experts specialize, including the kernel choice and its parameters, the trait-space geometry, and the number of experts. Importantly, InflEns is a general framework that can be extended to any encoder and data distribution.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2901,7 +2901,7 @@
           "title": "PDE-State Conditioning for Learned Optimization Using Physics-Informed Neural Networks",
           "url": "https://arxiv.org/abs/2611.25185",
           "summary": "arXiv:2611.25185v1 Announce Type: new Abstract: Physics-informed neural network (PINN) optimization depends on global properties of the underlying PDE and how the physics residual evolves across the domain. Standard optimizers such as Adam use fixed gradient-based statistics, while learned PINN optimizers replace the fixed rule with a learned update built from local parameters and optimization-history features. However, none explicitly use PDE-level information. We study two coupled design questions: what PDE-level information should a learned optimizer observe, and how should that information influence its update? We introduce an 11-dimensional PDE state-capturing operator structure, residual geometry, and short-horizon update response, and use it to condition a structured meta-learned optimizer through bounded feature-wise modulation. Repeated design studies identify the compact residual-geometry state G2 and bounded FiLM as the strongest overall choices among those tested. The resulting PDE-State-conditioned optimizer improves all evaluation metrics (relative-L2, L1, solution MSE, and physics MSE) over Adam and the unconditioned learned optimizer on Linear Advection, KdV, and Burgers.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2910,7 +2910,7 @@
           "title": "{\\phi}TD: Distributional Reinforcement Learning using Characteristic Functions",
           "url": "https://arxiv.org/abs/2611.25208",
           "summary": "arXiv:2611.25208v1 Announce Type: new Abstract: Distributional Reinforcement Learning methods aim to learn the entire distribution of returns, yet current algorithmic approaches are limited to a narrow class of distributions. We propose $\\varphi$TD, a method to overcome this limitation by computing the loss in the frequency domain. We demonstrate that this further unifies quantile and categorical approaches to distributional RL, and enables the learning of distributions that were previously impossible to capture, such as mixtures of continuous distributions. We empirically study $\\varphi$TD, across synthetic benchmarks and large-scale deep RL environments and demonstrate that the flexibility obtained from wider parametric families can lead to improved performance.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2919,7 +2919,7 @@
           "title": "Learning to Read Events for Exact State Tracking with Frozen Language Models",
           "url": "https://arxiv.org/abs/2611.25211",
           "summary": "arXiv:2611.25211v1 Announce Type: new Abstract: Long event streams require identifying each change and applying the changes in order. We train a selector on a frozen language model to read each transition. With API-only access, we ask the model to list the transitions. An external integer register composes them in order. A confidence rule can flag uncertain updates or retain several candidates. We study products of permutations of five items, a task that fixed-depth, log-precision transformers cannot solve on all input lengths under the standard conjecture that $\\mathrm{TC}^0 \\ne \\mathrm{NC}^1$. On two-event windows, a 27B model answered 3 of 100 correctly without visible reasoning and 96 of 100 when it generated intermediate steps. A frozen 0.8B model with a trained selector read every event in 299 of 299 windows of 43,687 events each. The same package passed 298 of 299 new windows on a fresh machine, missing the target of 0.99 for the one-sided 95% lower confidence bound. A separate follow-up sized to allow one failure yielded 472 of 473. On 1,000-event room-swap documents, three of ten models solved all five documents by reasoning alone. All seven models tested both ways at this length solved all five with extraction and the register, with no chain of thought requested. With concurrent extraction, median wall-clock time fell from 136.1 to 10.4 s for Sonnet 5.5 and from 313.5 to 28.0 s for GPT-6.1 Sol. At fixed per-token rates, mean cost per document fell by 55% for Sonnet 5.5 and 44% for GPT-6.1 Sol. A regular expression with an executor also solved all 15 fixed-format documents. On 500 free-form issue-tracker comments, a separately adapted 4B reader identified the recorded value in 68.8% of cases, compared with 61.0% for a frequency baseline fitted on the same training projects.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2928,7 +2928,7 @@
           "title": "Some Memories Must Fade: Persistence and Decay of User Memories in Model Parameters",
           "url": "https://arxiv.org/abs/2611.25235",
           "summary": "arXiv:2611.25235v1 Announce Type: new Abstract: Parametric memory allows Large Language Models to internalize knowledge directly into their weights, offering a potentially powerful alternative to retrieval-based memory (RAG). However, existing approaches to parametric memory are difficult to deploy as they largely mirror the Continual Learning (CL) objective of retaining information indefinitely. This is neither sustainable nor sufficient for a memory system, which must govern knowledge across its lifecycle by retaining stable facts, reinforcing recurring observations, updating changed beliefs, and allowing transient information to fade. We propose a system for parametric memory management consisting of a memory substrate (handling information storage and forgetting) and a learned policy (what to remember, how deeply, and for how long). Our substrate is a fixed-capacity LoRA adapter that consists of k-hot rank combinations which store facts without catastrophic interference and maintain an independently controlled temporal decay, enabling outdated information to fade while long-term facts persist. On this substrate, we train a lightweight controller that governs each incoming user event to ensure the memory system reflects the user's true, updated belief state. To evaluate how memory systems manage user memory, we introduce a controlled dataset of long-horizon user trajectories with varying persistence of facts based on changing belief states and user-behavioral shifts, and probe queries that test recall while information is valid and abstention after it expires. Our policy learns to effectively manage user memory over its entire lifecycle, balancing recall and abstention to achieve 86% of oracle performance, unlike CL and RAG baselines that primarily default to one of the two behaviors. By providing the first system to manage memory directly in model weights, this work establishes a foundation for long-horizon parametric memory.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2937,7 +2937,7 @@
           "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
           "url": "https://arxiv.org/abs/2611.25252",
           "summary": "arXiv:2611.25252v1 Announce Type: new Abstract: Coding agents built on large language models (LLMs) now help develop many models published as general solutions. Should generality instead reside in the agent that builds a model for each new task? We examine this question in prognostics and health management (PHM), where every model must work on unseen equipment. Our deployment-style benchmark, NextUnit-Bench, covers 24 public datasets split into 58 folds that hold out units or operating conditions; each agent has two hours to deliver an executable predictor, then run on the hidden units. First, frontier agents outperform AutoML, which reaches less than half the best agent's score, and faithful implementations of published methods on four datasets, of which only 6 of 30 beat the strongest agent's own design; published accuracies, where reproducible, rest on the papers' own conventions, and a single convention, capping the remaining life of test engines, can halve the reported error. Second, the agents' advantage is a design made on each machine's data; once made, a plain-text plan of a few hundred words carries most of the gap between two frontier agents, and given a weaker agent's plan, the strongest agent falls to that agent's level, often to identical predictions. Before touching the data, however, it matters little whose plan an agent carries out, and domain toolkits appear to help neither: what sets the strongest apart is how much it learns from the data. Third, such designs reach only implementers that can execute them: given the strongest agent's designs, a locally deployable open-weight model delivers half as often, even when they are lightened, and scores no higher than without them. Generality, we argue, is not disappearing but moving, from the model to the modeler.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2946,7 +2946,7 @@
           "title": "Process-Knowledge-Guided Latent Diffusion for Generative Design of Porous Architectures: A Case Study in Aerosol Jet Printing",
           "url": "https://arxiv.org/abs/2611.25264",
           "summary": "arXiv:2611.25264v1 Announce Type: new Abstract: Printed porous layouts interleave functional material with open channels, and the layout that uses the material best depends on how the process settings shape the deposit. Generative models propose layouts quickly, but a generator that does not receive the process setting samples from the same distribution at every setting, even when the process-dependent score ranks candidate layouts differently. This paper examines whether process knowledge can steer a latent diffusion generator toward layouts suited to a given process setting in a prescribed design domain. We formulate a process-dependent utilization score in which a process model sets the length over which the utility of printed material decays with distance from a channel. The generator combines a vector-quantized variational autoencoder (VQ-VAE) latent representation, a topology U-Net, a ControlNet domain branch, and a separately trained regressor that predicts the score from noised latents; the domain branch conditions each denoising step and the regressor gradient steers it. The method is applied to aerosol jet printing, where the atomizer and sheath gas flows enter the score through the flow-focusing relation. Across seven modeled flow settings, the lowest-scoring candidate layout of a domain differed between settings in 191 of 500 domains. In a sampling study, the mean directly computed score on three validation domains and one test domain was 0.642 with domain conditioning alone, 0.636 at a weight of 300, and 0.450 at 12,000 (112 scores per weight; lower is better). The results support process-knowledge-guided generation as an approach to process-specific porous design under the stated assumptions.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2955,7 +2955,7 @@
           "title": "Learning to Verify: Signature-Guided Training for Adaptive Adversarial Detection",
           "url": "https://arxiv.org/abs/2611.25271",
           "summary": "arXiv:2611.25271v1 Announce Type: new Abstract: Adversarial example detectors often fail when attackers explicitly attempt to bypass them. We propose a dual-model approach that keeps the original classifier fixed and trains a separate verifier to assess its predictions. During training, we identify patterns of internal neural network activations that distinguish genuine examples of each class from adversarial examples targeting that class. These patterns, called activation signatures, guide the generation of challenging adversarial examples that mislead the classifier, challenge the verifier, and internally resemble the target class. The verifier learns to recognize these examples while preserving its performance on clean inputs through knowledge distillation. At inference, the verifier evaluates the classifier's prediction without requiring activation signatures. We evaluate the approach on publicly available datasets against several adaptive attacks, including attacks unseen during training. The proposed verifier substantially outperforms directly attacked confidence-based and feature-based detectors under the evaluated L-infinity attacks. Ablation studies show that adaptive verifier training is the main source of this improvement, while signature guidance primarily benefits clean accuracy. Additional L2 evaluations reveal limitations in robustness across perturbation types.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2964,7 +2964,7 @@
           "title": "Scone: Symmetry-aware Neural Combinatorial Optimization for Graph Coloring",
           "url": "https://arxiv.org/abs/2611.25273",
           "summary": "arXiv:2611.25273v1 Announce Type: new Abstract: Graph coloring, which entails assigning colors to nodes such that no adjacent nodes have the same color, is a fundamental combinatorial optimization problem. In general, however, finding a node coloring with no monochromatic edges given a fixed palette is NP-hard. This motivates learning-based methods that can learn to exploit recurring structure across instances to efficiently produce high-quality colorings. Crucially, the validity of a coloring is invariant to permutations of the colors, and we show that exploiting this symmetry reduces the size of the effective state space over which the model has to learn its policy. At the same time, the coloring algorithm must be able to break some symmetries, for example to assign different colors to two adjacent nodes belonging to the same automorphism orbit. In this paper, we introduce Scone, a model that uses a color-equivariant graph neural network to construct colorings sequentially, allowing information from previous assignments to propagate and break node symmetries. Scone achieves perfect solution quality with low inference times across several graph coloring tasks, including on sudoku_extreme and register allocations, and showcases generalization to graph families not encountered during training.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2973,7 +2973,7 @@
           "title": "DS3M: Deep structured state space models for nonlinear system identification on modern hardware",
           "url": "https://arxiv.org/abs/2611.25274",
           "summary": "arXiv:2611.25274v1 Announce Type: new Abstract: Neural state-space identification learns dynamical models from measured inputs and outputs. SUBNET combines this task with an encoder that estimates initial states from short measurement histories. Its continuous-time version requires many successive neural-network evaluations during numerical integration, resulting in slow training speed which is a major limitation for practical use cases. We propose deep structured state space models (DS3M), which combine compact nonlinear dynamical components in parallel and in series. Custom GPU kernels implemented with Triton reduce the launch and memory overhead of their sequential evaluation. We explain this construction, describe a port-Hamiltonian variant, and present various benchmark comparisons of accuracy and training time.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2982,7 +2982,7 @@
           "title": "Intelligent Embedding Pruning for Large-Scale Recommendation Models",
           "url": "https://arxiv.org/abs/2611.25288",
           "summary": "arXiv:2611.25288v1 Announce Type: new Abstract: Modern recommendation systems face substantial memory pressure, largely from the sparse embedding layer that maps high-cardinality categorical features into dense vectors. In-training embedding pruning (ITEP) removes less important embedding rows during training, yielding end-to-end memory savings but sometimes degrading accuracy because per-table pruning ratios are set by size-based heuristics. We use feature importance (FI) to guide these ratios (FI-ITEP), assigning higher pruning to tables tied to less important features. Across three large-scale recommendation models, FI-ITEP achieves 20--40% total memory reduction while matching or improving accuracy relative to percentile-based ITEP. Because the feature-importance signal requires minimal resources to compute, these memory savings translate into concrete systems benefits: the same models train on fewer GPU trainers (e.g., 112 to 80) with higher per-GPU throughput, saving 1,000+ GPU-hours per model launch. We reproduce these trends on the open-source DLRM (Criteo 1TB) and quantify the end-to-end training-time and GPU-cost tradeoff---including the burden of computing FI---offering practical guidance for embedding pruning in real-world systems.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -2991,7 +2991,7 @@
           "title": "Cross-Question Reliable Reinforcement Learning",
           "url": "https://arxiv.org/abs/2611.25292",
           "summary": "arXiv:2611.25292v1 Announce Type: new Abstract: AI systems operating near the limits of their capabilities can maximize utility while minimizing the risk of error by abstaining or deferring questions they are not confident about to a human or a stronger model. Recently, large language models (LLMs) have been post-trained to estimate confidence in their own answers. To achieve this, methods reinforce confidence scores based on the correctness signal to each question-answer pair individually, with rewards that encourage assigning confidence 1 to correct answers and 0 to incorrect answers. However, estimating confidence scores is useful in that it enables selecting only the most confident answers, to maximize the share of solved questions while accommodating the user's risk tolerance. Assigning confidence 1 to correct answers and 0 to incorrect ones is theoretically optimal, but unattainable in practice and detrimental for selective prediction with a non-zero risk tolerance: confidences pushed to 0 and 1 carry no information about how answers compare to one another. We therefore introduce CARE (Cross-question Abstention Reward Estimation), which computes rewards over a set of question-answer pairs: At each of several risk tolerances, the confidences across the set induce an abstention threshold, and each confidence is rewarded for lying on the correct side of it. Since the threshold itself comes from the set, every verbalized confidence is reinforced relative to other questions' confidence, not against its own binary correctness label. On math, CARE increases the coverage at 5% risk (C@5) across MATH-500, GSM8K, and Big-Math-Digits from 0.8% to 42.4%, compared to existing pointwise correctness-matching rewards. When trained on multi-hop Wikipedia QA from HotpotQA, CARE improves C@5 in out-of-distribution general-knowledge, reasoning, and math benchmarks (including CommonsenseQA, GPQA, SimpleQA, and TriviaQA) from 12.3% to 23.6%.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3000,7 +3000,7 @@
           "title": "Federated Learning of Car Aerodynamics Surrogates with Spectral Optimizers",
           "url": "https://arxiv.org/abs/2611.25300",
           "summary": "arXiv:2611.25300v1 Announce Type: new Abstract: Neural surrogates predict the aerodynamic forces on a car in seconds, compared with hours for a CFD simulation, but training them requires thousands of CFD simulations of different car designs, which car manufacturers keep proprietary. Federated learning allows several manufacturers to train a shared surrogate without exchanging data. We study which federated optimizer brings such a surrogate closest to one trained on pooled data. On DrivAerNet++, we train a Transolver surrogate across six clients that each hold cars of a single body type, and we compare three spectral optimizers, which orthogonalize the update of each weight matrix (FedMuon and two methods we propose, FedMARS-M and FedOLion), with three non-spectral ones (FedAvg, SCAFFOLD-Adam and FedLion), all tuned with the same protocol. FedMuon and FedMARS-M reach a drag error within 2% of centralized training with Muon, using two to four local epochs per round. The non-spectral methods perform best with sixteen local epochs, the largest number we tested, and still have a 17 to 37% higher drag error than FedMARS-M. We relate this gap to the low stable rank of the weight gradients, for which an orthogonalized step yields about twice the first-order decrease of a gradient step of the same spectral norm. Code: https://github.com/armanbolatov/fedmars_drivaernet",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3009,7 +3009,7 @@
           "title": "SplitReAlign: Partition-Aware Representation Realignment for Split Federated Unlearning",
           "url": "https://arxiv.org/abs/2611.25301",
           "summary": "arXiv:2611.25301v1 Announce Type: new Abstract: Split federated learning (SFL) distributes neural networks across clients and a server, coupling class-specific knowledge across their representations. This coupling complicates split federated unlearning (SFU), where class-wise forgetting must remove target knowledge while preserving retained utility under heterogeneous representation spaces and asymmetric update constraints. We propose SplitReAlign, a partition-aware representation realignment framework for class-wise SFU. It constructs endpoint-specific discriminative subspaces coordinated through a shared semantic anchor, selectively realigning forgotten representations while penalizing changes outside the active subspaces. To accommodate asymmetric update constraints, SplitReAlign leverages gradients through frozen servers for Client-only updates and fixed client-feature statistics for Server-only guidance, while Joint updates optimize both partitions. Experiments on CIFAR-10 and CIFAR-100 under heterogeneous client distributions demonstrate that SplitReAlign achieves the lowest average gap to retraining among all compared methods across six settings. Notably, Server-only achieves the closest agreement with retraining on both datasets, highlighting the effectiveness of partition-aware guidance under restricted updates.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3018,7 +3018,7 @@
           "title": "Prescribed Bayesian Efficiency under Lifetime Adjustment Costs",
           "url": "https://arxiv.org/abs/2611.25311",
           "summary": "arXiv:2611.25311v1 Announce Type: new Abstract: A Bayesian learner may retain an issued action while updating its posterior, trading predictive loss against adjustment charges. We assume population curvature, boundary control, an order-$1/n$ lower bound on expected posterior uncertainty about the optimal action, and an observable unbiased gradient witness whose squared norms are uniformly integrable. Sample losses may be unbounded or nonconvex. Cumulative expected excess measures the loss increase relative to current predictive Bayes actions. For bounded nonnegative nondecreasing charges $c$ with $c(0)=0$ and nondecreasing profiles $G: \\mathbb{N} \\to [1,\\infty)$ with $G(J)=o(J)$, we characterize joint attainability of cumulative expected excess $O(G(J))$ at horizons $T=2^J$ and finite expected lifetime charge. Here $J$ indexes logarithmic time. The criterion is finiteness of a prefix-constrained allocation of tracking-error allowances across action-distance scales, equivalently its decreasing-weight dual. Adaptive timing and private randomization do not enlarge the attainable region. For each feasible pair, a horizon-independent deterministic checkpoint policy attains the profile with lifetime-cost moments of every positive order. For excess $O((\\log T)^r)$, $0<r<1$, every policy needs $\\Omega((\\log T)^{2-r})$ revisions in expectation, and a charge-independent schedule achieves a matching pathwise upper bound for every feasible charge. We verify the assumptions for logistic decision models with nondegenerate covariates, finite second moments and a locally positive smooth prior density, including fixed-ridge models with unbounded parameter priors.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3027,7 +3027,7 @@
           "title": "Improving Imitation Policies for Multi-Phase Tasks through Residual Learning Allocation",
           "url": "https://arxiv.org/abs/2611.25320",
           "summary": "arXiv:2611.25320v1 Announce Type: new Abstract: Residual reinforcement learning corrects an imitation-trained base policy using a limited budget of environment interaction. In a task with several phases, this budget must be divided among the phases, and the phase in which the base policy fails is not necessarily the phase in which a correction most improves task completion. We formalize this distinction through the completion gain: the change in full-task completion probability when, during a single phase, a state-feedback controller replaces selected components of the base policy's action. We decompose the completion gain into the probability of reaching the phase and the conditional improvement in completion from the start of the phase, and we estimate it from paired episodes. The positive estimates determine which action components the residual policy corrects and how training episodes are distributed across phases. In stochastic point-mass docking experiments, most failures occurred in the final docking phase, whereas the largest completion gain occurred in the preceding channel phase; gain-based allocation improved completion over allocation proportional to failure counts and, in a variant with a longer approach, over uniform allocation at half of the budget. In simulated bimanual robotic assembly, the completion-gain estimates were positive only for insertion and release, although few failures occurred during release; in a second assembly configuration, a residual policy trained in the release phase improved completion from held-out states at the start of release by 16.9%.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3036,7 +3036,7 @@
           "title": "Now You See Me Now You Don't: A Framework To Detect and Reduce Proxy Capacity",
           "url": "https://arxiv.org/abs/2611.25327",
           "summary": "arXiv:2611.25327v1 Announce Type: new Abstract: In regulated domains such as lending, the two most salient fairness concepts are disparate impact and disparate treatment: disparate impact is generally defined by differential rates of adverse outcomes between demographic groups, while disparate treatment is generally defined by the use of demographic information or proxies to issue decisions. There already exist established methods to quantitatively detect and mitigate disparate impact; however, there has been less research on doing the same for disparate treatment. From a practitioner's perspective, the manner in which a conditional independence test is formulated and operationalized to identify proxies is nuanced and underexplored. As Machine Learning (ML) systems increase in scope and application in regulated domains, practitioners need a defensible framework to identify proxies at scale. Current disparate treatment frameworks typically rely upon some combination of quantitative and qualitative review of models' inputs to identify proxies. Features that are identified as proxies are then typically removed from the model in practice, and predictive performance degrades in favor of fairness through unawareness. Here, we propose a two-part framework that reduces the disparate treatment risk of a feature and keeps the predictive performance that removal of the feature loses. First, we propose a quantitative test for proxy capacity that identifies whether some of a feature's values reveal membership in a particular demographic group. Second, we propose a pre-processing methodology that adjusts those proxy features to reduce their proxy capacity. We show empirically on synthetic and public datasets that this framework identifies features that proxy for demographic information and reduces their proxy capacity while the adjusted feature retains task-relevant signal (i.e. improves predictive performance versus removal).",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3045,7 +3045,7 @@
           "title": "Class-Conditional Conformal Triage for ICAO Face-Image Compliance under Class Imbalance",
           "url": "https://arxiv.org/abs/2611.25342",
           "summary": "arXiv:2611.25342v1 Announce Type: new Abstract: Automated ICAO/ISO face-image compliance analysers provide criterion-level pass/fail decisions, yet these verdicts do not quantify uncertainty when deciding whether to accept, reject, or retake a photograph. We investigate conformal prediction as a triage layer for BioGaze, evaluating 14 compliance criteria on the synthetic TONO benchmark. Without retraining the analyser, we fit per-criterion logistic classifiers and compare marginal and label-conditional (Mondrian) conformal prediction with conventional abstention rules using subject-disjoint splits. Marginal conformal prediction achieved approximately 0.90 overall coverage but substantially under-covered violations, with a ten-partition mean of 0.37 for one criterion. The corresponding Mondrian means ranged from 0.89 to 0.92 across criteria. However, most of the reduction in criterion-level false positives came from the logistic layer (0.145 to 0.048), while tuned abstention rules achieved lower false-positive rates than Mondrian at comparable retake rates. Bonferroni correction for joint coverage across 14 criteria required retaking nearly all images. These findings show that class-conditional conformal prediction can achieve near-target empirical coverage for minority violation classes and reveal trade-offs between statistical coverage, classification performance, and retake requirements in multi-criterion face-image compliance assessment.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3054,7 +3054,7 @@
           "title": "Drifting, Discriminating, and Directioning for Action Coordination in Higher-dimensional Action Space",
           "url": "https://arxiv.org/abs/2611.25385",
           "summary": "arXiv:2611.25385v1 Announce Type: new Abstract: This paper proposes a lightweight policy model to mitigate the difficulty of handling higher-dimensional action spaces in reinforcement learning (RL), alongside an algorithm to effectively train it. To address this, we focus on drifting models, which can implicitly represent complex distributions and infer actions in a single forward pass. However, while drifting models can be straightforwardly trained via backpropagation of the Q-gradient, this alone cannot be expected to appropriately capture the desired action coordination. Therefore, this paper constructs a three-step learning algorithm to encourage the action coordination. First, the source distribution of the drifting model is co-optimized as a diagonal policy model. This conditions the drifting model to attach the coordination, which cannot be expressed by a diagonal distribution, as residuals. Second, a discriminator model before and after drifting is introduced with adversarial training for a regularization term. This actively promotes the extraction of the coordination that fundamentally separates the two distributions. Third, best-of-N sampling is applied for action selection during rollouts in order to give directionality toward/beyond the regions where the coordination is insufficiently extracted/sufficiently discovered. The proposed method consistently improves the sample efficiency and the final control performance over the conventional diagonal distribution modeling across three locomotion tasks with high-dimensional action spaces. Furthermore, the analysis indicates that this improvement is achieved by reducing variance in certain action dimensions, effectively coupling them with other actions as action coordination.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3063,7 +3063,7 @@
           "title": "TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs",
           "url": "https://arxiv.org/abs/2611.25387",
           "summary": "arXiv:2611.25387v1 Announce Type: new Abstract: Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models (MLLMs) do the same? CAPTCHAs offer a natural test, since humans solve them through this very loop, clicking and dragging on the screen and adjusting after each result. Yet existing CAPTCHA benchmarks are largely solved and rarely spatial, while spatial benchmarks rarely require action. We therefore present TuringSpace, a synthetic web environment of 125 interactive CAPTCHAs that span five spatial abilities and must be solved through clicks and drags on the screen. Every task is a program that generates new instances with a checker and an oracle, so the tasks also form a scalable training gym. Humans solve 94.1% of the tasks, whereas the best model, GPT-6 Astra, still fails 25.9% of them, and the best open-weight model, Kimi K3, fails 68.0%. Our further analysis shows that most failures come from misreading the screenshot, and that model reasoning rarely corrects a wrong belief but hallucinates evidence to defend it. To test whether such spatial abilities can be learned, we fine-tune Qwen3.5-9B on this gym. Its success rate rises from 1.6% to 33.1%, above Kimi K3, and it improves on all seven out-of-distribution benchmarks, including a 9.9-point gain on the real-world indoor videos of VSI-Bench. These results show that grounding spatial intelligence in screen actions exposes what MLLMs lack and offers a scalable way to teach it, with gains that transfer to real-world scenes. We will release TuringSpace to support further study.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3072,7 +3072,7 @@
           "title": "Protein Functional Semantic Alignment via Representation Rectification",
           "url": "https://arxiv.org/abs/2611.25396",
           "summary": "arXiv:2611.25396v1 Announce Type: new Abstract: Protein language models (PLMs) are commonly pretrained with likelihood-based objectives such as masked language modeling or denoising. These objectives capture sequence-level regularities, but can produce representations in which functional signals are entangled with non-functional variation (e.g., sequence identity, compositional bias, and frequent local motifs), creating a readout bottleneck for downstream function prediction. We introduce Functional Semantic Alignment via Representation Rectification (SAVR), a contrastive post-training method using Pfam family co-membership as a homology-guided discrete semantic signal to reshape PLM representations. SAVR reduces directional dominance and redistributes variance across embedding dimensions, decreasing variance concentration, and increasing effective dimensionality of the embedding covariance spectrum. Without observing any task-specific labels during post-training, SAVR achieves state-of-the-art results on Enzyme Commission (EC) benchmarks and competitive results on Gene Ontology (GO) benchmarks under frozen-backbone evaluation. These results suggest that homology-guided contrastive post-training can rectify PLM representation geometry and improve sequence-based protein function prediction.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3081,7 +3081,7 @@
           "title": "Antom 3-in-1 Transformer: A Payment Foundation Model",
           "url": "https://arxiv.org/abs/2611.25403",
           "summary": "arXiv:2611.25403v1 Announce Type: new Abstract: We report the development of Antom 3-in-1 Transformer, a payment foundation model that integrates sequence, tabular, and graph representations for payment risk detection. The model contains approximately 7B parameters, with approximately 1.7B activated per task route. Antom 3-in-1 Transformer is pretrained to learn reusable behavioral and relational representations, primarily on Ant International's internal payment data. In a cross-business transfer experiment, pretraining improves the target business metric by 34.5% over the same architecture trained from scratch. With only 25% of the training labels, the pretrained model outperforms the full-label scratch baseline in Average Precision (AP) and Recall@0.5% on different merchant domains. In a four-month online experiment on Ant International's billion-scale payment platform, the model reduced the overall loss rate by 37.88% relative to XGB-Online.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3090,7 +3090,7 @@
           "title": "FG-GraphBench: Benchmarking and Enhancing Fine-Grained Visual Understanding with Multimodal Scene Graphs",
           "url": "https://arxiv.org/abs/2611.25408",
           "summary": "arXiv:2611.25408v1 Announce Type: new Abstract: Fine-grained visual understanding requires multimodal large language models (MLLMs) to recognize small visual entities and understand their relationships. Scene graphs offer a natural way to represent this information, organizing visual entities as nodes and their relationships as edges. However, we identify two challenges: existing scene graph benchmarks provide insufficient coverage of fine-grained entities and the relationships among them, and existing methods for fine-grained visual understanding have yet to effectively leverage such graph-structured information in MLLMs. To address these challenges, we introduce Fine-Grained Multimodal Scene Graph Benchmark (FG-GraphBench) and FiGRA. FG-GraphBench is a benchmark comprising three complementary tasks: fine-grained visual question answering (FG-QA), image captioning (FG-Caption), and image description generation (FG-Description). We develop a two-stage construction pipeline that discovers and grounds fine-grained entities and establishes their relations to construct the fine-grained multimodal scene graphs (MSGs) in FG-GraphBench. Building on these MSGs, we propose FiGRA, a Fine-grained Graph Representation Augmentation method for MLLMs. FiGRA adopts a two-stage training strategy. It encodes multimodal entity and relation features as continuous graph tokens, and integrates them into the MLLM. Experiments show that FiGRA significantly outperforms strong baselines across three tasks of FG-GraphBench. Further analyses confirm the effectiveness of FG-GraphBench and highlight the importance of preserving fine-grained entity and relation information for visual understanding.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3099,7 +3099,7 @@
           "title": "From Sequence Uncertainty to Phenotype Hypotheses: Uncertainty-Conditioned Inference over Biomedical Knowledge Graphs",
           "url": "https://arxiv.org/abs/2611.25422",
           "summary": "arXiv:2611.25422v1 Announce Type: new Abstract: Genomic foundation models provide variant-level evidence, but connecting that evidence to phenotype hypotheses requires accounting for uncertainty throughout structured reasoning. We introduce an uncertainty-conditioned path-energy framework that converts sequence predictions and calibrated predictive uncertainty into explicit distributions over graph-supported phenotype hypotheses, without patient-level phenotype supervision. An interpretable learned energy scores admissible gene--disease--phenotype routes, query uncertainty controls the target temperature, and path probabilities are aggregated into phenotype hypotheses. This formulation makes evidence quality an explicit determinant of hypothesis breadth while retaining traceable multi-path support. Exact normalization over enumerable candidate sets provides a reference for evaluating a Hastings-corrected learned revision operator. On AlzKB and Hetionet, phenotype-level entropy tracks upstream uncertainty, with Spearman correlations of 0.951 and 0.878, respectively; ablations identify the contribution of uncertainty conditioning. In masked-edge recovery, the model exceeds chance and degree-matched probability-permutation controls. Training the energy under the uncertainty-dependent temperature yields higher held-out recall@10 than training under a constant temperature of comparable magnitude. Under gene hold-out, recall@10 exceeds that of a trained DistMult embedding on 24 of 30 graph masks (0.183 versus 0.123); this difference is attributable mainly to three genes with many variants and is not established for all genes. These results establish an uncertainty-aware interface from genomic predictions to graph-supported phenotype hypotheses that combines interpretable probability allocation with held-out association recovery of explicitly stated scope.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3108,7 +3108,7 @@
           "title": "Coordinate Basis Linear Bandits with Sublinear Regret over Low-Rank Clusters",
           "url": "https://arxiv.org/abs/2611.25424",
           "summary": "arXiv:2611.25424v1 Announce Type: new Abstract: We study the problem of computational efficiency for linear bandits in high-dimensional settings with a finite arm set. In linear bandits, the increase in the dimension $d$ of the feature vectors leads to growing computational costs of $O(d^2)$ at each round of update. Traditional low-rank approximation methods such as SOFUL reduce computation via fixed-size matrix sketching, yet run the risk of incurring vacuous linear regret when the spectral tail of the data is heavy and the approximation rank is inadequately selected. To guarantee regret convergence and effectively reduce computational costs, we introduce a clustering mechanism and propose the Coordinate Basis Linear Bandit (CBL) algorithm. Our method preserves the full covariance information in each cluster by maintaining an exact orthonormal basis of the cluster's column space together with a low-dimensional coordinate representation, which guarantees robust sublinear regret without spectral-tail vulnerabilities. It performs cluster switching by assigning a sentinel for each cluster, and reduces per-round update computation to $O(\\bar r^2)$ in the cluster's effective dimension $\\bar r=\\min(r,l)$, where $r$ is the intrinsic rank of the data and $l<d$ is a tunable rank bound.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         },
         {
@@ -3117,7 +3117,7 @@
           "title": "Interference Bounds and Merge-Aware Training Dynamics for Composable Fine-Tuned Models",
           "url": "https://arxiv.org/abs/2611.25430",
           "summary": "arXiv:2611.25430v1 Announce Type: new Abstract: Combining fine-tuned models by composing their parameter updates has become a standard alternative to multi-task training. We formalize composability as a property of a collection of task vectors and prove that the excess loss of the merged model is controlled by an interference functional of the cross-task curvature overlap and the signed alignment of the updates. In the quadratic regime this functional equals the excess loss, giving a criterion that is necessary as well as sufficient and that measures the angle between task vectors in the curvature metric rather than the Euclidean one. Fine-tuning under a curvature-guided regularizer -- constructed from curvature statistics of the kind memory-efficient optimizers maintain -- keeps displacement in the base curvature metric below a ceiling set by the penalty coefficient at every iterate, at the standard $O(1/\\sqrt{T})$ non-convex rate. Under a single Loewner comparison between the base statistic and the task curvatures, this control converts into a ceiling on the interference functional, inversely proportional to the penalty coefficient, so that the curvature term of the bound is controlled during training. A first-order term, present because regularized solutions are not stationary for the task loss, is not reduced in the same way. Experiments on an exact non-quadratic model confirm the budget and the ceiling, show the first-order term dominating for strong penalties, and find the curvature-guided penalty slightly better than an isotropic one. In a three-seed transformer study the functional is rank-correlated with merging degradation, but no more strongly than the Euclidean displacement norm.",
-          "pubDate": "2026-11-20T00:00:00.000Z",
+          "pubDate": "2026-11-21T00:00:00.000Z",
           "extraSourceIds": []
         }
       ]
@@ -3125,7 +3125,7 @@
     "techcrunch_ai": {
       "sourceId": "techcrunch_ai",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:38.696315Z",
+      "updatedAt": "2026-11-21T07:53:24.709896Z",
       "error": null,
       "items": [
         {
@@ -3313,14 +3313,14 @@
     "venturebeat_ai": {
       "sourceId": "venturebeat_ai",
       "status": "error",
-      "updatedAt": "2026-11-21T00:33:38.802269Z",
+      "updatedAt": "2026-11-21T07:53:24.792297Z",
       "error": "Exception: HTTP 429 for https://venturebeat.com/category/ai/feed",
       "items": []
     },
     "mittr_ai": {
       "sourceId": "mittr_ai",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:39.008717Z",
+      "updatedAt": "2026-11-21T07:53:24.919305Z",
       "error": null,
       "items": [
         {
@@ -3418,9 +3418,18 @@
     "marktechpost": {
       "sourceId": "marktechpost",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:39.008991Z",
+      "updatedAt": "2026-11-21T07:53:24.919603Z",
       "error": null,
       "items": [
+        {
+          "id": "0092e65f587564c7c0a7cb48fca751f32975655722a2fe75bd2ed7bfbc38d06e",
+          "sourceId": "marktechpost",
+          "title": "Baseten Releases Bison-1 and Groundhog-1, Topping Decision Model Index",
+          "url": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/",
+          "summary": "Baseten released bison-1 and groundhog-1, open-weight decision models built on Gemma 4. bison-1 scores 76 on the AA Decision Index v2.1, and both models support 128k context and image input. The post Baseten Releases Bison-1 and Groundhog-1, Topping Decision Model Index appeared first on MarkTechPost .",
+          "pubDate": "2026-11-21T04:01:04.000Z",
+          "extraSourceIds": []
+        },
         {
           "id": "ef4d59d08a821ddea518f1e39a30fdfe94db67f9d1b8fadee376640700a4f139",
           "sourceId": "marktechpost",
@@ -3501,24 +3510,177 @@
           "summary": "Hugging Face released Qwen3.8-27B-pi-adapted, an Apache-2.0 LoRA adapter trained with reinforcement learning for the pi coding agent. It lifts SWE-bench Pro hard-51 pass@1 from 39.2% to 64.7% and Terminal-Bench 2.1 from 39.5% to 55.8%. The post New LoRA Adapter Lifts Qwen3.8 Coding Success From 39% to 65% appeared first on MarkTechPost .",
           "pubDate": "2026-11-18T16:07:50.000Z",
           "extraSourceIds": []
-        },
-        {
-          "id": "3b15d2a017feff0a557fceff1f7908e7ec304ce5be0d3c060b3a3a38c5ad21c1",
-          "sourceId": "marktechpost",
-          "title": "SID AI Releases SID-2 Agentic Search Model With 0.720 NDCG Swarm Mode",
-          "url": "https://www.marktechpost.com/2026/11/17/sid-ai-sid-2-agentic-search-swarm/",
-          "summary": "SID AI released SID-2, an agentic search model trained with reinforcement learning. A single agent reaches 0.585 NDCG in 3.11 seconds, and a 12-agent SID-2 Swarm scores 0.720 NDCG, above GPT-6 Astra on SID’s benchmark. The post SID AI Releases SID-2 Agentic Search Model With 0.720 NDCG Swarm Mode appeared first on MarkTechPost .",
-          "pubDate": "2026-11-18T07:10:53.000Z",
-          "extraSourceIds": []
         }
       ]
     },
     "hn_ai": {
       "sourceId": "hn_ai",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:51.010927Z",
+      "updatedAt": "2026-11-21T07:53:24.919722Z",
       "error": null,
       "items": [
+        {
+          "id": "ed4327b6164a43b4df27de39ecfcb5a33f7b7bf01daf63679f5e2a66f7c88e92",
+          "sourceId": "hn_ai",
+          "title": "Aletheia Aegis: Deterministic sub-millisecond output guard for AI agents",
+          "url": "https://github.com/vikasny30/aletheia-aegis",
+          "summary": "Article URL: https://github.com/vikasny30/aletheia-aegis Comments URL: https://news.ycombinator.com/item?id=50586524 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T06:21:38.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "31f7f0f2175e9ff65ae1db44012364fbc54bac2722de2229cfacfdc0ee9867a2",
+          "sourceId": "hn_ai",
+          "title": "I'm building GURU, a framework for a personal AI that lives alongside you",
+          "url": "https://github.com/GuruProduction/GURUbyUnusLumen",
+          "summary": "Article URL: https://github.com/GuruProduction/GURUbyUnusLumen Comments URL: https://news.ycombinator.com/item?id=50586474 Points: 1 # Comments: 1",
+          "pubDate": "2026-11-21T06:12:39.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "010d5f29ac1340a49ae6d84399d6bb60095818b8c877e33b5208d6022ffd189c",
+          "sourceId": "hn_ai",
+          "title": "Federal Revenue When AI Replaces Labor",
+          "url": "https://www.rand.org/pubs/research_reports/RRA4980-1.html",
+          "summary": "Article URL: https://www.rand.org/pubs/research_reports/RRA4980-1.html Comments URL: https://news.ycombinator.com/item?id=50586471 Points: 3 # Comments: 2",
+          "pubDate": "2026-11-21T06:12:31.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "8664137b09c58deb433d9c5517d13b3b93c358e9fdd4bbb31beb97922b0f2613",
+          "sourceId": "hn_ai",
+          "title": "Show HN: Sniffy – a free AI detector and Chrome extension",
+          "url": "https://getsniffy.com/",
+          "summary": "Hi, I wanted to see if I can replicate a completely free pangram.com alternative. I directed Fable 5.2 to fine tune RoBert model. At this point it does make mistakes, and not as accurate as pangram.com but I intend to improve it as more people help me with data. Comments URL: https://news.ycombinator.com/item?id=50586349 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T05:47:31.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "ebb1b6e62820985f722ef99b55e88054223ac2511ed6824bf8d3693ddf44d13f",
+          "sourceId": "hn_ai",
+          "title": "Show HN: Musset, open-source Scrivener alternative with an AI that never writes",
+          "url": "https://github.com/Musset-App/musset",
+          "summary": "I’m writing my first novel and could not find an app that fit my workflow: quiet like iA Writer, organized like Scrivener, and with AI so I can discuss my book while I write it. It allows me to feel less “alone” and have a sounding board while I write. - A book is a folder of plain Markdown files. Musset commits to a git repo, tracks versions and drafts without you having to know git. - Revisions are CriticMarkup inside the text. It manages docx revisions too, so your editor can edit a Word doc and you import their comments. - PDFs are typeset using Typst, embedded in the app, following each language’s typographic rules. - Spelling and grammar are checked using LanguageTool, also embedded. - Mac/Word, WordStar, vi and Emacs keyboard modes. The AI is optional and uses your Codex or Claude Code CLI. It comments, leaves margin notes, and checks continuity and your chapters against your style rules. It’s GPL-3.0 and free during the beta. When or if it reaches 1.0, if there is sufficient interest, the idea is to make it a small one-time payment ($9.90). There is a paid sync service (git hosting) that lets you share a book with beta readers and editors. Download: https://musset.app I’d love to have some feedback! Comments URL: https://news.ycombinator.com/item?id=50586323 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-21T05:42:49.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "39c74caf7b8b43ff9f262b39a30a608251c234b7154d1ef0f15be61d35fa4da6",
+          "sourceId": "hn_ai",
+          "title": "ClawDOS – An AI coding agent for DOS",
+          "url": "http://ricapar.net/ClawDOS/",
+          "summary": "Article URL: http://ricapar.net/ClawDOS/ Comments URL: https://news.ycombinator.com/item?id=50586292 Points: 27 # Comments: 3",
+          "pubDate": "2026-11-21T05:38:01.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "addc4cc99409113aaca2f79f01a6e4c7f048e1eedeb547286905cc79f331a9cf",
+          "sourceId": "hn_ai",
+          "title": "Splice-Core: Low-Order-Bit-Splicing GEMM for Energy-Efficient AI Accelerators",
+          "url": "https://arxiv.org/abs/2611.25617",
+          "summary": "Article URL: https://arxiv.org/abs/2611.25617 Comments URL: https://news.ycombinator.com/item?id=50586249 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T05:31:30.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "eca7067bcce701438e88cfee65b712055ba6e835482e60faec3099daccb2e812",
+          "sourceId": "hn_ai",
+          "title": "Show HN: Bootstrapping a compiler with AI run on to ARM64, WASM, SPIR-V",
+          "url": "https://github.com/drakestapleton/omega-mv/blob/main/seed/README.md",
+          "summary": "Article URL: https://github.com/drakestapleton/omega-mv/blob/main/seed/README.md Comments URL: https://news.ycombinator.com/item?id=50585893 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T04:17:44.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "e778909ad56913529894aab5c95156c9a6822027e6fe33e367259357bf25ab13",
+          "sourceId": "hn_ai",
+          "title": "Legit use cases for uncensored AI models",
+          "url": "https://uplinkswitch.ai",
+          "summary": "Article URL: https://uplinkswitch.ai Comments URL: https://news.ycombinator.com/item?id=50585695 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T03:44:14.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "36ee0d0fdb3079696de59521c7736a8e89603f04fa09cba464ad1e8ce8b0c3ad",
+          "sourceId": "hn_ai",
+          "title": "The Dangers of AI 'Handoverism'",
+          "url": "https://www.ft.com/content/45194ea4-4fa7-4c38-a5b2-137eb7402d57",
+          "summary": "Article URL: https://www.ft.com/content/45194ea4-4fa7-4c38-a5b2-137eb7402d57 Comments URL: https://news.ycombinator.com/item?id=50585432 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-21T02:50:11.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "949be47ece33429605008eafba86ab962cb8bb36bcbc5275db6713dc4df98e40",
+          "sourceId": "hn_ai",
+          "title": "The Most Important Charts in AI Are Wrong",
+          "url": "https://www.rameznaam.com/p/the-most-important-charts-in-ai-are",
+          "summary": "Article URL: https://www.rameznaam.com/p/the-most-important-charts-in-ai-are Comments URL: https://news.ycombinator.com/item?id=50585411 Points: 2 # Comments: 1",
+          "pubDate": "2026-11-21T02:45:31.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "0f14deee3ea5795276c76b8151ec5af47cf6288d8af3e1a3b5907be1b40e31a2",
+          "sourceId": "hn_ai",
+          "title": "Images of Canada's most wanted are AI-generated",
+          "url": "https://www.cbc.ca/news/canada/bolo-program-canada-fugitives-police-ai-9.7428331",
+          "summary": "Article URL: https://www.cbc.ca/news/canada/bolo-program-canada-fugitives-police-ai-9.7428331 Comments URL: https://news.ycombinator.com/item?id=50585403 Points: 1 # Comments: 1",
+          "pubDate": "2026-11-21T02:44:51.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "931a49418b64b5eb6cad47230accd84215b0019bc33342f8c8ee2c439dfece67",
+          "sourceId": "hn_ai",
+          "title": "Experts warn: Everyone in AI is susceptible to a honey-trap scheme",
+          "url": "https://techcrunch.com/2026/11/20/experts-warn-nearly-everyone-in-ai-is-susceptible-to-a-honey-trap-scheme-right-now/",
+          "summary": "Article URL: https://techcrunch.com/2026/11/20/experts-warn-nearly-everyone-in-ai-is-susceptible-to-a-honey-trap-scheme-right-now/ Comments URL: https://news.ycombinator.com/item?id=50585239 Points: 4 # Comments: 0",
+          "pubDate": "2026-11-21T02:19:42.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "cd0ecddf0e51470139388eb0e7a51fd334a5184f2e8a3c24bd484e6c48fa066c",
+          "sourceId": "hn_ai",
+          "title": "AI R&D-relevant model capabilities are improving rapidly",
+          "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
+          "summary": "Article URL: https://metr.org/blog/2026-11-20-q4-2026-capability-update/ Comments URL: https://news.ycombinator.com/item?id=50584825 Points: 2 # Comments: 0",
+          "pubDate": "2026-11-21T01:23:46.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "49934f769ffb97bc8fee4ae29b89d67d2082bc8349c11d3c2f29f39fd9413e95",
+          "sourceId": "hn_ai",
+          "title": "Things I learned coding with AI for a year",
+          "url": "https://twnstr.com/blogs/software-development-post-ai",
+          "summary": "Article URL: https://twnstr.com/blogs/software-development-post-ai Comments URL: https://news.ycombinator.com/item?id=50584786 Points: 5 # Comments: 1",
+          "pubDate": "2026-11-21T01:18:18.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "2e10fc658652a4a375f01eb543fb40fae7a0b9da33eb8f92fb05693352f214ab",
+          "sourceId": "hn_ai",
+          "title": "Detecting AI Agents in Next.js with Vouched KYA",
+          "url": "https://www.vouched.id/learn/blog/detecting-ai-agents-in-next.js-with-vouched-kya",
+          "summary": "Article URL: https://www.vouched.id/learn/blog/detecting-ai-agents-in-next.js-with-vouched-kya Comments URL: https://news.ycombinator.com/item?id=50584720 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T01:10:10.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "07d8728547b890d8ed01ba89682e858798562ccc476d6badbd593c64ea5264ca",
+          "sourceId": "hn_ai",
+          "title": "House China Cmte: China Trying to Get US Companies Addicted to Chinese AI Models",
+          "url": "https://chinaselectcommittee.house.gov/media/reports/joint-investigation-report-china-is-trying-to-get-us-companies-addicted-to-chinese-ai-models",
+          "summary": "Article URL: https://chinaselectcommittee.house.gov/media/reports/joint-investigation-report-china-is-trying-to-get-us-companies-addicted-to-chinese-ai-models Comments URL: https://news.ycombinator.com/item?id=50584675 Points: 3 # Comments: 2",
+          "pubDate": "2026-11-21T01:03:45.000Z",
+          "extraSourceIds": []
+        },
+        {
+          "id": "65e6690008f46b75f8c715eed3a010e86e58de508116b30bb7f9599ac72334e2",
+          "sourceId": "hn_ai",
+          "title": "A push for a treaty to not allow AI total control over nukes",
+          "url": "https://theelders.org/news/humanity-threshold-declaration-artificial-intelligence-and-nuclear-weapons",
+          "summary": "Article URL: https://theelders.org/news/humanity-threshold-declaration-artificial-intelligence-and-nuclear-weapons Comments URL: https://news.ycombinator.com/item?id=50584410 Points: 1 # Comments: 0",
+          "pubDate": "2026-11-21T00:31:13.000Z",
+          "extraSourceIds": []
+        },
         {
           "id": "2324c40553081ca206b18c7bc5b3900942f07f4942461e966d2e282ecca62cb9",
           "sourceId": "hn_ai",
@@ -3533,170 +3695,8 @@
           "sourceId": "hn_ai",
           "title": "Is Ssense Pivoting to AI Slop?",
           "url": "https://www.thecut.com/article/is-ssense-pivoting-to-ai-slop.html",
-          "summary": "Article URL: https://www.thecut.com/article/is-ssense-pivoting-to-ai-slop.html Comments URL: https://news.ycombinator.com/item?id=50584218 Points: 2 # Comments: 1",
+          "summary": "Article URL: https://www.thecut.com/article/is-ssense-pivoting-to-ai-slop.html Comments URL: https://news.ycombinator.com/item?id=50584218 Points: 3 # Comments: 2",
           "pubDate": "2026-11-21T00:06:18.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "c6ab96ce22acf7ceb2ebb3ac59acd8d1851c769d2cb2fb6c4a955157702f7e0f",
-          "sourceId": "hn_ai",
-          "title": "AI models change their answers when they are monitored",
-          "url": "https://www.jordannews.jo/Section-129/Technology/AI-models-change-their-answers-when-they-are-monitored-59093",
-          "summary": "Article URL: https://www.jordannews.jo/Section-129/Technology/AI-models-change-their-answers-when-they-are-monitored-59093 Comments URL: https://news.ycombinator.com/item?id=50583899 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T23:33:44.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "547c4140d1b3b75548c25f662f50d7912f462b658af353184a7b35da342debb3",
-          "sourceId": "hn_ai",
-          "title": "Show HN: SaturnSQL Context, telling AI tools what the database means",
-          "url": "https://saturnsql.com/context-layer",
-          "summary": "I've seen a rising demand for context when AI queries data from different places, so I built a way to provide it. You basically describe the tables, write free-form markdown notes and set definitions (e.g. the SQL for how to calculate an active user, so everyone in the company calculates it the same way). It support Apache Ossie and the context can live in your codebase or my service or both. Comments URL: https://news.ycombinator.com/item?id=50583881 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T23:31:55.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "37d5c2a1f7ddc0961aeb430545cd619f83d208d71de7ebd63aedabd77a9cbe10",
-          "sourceId": "hn_ai",
-          "title": "Tor Books Removes Book Cover Generated with AI",
-          "url": "https://bsky.app/profile/torbooks.bsky.social/post/3n2r7ra4rki2w",
-          "summary": "Article URL: https://bsky.app/profile/torbooks.bsky.social/post/3n2r7ra4rki2w Comments URL: https://news.ycombinator.com/item?id=50583716 Points: 5 # Comments: 0",
-          "pubDate": "2026-11-20T23:14:11.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "2706ce25057aabfd9c2795aa50a54ac92e88185493dafce527d7fd327ddb4e80",
-          "sourceId": "hn_ai",
-          "title": "Cursor tells Congress it's considering phasing out foreign open-weight AI models",
-          "url": "https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html",
-          "summary": "Article URL: https://www.cnbc.com/2026/11/20/cursor-chinese-ai-models-geopolitical-risk.html Comments URL: https://news.ycombinator.com/item?id=50583519 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T22:55:03.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "4c5eab8c16f17604ab9d4a3a65da3310d12509e7431c1f96602f3ea8fef13f5f",
-          "sourceId": "hn_ai",
-          "title": "AI may have solved the most important problem in mathematics",
-          "url": "https://www.economist.com/science-and-technology/2026/11/20/ai-may-have-solved-the-most-important-problem-in-mathematics",
-          "summary": "Article URL: https://www.economist.com/science-and-technology/2026/11/20/ai-may-have-solved-the-most-important-problem-in-mathematics Comments URL: https://news.ycombinator.com/item?id=50583445 Points: 11 # Comments: 4",
-          "pubDate": "2026-11-20T22:46:59.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "1e4c52bb19557e8a8ae952a36fbaba60c88b9d3dd40551e32961d7ec24293705",
-          "sourceId": "hn_ai",
-          "title": "Libreboot Abandons Anti-AI Policy After One Month",
-          "url": "https://www.phoronix.com/news/Libreboot-Drops-AI-Policy",
-          "summary": "Article URL: https://www.phoronix.com/news/Libreboot-Drops-AI-Policy Comments URL: https://news.ycombinator.com/item?id=50583380 Points: 6 # Comments: 0",
-          "pubDate": "2026-11-20T22:42:14.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "2d3268ee9e10cbe8255dd64436217239d6637ac7443cb9a2312789786da7523e",
-          "sourceId": "hn_ai",
-          "title": "Written Agent Authorizations: 25 Instruments, Dissected for AI-Agent Design",
-          "url": "https://github.com/dazzaji/agent4whom/blob/main/25-legal-instruments.md",
-          "summary": "Article URL: https://github.com/dazzaji/agent4whom/blob/main/25-legal-instruments.md Comments URL: https://news.ycombinator.com/item?id=50583377 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T22:41:37.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "a52ab050f42f83923d3d38d6d0ced8b74a95312aa75666e02ad99b07824aca8c",
-          "sourceId": "hn_ai",
-          "title": "Antseed – brings people's computers together to serve AI",
-          "url": "https://antseed.com/",
-          "summary": "Article URL: https://antseed.com/ Comments URL: https://news.ycombinator.com/item?id=50583354 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T22:39:24.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "0d005902093f0825c40cd1bfbcd150eef863c7952db80098471e1222750f50a7",
-          "sourceId": "hn_ai",
-          "title": "Jsonbit – Reduce token usage when AI reads logs",
-          "url": "https://github.com/prathikmurugan/jsonbit",
-          "summary": "Article URL: https://github.com/prathikmurugan/jsonbit Comments URL: https://news.ycombinator.com/item?id=50582997 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T22:08:26.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "3b42829b973589feee99b0c9fbe299591c454780e46200c9f800170e1bb0fe50",
-          "sourceId": "hn_ai",
-          "title": "Leaky AI supply chain is exposing secret user data at an alarming rate",
-          "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
-          "summary": "Article URL: https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/ Comments URL: https://news.ycombinator.com/item?id=50582794 Points: 6 # Comments: 1",
-          "pubDate": "2026-11-20T21:53:39.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "532fe0f22f6780c0062cd530a5af64ea18044814998a1dc654a018ac5484eb6f",
-          "sourceId": "hn_ai",
-          "title": "Why Anthropic's blockbuster debut didn't ease Wall Street's AI fears",
-          "url": "https://www.cnn.com/2026/11/20/investing/anthropic-ai-stock-nasdaq",
-          "summary": "Article URL: https://www.cnn.com/2026/11/20/investing/anthropic-ai-stock-nasdaq Comments URL: https://news.ycombinator.com/item?id=50582751 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T21:50:43.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "3a35b25e0feb2b4206dc0b1d2dfa4fdef64ca074ef2644f8e67915e5f42db532",
-          "sourceId": "hn_ai",
-          "title": "Prompt Canaries Detect Prompt Leaks at AI Providers",
-          "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
-          "summary": "Article URL: https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens Comments URL: https://news.ycombinator.com/item?id=50582734 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T21:49:42.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "31d6e2979bbc71e0d2a47c0c27ceaf18d7a851138da8c88f99599a8feb9cd375",
-          "sourceId": "hn_ai",
-          "title": "Show HN: Luminol: see what AI evidence a Windows PC holds and when it expires",
-          "url": "https://github.com/adilshadowaiforensics/luminol/releases/tag/v0.1.1",
-          "summary": "Article URL: https://github.com/adilshadowaiforensics/luminol/releases/tag/v0.1.1 Comments URL: https://news.ycombinator.com/item?id=50582358 Points: 3 # Comments: 0",
-          "pubDate": "2026-11-20T21:23:16.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "fa86ab9eb01462d4c69de482c2fb3f23935f3005e862f4ab14ee6502fb59b90f",
-          "sourceId": "hn_ai",
-          "title": "Anthropic's IPO Bust Deepens $4T AI Wipeout on Wall Street",
-          "url": "https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90",
-          "summary": "Article URL: https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90 Comments URL: https://news.ycombinator.com/item?id=50582280 Points: 27 # Comments: 4",
-          "pubDate": "2026-11-20T21:18:46.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "5c076f3d052b376e70a740d1dd1ba712f76fa9df1f5faab21d39013aef1c0467",
-          "sourceId": "hn_ai",
-          "title": "AI Trade Fears, Anthropic IPO Aftermath Prompts Tech Selloff",
-          "url": "https://www.bloomberg.com/news/live-blog/2026-11-20/markets-turmoil",
-          "summary": "Article URL: https://www.bloomberg.com/news/live-blog/2026-11-20/markets-turmoil Comments URL: https://news.ycombinator.com/item?id=50582084 Points: 3 # Comments: 1",
-          "pubDate": "2026-11-20T21:04:20.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "47cf0dc9cff5ad78099fdeff0e4d579eefc6a3e12ba5fd89d663f4c6295f591a",
-          "sourceId": "hn_ai",
-          "title": "AI is building me a web browser",
-          "url": "https://blog.senko.net/ai-is-building-me-a-web-browser",
-          "summary": "Article URL: https://blog.senko.net/ai-is-building-me-a-web-browser Comments URL: https://news.ycombinator.com/item?id=50581976 Points: 6 # Comments: 0",
-          "pubDate": "2026-11-20T20:57:55.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "adb061caac811ed56e1ee5c38754e64c6469e200b992451bd4a8ffffd2ad8729",
-          "sourceId": "hn_ai",
-          "title": "LegisComply – Mask sensitive details in AI prompts",
-          "url": "https://www.legiscomply.com/?sample=proposal-review",
-          "summary": "Article URL: https://www.legiscomply.com/?sample=proposal-review Comments URL: https://news.ycombinator.com/item?id=50581897 Points: 1 # Comments: 0",
-          "pubDate": "2026-11-20T20:52:52.000Z",
-          "extraSourceIds": []
-        },
-        {
-          "id": "f3a29f5ae3599c55c3af875b3f342a153f1f408c1e206b149419ab567f51b547",
-          "sourceId": "hn_ai",
-          "title": "Second Brain and Agent Maintenance Thoughts on AI Usage?",
-          "url": "https://news.ycombinator.com/item?id=50581873",
-          "summary": "I have been seeing tons of stuff about people developing 'second brains' as a data vault for their AI usage on X. I fully understand the ideology, in terms of storing data, reducing context, having a single pane to work off of, etc. The part I struggle with, is that as an employee, I feel like every time I create a workflow, recurring data-pull, etc., it feels as if I am creating an app that I have to maintain myself. When my organization is constantly changing permissions, MCP accessibility, and token usage, I am having to maintain the app as if I were a developer, updating the automations as time goes on. I am grateful that I am technical enough to do this, and could probably avoid much of this problem if I had better technical foresight, but for a non-technical employee this seems like a significant barrier to AI-success on a per-employee basis. Anybody else experience the same maintenance struggle? I have developed countless useful agents that just die off in my mind after a few days because I forget about them, and they break. Comments URL: https://news.ycombinator.com/item?id=50581873 Points: 2 # Comments: 0",
-          "pubDate": "2026-11-20T20:51:15.000Z",
           "extraSourceIds": []
         }
       ]
@@ -3704,24 +3704,42 @@
     "hackernews": {
       "sourceId": "hackernews",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:39.009157Z",
+      "updatedAt": "2026-11-21T07:53:24.919809Z",
       "error": null,
       "items": [
         {
-          "id": "5431253c67bd43f461d9407c760d7a29360d2a1bf2ec144bf532946a8f7bc1a3",
+          "id": "c785532dfd336293877668997db3a77c95f01b64c0c7a28adf6131b6eeecb2bc",
           "sourceId": "hackernews",
-          "title": "Re: Riemann",
-          "url": "https://borretti.me/article/re-riemann",
-          "summary": "Article URL: https://borretti.me/article/re-riemann Comments URL: https://news.ycombinator.com/item?id=50583982 Points: 7 # Comments: 0",
+          "title": "ClawDOS – An AI coding agent for DOS",
+          "url": "http://ricapar.net/ClawDOS/",
+          "summary": "Article URL: http://ricapar.net/ClawDOS/ Comments URL: https://news.ycombinator.com/item?id=50586292 Points: 29 # Comments: 5",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "74a385fa6b5f12e8836fe43e1d8df25efc21d214ac028d61eb3db0047a3bf505",
+          "id": "640fa271c980aedc1e733af9b064660ac538613205be518f70cd035554cb4681",
           "sourceId": "hackernews",
-          "title": "Help github just deleted me",
-          "url": "https://nate.mecca1.net/posts/2026-11-20_help/",
-          "summary": "Article URL: https://nate.mecca1.net/posts/2026-11-20_help/ Comments URL: https://news.ycombinator.com/item?id=50583911 Points: 40 # Comments: 20",
+          "title": "Backblaze Notice at Collection and Privacy Policy",
+          "url": "https://www.backblaze.com/company/policy/privacy",
+          "summary": "Article URL: https://www.backblaze.com/company/policy/privacy Comments URL: https://news.ycombinator.com/item?id=50585593 Points: 165 # Comments: 51",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "27220bc92fbc291541bf06d1e80e215becb764e616d0225dfe4f3c30f9a1c9de",
+          "sourceId": "hackernews",
+          "title": "Clojure will affect the way you think about programming (2017)",
+          "url": "https://eli.thegreenplace.net/2017/clojure-the-perfect-language-to-expand-your-brain/",
+          "summary": "Article URL: https://eli.thegreenplace.net/2017/clojure-the-perfect-language-to-expand-your-brain/ Comments URL: https://news.ycombinator.com/item?id=50585376 Points: 61 # Comments: 19",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "9bb7b6a1c90fe5d4efe7bf84bf24aa950c24b8ec6d5fd0e7a374e313de69a848",
+          "sourceId": "hackernews",
+          "title": "Serious cyberattack thought backed by wealthy operators",
+          "url": "https://www.ruv.is/english/2026-11-20-serious-cyberattack-thought-backed-by-wealthy-operators-493411",
+          "summary": "Article URL: https://www.ruv.is/english/2026-11-20-serious-cyberattack-thought-backed-by-wealthy-operators-493411 Comments URL: https://news.ycombinator.com/item?id=50583856 Points: 73 # Comments: 35",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3730,16 +3748,16 @@
           "sourceId": "hackernews",
           "title": "Sir Brian May adds new dimension to Hera asteroid",
           "url": "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/sir-brian-may-adds-new-dimension-to-hera-asteroid",
-          "summary": "Article URL: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/sir-brian-may-adds-new-dimension-to-hera-asteroid Comments URL: https://news.ycombinator.com/item?id=50583768 Points: 16 # Comments: 0",
+          "summary": "Article URL: https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/sir-brian-may-adds-new-dimension-to-hera-asteroid Comments URL: https://news.ycombinator.com/item?id=50583768 Points: 89 # Comments: 19",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "2c83f32b0721d50d09c5dbd340436bae0539472efab33cd1b8e9395ffd2cf8eb",
+          "id": "9745726d0768579f1f5380512504428ab9d4e2c0b6f089c007453dc4f4814ab4",
           "sourceId": "hackernews",
-          "title": "AI may have solved the most important problem in mathematics",
-          "url": "https://www.economist.com/science-and-technology/2026/11/20/ai-may-have-solved-the-most-important-problem-in-mathematics",
-          "summary": "Article URL: https://www.economist.com/science-and-technology/2026/11/20/ai-may-have-solved-the-most-important-problem-in-mathematics Comments URL: https://news.ycombinator.com/item?id=50583445 Points: 9 # Comments: 3",
+          "title": "Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?",
+          "url": "https://news.ycombinator.com/item?id=50583761",
+          "summary": "I'm Senior software engineer in the US (DMV area), with 15y of experience. Worked for Fortune 50+ company and bunch of mid-size companies. Been unemployed for 2y and can't find a job, within those 2 years, I pretty much spent my savings that I've saved through years, maybe have 4-5 months left to support my household. Currently, I tutor math and probably about to start working as manager in pizzaria. In Jan 2025, I quit from a mid-size insurance tech company(1000+) after working there for almost 4y, because I was tipped off the they were about to start layoffs and they did. Well, since then I have zero luck finding any job in SWE. At this point, I have massive gap in my resume that I can't explain to recruiters, I can still code (C#/.NET/AWS) and learned the AI, but who cares if date of my last employment is Jan2025. What should I do ? If you have an alternative path (something completely different from SWE or SWE adjacent) that pays \"well\", I would like to hear. Comments URL: https://news.ycombinator.com/item?id=50583761 Points: 114 # Comments: 111",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3748,16 +3766,7 @@
           "sourceId": "hackernews",
           "title": "NINLIVE: The Nine Inch Nails live archive",
           "url": "https://ninlive.com/",
-          "summary": "Article URL: https://ninlive.com/ Comments URL: https://news.ycombinator.com/item?id=50583274 Points: 72 # Comments: 17",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2bdc450d5c7601e9d615bd35a42819e534ee1c8c89b2ce45ced9713d66be4df2",
-          "sourceId": "hackernews",
-          "title": "Nasdaq erases all 2026 gains",
-          "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html",
-          "summary": "Article URL: https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html Comments URL: https://news.ycombinator.com/item?id=50583254 Points: 83 # Comments: 33",
+          "summary": "Article URL: https://ninlive.com/ Comments URL: https://news.ycombinator.com/item?id=50583274 Points: 222 # Comments: 59",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3766,16 +3775,7 @@
           "sourceId": "hackernews",
           "title": "The Hungry Butler Effect: Concealed Commercial Incentives in LLMs",
           "url": "https://www.researchgate.net/publication/418143113_The_Hungry_Butler_Effect_Concealed_Commercial_Incentives_and_the_Erosion_of_Epistemic_Rigour_in_Large_Language_Models",
-          "summary": "Article URL: https://www.researchgate.net/publication/418143113_The_Hungry_Butler_Effect_Concealed_Commercial_Incentives_and_the_Erosion_of_Epistemic_Rigour_in_Large_Language_Models Comments URL: https://news.ycombinator.com/item?id=50583117 Points: 9 # Comments: 4",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "519c4db8cd100c2ab8f3142fa8ce373bb80895f7b8d69a2d192617531b6a1995",
-          "sourceId": "hackernews",
-          "title": "Nvidia accounting under SEC investigation, sources say",
-          "url": "https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html",
-          "summary": "Article URL: https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html Comments URL: https://news.ycombinator.com/item?id=50581438 Points: 206 # Comments: 96",
+          "summary": "Article URL: https://www.researchgate.net/publication/418143113_The_Hungry_Butler_Effect_Concealed_Commercial_Incentives_and_the_Erosion_of_Epistemic_Rigour_in_Large_Language_Models Comments URL: https://news.ycombinator.com/item?id=50583117 Points: 36 # Comments: 13",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3784,7 +3784,7 @@
           "sourceId": "hackernews",
           "title": "Show HN: OpenComputer – an open source alternative to Devin",
           "url": "https://github.com/diggerhq/opencomputer",
-          "summary": "Hi HN! Utpal here, I'm one of the founders of OpenComputer. OpenComputer is an open source cloud coding agent for teams that can run in your own cloud account (AWS, GCP, Azure). We run the agent harness and the sandbox on the same durable VM (architecture in the docs [1]). First commit lands in 24s; the alternatives we benchmarked took 53-72s (benchmarks below [2]). Two other choices: - One VM per team, scalable horizontally. Sessions are isolated in git worktrees. - Session files are backed up to a repo after every turn, so any session can resume on another VM. We noticed that past ~640 session-hours a month, one always-on 4 vCPU VM is cheaper than per-session E2B sandboxes, for example. So at scale, this setup would not only be faster than current SOTA coding agents, but also more cost-efficient. Feel free to try via cloud for free [4] or self host. We would love any and all feedback, and happy to answer any questions! Full demo below [3]. [1]: https://docs.opencomputer.dev/getting-started/architecture [2]: https://opencomputer.dev/blog/cloud-agents-as-fast-as-local/ [3]: https://x.com/IgorZIJ/status/2121309785882591711 [4]: https://app.opencomputer.dev Comments URL: https://news.ycombinator.com/item?id=50581403 Points: 50 # Comments: 15",
+          "summary": "Hi HN! Utpal here, I'm one of the founders of OpenComputer. OpenComputer is an open source cloud coding agent for teams that can run in your own cloud account (AWS, GCP, Azure). We run the agent harness and the sandbox on the same durable VM (architecture in the docs [1]). First commit lands in 24s; the alternatives we benchmarked took 53-72s (benchmarks below [2]). Two other choices: - One VM per team, scalable horizontally. Sessions are isolated in git worktrees. - Session files are backed up to a repo after every turn, so any session can resume on another VM. We noticed that past ~640 session-hours a month, one always-on 4 vCPU VM is cheaper than per-session E2B sandboxes, for example. So at scale, this setup would not only be faster than current SOTA coding agents, but also more cost-efficient. Feel free to try via cloud for free [4] or self host. We would love any and all feedback, and happy to answer any questions! Full demo below [3]. [1]: https://docs.opencomputer.dev/getting-started/architecture [2]: https://opencomputer.dev/blog/cloud-agents-as-fast-as-local/ [3]: https://x.com/IgorZIJ/status/2121309785882591711 [4]: https://app.opencomputer.dev Comments URL: https://news.ycombinator.com/item?id=50581403 Points: 103 # Comments: 27",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3793,7 +3793,7 @@
           "sourceId": "hackernews",
           "title": "Inkling 2 Mini",
           "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
-          "summary": "Article URL: https://thinkingmachines.ai/news/inkling-2-mini/ Comments URL: https://news.ycombinator.com/item?id=50581260 Points: 579 # Comments: 94",
+          "summary": "Article URL: https://thinkingmachines.ai/news/inkling-2-mini/ Comments URL: https://news.ycombinator.com/item?id=50581260 Points: 905 # Comments: 171",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3802,7 +3802,7 @@
           "sourceId": "hackernews",
           "title": "And yet, it moves",
           "url": "https://signoregalilei.com/2026/11/20/and-yet-it-moves/",
-          "summary": "Article URL: https://signoregalilei.com/2026/11/20/and-yet-it-moves/ Comments URL: https://news.ycombinator.com/item?id=50581177 Points: 67 # Comments: 30",
+          "summary": "Article URL: https://signoregalilei.com/2026/11/20/and-yet-it-moves/ Comments URL: https://news.ycombinator.com/item?id=50581177 Points: 137 # Comments: 84",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3811,7 +3811,7 @@
           "sourceId": "hackernews",
           "title": "DreamCoder: Coding harness and IDE from the author of Mastering Emacs",
           "url": "https://www.masteringemacs.org/article/announcing-dreamcoder",
-          "summary": "Article URL: https://www.masteringemacs.org/article/announcing-dreamcoder Comments URL: https://news.ycombinator.com/item?id=50581110 Points: 80 # Comments: 11",
+          "summary": "Article URL: https://www.masteringemacs.org/article/announcing-dreamcoder Comments URL: https://news.ycombinator.com/item?id=50581110 Points: 187 # Comments: 52",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3820,7 +3820,7 @@
           "sourceId": "hackernews",
           "title": "The stochastic parrots have apparently proved the Riemann Hypothesis",
           "url": "https://scottaaronson.blog/?p=10344",
-          "summary": "Article URL: https://scottaaronson.blog/?p=10344 Comments URL: https://news.ycombinator.com/item?id=50581084 Points: 194 # Comments: 158",
+          "summary": "Article URL: https://scottaaronson.blog/?p=10344 Comments URL: https://news.ycombinator.com/item?id=50581084 Points: 270 # Comments: 243",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3829,7 +3829,7 @@
           "sourceId": "hackernews",
           "title": "Winedroid – run Android apps without Android (WASM demo)",
           "url": "https://winedroid.soham.sh/demo/",
-          "summary": "Article URL: https://winedroid.soham.sh/demo/ Comments URL: https://news.ycombinator.com/item?id=50580536 Points: 88 # Comments: 25",
+          "summary": "Article URL: https://winedroid.soham.sh/demo/ Comments URL: https://news.ycombinator.com/item?id=50580536 Points: 129 # Comments: 37",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3838,7 +3838,7 @@
           "sourceId": "hackernews",
           "title": "Hurried Announcement: Alessandro Masullo GRH",
           "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
-          "summary": "Article URL: https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/ Comments URL: https://news.ycombinator.com/item?id=50579568 Points: 1420 # Comments: 653",
+          "summary": "Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968 Comments URL: https://news.ycombinator.com/item?id=50579568 Points: 1908 # Comments: 880",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3847,7 +3847,7 @@
           "sourceId": "hackernews",
           "title": "We promoted developers into architects without informing them",
           "url": "https://manidoraisamy.com/developer-to-architect.html",
-          "summary": "Article URL: https://manidoraisamy.com/developer-to-architect.html Comments URL: https://news.ycombinator.com/item?id=50579331 Points: 263 # Comments: 167",
+          "summary": "Article URL: https://manidoraisamy.com/developer-to-architect.html Comments URL: https://news.ycombinator.com/item?id=50579331 Points: 391 # Comments: 225",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3856,7 +3856,7 @@
           "sourceId": "hackernews",
           "title": "Vibecoding an inference chip",
           "url": "https://ankitg.me/blog/vibecoding-inference-chip/",
-          "summary": "Article URL: https://ankitg.me/blog/vibecoding-inference-chip/ Comments URL: https://news.ycombinator.com/item?id=50579297 Points: 103 # Comments: 36",
+          "summary": "Article URL: https://ankitg.me/blog/vibecoding-inference-chip/ Comments URL: https://news.ycombinator.com/item?id=50579297 Points: 139 # Comments: 55",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3865,25 +3865,7 @@
           "sourceId": "hackernews",
           "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
           "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
-          "summary": "Article URL: https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/ Comments URL: https://news.ycombinator.com/item?id=50578358 Points: 317 # Comments: 124",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "be4edca1faf2d1498c33fadbaab7a8a755ccce335e6bedc4c1cb5f7aea4c4f57",
-          "sourceId": "hackernews",
-          "title": "Google Workers Tell Their Employer Not to Punish Schools That Don't Want AI",
-          "url": "https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/",
-          "summary": "Article URL: https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/ Comments URL: https://news.ycombinator.com/item?id=50577901 Points: 249 # Comments: 190",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "a2aa9b7a739cc9453d8371d508c5872de7fdde4bebe14fd7d291ea3f2d9bfb2f",
-          "sourceId": "hackernews",
-          "title": "I'm Peter Roberts, immigration attorney who does work for YC and startups. AMA",
-          "url": "https://news.ycombinator.com/item?id=50577613",
-          "summary": "I'll be here for the rest of the day. As usual, there are countless possible topics and I'll be guided by whatever you're concerned with. Please remember that I can't provide legal advice on specific cases for obvious liability reasons because I won't have access to all the facts. Please stick to a factual discussion in your questions and comments and I'll try to do the same in my answers! Previous threads we've done: https://news.ycombinator.com/submitted?id=proberts . Comments URL: https://news.ycombinator.com/item?id=50577613 Points: 92 # Comments: 129",
+          "summary": "Article URL: https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/ Comments URL: https://news.ycombinator.com/item?id=50578358 Points: 411 # Comments: 171",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3892,7 +3874,7 @@
           "sourceId": "hackernews",
           "title": "Language Models Can Rewrite Their Own Weights",
           "url": "https://arxiv.org/abs/2611.21885",
-          "summary": "Article URL: https://arxiv.org/abs/2611.21885 Comments URL: https://news.ycombinator.com/item?id=50577265 Points: 324 # Comments: 106",
+          "summary": "Article URL: https://arxiv.org/abs/2611.21885 Comments URL: https://news.ycombinator.com/item?id=50577265 Points: 389 # Comments: 117",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3901,7 +3883,16 @@
           "sourceId": "hackernews",
           "title": "Finite-time blow-up for the Navier–Stokes equations",
           "url": "https://github.com/tristanbuckmaster/navier-stokes/",
-          "summary": "Article URL: https://github.com/tristanbuckmaster/navier-stokes/ Comments URL: https://news.ycombinator.com/item?id=50576232 Points: 252 # Comments: 79",
+          "summary": "Article URL: https://github.com/tristanbuckmaster/navier-stokes/ Comments URL: https://news.ycombinator.com/item?id=50576232 Points: 277 # Comments: 87",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "cb41d205f51bee699f56a17944db12e8cf4a7e651065e8a27c85eaa02d61b941",
+          "sourceId": "hackernews",
+          "title": "Slopstrap – Make your site look hastily vibecoded",
+          "url": "https://slopstrap.mikelacher.com/",
+          "summary": "Article URL: https://slopstrap.mikelacher.com/ Comments URL: https://news.ycombinator.com/item?id=50576012 Points: 201 # Comments: 35",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3910,61 +3901,52 @@
           "sourceId": "hackernews",
           "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
           "url": "https://alpo.ge/remark.pdf",
-          "summary": "Article URL: https://alpo.ge/remark.pdf Comments URL: https://news.ycombinator.com/item?id=50574968 Points: 2300 # Comments: 1557",
+          "summary": "Related: Hurried Announcement: Alessandro Masullo GRH - https://news.ycombinator.com/item?id=50579568 Comments URL: https://news.ycombinator.com/item?id=50574968 Points: 2548 # Comments: 1760",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "e13c19e19a512bf5f6f9576572990b88cf5fee631461542b780e1efa62e756fe",
+          "id": "28ef4bc84a109ad82423eacad4a141dbd59cfe04b6eab8368bbdb975e1926d6e",
           "sourceId": "hackernews",
-          "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
-          "url": "https://architectlabs.com/blog/frostbite",
-          "summary": "Article URL: https://architectlabs.com/blog/frostbite Comments URL: https://news.ycombinator.com/item?id=50572503 Points: 615 # Comments: 320",
+          "title": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day",
+          "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+          "summary": "Article URL: https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off Comments URL: https://news.ycombinator.com/item?id=50574383 Points: 265 # Comments: 530",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "da4968f9deb96a02a55217daaafb259f83a7bef05c2634647c8539929445eee7",
+          "id": "6ee8ed03e789872baf2a23e1b430956a77794e8f328d85a3a94404de516d4e65",
           "sourceId": "hackernews",
-          "title": "If you can't explain something in simple terms, you don't understand it (2017)",
-          "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
-          "summary": "Article URL: https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it Comments URL: https://news.ycombinator.com/item?id=50572355 Points: 610 # Comments: 288",
+          "title": "Fewer slides, more dragons",
+          "url": "https://www.breakingchange.blog/p/fewer-slides-more-dragons",
+          "summary": "Article URL: https://www.breakingchange.blog/p/fewer-slides-more-dragons Comments URL: https://news.ycombinator.com/item?id=50556482 Points: 13 # Comments: 4",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "304a9df1128785a047e066917c3f72ed6e57698f285491f76b17d36ef72f23d8",
+          "id": "6ee3f93126383aa748a2372116ecc74cb2db461f7b4d2d42c547d48bd72b267c",
           "sourceId": "hackernews",
-          "title": "Signal Is Serious About Protecting Your Privacy",
-          "url": "https://signal.org/blog/protecting-your-privacy/",
-          "summary": "Article URL: https://signal.org/blog/protecting-your-privacy/ Comments URL: https://news.ycombinator.com/item?id=50572348 Points: 488 # Comments: 296",
+          "title": "Show HN: Tinnitus frequency finder and audio notch tool",
+          "url": "https://trynotched.com/find",
+          "summary": "I've had tinnitus for about a year and a half. There's no cure, so I'm trying anything that looks promising. One idea people are researching is listening to sound with a notch cut out right at your tinnitus frequency. The frequency finder will help you zero in on your tinnitus pitch. The method write-up is here: https://trynotched.com/how-pitch-matching-works Once you have a pitch, there's a free web app that plays background sounds (stream, rain, wind and so on) with a notch at your frequency: https://trynotched.com/tools . I built it as a PWA so you can save to your phone's home screen and it works offline. No account or time limit. Comments URL: https://news.ycombinator.com/item?id=50541568 Points: 160 # Comments: 109",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "18175ba1fed83fec1148769f54c4d705b3327b9d91fa9af6ca3caa2393a59f35",
+          "id": "3f9aa0450e249ee1b01f2f7afc530d721fb7454ef9a335442b8419b9085bcbae",
           "sourceId": "hackernews",
-          "title": "Microsoft announces Windows Server 2028 with hardened security",
-          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-windows-server-2028-with-hardened-security/",
-          "summary": "Article URL: https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-windows-server-2028-with-hardened-security/ Comments URL: https://news.ycombinator.com/item?id=50550430 Points: 65 # Comments: 75",
+          "title": "3-legged Persian leopard's 150-mile journey highlights Caucasus border hazards",
+          "url": "https://news.mongabay.com/short-article/2026/11/three-legged-persian-leopards-150-mile-journey-highlights-caucasus-border-hazards/",
+          "summary": "Article URL: https://news.mongabay.com/short-article/2026/11/three-legged-persian-leopards-150-mile-journey-highlights-caucasus-border-hazards/ Comments URL: https://news.ycombinator.com/item?id=50540342 Points: 12 # Comments: 0",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "cef328f7e302ec457a806868c3db3afdccb6f19c265308e1c7bc7be1e7d34bf9",
+          "id": "66f8e460188dda392170a71076ea0cc12b588c6607d0302011f8e4694e062eb0",
           "sourceId": "hackernews",
-          "title": "Replacing implicit optionals with a None type in TypeDB",
-          "url": "https://typedb.com/blog/replacing-implicit-optionals-with-a-none-type-in-typedb",
-          "summary": "Article URL: https://typedb.com/blog/replacing-implicit-optionals-with-a-none-type-in-typedb Comments URL: https://news.ycombinator.com/item?id=50535504 Points: 6 # Comments: 0",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7814a2c4eebd9428b62871fae13cc3498fbde5c711d23831c68214a244274f72",
-          "sourceId": "hackernews",
-          "title": "Show HN: An API for word timestamps from speech, 75% within 20ms",
-          "url": "https://quebec.yarn.so",
-          "summary": "Hey HN, we're Yarn (W24) and we make a video editing app for startups, and we built Quebec ( https://quebec.yarn.so ), an API that gives you accurate word timestamps from speech. We needed it because cutting a word even 50ms off from its true timing can ruin talking head footage (examples in the write up). Accurate word timestamps usually come from a forced aligner, which takes the speech audio and a transcript and works out exactly when each word starts and ends. We weren't satisfied with the accuracy of Montreal Forced Aligner (MFA) or new models like ElevenLabs Cue ( https://elevenlabs.io/blog/cue-aligner ). Giving LLMs access to a waveform/spectrogram didn't help much either. So we built our own. There are two particularly interesting parts: - We wrote our own decoder around MFA's acoustic model that only lets each word land within 200ms of the rough timings. That made search small enough to solve exactly, so we don't need to use MFA's beam search. - We added a small CNN, built on the first two layers of Whisper Tiny, that nudges each word boundary by up to 50ms. We couldn't find enough hand-labelled speech that allowed for commercial use, so we had Gemini label our own (17k word boundaries). It took a couple of hours and cost under $200. A net trained on Gemini's labels scored the same as one trained on human labels (73.9% vs. 74%). One way to measure accuracy is % of word boundaries within 20ms of hand labels. Here are the results on Buckeye (hand-labelled American speech that we didn't train on): - Quebec 75% - MFA 61% - ElevenLabs Cue 30% If you want to try it, it's free until tomorrow night. You can point your agent at our docs at https://quebec.yarn.so , and send audio on its own or with your own transcript. After that, it costs $0.32 per hour with no signup (minimum $10 top-up). We serve it at cost. Caveats: only tested in English and slower than ElevenLabs. Let us know if Quebec works well for you, and send us any samples that work badly (you can email support at yarn dot so). Also let us know if you've built or found a better aligner. In theory we would just switch to a better aligner, although we would probably just push a bit harder to make ours better. Thanks! Jasper Comments URL: https://news.ycombinator.com/item?id=50532515 Points: 54 # Comments: 8",
+          "title": "Valkey kills the skiplist, cuts sorted set overhead by up to 43%",
+          "url": "https://valkey.io/blog/from-skiplist-to-b+tree/",
+          "summary": "Article URL: https://valkey.io/blog/from-skiplist-to-b+tree/ Comments URL: https://news.ycombinator.com/item?id=50534387 Points: 110 # Comments: 39",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -3973,7 +3955,25 @@
           "sourceId": "hackernews",
           "title": "Show HN: I made an audio-to-MIDI model 60x more efficient",
           "url": "https://kobi.music/research/dettato",
-          "summary": "I released dettato, my open weight audio to midi transcription model. It beats muscriptor 1.3b on every set and is roughly 60x smaller, without training on copyrighted recordings. Feel free to ask questions Comments URL: https://news.ycombinator.com/item?id=50526023 Points: 227 # Comments: 48",
+          "summary": "I released dettato, my open weight audio to midi transcription model. It beats muscriptor 1.3b on every set and is roughly 60x smaller, without training on copyrighted recordings. Feel free to ask questions Comments URL: https://news.ycombinator.com/item?id=50526023 Points: 272 # Comments: 57",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6ad22bb6582d95ed72782f8d0f1ed82034774410b1d4cd1cf3537c68f5e36a08",
+          "sourceId": "hackernews",
+          "title": "I can’t believe it’s 1",
+          "url": "https://aperiodical.com/2026/11/i-cant-believe-its-1/",
+          "summary": "Article URL: https://aperiodical.com/2026/11/i-cant-believe-its-1/ Comments URL: https://news.ycombinator.com/item?id=50521550 Points: 60 # Comments: 61",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "927a277e7db7fa436bb4618f1835aca7fd7e184172838952256bae04d680ca24",
+          "sourceId": "hackernews",
+          "title": "Why the Airbus A321XLR often gets stuck climbing for first few hours of flight",
+          "url": "https://simpleflying.com/airbus-a321xlr-often-stuck-climbing-1st-few-hours-flight/",
+          "summary": "Article URL: https://simpleflying.com/airbus-a321xlr-often-stuck-climbing-1st-few-hours-flight/ Comments URL: https://news.ycombinator.com/item?id=50495392 Points: 109 # Comments: 76",
           "pubDate": null,
           "extraSourceIds": []
         }
@@ -3982,266 +3982,14 @@
     "producthunt": {
       "sourceId": "producthunt",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:39.010329Z",
+      "updatedAt": "2026-11-21T07:53:24.921360Z",
       "error": null,
       "items": [
-        {
-          "id": "5f3ba8a345632d20f9799d957e793fcbb253a2027cb391210babfa2d11d09b85",
-          "sourceId": "producthunt",
-          "title": "Direct by Instagram",
-          "url": "https://www.producthunt.com/products/instagram",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f4468fb6ed6c6516d624c220e967dfca3ddd5aa5befca2045a58c8d198cd190b",
-          "sourceId": "producthunt",
-          "title": "Zethos",
-          "url": "https://www.producthunt.com/products/zethos",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "920319c191807f59d34753a321234bd28f5d843613b15916f232815932c77e41",
-          "sourceId": "producthunt",
-          "title": "Nova by Vybe",
-          "url": "https://www.producthunt.com/products/vybe-4",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "75cb7a618b92d1056c5c834dc01cdecba499b87c5fce6ccb775e84b422b77061",
-          "sourceId": "producthunt",
-          "title": "Samiksa",
-          "url": "https://www.producthunt.com/products/samiksa",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "a982440826a5004b78cb4f66446f26fcb135b3abf879556881e1e1bcae6bfede",
-          "sourceId": "producthunt",
-          "title": "Storiara",
-          "url": "https://www.producthunt.com/products/storiara",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "210ea273be79bc1f499d7d03a9011b0deb21ad772362e4acfaafb36380d9886b",
-          "sourceId": "producthunt",
-          "title": "Inkrail",
-          "url": "https://www.producthunt.com/products/inkrail",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6152b740a532145833f5b43cbbdfe2ac0897e21a6ecfed94883e3f5a93ca54a0",
-          "sourceId": "producthunt",
-          "title": "tinytldr",
-          "url": "https://www.producthunt.com/products/tinytldr",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "9abc25087722eaeac7cf3631c1c7c2112153fc0b1ea127d812f36353d2efe991",
-          "sourceId": "producthunt",
-          "title": "Interview Coach",
-          "url": "https://www.producthunt.com/products/interview-coach-3",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "0295b105f4a01d580dab6bcaa0baf93b3e1e92d5ae668501017ce7d6302838d4",
-          "sourceId": "producthunt",
-          "title": "Mailpipe",
-          "url": "https://www.producthunt.com/products/mailpipe-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "c484ee5b8bfd4d8aabd97f520025e583d593bf43ed109fd8da47ed0591593cde",
-          "sourceId": "producthunt",
-          "title": "Scam Link Check",
-          "url": "https://www.producthunt.com/products/scam-link-check",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "706a77ff6542bb1400275070333f21b37376bc0ddca41cf9b840d49b01d29cd3",
-          "sourceId": "producthunt",
-          "title": "Veryfi Thinking Mode",
-          "url": "https://www.producthunt.com/products/veryfi",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "9049843f3f18e1571ee7baee5425ab925dc050bcb47bf31ce5f8a44621685de7",
-          "sourceId": "producthunt",
-          "title": "Salus",
-          "url": "https://www.producthunt.com/products/salus",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "862a971505c5518850c394fe93cf0ec26c506da504e6a972576cb42c7c7afa91",
-          "sourceId": "producthunt",
-          "title": "Compass OS",
-          "url": "https://www.producthunt.com/products/compassos-dev",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7283b32affff9a0903ae73b4c945e70fe2c1cb09eeb4f4706039142b96e91bf5",
-          "sourceId": "producthunt",
-          "title": "Badya",
-          "url": "https://www.producthunt.com/products/badya-ai-language-immersion",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2786258b381894a2cf9cdca717644bccecb697545fccc8cc7ba1968eef754bd1",
-          "sourceId": "producthunt",
-          "title": "Lumyna Community Challenge",
-          "url": "https://www.producthunt.com/products/lumyna-community-challenge",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2b5ed174a1f0f5e4b0907b01c8eb33325c84ae45e28c35eb739e9a8aea2374f8",
-          "sourceId": "producthunt",
-          "title": "Rox",
-          "url": "https://www.producthunt.com/products/rox-2",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2f3c4c4812c49afd4fe0f37e9843099694b89c59743343158716575869444527",
-          "sourceId": "producthunt",
-          "title": "Andromon",
-          "url": "https://www.producthunt.com/products/andromon",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "928d2a9ced15b8d23e616511392a4ac25fac35346b20728e4be8e915f1aa30b2",
-          "sourceId": "producthunt",
-          "title": "tensorViz",
-          "url": "https://www.producthunt.com/products/tensorviz",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "d589b78cde25c665d56ee2f59d9c65cb0804775450ce0d3c36ca8904693d363a",
-          "sourceId": "producthunt",
-          "title": "Stormi",
-          "url": "https://www.producthunt.com/products/stormi",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f4fd806586882fe23d837336a72d79d7f9bf207b09b05587f53afd139641e00d",
-          "sourceId": "producthunt",
-          "title": "tripps",
-          "url": "https://www.producthunt.com/products/tripps",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
         {
           "id": "1b98d145f6c27b7109db377b8ccd34547978a032db18d18f83eb46ecb8373539",
           "sourceId": "producthunt",
           "title": "UndoGuard",
           "url": "https://www.producthunt.com/products/undoguard",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "a03ba4503d78719e1dbfdf69073437cbcbb9d88a4d1036de7a32512f4227f14b",
-          "sourceId": "producthunt",
-          "title": "greatai Review",
-          "url": "https://www.producthunt.com/products/greatai-review",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "d6baeb0b4ec050eff83d999ffeff0e509c648f85248f2ddff00cc47c1e625e52",
-          "sourceId": "producthunt",
-          "title": "Saparo",
-          "url": "https://www.producthunt.com/products/saparo",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "d4886a740b0fcd961983b3aebe4168d5c79c3892d5b306b8b8d8886ad91298b3",
-          "sourceId": "producthunt",
-          "title": "aiteam.space",
-          "url": "https://www.producthunt.com/products/aiteam-space",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "2128265d7d75f818a33c7eaf2db2f3182f2d980a91a4c23545fc7237f9a7ba1e",
-          "sourceId": "producthunt",
-          "title": "Tamekoshi",
-          "url": "https://www.producthunt.com/products/tamekoshi",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "942fcb48328520999b1a64b5e3fd9f65220935c915db7094607d29773c7fc8c1",
-          "sourceId": "producthunt",
-          "title": "Same Moon",
-          "url": "https://www.producthunt.com/products/same-moon",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "dab4072404229a0c241eaedccc9ce3d8bc2ebc159e2aec04d9c5998011d0d718",
-          "sourceId": "producthunt",
-          "title": "FFMPA Kids News",
-          "url": "https://www.producthunt.com/products/ffmpa-kids-news",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "8b92d62bb01fb51f0c064a4077d8bb7f99b686ed2e2539af0f9fa27c5bb9d446",
-          "sourceId": "producthunt",
-          "title": "Volcano",
-          "url": "https://www.producthunt.com/products/volcano-3",
-          "summary": "",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "12d8e9490c02b2866fa5fa5de2b0dac16732240b85e456e90901bc52d261eeaa",
-          "sourceId": "producthunt",
-          "title": "Memanto Cloud",
-          "url": "https://www.producthunt.com/products/memanto-by-moorcheh",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4256,28 +4004,64 @@
           "extraSourceIds": []
         },
         {
-          "id": "f1b554562f693828a8dbad23e3e920c0337915d857fe54aec51cebc14775dd46",
+          "id": "c484ee5b8bfd4d8aabd97f520025e583d593bf43ed109fd8da47ed0591593cde",
           "sourceId": "producthunt",
-          "title": "Kuc-kuc",
-          "url": "https://www.producthunt.com/products/kuc-kuc",
+          "title": "Scam Link Check",
+          "url": "https://www.producthunt.com/products/scam-link-check",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "71558614ddd06a2276580bcef9e776c17fb8a5d32701f3bb48ed681dd8a058ee",
+          "id": "6152b740a532145833f5b43cbbdfe2ac0897e21a6ecfed94883e3f5a93ca54a0",
           "sourceId": "producthunt",
-          "title": "Dozy",
-          "url": "https://www.producthunt.com/products/dozy",
+          "title": "tinytldr",
+          "url": "https://www.producthunt.com/products/tinytldr",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "0472e308ea64e78ad636593b86d0f5804acf1c5b08f678109af701172c8c58dc",
+          "id": "75cb7a618b92d1056c5c834dc01cdecba499b87c5fce6ccb775e84b422b77061",
           "sourceId": "producthunt",
-          "title": "ThreadLore",
-          "url": "https://www.producthunt.com/products/threadlore",
+          "title": "Samiksa",
+          "url": "https://www.producthunt.com/products/samiksa",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "dab4072404229a0c241eaedccc9ce3d8bc2ebc159e2aec04d9c5998011d0d718",
+          "sourceId": "producthunt",
+          "title": "FFMPA Kids News",
+          "url": "https://www.producthunt.com/products/ffmpa-kids-news",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "d4886a740b0fcd961983b3aebe4168d5c79c3892d5b306b8b8d8886ad91298b3",
+          "sourceId": "producthunt",
+          "title": "aiteam.space",
+          "url": "https://www.producthunt.com/products/aiteam-space",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "9049843f3f18e1571ee7baee5425ab925dc050bcb47bf31ce5f8a44621685de7",
+          "sourceId": "producthunt",
+          "title": "Salus",
+          "url": "https://www.producthunt.com/products/salus",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2f3c4c4812c49afd4fe0f37e9843099694b89c59743343158716575869444527",
+          "sourceId": "producthunt",
+          "title": "Andromon",
+          "url": "https://www.producthunt.com/products/andromon",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4292,6 +4076,60 @@
           "extraSourceIds": []
         },
         {
+          "id": "f1b554562f693828a8dbad23e3e920c0337915d857fe54aec51cebc14775dd46",
+          "sourceId": "producthunt",
+          "title": "Kuc-kuc",
+          "url": "https://www.producthunt.com/products/kuc-kuc",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f4468fb6ed6c6516d624c220e967dfca3ddd5aa5befca2045a58c8d198cd190b",
+          "sourceId": "producthunt",
+          "title": "Zethos",
+          "url": "https://www.producthunt.com/products/zethos",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "0472e308ea64e78ad636593b86d0f5804acf1c5b08f678109af701172c8c58dc",
+          "sourceId": "producthunt",
+          "title": "ThreadLore",
+          "url": "https://www.producthunt.com/products/threadlore",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "71558614ddd06a2276580bcef9e776c17fb8a5d32701f3bb48ed681dd8a058ee",
+          "sourceId": "producthunt",
+          "title": "Dozy",
+          "url": "https://www.producthunt.com/products/dozy",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "920319c191807f59d34753a321234bd28f5d843613b15916f232815932c77e41",
+          "sourceId": "producthunt",
+          "title": "Nova by Vybe",
+          "url": "https://www.producthunt.com/products/vybe-4",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "d589b78cde25c665d56ee2f59d9c65cb0804775450ce0d3c36ca8904693d363a",
+          "sourceId": "producthunt",
+          "title": "Stormi",
+          "url": "https://www.producthunt.com/products/stormi",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
           "id": "50be6797578043992d19ce1afc84372ee45722a3d7d2b0b11b027707b9c1579e",
           "sourceId": "producthunt",
           "title": "HelpCard",
@@ -4301,28 +4139,82 @@
           "extraSourceIds": []
         },
         {
-          "id": "4f0766b17b509848e8c3ed237138966a82604a8c29c2913ddba34086dd912049",
+          "id": "2b5ed174a1f0f5e4b0907b01c8eb33325c84ae45e28c35eb739e9a8aea2374f8",
           "sourceId": "producthunt",
-          "title": "Cup of Sugar",
-          "url": "https://www.producthunt.com/products/cup-of-sugar-2",
+          "title": "Rox",
+          "url": "https://www.producthunt.com/products/rox-2",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "cef4ead83e0d888b142791b0fbb89eb6b939d10e7758cfd10814970a266f2afa",
+          "id": "9abc25087722eaeac7cf3631c1c7c2112153fc0b1ea127d812f36353d2efe991",
           "sourceId": "producthunt",
-          "title": "DWaste",
-          "url": "https://www.producthunt.com/products/deep-waste",
+          "title": "Interview Coach",
+          "url": "https://www.producthunt.com/products/interview-coach-3",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "93bd86a7b03e06d25c22665b28130c96dc5cc7cedbfd04310633bff8899997d9",
+          "id": "862a971505c5518850c394fe93cf0ec26c506da504e6a972576cb42c7c7afa91",
           "sourceId": "producthunt",
-          "title": "NetSieve",
-          "url": "https://www.producthunt.com/products/netsieve",
+          "title": "Compass OS",
+          "url": "https://www.producthunt.com/products/compassos-dev",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "928d2a9ced15b8d23e616511392a4ac25fac35346b20728e4be8e915f1aa30b2",
+          "sourceId": "producthunt",
+          "title": "tensorViz",
+          "url": "https://www.producthunt.com/products/tensorviz",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "12d8e9490c02b2866fa5fa5de2b0dac16732240b85e456e90901bc52d261eeaa",
+          "sourceId": "producthunt",
+          "title": "Memanto Cloud",
+          "url": "https://www.producthunt.com/products/memanto-by-moorcheh",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "a982440826a5004b78cb4f66446f26fcb135b3abf879556881e1e1bcae6bfede",
+          "sourceId": "producthunt",
+          "title": "Storiara",
+          "url": "https://www.producthunt.com/products/storiara",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "0295b105f4a01d580dab6bcaa0baf93b3e1e92d5ae668501017ce7d6302838d4",
+          "sourceId": "producthunt",
+          "title": "Mailpipe",
+          "url": "https://www.producthunt.com/products/mailpipe-2",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f4fd806586882fe23d837336a72d79d7f9bf207b09b05587f53afd139641e00d",
+          "sourceId": "producthunt",
+          "title": "tripps",
+          "url": "https://www.producthunt.com/products/tripps",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "8b92d62bb01fb51f0c064a4077d8bb7f99b686ed2e2539af0f9fa27c5bb9d446",
+          "sourceId": "producthunt",
+          "title": "Volcano",
+          "url": "https://www.producthunt.com/products/volcano-3",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4337,10 +4229,118 @@
           "extraSourceIds": []
         },
         {
+          "id": "942fcb48328520999b1a64b5e3fd9f65220935c915db7094607d29773c7fc8c1",
+          "sourceId": "producthunt",
+          "title": "Same Moon",
+          "url": "https://www.producthunt.com/products/same-moon",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "cef4ead83e0d888b142791b0fbb89eb6b939d10e7758cfd10814970a266f2afa",
+          "sourceId": "producthunt",
+          "title": "DWaste",
+          "url": "https://www.producthunt.com/products/deep-waste",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "a03ba4503d78719e1dbfdf69073437cbcbb9d88a4d1036de7a32512f4227f14b",
+          "sourceId": "producthunt",
+          "title": "greatai Review",
+          "url": "https://www.producthunt.com/products/greatai-review",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2786258b381894a2cf9cdca717644bccecb697545fccc8cc7ba1968eef754bd1",
+          "sourceId": "producthunt",
+          "title": "Lumyna Community Challenge",
+          "url": "https://www.producthunt.com/products/lumyna-community-challenge",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "d6baeb0b4ec050eff83d999ffeff0e509c648f85248f2ddff00cc47c1e625e52",
+          "sourceId": "producthunt",
+          "title": "Saparo",
+          "url": "https://www.producthunt.com/products/saparo",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "93bd86a7b03e06d25c22665b28130c96dc5cc7cedbfd04310633bff8899997d9",
+          "sourceId": "producthunt",
+          "title": "NetSieve",
+          "url": "https://www.producthunt.com/products/netsieve",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3b346704405be46996a45d5fe33b9ec06fc283684e950fa60ba001d9b16369c0",
+          "sourceId": "producthunt",
+          "title": "Currents",
+          "url": "https://www.producthunt.com/products/currents-4",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
           "id": "69b4bb8ec91c79b1fdc58fa0bfbc3523e4942ea63219de42dc2a324b3e5d3d3c",
           "sourceId": "producthunt",
           "title": "InteraOne",
           "url": "https://www.producthunt.com/products/interaone",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2128265d7d75f818a33c7eaf2db2f3182f2d980a91a4c23545fc7237f9a7ba1e",
+          "sourceId": "producthunt",
+          "title": "Tamekoshi",
+          "url": "https://www.producthunt.com/products/tamekoshi",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "210ea273be79bc1f499d7d03a9011b0deb21ad772362e4acfaafb36380d9886b",
+          "sourceId": "producthunt",
+          "title": "Inkrail",
+          "url": "https://www.producthunt.com/products/inkrail",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "47d093372057542fd3f8b2af033569551f8f43746ac0c02a79aa3bf4f503e5af",
+          "sourceId": "producthunt",
+          "title": "Fack’d",
+          "url": "https://www.producthunt.com/products/fack-d",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "5f3ba8a345632d20f9799d957e793fcbb253a2027cb391210babfa2d11d09b85",
+          "sourceId": "producthunt",
+          "title": "Direct by Instagram",
+          "url": "https://www.producthunt.com/products/instagram",
+          "summary": "",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "4f0766b17b509848e8c3ed237138966a82604a8c29c2913ddba34086dd912049",
+          "sourceId": "producthunt",
+          "title": "Cup of Sugar",
+          "url": "https://www.producthunt.com/products/cup-of-sugar-2",
           "summary": "",
           "pubDate": null,
           "extraSourceIds": []
@@ -4350,7 +4350,7 @@
     "github-trending-today": {
       "sourceId": "github-trending-today",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:39.010444Z",
+      "updatedAt": "2026-11-21T07:53:24.921441Z",
       "error": null,
       "items": [
         {
@@ -4502,7 +4502,7 @@
     "steam": {
       "sourceId": "steam",
       "status": "ok",
-      "updatedAt": "2026-11-21T00:33:51.167156Z",
+      "updatedAt": "2026-11-21T07:53:27.203155Z",
       "error": null,
       "items": [
         {
@@ -4510,16 +4510,7 @@
           "sourceId": "steam",
           "title": "Counter-Strike 2",
           "url": "https://store.steampowered.com/app/730/CounterStrike_2/",
-          "summary": "560,292",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "ba3fd05e78cdca5d65bf242ee77c3a4a8759c77163966ec24f2f82fce806db88",
-          "sourceId": "steam",
-          "title": "ROB RUN",
-          "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
-          "summary": "390,283",
+          "summary": "696,814",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4528,25 +4519,7 @@
           "sourceId": "steam",
           "title": "Dota 2",
           "url": "https://store.steampowered.com/app/570/Dota_2/",
-          "summary": "383,892",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "22b96ee1ac9805205625b98baf2b6cf1016b1539dc951741d221e7bfba27e742",
-          "sourceId": "steam",
-          "title": "Bongo Cat",
-          "url": "https://store.steampowered.com/app/3419430/Bongo_Cat/",
-          "summary": "169,120",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "9173e51751e1015d3741dce6177656fbbe5f30c0f42d1e519e22f6989c57cad9",
-          "sourceId": "steam",
-          "title": "AION 2",
-          "url": "https://store.steampowered.com/app/3393110/AION_2/",
-          "summary": "110,407",
+          "summary": "521,778",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4555,223 +4528,25 @@
           "sourceId": "steam",
           "title": "PUBG: BATTLEGROUNDS",
           "url": "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/",
-          "summary": "97,201",
+          "summary": "433,664",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "3b8a75414260f5e514ca7178eae338728a2dad65ef5a066b7e209aad43f8f8e5",
+          "id": "ba3fd05e78cdca5d65bf242ee77c3a4a8759c77163966ec24f2f82fce806db88",
           "sourceId": "steam",
-          "title": "Team Fortress 2",
-          "url": "https://store.steampowered.com/app/440/Team_Fortress_2/",
-          "summary": "95,190",
+          "title": "ROB RUN",
+          "url": "https://store.steampowered.com/app/4262460/ROB_RUN/",
+          "summary": "221,990",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "6f23c859878706a5675832aff8b371332ea4557b9771f7b6c8bfb338354ec09b",
+          "id": "22b96ee1ac9805205625b98baf2b6cf1016b1539dc951741d221e7bfba27e742",
           "sourceId": "steam",
-          "title": "Call of Duty®",
-          "url": "https://store.steampowered.com/app/1938090/Call_of_Duty/",
-          "summary": "90,286",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f25cafcc1d38894195b765a0d295b72a146dd7420377a0b0d40a701ceb07de41",
-          "sourceId": "steam",
-          "title": "Rust",
-          "url": "https://store.steampowered.com/app/252490/Rust/",
-          "summary": "73,541",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cca8cdfaf0e2f7db7ac31548f8e239796bb4ee573ee3c2424aed5d7d84be2f17",
-          "sourceId": "steam",
-          "title": "Slay the Spire 2",
-          "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
-          "summary": "68,525",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "7c3de5141746b3a3bfa33e13f5bbf11bd332d15acfcd3266bd45566f9283d0da",
-          "sourceId": "steam",
-          "title": "Cyberpunk 2077",
-          "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
-          "summary": "66,342",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "db2f87e88db86bdad54330f99a1af244989edf14d720368694b3cf6d406ac5a1",
-          "sourceId": "steam",
-          "title": "Path of Exile",
-          "url": "https://store.steampowered.com/app/238960/Path_of_Exile/",
-          "summary": "61,083",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "20393eb6c20f291afd6820e10996f67a6fce09b5163a07c2951c2d323f5d3fdc",
-          "sourceId": "steam",
-          "title": "WARDOGS",
-          "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
-          "summary": "58,449",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "66b74aa26ea9caf669d4f1e47d6ab5df964c2c431907d9d9b39395cc30783a37",
-          "sourceId": "steam",
-          "title": "Marvel Rivals",
-          "url": "https://store.steampowered.com/app/2767030/Marvel_Rivals/",
-          "summary": "55,212",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "19b81c365a6b49e5ef55eaa8b5b7de64a24e8ef63ae85eec8ce1c4dea1b87898",
-          "sourceId": "steam",
-          "title": "Tom Clancy's Rainbow Six Siege",
-          "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
-          "summary": "54,389",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "cafb6b7d81a338e24aeedb75972dab5cdb1fe696b3c748281e330db1484b3cce",
-          "sourceId": "steam",
-          "title": "Apex Legends",
-          "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
-          "summary": "50,886",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "3685ab197aa7543393776646700c11099c74fa8bba10349cc5f9c617e90698bd",
-          "sourceId": "steam",
-          "title": "Wallpaper Engine",
-          "url": "https://store.steampowered.com/app/431960/Wallpaper_Engine/",
-          "summary": "50,273",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "25f640dc6c4cbeab80235e0e1a21dcb12c391aefffc38186a853b76372f0b3a0",
-          "sourceId": "steam",
-          "title": "Warframe",
-          "url": "https://store.steampowered.com/app/230410/Warframe/",
-          "summary": "49,719",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "c1ea1c408894e2e22fb2c9259bc668380d36d28af75b6d24353de2fd49c2aaf7",
-          "sourceId": "steam",
-          "title": "Grand Theft Auto V Enhanced",
-          "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
-          "summary": "48,526",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "56e2f2f53bf24be6521b23086a00e6db514917796dfa013db36ac8c87526bc13",
-          "sourceId": "steam",
-          "title": "TBH: Task Bar Hero",
-          "url": "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
-          "summary": "47,483",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "547babfbcb800ec42efdae7d1c7cdeaa27ad6180a3a313eb5e1b5195b1d63e85",
-          "sourceId": "steam",
-          "title": "VRChat",
-          "url": "https://store.steampowered.com/app/438100/VRChat/",
-          "summary": "47,071",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "b0533802e00abfe7a0de256e0b704d58f12df159d2a57cce25f065b1add6f6cf",
-          "sourceId": "steam",
-          "title": "Geometry Dash",
-          "url": "https://store.steampowered.com/app/322170/Geometry_Dash/",
-          "summary": "44,129",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "daf86c83d09c91c0bf8c2f230c7c9d3311463c89ac03148bfa7a4d020ffc2e72",
-          "sourceId": "steam",
-          "title": "Desktop Wallet Heroes",
-          "url": "https://store.steampowered.com/app/5052450/Desktop_Wallet_Heroes/",
-          "summary": "44,069",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "8675e89d044dbee34180d4119e83acfc194f1c11a136ed5b2b36fe1252b538df",
-          "sourceId": "steam",
-          "title": "Grand Theft Auto V Legacy",
-          "url": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/",
-          "summary": "42,261",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "fbd68c34fe71d6b1e32a2f5b27879fbf8306be947e833f2aad4c47f326a61cca",
-          "sourceId": "steam",
-          "title": "Overwatch®",
-          "url": "https://store.steampowered.com/app/2357570/Overwatch/",
-          "summary": "41,196",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "8ec7acf3f46b56d476901428413fa126cf0984b0c2cb6007f767e258af9f40c3",
-          "sourceId": "steam",
-          "title": "War Thunder",
-          "url": "https://store.steampowered.com/app/236390/War_Thunder/",
-          "summary": "36,672",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "78d92e5e54f20dd3bb839c39984f145af72b5dfbb58b01ca719c75b3c660f168",
-          "sourceId": "steam",
-          "title": "Football Manager 27",
-          "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
-          "summary": "36,309",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "6bde3c0276b8e598c0618e6c4a1205bf87baab022d5c1eb1dab9899c20da2790",
-          "sourceId": "steam",
-          "title": "Dead by Daylight",
-          "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
-          "summary": "35,798",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "3369b3c2ae4e206a9f110f65201da10910c04277793a4e210dc4f5ae89e1b658",
-          "sourceId": "steam",
-          "title": "Crosshair X",
-          "url": "https://store.steampowered.com/app/1366800/Crosshair_X/",
-          "summary": "35,553",
-          "pubDate": null,
-          "extraSourceIds": []
-        },
-        {
-          "id": "f13a09442dc5d2e63ed32d55add8860367c1f9ddca5325de042295db89ab12c0",
-          "sourceId": "steam",
-          "title": "EA SPORTS FC™ 27",
-          "url": "https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27/",
-          "summary": "34,902",
+          "title": "Bongo Cat",
+          "url": "https://store.steampowered.com/app/3419430/Bongo_Cat/",
+          "summary": "183,177",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4780,16 +4555,124 @@
           "sourceId": "steam",
           "title": "Phantom Blade Zero",
           "url": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
-          "summary": "34,392",
+          "summary": "155,333",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "f0b7b276167d0ee95b2460a03b231aa2df4973c3784e1adb2e6f697a49243aac",
+          "id": "cafb6b7d81a338e24aeedb75972dab5cdb1fe696b3c748281e330db1484b3cce",
           "sourceId": "steam",
-          "title": "ARC Raiders",
-          "url": "https://store.steampowered.com/app/1808500/ARC_Raiders/",
-          "summary": "34,242",
+          "title": "Apex Legends",
+          "url": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+          "summary": "138,081",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "cca8cdfaf0e2f7db7ac31548f8e239796bb4ee573ee3c2424aed5d7d84be2f17",
+          "sourceId": "steam",
+          "title": "Slay the Spire 2",
+          "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
+          "summary": "106,652",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "9173e51751e1015d3741dce6177656fbbe5f30c0f42d1e519e22f6989c57cad9",
+          "sourceId": "steam",
+          "title": "AION 2",
+          "url": "https://store.steampowered.com/app/3393110/AION_2/",
+          "summary": "103,637",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3b8a75414260f5e514ca7178eae338728a2dad65ef5a066b7e209aad43f8f8e5",
+          "sourceId": "steam",
+          "title": "Team Fortress 2",
+          "url": "https://store.steampowered.com/app/440/Team_Fortress_2/",
+          "summary": "95,257",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "3685ab197aa7543393776646700c11099c74fa8bba10349cc5f9c617e90698bd",
+          "sourceId": "steam",
+          "title": "Wallpaper Engine",
+          "url": "https://store.steampowered.com/app/431960/Wallpaper_Engine/",
+          "summary": "91,844",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6f23c859878706a5675832aff8b371332ea4557b9771f7b6c8bfb338354ec09b",
+          "sourceId": "steam",
+          "title": "Call of Duty®",
+          "url": "https://store.steampowered.com/app/1938090/Call_of_Duty/",
+          "summary": "84,941",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "c1ea1c408894e2e22fb2c9259bc668380d36d28af75b6d24353de2fd49c2aaf7",
+          "sourceId": "steam",
+          "title": "Grand Theft Auto V Enhanced",
+          "url": "https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_Enhanced/",
+          "summary": "78,800",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "91775245e6c61f93cee2e4689d92b3a5c021382ff11767ce0eb80495a26c3908",
+          "sourceId": "steam",
+          "title": "Probably Stolen",
+          "url": "https://store.steampowered.com/app/4348910/Probably_Stolen_Cyberpunk_Shopkeeper_Sim/",
+          "summary": "73,915",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "f25cafcc1d38894195b765a0d295b72a146dd7420377a0b0d40a701ceb07de41",
+          "sourceId": "steam",
+          "title": "Rust",
+          "url": "https://store.steampowered.com/app/252490/Rust/",
+          "summary": "70,987",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b2f598305ccfcd02ec393b28d0ebe9f20c55b0d03a174cd5b27f4e36e482db7b",
+          "sourceId": "steam",
+          "title": "Delta Force",
+          "url": "https://store.steampowered.com/app/2507950/Delta_Force/",
+          "summary": "69,674",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7c3de5141746b3a3bfa33e13f5bbf11bd332d15acfcd3266bd45566f9283d0da",
+          "sourceId": "steam",
+          "title": "Cyberpunk 2077",
+          "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+          "summary": "65,164",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "25f640dc6c4cbeab80235e0e1a21dcb12c391aefffc38186a853b76372f0b3a0",
+          "sourceId": "steam",
+          "title": "Warframe",
+          "url": "https://store.steampowered.com/app/230410/Warframe/",
+          "summary": "61,720",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "56e2f2f53bf24be6521b23086a00e6db514917796dfa013db36ac8c87526bc13",
+          "sourceId": "steam",
+          "title": "TBH: Task Bar Hero",
+          "url": "https://store.steampowered.com/app/3678970/TBH_Task_Bar_Hero/",
+          "summary": "57,825",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4798,7 +4681,16 @@
           "sourceId": "steam",
           "title": "Limbus Company",
           "url": "https://store.steampowered.com/app/1973530/Limbus_Company/",
-          "summary": "33,866",
+          "summary": "57,452",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "547babfbcb800ec42efdae7d1c7cdeaa27ad6180a3a313eb5e1b5195b1d63e85",
+          "sourceId": "steam",
+          "title": "VRChat",
+          "url": "https://store.steampowered.com/app/438100/VRChat/",
+          "summary": "55,092",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4807,43 +4699,79 @@
           "sourceId": "steam",
           "title": "Stardew Valley",
           "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
-          "summary": "33,659",
+          "summary": "54,235",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "34037af49375913589a780dee799b6b893bb22901c1be89a2c14d16e25529ab4",
+          "id": "8675e89d044dbee34180d4119e83acfc194f1c11a136ed5b2b36fe1252b538df",
           "sourceId": "steam",
-          "title": "Valheim",
-          "url": "https://store.steampowered.com/app/892970/Valheim/",
-          "summary": "32,655",
+          "title": "Grand Theft Auto V Legacy",
+          "url": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/",
+          "summary": "54,143",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "2be0970e0efe5caf31f1d2755e46d83e92425f52ea1fcd2168950c2b65779fb8",
+          "id": "daf86c83d09c91c0bf8c2f230c7c9d3311463c89ac03148bfa7a4d020ffc2e72",
           "sourceId": "steam",
-          "title": "Project Zomboid",
-          "url": "https://store.steampowered.com/app/108600/Project_Zomboid/",
-          "summary": "32,278",
+          "title": "Desktop Wallet Heroes",
+          "url": "https://store.steampowered.com/app/5052450/Desktop_Wallet_Heroes/",
+          "summary": "53,978",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "2308be1440745bfc05d9f37d5288e0268492f5236a21145e5c96d223c407e536",
+          "id": "8ec7acf3f46b56d476901428413fa126cf0984b0c2cb6007f767e258af9f40c3",
           "sourceId": "steam",
-          "title": "Baldur's Gate 3",
-          "url": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/",
-          "summary": "31,147",
+          "title": "War Thunder",
+          "url": "https://store.steampowered.com/app/236390/War_Thunder/",
+          "summary": "52,944",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "6db7fef745e777565e78ac14811a8325c770ca73fc036dcb9462abff76a1796e",
+          "id": "db2f87e88db86bdad54330f99a1af244989edf14d720368694b3cf6d406ac5a1",
           "sourceId": "steam",
-          "title": "The Elder Scrolls V: Skyrim Special Edition",
-          "url": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/",
-          "summary": "29,775",
+          "title": "Path of Exile",
+          "url": "https://store.steampowered.com/app/238960/Path_of_Exile/",
+          "summary": "47,303",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "20393eb6c20f291afd6820e10996f67a6fce09b5163a07c2951c2d323f5d3fdc",
+          "sourceId": "steam",
+          "title": "WARDOGS",
+          "url": "https://store.steampowered.com/app/1867240/WARDOGS/",
+          "summary": "43,063",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "7501e13513955781190ee6022239d2947bdd240a74d356d4d06e149d5e10bbdc",
+          "sourceId": "steam",
+          "title": "Don't Starve Together",
+          "url": "https://store.steampowered.com/app/322330/Dont_Starve_Together/",
+          "summary": "38,608",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "66b74aa26ea9caf669d4f1e47d6ab5df964c2c431907d9d9b39395cc30783a37",
+          "sourceId": "steam",
+          "title": "Marvel Rivals",
+          "url": "https://store.steampowered.com/app/2767030/Marvel_Rivals/",
+          "summary": "38,602",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "19b81c365a6b49e5ef55eaa8b5b7de64a24e8ef63ae85eec8ce1c4dea1b87898",
+          "sourceId": "steam",
+          "title": "Tom Clancy's Rainbow Six Siege",
+          "url": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+          "summary": "37,800",
           "pubDate": null,
           "extraSourceIds": []
         },
@@ -4852,16 +4780,88 @@
           "sourceId": "steam",
           "title": "Red Dead Redemption 2",
           "url": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/",
-          "summary": "29,662",
+          "summary": "37,460",
           "pubDate": null,
           "extraSourceIds": []
         },
         {
-          "id": "c25c3d609d625512c18de6e99625e35029df848323cc4f73e36279852c2aa7e2",
+          "id": "ae70273187c0d5bd927f34c039107296c315416470a66bbaedb468ea888a8833",
           "sourceId": "steam",
-          "title": "DayZ",
-          "url": "https://store.steampowered.com/app/221100/DayZ/",
-          "summary": "28,151",
+          "title": "Hearts of Iron IV",
+          "url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+          "summary": "35,627",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "4ec076428aa2de784c928368ae3895bf58cbcbf37f57be18803f22cbd611e8d0",
+          "sourceId": "steam",
+          "title": "NARAKA: BLADEPOINT",
+          "url": "https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/",
+          "summary": "34,567",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "fbd68c34fe71d6b1e32a2f5b27879fbf8306be947e833f2aad4c47f326a61cca",
+          "sourceId": "steam",
+          "title": "Overwatch®",
+          "url": "https://store.steampowered.com/app/2357570/Overwatch/",
+          "summary": "34,204",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "6bde3c0276b8e598c0618e6c4a1205bf87baab022d5c1eb1dab9899c20da2790",
+          "sourceId": "steam",
+          "title": "Dead by Daylight",
+          "url": "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+          "summary": "32,873",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "78d92e5e54f20dd3bb839c39984f145af72b5dfbb58b01ca719c75b3c660f168",
+          "sourceId": "steam",
+          "title": "Football Manager 27",
+          "url": "https://store.steampowered.com/app/4530370/Football_Manager_27/",
+          "summary": "31,685",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "92ad8dc7209523f65472c1ad50c06b3c865e0cd6a712fe6387225ac871949ce6",
+          "sourceId": "steam",
+          "title": "Euro Truck Simulator 2",
+          "url": "https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/",
+          "summary": "30,520",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "2be0970e0efe5caf31f1d2755e46d83e92425f52ea1fcd2168950c2b65779fb8",
+          "sourceId": "steam",
+          "title": "Project Zomboid",
+          "url": "https://store.steampowered.com/app/108600/Project_Zomboid/",
+          "summary": "29,746",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "5b53747c7e9b6b6f8318ea7e6fc0cdcb233560b80a5afbd75af58d827bee9fe8",
+          "sourceId": "steam",
+          "title": "Sid Meier's Civilization VI",
+          "url": "https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/",
+          "summary": "29,595",
+          "pubDate": null,
+          "extraSourceIds": []
+        },
+        {
+          "id": "b0533802e00abfe7a0de256e0b704d58f12df159d2a57cce25f065b1add6f6cf",
+          "sourceId": "steam",
+          "title": "Geometry Dash",
+          "url": "https://store.steampowered.com/app/322170/Geometry_Dash/",
+          "summary": "29,210",
           "pubDate": null,
           "extraSourceIds": []
         }
