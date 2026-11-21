@@ -4,6 +4,13 @@ AI news reader (Flutter). The same codebase can target other desktops and phones
 
 Domestic RSS is fetched on the device. Overseas feeds are bundled as `data/snapshot.json` and can be refreshed from jsDelivr after you publish this repo.
 
+## Download
+
+Version 1.0.0 packages are on the [release](https://github.com/martjay/AI-News-Reader/releases/tag/v1.0.0).
+
+- **Windows:** download `News-windows.rar`, extract the whole folder, and run `News.exe`. Leave the exe next to the `data` folder and the bundled DLLs. The package already includes the Visual C++ runtime used by the release build.
+- **Android:** download `News-android.apk` and install it. Allow installation from this source if the phone asks.
+
 ## Run
 
 1. Install [Flutter](https://flutter.dev) (stable) and put it on `PATH`.
@@ -14,11 +21,20 @@ install.bat
 run.bat
 ```
 
-Windows release + Android APK (on Mac: `cd app && flutter run -d macos`):
+Windows release and Android APK together (on Mac: `cd app && flutter run -d macos`):
 
 ```bat
 build.bat
 ```
+
+One target only:
+
+```bat
+build-windows.bat
+build-android.bat
+```
+
+`build-windows.bat` writes `dist\News-windows\`. `build-android.bat` writes `dist\News-android\app-release.apk`.
 
 Ship **`dist\News-windows\`**, not `app\build\windows\x64\runner\Debug`. A Debug exe needs `MSVCP140D.dll` (Visual Studio debug CRT), which is not installed on user machines and is not redistributable. The Release folder plus the bundled `msvcp140.dll` / `vcruntime140.dll` is what `build.bat` copies into `dist`.
 
