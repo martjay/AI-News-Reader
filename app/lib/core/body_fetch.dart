@@ -34,16 +34,41 @@ bool isWeakBodyStatus(String status) =>
 /// otherwise put the reader back on the summary.
 ArticleRecord preserveFetchedBody(ArticleRecord incoming, ArticleRecord? live) {
   if (live == null) return incoming;
+  var next = incoming;
   final incomingFull = hasUsableFullBody(incoming.body, incoming.bodyStatus);
   final liveFull = hasUsableFullBody(live.body, live.bodyStatus);
   if (liveFull && !incomingFull) {
-    return incoming.copyWith(
+    next = next.copyWith(
       body: live.body,
       bodyZh: live.bodyZh,
       bodyStatus: live.bodyStatus,
     );
+  } else if (next.body.trim() == live.body.trim() && next.bodyZh.isEmpty && live.bodyZh.isNotEmpty) {
+    next = next.copyWith(bodyZh: live.bodyZh);
   }
-  return incoming;
+  if (next.titleZh.isEmpty && live.titleZh.isNotEmpty) {
+    next = next.copyWith(titleZh: live.titleZh);
+  }
+  if (next.summaryZh.isEmpty && live.summaryZh.isNotEmpty) {
+    next = next.copyWith(summaryZh: live.summaryZh);
+  }
+  return next;
+}
+
+/// Body-fetch failures replace a quiet banner. A network banner stays visible.
+/// A successful or excerpt fetch clears a stale body error.
+String? bannerAfterBodyFetch({
+  required String? current,
+  required String status,
+  required bool selected,
+}) {
+  final failed = selected && status == 'fail';
+  if (failed) {
+    if (current == 'network' || current == 'snapshot' || current == 'partial') return current;
+    return 'body';
+  }
+  if (current == 'body') return null;
+  return current;
 }
 
 StoredBody applyFetchedBody({

@@ -69,7 +69,15 @@ class ArticlePane extends StatelessWidget {
               return AppMotion.fadeSlide(animation: animation, child: child);
             },
             child: record == null || catalog == null
-                ? EmptyState(key: const ValueKey('empty'), palette: palette, message: l10n.emptyArticle, icon: LucideIcons.panelRight)
+                ? EmptyState(
+                    key: const ValueKey('empty'),
+                    palette: palette,
+                    message: l10n.emptyArticle,
+                    icon: LucideIcons.panelRight,
+                    action: onClose == null
+                        ? null
+                        : OutlinedButton(onPressed: onClose, child: Text(l10n.actionBack)),
+                  )
                 : _ReaderBody(
                     key: ValueKey(record!.item.id),
                     rec: record!,
@@ -932,7 +940,7 @@ class _TtsVoiceButton extends ConsumerWidget {
           voices: voicesForLocale('zh-CN'),
           selectedId: selected.id,
           chineseUi: chineseUi,
-          onPick: (id) => ref.read(settingsProvider.notifier).update(settings.copyWith(ttsVoice: id)),
+          onPick: (id) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(ttsVoice: id)),
         ),
         _voiceSubmenu(
           palette: palette,
@@ -941,7 +949,7 @@ class _TtsVoiceButton extends ConsumerWidget {
           voices: voicesForLocale('en-US'),
           selectedId: selected.id,
           chineseUi: chineseUi,
-          onPick: (id) => ref.read(settingsProvider.notifier).update(settings.copyWith(ttsVoice: id)),
+          onPick: (id) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(ttsVoice: id)),
         ),
       ],
     );

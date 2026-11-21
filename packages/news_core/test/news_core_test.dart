@@ -55,6 +55,28 @@ void main() {
     expect(merged.first.summary, 'a longer summary from the second feed');
   });
 
+  test('foldIncoming returns only the row that changed', () {
+    final kept = const NewsItem(id: 'kept', sourceId: 'a', title: 'Other story', url: 'https://x.com/other');
+    final stored = [
+      kept,
+      const NewsItem(id: 'stored-1', sourceId: 'a', title: 'OpenAI releases GPT', url: 'https://x.com/p', summary: 'short'),
+    ];
+    final incoming = [
+      const NewsItem(
+        id: 'fresh-2',
+        sourceId: 'b',
+        title: 'OpenAI releases GPT',
+        url: 'https://x.com/p?utm_source=1',
+        summary: 'a longer summary from the second feed',
+      ),
+    ];
+    final folded = foldIncoming(stored, incoming);
+    expect(folded.changed.map((item) => item.id), ['stored-1']);
+    expect(folded.changed.single.summary, 'a longer summary from the second feed');
+    expect(folded.known.map((item) => item.id), containsAll(['kept', 'stored-1']));
+    expect(foldIncoming(stored, const []).changed, isEmpty);
+  });
+
   test('snapshot url rejects http and loopback', () {
     expect(isAllowedSnapshotUrl('https://cdn.jsdelivr.net/gh/a/b@main/data/snapshot.json'), isTrue);
     expect(isAllowedSnapshotUrl('http://cdn.jsdelivr.net/gh/a/b@main/data/snapshot.json'), isFalse);

@@ -123,3 +123,38 @@ List<String> mergedSourceIds(NewsItem keep, NewsItem other) {
 List<NewsItem> mergeIncoming(List<NewsItem> stored, List<NewsItem> incoming) {
   return mergeAndDedupe([...stored, ...incoming]);
 }
+
+bool sameNewsItem(NewsItem a, NewsItem b) {
+  if (a.id != b.id ||
+      a.sourceId != b.sourceId ||
+      a.title != b.title ||
+      a.url != b.url ||
+      a.summary != b.summary ||
+      a.pubDate != b.pubDate ||
+      a.extraSourceIds.length != b.extraSourceIds.length) {
+    return false;
+  }
+  for (var i = 0; i < a.extraSourceIds.length; i++) {
+    if (a.extraSourceIds[i] != b.extraSourceIds[i]) return false;
+  }
+  return true;
+}
+
+/// Merges one source into the known set and returns only the rows that changed.
+class FoldedItems {
+  const FoldedItems(this.known, this.changed);
+
+  final List<NewsItem> known;
+  final List<NewsItem> changed;
+}
+
+FoldedItems foldIncoming(List<NewsItem> known, List<NewsItem> incoming) {
+  if (incoming.isEmpty) return FoldedItems(known, const []);
+  final before = {for (final item in known) item.id: item};
+  final merged = mergeIncoming(known, incoming);
+  final changed = <NewsItem>[
+    for (final item in merged)
+      if (before[item.id] == null || !sameNewsItem(before[item.id]!, item)) item,
+  ];
+  return FoldedItems(merged, changed);
+}

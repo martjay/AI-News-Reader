@@ -6,6 +6,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'feed_filter.dart';
+import 'serial.dart';
 
 class AppSettings {
   const AppSettings({
@@ -165,6 +166,7 @@ class SettingsNotifier extends Notifier<AppSettings> {
   static const _key = 'inkbrief.settings';
   static const _secretKey = 'inkbrief.translationApiKey';
   static const _storage = FlutterSecureStorage();
+  final _writes = Serial();
 
   @override
   AppSettings build() => const AppSettings();
@@ -200,9 +202,19 @@ class SettingsNotifier extends Notifier<AppSettings> {
     }
   }
 
-  Future<void> update(AppSettings next, {bool persist = true}) async {
-    state = next;
-    if (!persist) return;
+  /// Applies [change] to the latest settings. Overlapping callers cannot drop each other's fields.
+  Future<void> mutate(AppSettings Function(AppSettings current) change, {bool persist = true}) {
+    state = change(state);
+    if (!persist) return Future<void>.value();
+    return _writes.run(_persistCurrent);
+  }
+
+  Future<void> update(AppSettings next, {bool persist = true}) {
+    return mutate((_) => next, persist: persist);
+  }
+
+  Future<void> _persistCurrent() async {
+    final next = state;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_key, jsonEncode(next.toJson()));
     try {
@@ -212,36 +224,40 @@ class SettingsNotifier extends Notifier<AppSettings> {
         await _storage.write(key: _secretKey, value: next.translationApiKey.trim());
       }
     } catch (e, st) {
-      debugPrint('secure storage write failed: $e\n$st');
+      debugPrint('secure storage write failed: ${e.runtimeType}\n$st');
     }
   }
 
-  Future<void> beginSession() async {
+  Future<void> beginSession() {
     final now = DateTime.now().millisecondsSinceEpoch;
-    final last = state.lastVisitMs;
-    final newSince = last == 0 ? now - const Duration(hours: 24).inMilliseconds : last;
-    await update(state.copyWith(newSinceMs: newSince, lastVisitMs: now));
+    return mutate((current) {
+      final last = current.lastVisitMs;
+      final newSince = last == 0 ? now - const Duration(hours: 24).inMilliseconds : last;
+      return current.copyWith(newSinceMs: newSince, lastVisitMs: now);
+    });
   }
 
-  Future<void> touchVisit() async {
-    await update(state.copyWith(lastVisitMs: DateTime.now().millisecondsSinceEpoch));
+  Future<void> touchVisit() {
+    return mutate((current) => current.copyWith(lastVisitMs: DateTime.now().millisecondsSinceEpoch));
   }
 
   Future<void> setSourceEnabled(
     String id,
     bool on, {
     Iterable<String> catalogEnabledIds = const [],
-  }) async {
-    final next = applySourceEnabled(
-      enabledSources: state.enabledSources,
-      seenSourceIds: state.seenSourceIds,
-      catalogEnabledIds: catalogEnabledIds,
-      id: id,
-      on: on,
-    );
-    final seen = [...state.seenSourceIds];
-    if (!seen.contains(id)) seen.add(id);
-    await update(state.copyWith(enabledSources: next, seenSourceIds: seen));
+  }) {
+    return mutate((current) {
+      final next = applySourceEnabled(
+        enabledSources: current.enabledSources,
+        seenSourceIds: current.seenSourceIds,
+        catalogEnabledIds: catalogEnabledIds,
+        id: id,
+        on: on,
+      );
+      final seen = [...current.seenSourceIds];
+      if (!seen.contains(id)) seen.add(id);
+      return current.copyWith(enabledSources: next, seenSourceIds: seen);
+    });
   }
 }
 

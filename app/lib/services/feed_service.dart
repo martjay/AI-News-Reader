@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:news_core/news_core.dart';
 
+import '../core/serial.dart';
 import '../core/settings.dart';
 
 class FeedService {
@@ -53,18 +54,36 @@ class FeedService {
     }
   }
 
-  Future<List<SourceFetchResult>> fetchDirect(List<SourceDef> sources, {int parallelism = 6}) async {
-    final fetcher = SourceFetcher();
+  Future<List<SourceFetchResult>> fetchDirect(
+    List<SourceDef> sources, {
+    int parallelism = 6,
+    Future<SourceFetchResult> Function(SourceDef source)? fetchOne,
+    Future<void> Function(SourceFetchResult result)? onEach,
+  }) async {
+    final fetcher = fetchOne == null ? SourceFetcher() : null;
     final results = <SourceFetchResult>[];
+    final publish = Serial();
     try {
-      for (var i = 0; i < sources.length; i += parallelism) {
-        final end = i + parallelism > sources.length ? sources.length : i + parallelism;
-        results.addAll(await Future.wait(sources.sublist(i, end).map(fetcher.fetch)));
-        await Future<void>.delayed(Duration.zero);
+      if (sources.isEmpty) return results;
+      var next = 0;
+      final width = parallelism < 1
+          ? 1
+          : (parallelism > sources.length ? sources.length : parallelism);
+      Future<void> worker() async {
+        while (true) {
+          if (next >= sources.length) return;
+          final source = sources[next];
+          next += 1;
+          final result = fetchOne != null ? await fetchOne(source) : await fetcher!.fetch(source);
+          results.add(result);
+          if (onEach != null) await publish.run(() => onEach(result));
+        }
       }
+
+      await Future.wait([for (var i = 0; i < width; i++) worker()]);
       return results;
     } finally {
-      fetcher.client.close();
+      fetcher?.client.close();
     }
   }
 }

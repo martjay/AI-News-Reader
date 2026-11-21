@@ -30,6 +30,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get actionRefresh => '刷新';
 
   @override
+  String get actionRetry => '重试';
+
+  @override
+  String get actionBack => '返回';
+
+  @override
   String get actionSearch => '搜索';
 
   @override
@@ -195,6 +201,9 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingsSaved => '已保存';
+
+  @override
+  String get settingsInvalid => '这个地址看起来不正确，没有保存。';
 
   @override
   String get aboutTitle => '关于';

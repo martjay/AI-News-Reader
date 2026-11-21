@@ -12,6 +12,7 @@ import '../../l10n/app_localizations.dart';
 import '../theme/motion.dart';
 import '../theme/tokens.dart';
 import '../widgets/empty_state.dart';
+import '../widgets/feed_skeleton.dart';
 
 class SourcesPage extends ConsumerWidget {
   const SourcesPage({super.key, required this.palette});
@@ -25,7 +26,7 @@ class SourcesPage extends ConsumerWidget {
     final settings = ref.watch(settingsProvider);
     final catalog = news.catalog;
     if (!news.ready) {
-      return Center(child: CircularProgressIndicator(color: palette.primary, strokeWidth: 2));
+      return FeedSkeleton(palette: palette);
     }
     if (catalog == null) {
       return EmptyState(
@@ -55,9 +56,8 @@ class SourcesPage extends ConsumerWidget {
         final item = next.removeAt(from);
         if (to > from) to -= 1;
         next.insert(to, item);
-        ref.read(settingsProvider.notifier).update(
-              settings.copyWith(sourceOrder: next.map((s) => s.id).toList()),
-            );
+        final order = next.map((source) => source.id).toList();
+        ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(sourceOrder: order));
       },
       itemBuilder: (context, index) {
         if (index == 0) {

@@ -43,6 +43,7 @@ if errorlevel 1 (
   exit /b 1
 )
 call dart run flutter_launcher_icons
+copy /Y "..\resources\app_icon.ico" "windows\runner\resources\app_icon.ico" >nul
 call flutter build windows --release
 if errorlevel 1 (
   echo [ERROR] Windows build failed.

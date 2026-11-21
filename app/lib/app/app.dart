@@ -188,7 +188,7 @@ class _ArticleState extends ConsumerState<_Article> {
       palette: palette,
       settings: settings,
       loadingBody: news.loadingBody && news.selectedId == widget.id,
-      translatingBody: news.translatingBody && news.selectedId == widget.id,
+      translatingBody: news.translatingBodyId == widget.id,
       translateFailed: news.translateFailedId == widget.id,
       onFetchBody: record == null ? null : () => ref.read(newsProvider.notifier).fetchBody(widget.id, force: true),
       onTranslate: record == null ? null : () => ref.read(newsProvider.notifier).translateArticle(widget.id),

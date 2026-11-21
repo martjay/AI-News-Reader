@@ -140,6 +140,18 @@ abstract class AppLocalizations {
   /// **'刷新'**
   String get actionRefresh;
 
+  /// No description provided for @actionRetry.
+  ///
+  /// In zh, this message translates to:
+  /// **'重试'**
+  String get actionRetry;
+
+  /// No description provided for @actionBack.
+  ///
+  /// In zh, this message translates to:
+  /// **'返回'**
+  String get actionBack;
+
   /// No description provided for @actionSearch.
   ///
   /// In zh, this message translates to:
@@ -463,6 +475,12 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'已保存'**
   String get settingsSaved;
+
+  /// No description provided for @settingsInvalid.
+  ///
+  /// In zh, this message translates to:
+  /// **'这个地址看起来不正确，没有保存。'**
+  String get settingsInvalid;
 
   /// No description provided for @aboutTitle.
   ///

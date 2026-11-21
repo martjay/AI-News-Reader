@@ -42,7 +42,7 @@ class AdaptiveShell extends ConsumerWidget {
       if (!context.mounted) return;
       if (loc == '/search') {
         if (settings.feedFilter != 'all') {
-          ref.read(settingsProvider.notifier).update(settings.copyWith(feedFilter: 'all'));
+          ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(feedFilter: 'all'));
         }
         if (wide) {
           if (context.canPop()) {
@@ -217,7 +217,7 @@ class _DesktopSplitState extends ConsumerState<_DesktopSplit> {
             },
             onHorizontalDragEnd: (_) {
               final next = _dragWidth ?? width;
-              ref.read(settingsProvider.notifier).update(settings.copyWith(listPaneWidth: next));
+              ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(listPaneWidth: next));
             },
             child: Container(
               width: 8,
@@ -502,13 +502,17 @@ class _StatusBanner extends ConsumerWidget {
                       ),
                     ),
                     if (banner != null)
-                      GhostIconButton(
-                        tooltip: l10n.done,
-                        onPressed: () => ref.read(newsProvider.notifier).dismissBanner(),
-                        icon: LucideIcons.x,
-                        color: palette.fgMuted,
-                        hoverColor: palette.accent,
+                      TextButton(
+                        onPressed: () => ref.read(newsProvider.notifier).retryBanner(),
+                        child: Text(l10n.actionRetry),
                       ),
+                    GhostIconButton(
+                      tooltip: l10n.done,
+                      onPressed: () => ref.read(newsProvider.notifier).dismissBanner(),
+                      icon: LucideIcons.x,
+                      color: palette.fgMuted,
+                      hoverColor: palette.accent,
+                    ),
                   ],
                 ),
               ),
@@ -528,7 +532,7 @@ class _ReaderHost extends ConsumerWidget {
     final selected = ref.watch(newsProvider.select((s) => s.selected));
     final catalog = ref.watch(newsProvider.select((s) => s.catalog));
     final loadingBody = ref.watch(newsProvider.select((s) => s.loadingBody));
-    final translatingBody = ref.watch(newsProvider.select((s) => s.translatingBody));
+    final translatingBodyId = ref.watch(newsProvider.select((s) => s.translatingBodyId));
     final translateFailedId = ref.watch(newsProvider.select((s) => s.translateFailedId));
     return ArticlePane(
       record: selected,
@@ -536,7 +540,7 @@ class _ReaderHost extends ConsumerWidget {
       palette: palette,
       settings: settings,
       loadingBody: loadingBody,
-      translatingBody: translatingBody,
+      translatingBody: selected != null && translatingBodyId == selected.item.id,
       translateFailed: selected != null && translateFailedId == selected.item.id,
       onFetchBody: selected == null ? null : () => ref.read(newsProvider.notifier).fetchBody(selected.item.id, force: true),
       onTranslate: selected == null ? null : () => ref.read(newsProvider.notifier).translateArticle(selected.item.id),

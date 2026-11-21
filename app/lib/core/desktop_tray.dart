@@ -20,11 +20,18 @@ class DesktopTray with TrayListener, WindowListener {
     if (!_desktop || _ready) return;
     await windowManager.setPreventClose(true);
     windowManager.addListener(this);
-    final icon = Platform.isWindows ? 'assets/icons/tray_icon.ico' : 'assets/icons/app_icon.png';
-    await trayManager.setIcon(icon);
-    trayManager.addListener(this);
-    _ready = true;
-    await applyMenu();
+    try {
+      final icon = Platform.isWindows ? 'assets/icons/tray_icon.ico' : 'assets/icons/app_icon.png';
+      await trayManager.setIcon(icon);
+      trayManager.addListener(this);
+      _ready = true;
+      await applyMenu();
+    } catch (e, st) {
+      debugPrint('tray start failed: ${e.runtimeType}\n$st');
+      windowManager.removeListener(this);
+      _ready = false;
+      await windowManager.setPreventClose(false);
+    }
   }
 
   void dispose() {

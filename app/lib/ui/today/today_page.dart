@@ -14,6 +14,7 @@ import '../theme/tokens.dart';
 import '../widgets/article_tile.dart';
 import '../widgets/brief_story_card.dart';
 import '../widgets/empty_state.dart';
+import '../widgets/feed_skeleton.dart';
 import '../widgets/feed_filter_bar.dart';
 import '../widgets/section_header.dart';
 
@@ -141,7 +142,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final records = ref.watch(newsProvider.select((s) => s.records));
     final statuses = ref.watch(newsProvider.select((s) => s.statuses));
     if (!ready) {
-      return Center(child: CircularProgressIndicator(color: palette.primary, strokeWidth: 2));
+      return FeedSkeleton(palette: palette);
     }
     if (catalog == null) {
       return RefreshIndicator(
@@ -282,7 +283,8 @@ class _TodayPageState extends ConsumerState<TodayPage> {
           chinese: settings.isZh,
           caption: unreadTotal > 0 ? l10n.unreadCount(unreadTotal) : (visible.isEmpty ? null : l10n.feedCount(visible.length)),
           onSelected: (next) {
-            ref.read(settingsProvider.notifier).update(settings.copyWith(feedFilter: next));
+            ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(feedFilter: next));
+            ref.read(newsProvider.notifier).translatePending();
           },
         ),
         Expanded(
@@ -301,6 +303,17 @@ class _TodayPageState extends ConsumerState<TodayPage> {
                               ? l10n.emptyToday
                               : l10n.emptyFilter,
                           icon: LucideIcons.newspaper,
+                          action: filter == 'all'
+                              ? null
+                              : OutlinedButton(
+                                  onPressed: () {
+                                    ref.read(settingsProvider.notifier).mutate(
+                                          (current) => current.copyWith(feedFilter: 'all'),
+                                        );
+                                    ref.read(newsProvider.notifier).translatePending();
+                                  },
+                                  child: Text(l10n.feedAll),
+                                ),
                         ),
                       ),
                     ],

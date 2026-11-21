@@ -17,7 +17,8 @@ class TranslateException implements Exception {
 }
 
 class TranslateService {
-  TranslateService({FetchClient? client}) : _client = client ?? FetchClient(timeout: const Duration(seconds: 20));
+  TranslateService({FetchClient? client, Duration timeout = const Duration(seconds: 20)})
+      : _client = client ?? FetchClient(timeout: timeout);
 
   final FetchClient _client;
 
@@ -53,25 +54,27 @@ class TranslateService {
   }
 
   Future<String> _translateChunk(String clipped, AppSettings settings) async {
-    if (clipped.trim().isEmpty) return clipped;
-    if (!hasTranslatableLatin(clipped) && isPrimarilyChinese(clipped)) return clipped;
+    var text = clipped.trim();
+    if (text.isEmpty) return text;
+    if (text.length > 800) text = text.substring(0, 800);
+    if (!hasTranslatableLatin(text) && isPrimarilyChinese(text)) return text;
     if (settings.translationApiKey.trim().isNotEmpty) {
       try {
-        return await _viaLlm(clipped, settings);
+        return await _viaLlm(text, settings);
       } catch (e, st) {
-        debugPrint('LLM translate failed, falling back: $e\n$st');
+        debugPrint('LLM translate failed, falling back: ${e.runtimeType}\n$st');
       }
     }
     try {
-      return await _viaTransmart(clipped);
+      return await _viaTransmart(text);
     } catch (transmart) {
       try {
-        return await _viaGoogle(clipped);
-      } catch (google) {
+        return await _viaMyMemory(text);
+      } catch (memory) {
         try {
-          return await _viaMyMemory(clipped);
-        } catch (memory) {
-          throw TranslateException('mymemory', memory, previous: [transmart, google]);
+          return await _viaGoogle(text);
+        } catch (google) {
+          throw TranslateException('google', google, previous: [transmart, memory]);
         }
       }
     }

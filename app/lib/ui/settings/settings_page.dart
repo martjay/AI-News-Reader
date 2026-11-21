@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
+import '../../core/input_check.dart';
 import '../../core/news_controller.dart';
 import '../../core/settings.dart';
 import '../../l10n/app_localizations.dart';
@@ -70,7 +71,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             ButtonSegment(value: 'en', label: Text(l10n.langEn)),
           ],
           selected: {settings.language},
-          onSelectionChanged: (v) => ref.read(settingsProvider.notifier).update(settings.copyWith(language: v.first)),
+          onSelectionChanged: (v) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(language: v.first)),
         )),
         const SizedBox(height: AppTokens.s12),
         _row(p, l10n.actionTheme, SegmentedButton<String>(
@@ -79,7 +80,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             ButtonSegment(value: 'dark', label: Text(l10n.themeDark)),
           ],
           selected: {settings.theme},
-          onSelectionChanged: (v) => ref.read(settingsProvider.notifier).update(settings.copyWith(theme: v.first)),
+          onSelectionChanged: (v) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(theme: v.first)),
         )),
         const SizedBox(height: AppTokens.s12),
         Text(l10n.fontSize, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
@@ -89,10 +90,8 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           max: 1.3,
           divisions: 4,
           activeColor: p.primary,
-          onChanged: (v) => ref.read(settingsProvider.notifier).update(settings.copyWith(fontScale: v), persist: false),
-          onChangeEnd: (v) => ref.read(settingsProvider.notifier).update(
-                ref.read(settingsProvider).copyWith(fontScale: v),
-              ),
+          onChanged: (v) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(fontScale: v), persist: false),
+          onChangeEnd: (v) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(fontScale: v)),
         ),
         const SizedBox(height: AppTokens.s24),
         Text(l10n.settingsSectionTranslate, style: AppType.section(p.fg)),
@@ -103,7 +102,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           l10n.autoTranslate,
           settings.autoTranslate,
           (on) {
-            ref.read(settingsProvider.notifier).update(settings.copyWith(autoTranslate: on));
+            ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(autoTranslate: on));
             if (on) ref.read(newsProvider.notifier).translatePending();
           },
         ),
@@ -111,14 +110,14 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           p,
           l10n.showOriginal,
           settings.showOriginal,
-          (on) => ref.read(settingsProvider.notifier).update(settings.copyWith(showOriginal: on)),
+          (on) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(showOriginal: on)),
         ),
         if (Platform.isWindows || Platform.isLinux || Platform.isMacOS)
           _inlineSwitch(
             p,
             l10n.closeToTray,
             settings.closeToTray,
-            (on) => ref.read(settingsProvider.notifier).update(settings.copyWith(closeToTray: on)),
+            (on) => ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(closeToTray: on)),
           ),
         const SizedBox(height: AppTokens.s12),
         Theme(
@@ -146,9 +145,12 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 l10n.useSystemProxy,
                 settings.useSystemProxy,
                 (on) async {
-                  final next = settings.copyWith(useSystemProxy: on, proxyUrl: _proxy.text.trim());
-                  await ref.read(settingsProvider.notifier).update(next);
-                  await applyProxyFromSettings(next);
+                  final proxy = _proxy.text.trim();
+                  if (!_accept(context, acceptableProxy(proxy))) return;
+                  await ref.read(settingsProvider.notifier).mutate(
+                        (current) => current.copyWith(useSystemProxy: on, proxyUrl: proxy),
+                      );
+                  await applyProxyFromSettings(ref.read(settingsProvider));
                   if (context.mounted) _notifySaved(context);
                 },
               ),
@@ -158,19 +160,15 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 controller: _proxy,
                 style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
                 decoration: const InputDecoration(hintText: '127.0.0.1:7890'),
-                onSubmitted: (_) async {
-                  await _saveProxy(settings);
-                  if (context.mounted) _notifySaved(context);
-                },
+                onSubmitted: (_) => _saveProxy(context),
               ),
               const SizedBox(height: AppTokens.s8),
               Align(
                 alignment: Alignment.centerLeft,
                 child: OutlinedButton(
                   onPressed: () async {
-                    await _saveProxy(settings);
-                    ref.read(newsProvider.notifier).refresh();
-                    if (context.mounted) _notifySaved(context);
+                    final saved = await _saveProxy(context);
+                    if (saved) ref.read(newsProvider.notifier).refresh();
                   },
                   child: Text(l10n.done),
                 ),
@@ -189,7 +187,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                     icon: Icon(_showApiKey ? LucideIcons.eyeOff : LucideIcons.eye, size: 18, color: p.fgMuted),
                   ),
                 ),
-                onSubmitted: (_) => _saveTranslate(settings, context),
+                onSubmitted: (_) => _saveTranslate(context),
               ),
               const SizedBox(height: AppTokens.s12),
               Text(l10n.translationBaseUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
@@ -198,7 +196,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 controller: _baseUrl,
                 style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
                 decoration: const InputDecoration(hintText: 'https://api.deepseek.com/v1'),
-                onSubmitted: (_) => _saveTranslate(settings, context),
+                onSubmitted: (_) => _saveTranslate(context),
               ),
               const SizedBox(height: AppTokens.s12),
               Text(l10n.translationModel, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
@@ -207,14 +205,14 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 controller: _model,
                 style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
                 decoration: const InputDecoration(hintText: 'deepseek-chat'),
-                onSubmitted: (_) => _saveTranslate(settings, context),
+                onSubmitted: (_) => _saveTranslate(context),
               ),
               const SizedBox(height: AppTokens.s8),
               Align(
                 alignment: Alignment.centerLeft,
                 child: OutlinedButton(
                   onPressed: () {
-                    _saveTranslate(settings, context);
+                    _saveTranslate(context);
                     ref.read(newsProvider.notifier).translatePending();
                   },
                   child: Text(l10n.done),
@@ -229,10 +227,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 controller: _repo,
                 style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
                 decoration: const InputDecoration(hintText: 'owner/repo'),
-                onSubmitted: (v) {
-                  ref.read(settingsProvider.notifier).update(settings.copyWith(snapshotRepo: v.trim()));
-                  _notifySaved(context);
-                },
+                onSubmitted: (v) => _saveSnapshot(context, repo: v.trim(), url: _url.text.trim()),
               ),
               const SizedBox(height: AppTokens.s12),
               Text(l10n.snapshotUrl, style: TextStyle(color: p.fgMuted, fontSize: AppTokens.caption)),
@@ -241,22 +236,13 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                 controller: _url,
                 style: TextStyle(color: p.inputFg, fontSize: AppTokens.body),
                 decoration: const InputDecoration(hintText: 'https://.../snapshot.json'),
-                onSubmitted: (v) {
-                  ref.read(settingsProvider.notifier).update(settings.copyWith(snapshotUrl: v.trim()));
-                  _notifySaved(context);
-                },
+                onSubmitted: (v) => _saveSnapshot(context, repo: _repo.text.trim(), url: v.trim()),
               ),
               const SizedBox(height: AppTokens.s8),
               Align(
                 alignment: Alignment.centerLeft,
                 child: OutlinedButton(
-                  onPressed: () {
-                    ref.read(settingsProvider.notifier).update(
-                          settings.copyWith(snapshotRepo: _repo.text.trim(), snapshotUrl: _url.text.trim()),
-                        );
-                    ref.read(newsProvider.notifier).refresh();
-                    _notifySaved(context);
-                  },
+                  onPressed: () => _saveSnapshot(context, repo: _repo.text.trim(), url: _url.text.trim(), refresh: true),
                   child: Text(l10n.done),
                 ),
               ),
@@ -286,10 +272,30 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     );
   }
 
-  Future<void> _saveProxy(AppSettings settings) async {
-    final next = settings.copyWith(proxyUrl: _proxy.text.trim());
-    await ref.read(settingsProvider.notifier).update(next);
-    await applyProxyFromSettings(next);
+  bool _accept(BuildContext context, bool valid) {
+    if (valid) return true;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(AppLocalizations.of(context).settingsInvalid), duration: const Duration(seconds: 2)),
+    );
+    return false;
+  }
+
+  Future<bool> _saveProxy(BuildContext context) async {
+    final proxy = _proxy.text.trim();
+    if (!_accept(context, acceptableProxy(proxy))) return false;
+    await ref.read(settingsProvider.notifier).mutate((current) => current.copyWith(proxyUrl: proxy));
+    await applyProxyFromSettings(ref.read(settingsProvider));
+    if (context.mounted) _notifySaved(context);
+    return true;
+  }
+
+  Future<void> _saveSnapshot(BuildContext context, {required String repo, required String url, bool refresh = false}) async {
+    if (!_accept(context, acceptableRepo(repo) && acceptableHttpUrl(url))) return;
+    await ref.read(settingsProvider.notifier).mutate(
+          (current) => current.copyWith(snapshotRepo: repo, snapshotUrl: url),
+        );
+    if (refresh) ref.read(newsProvider.notifier).refresh();
+    if (context.mounted) _notifySaved(context);
   }
 
   void _notifySaved(BuildContext context) {
@@ -298,11 +304,13 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     );
   }
 
-  void _saveTranslate(AppSettings settings, BuildContext context) {
-    ref.read(settingsProvider.notifier).update(
-          settings.copyWith(
+  void _saveTranslate(BuildContext context) {
+    final base = _baseUrl.text.trim().isEmpty ? 'https://api.deepseek.com/v1' : _baseUrl.text.trim();
+    if (!_accept(context, acceptableHttpUrl(base))) return;
+    ref.read(settingsProvider.notifier).mutate(
+          (current) => current.copyWith(
             translationApiKey: _apiKey.text.trim(),
-            translationBaseUrl: _baseUrl.text.trim().isEmpty ? 'https://api.deepseek.com/v1' : _baseUrl.text.trim(),
+            translationBaseUrl: base,
             translationModel: _model.text.trim().isEmpty ? 'deepseek-chat' : _model.text.trim(),
           ),
         );

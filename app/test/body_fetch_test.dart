@@ -84,6 +84,23 @@ void main() {
     expect(hasUsableFullBody(kept.body, kept.bodyStatus), isTrue);
   });
 
+  test('a stale list keeps an in-memory translation the database has not stored yet', () {
+    final item = NewsItem(id: 'a', sourceId: 'aihot', title: 'Title', url: 'https://example.com');
+    final incoming = ArticleRecord(item: item);
+    final live = ArticleRecord(item: item, titleZh: '标题', summaryZh: '摘要');
+    final kept = preserveFetchedBody(incoming, live);
+    expect(kept.titleZh, '标题');
+    expect(kept.summaryZh, '摘要');
+  });
+
+  test('body banner stays specific and does not hide a network failure', () {
+    expect(bannerAfterBodyFetch(current: null, status: 'fail', selected: true), 'body');
+    expect(bannerAfterBodyFetch(current: 'body', status: 'ok', selected: true), isNull);
+    expect(bannerAfterBodyFetch(current: 'body', status: 'excerpt', selected: true), isNull);
+    expect(bannerAfterBodyFetch(current: 'network', status: 'fail', selected: true), 'network');
+    expect(bannerAfterBodyFetch(current: 'snapshot', status: 'ok', selected: true), 'snapshot');
+  });
+
   test('failed refetch still counts a long previous body as full text', () {
     const previous =
         'Full article text that is long enough to count as complete body content for the reader.';

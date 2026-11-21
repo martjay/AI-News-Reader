@@ -30,6 +30,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get actionRefresh => 'Refresh';
 
   @override
+  String get actionRetry => 'Retry';
+
+  @override
+  String get actionBack => 'Back';
+
+  @override
   String get actionSearch => 'Search';
 
   @override
@@ -201,6 +207,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsSaved => 'Saved';
+
+  @override
+  String get settingsInvalid =>
+      'That address does not look valid, so it was not saved.';
 
   @override
   String get aboutTitle => 'About';

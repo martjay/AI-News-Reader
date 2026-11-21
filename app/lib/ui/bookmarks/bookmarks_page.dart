@@ -10,6 +10,7 @@ import '../theme/motion.dart';
 import '../theme/tokens.dart';
 import '../widgets/article_tile.dart';
 import '../widgets/empty_state.dart';
+import '../widgets/feed_skeleton.dart';
 import '../widgets/section_header.dart';
 
 class BookmarksPage extends ConsumerWidget {
@@ -25,7 +26,7 @@ class BookmarksPage extends ConsumerWidget {
     final catalog = news.catalog;
     final saved = news.records.where((r) => r.saved).toList();
     if (!news.ready) {
-      return Center(child: CircularProgressIndicator(color: palette.primary, strokeWidth: 2));
+      return FeedSkeleton(palette: palette);
     }
     if (catalog == null) {
       return EmptyState(

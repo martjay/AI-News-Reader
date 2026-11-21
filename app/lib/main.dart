@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sqlite3_flutter_libs/sqlite3_flutter_libs.dart';
@@ -13,6 +14,26 @@ import 'core/settings.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  FlutterError.onError = FlutterError.presentError;
+  PlatformDispatcher.instance.onError = (error, stack) {
+    debugPrint('uncaught: ${error.runtimeType}\n$stack');
+    return true;
+  };
+  ErrorWidget.builder = (details) {
+    return const ColoredBox(
+      color: Color(0xFF12151A),
+      child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(24),
+          child: Text(
+            '这一页没有显示出来。\nThis page could not be shown.',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Color(0xFFE6E1D6), fontSize: 14, height: 1.5),
+          ),
+        ),
+      ),
+    );
+  };
   if (Platform.isAndroid) {
     await applyWorkaroundToOpenSqlite3OnOldAndroidVersions();
   }
